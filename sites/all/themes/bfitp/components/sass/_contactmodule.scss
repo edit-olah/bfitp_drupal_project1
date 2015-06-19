@@ -1,0 +1,158 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05-May-2015, 17:56:48
+    Author     : Edit
+*/
+// _contactmodule.scss
+// ============
+
+
+/*================================= CONTACT MODULE =================================*/
+
+#ContactIndi {
+    
+    @extend #Portfolio;
+    
+    //float:left;
+    width: 100%;
+    padding-bottom: 10px;
+    
+    .leftContainer {
+	width: 65%;
+    }
+  
+    .rightContainer {
+	width: 33%;
+	img {
+	    width: 80%;
+	    max-width: 80%;
+	    height: auto;
+	    margin-top: 5%;
+	    margin-left: 10%;
+	}
+    }
+    
+    .highlighted {
+	margin-bottom: 0;
+	margin-top: 1em;
+    }
+    
+    .contactDetails {
+	background-color: lighten($primaryBG, 4);
+	padding: 3px 10px 0;
+	border-bottom: 2px dashed lighten($primaryBG, 25);
+    }
+    
+    .email{
+	margin: .5em 0 1.5em;
+    }
+    
+    .buttons{
+	margin-bottom: 15px;
+    }
+    
+    .button{
+	width: 48%;
+	a{
+	    font-size: 1.1em;
+	    line-height: 1.1;
+	    padding: 4px 8px;
+	}
+    }
+   
+    
+    .socialIcons{
+	width: 98%;
+	padding: 10px 0;
+	
+	
+	a{
+	    
+	    img{
+		width: 2.5em;
+	    }
+	}
+    }
+   
+}
+
+@media screen and (max-width: 580px) {
+    #ContactIndi {
+	.leftContainer {
+	    width: 75%;
+	}
+	.rightContainer {
+	    width: 22%;
+	    
+	    img {
+		  margin-top: 15%;
+	    }
+	}
+	
+	.email{
+	    margin: 1em 0 1.5em;
+	    a {
+		font-size: .9em;
+	    }
+	}
+    }
+}
+
+
+
+
+@media screen and (max-width: 627px) {
+    #ContactIndi {
+	.button{
+	    width: 98%;
+	    
+	    a{
+		font-size: 1.1em;
+		line-height: 1.1;
+	    }
+	}
+    }
+}
+
+@media screen and (max-width: 395px) {
+    #ContactIndi {
+	.button{
+	    a{
+		font-size: .85em;
+		padding: 10px 7px;
+	    }
+	}
+	.email{
+	    a {
+	    word-wrap: break-word;
+	    }
+	}
+    }
+}
+
+@media screen and (min-width: 628px) and (max-width: 778px) {
+    #ContactIndi {
+	.button{
+	    a{
+		font-size: .9em;
+		line-height: .9;
+		padding: 8px 2px 8px 8px;
+	    }
+	}
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+    #ContactIndi {
+	.rightContainer {
+	    img {
+		max-width: initial;
+		width: 95%;
+	    }
+	}
+    }
+}

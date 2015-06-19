@@ -1,0 +1,114 @@
+/* 
+    Created on : 06-Jan-2015, 07:57:18
+    Author     : Edit
+*/
+
+// _variables.scss
+// =================
+
+
+
+// Font files have been added to the project to be able to work off-line. 
+// Uncomment this section and the relevant variables below, and don't include font files before production/going live takes place'
+
+    // @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,500,600,700);
+    // @import url('//cdn.jsdelivr.net/font-zero-width/latest/zero-width.css');
+
+// Font family and size
+$baseFont	    : sourceCodeProNormal,"Helvetica Neue", Helvetica, Arial, sans-serif;
+    //$baseFont	    : 'Source Code Pro',"Helvetica Neue", Helvetica, Arial, sans-serif;
+$baseFontSize	    : 62.5%; //if browser default is 16px (font-size on <html> level), this equals 10px -> 10px = 0.625rem
+    
+$zerowidthFont : 'zero-width';
+
+// Font weights
+
+$light	    : 300;
+$normal	    : 400;
+$medium	    : 500;
+$semi-bold  : 600;
+$bold	    : 700;
+
+
+// Font sizes
+
+$defaultFontSize    : 1.2em;
+$semiLargeFontSize  : 1.3em;
+$largeFontSize	    : 1.5em;
+
+
+ // background colors
+$primaryBG	    : #3A3F39;
+$secondaryBG	    : #899787;
+$greenBG2	    : #bdde37;
+$greenBG	    : #5FC124;
+$turqBG		    : #1C926E;
+$orangeBG	    : #DC6E2A;
+$magnetaBG	    : #C1255C;
+
+//font colors
+$primaryFontColor   : #B9C8B5;
+$secondaryFontColor : #859900;
+//$headings-fontColor : #ABEC9A;
+
+//other colors
+$lightGreen	    : #ABF381;
+$semiLightGreen	    : #85E14F;
+$semiDarkGreen	    : #39820E;
+$darkGreen	    : #122F00;
+
+$lightTurq	    : #76DFC0;
+$semiLightTurq	    : #3DAF8C;
+$semiDarkTurq	    : #0A6248;
+$darkTurq	    : #002419;
+
+$lightOrange	    : #FFB587;
+$semiLightOrange    : #FF9959;
+$semiDarkOrange	    : #954310;
+$darkOrange	    : #361500;
+
+$lightMagneta	    : #F481A9;
+$semiLightMagneta   : #E24F83;
+$semiDarkMagneta    : #830E37;
+$darkMagneta	    : #2F0011;
+
+$drupalBlue	    : #137CC1;
+
+
+//padding
+
+$defaultPadding	    : 15px 25px;
+$secondaryPadding   : 15px 15px;
+$minPadding	    : 15px 0;
+
+
+
+//mix it up
+
+$mixitupWidth1		    : 98%; //1 item in a row
+$mixitupWidth2		    : 49%; //2 items in a row
+$mixitupWidth3		    : 32%; //3 items in a row
+$mixitupWidth4		    : 23%; //4 items in a row
+$mixitupWidth5		    : 19%; //5 items in a row
+
+
+// hamburger menu
+
+// line heights
+$line-height--small: 1.2;
+$line-height--medium: 1.5;
+
+// colours
+$neutral: rgb(120,120,120);
+
+
+$accent: rgb(255,150,80);
+$accent-dark: darken($accent, 20%);
+
+
+$button-width: 60px;
+$button-height: 52px;
+$bar-thickness: 4px;
+$button-pad: 10px;
+$button-trans-delay: 0.3s;
+

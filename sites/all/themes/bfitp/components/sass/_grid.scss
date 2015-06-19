@@ -1,0 +1,525 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-Apr-2015, 14:57:52
+    Author     : Edit
+*/
+// _grid.scss
+// ============
+
+
+/*================================= GRIDS =================================*/
+
+/****************** Default grid - beginning **********************/
+
+.grid {
+    margin-bottom: 3%;
+    text-align: justify;
+    font-family: $zerowidthFont;
+    font-size: 0.1px; // adjusting typographic CSS properties that affect the site layout's whitespace
+    
+    
+    li {
+	font-family: $baseFont;
+	font-size: 1.2rem;
+	display: inline-block;
+	width: $mixitupWidth3;
+	padding-top: 3%; 
+	padding-bottom: 2%;
+	margin-bottom: 1%;
+	background-color: lighten($primaryBG, 10);
+	border-radius: 3px;
+	border: 2px dashed lighten($primaryBG, 5);
+	vertical-align: top;
+	
+
+	h2, h3, p {
+	    text-align: left;
+
+	}
+
+	h2 {
+	    margin-bottom: .5em;
+	    color: $lightGreen;
+	}
+
+	h3 {
+	    margin-bottom: .8em;
+
+	}
+
+	.email {
+	    
+	    a {
+	       font-size: 1em;
+	       word-wrap:break-word;
+	   }
+	}
+
+	.button {
+	    width: 100%;
+	    
+	    a {
+		 width: 100%;
+		 padding: 7px 15px;
+	     }
+	 }
+    }
+    
+    .gap {
+	width: $mixitupWidth3;
+	height: 0;
+	padding: 0;
+	padding-bottom:0 !important;
+	border: 0;
+    }
+    &:after { // lacking support in IE6/7
+	content: '';
+	display: inline-block;
+	width: 100%;
+    }
+}
+
+
+
+.grid-contentHolder {
+    font-size:1rem;
+    padding: 0px 25px;
+    box-sizing: border-box;
+    
+    img {
+	width: 12em;
+	height: auto;
+	margin-right: 3%;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 639px) {
+    .grid {
+	li {
+	    width: 100%;
+	    padding-top: 1%;
+	    margin-bottom: 2%;
+	    box-sizing: border-box;
+
+	    h2 {
+		margin-top: 1.3em;
+		min-height: initial;
+	    }
+	    
+	    .sidebar-header{
+		margin: 1.3em 15px .5em;
+	    }
+	    
+	    h3 {
+		margin-bottom: .8em;
+		min-height: initial;
+	    }
+
+	    p {
+		display: inline-block;
+		width: 100%;
+		margin: 0;
+		min-height: initial;
+	    }
+
+
+	    .button {
+		a {
+		    padding: 5px 10px;
+		    width: 100%;
+		    display: block;
+		    box-sizing: border-box;
+		    margin: 0 auto;
+		    text-align: center;
+		    white-space: nowrap;
+		    font-size: 1.2em;
+		}
+	    }
+
+	    .grid-contentHolder {
+		padding: 0px 15px 10px 15px;
+
+		img {
+		    width: 11em;
+		    margin-top: 3%;
+		}
+	    }
+	}
+    }
+
+}
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
+    .grid {
+	li {
+	    width: $mixitupWidth2;
+	}
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .grid {
+    
+	li {
+	    width: $mixitupWidth3;
+	    padding-top: 3%;
+	    margin-bottom: 2%;
+	    box-sizing: border-box;
+	    
+	    h2 {
+		margin-bottom: .7em;
+	    }
+
+
+	    h3 {
+		margin-bottom: .5em;
+	    }
+
+
+	   .button {
+	       width: 100%;
+		a {
+		     width: 100%;
+		     white-space: nowrap;
+		     display: block;
+		     padding: 5px 10px; // used to be just 5px for all sides
+		     box-sizing: border-box;
+		     clear:both;
+		 }
+	    
+	    }
+	}
+	
+	.gap {
+	    width: $mixitupWidth3;
+	}
+	
+	.grid-contentHolder {
+	    min-height: 156px;
+	    box-sizing: border-box;
+	    
+	    img {
+		padding-bottom: 15px;
+	    }
+	}
+    }
+
+}
+
+
+
+/**** Default grid - end ****/
+
+/*=====================================================================================*/
+
+/********** CONTACT US PAGE - Stretched / full width / blog-section grid - beginning ***************/
+
+
+.grid.grid-stretched-layout {
+    
+    li {
+	 width: 32%;
+	 padding-bottom: 0%;
+    }
+    
+    img {
+	width: 100%;
+	height: auto;
+	margin: 0 auto 4%;
+	float: none;
+	display: block;
+    }
+    
+    
+    .grid-contentHolder {
+	width: 100%;
+	padding: 0px 25px 11px 25px;
+	
+	p.min-height-applied {
+	    min-height: 70px;
+	    box-sizing: border-box;
+	}
+	
+	.email {
+	    min-height: 60px;
+	    box-sizing: border-box;	    
+	}
+	.socialIcons {
+	    padding: 5px;
+	    margin-bottom: 6%;
+	    
+	    img {
+		width: 13%;
+		height: auto;
+		padding: 4px;
+		margin: 0;
+		display: inline;
+	     }
+	}
+	
+
+    }  
+    
+}
+
+.grid.grid-stretched-layout > li:last-child {
+    border: 2px dashed darken($primaryBG, 2);
+    background-color: lighten($primaryBG, 5);
+}
+.grid.grid-stretched-layout > li:last-child .grid.grid-full-width > li {
+    background-color: lighten($primaryBG, 5);
+    
+}
+
+.grid.grid-full-width > li {
+    width: 100%;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px dashed darken($primaryBG, 7);
+    padding-top: 15px;
+}
+
+.grid.grid-stretched-layout > li:last-child .grid.grid-full-width > li:last-child {
+    border-bottom: 0;
+}
+
+.grid.grid-full-width > li:first-child {
+    padding-top: 0;
+}
+
+.grid.grid-stretched-layout > li > h2 {
+    font-size: 1.7rem;
+    line-height: 1.8rem;
+    padding: 0 25px;
+    margin-bottom: 20px;
+}
+
+.grid-stretched-layout .grid-full-width.blog-section p.button a {
+    padding: 5px 10px;
+    
+}
+
+.grid-full-width.blog-section {
+    margin-bottom: 0px;
+    
+    li {
+	img {
+	    margin-bottom: 1.4em;
+	}
+	
+	h3 {
+	    font-size: 1.3em;
+	    line-height: 1.3;
+	    margin-bottom: 1em;
+	}
+
+	h4 {
+	    font-size: 1.2em;
+	    line-height: 1.2;
+	    margin-bottom: 1em;
+	}  
+
+	p {
+	      margin-bottom:  0.64em;
+	}
+	
+	 .button {
+	    a:hover {
+		background-color: lighten($primaryBG, 2);
+	    }
+	 }
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    
+    .grid.grid-stretched-layout {
+    
+	li {
+	     width: 49%;
+	}
+    }
+    
+
+    .grid.grid-stretched-layout > li:last-child {
+	clear:both;
+	width: 100%;
+    }
+    
+    .grid.grid-stretched-layout > li .grid.grid-full-width > li {
+	width: 100%;
+	
+	img {
+	    width: 50%;
+	    height: auto;
+	    float: left;
+	    margin-right: 3%;
+	    padding-top: 0px;
+	    padding-bottom: 0;
+	    margin-bottom: 1%;
+	}
+	
+	p {
+	    clear: both;
+	}
+
+    }
+    
+}
+
+@media screen and (max-width: 639px) {
+    
+    .grid.grid-stretched-layout {
+	
+	margin-bottom: 1%;
+	
+	li {
+	    clear:both;
+	    width: 100%;
+	    padding-bottom: 5%;
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+	
+	.grid-contentHolder {
+	    padding: 0 15px;
+	    
+	    img {
+		width: 70%;
+		margin: 4% auto;
+	    }
+	    .email {
+		min-height: initial;
+		box-sizing: border-box;	    
+	    }
+	    p.min-height-applied {
+		min-height: initial;
+	    }
+	    .socialIcons {
+		margin: 0 auto 1%;
+		width: 70%;
+		img {
+		    padding: 2%;
+		 }
+
+	    }
+	    .button {
+		a {
+		    font-size: 1.4em;
+		}
+	    }
+	}
+    }
+    
+    .grid.grid-full-width > li {
+	padding-top: 0%;
+    }
+    
+    .grid.grid-stretched-layout > li .grid.grid-full-width > li {
+	img {
+	    padding-top: 0%;
+	    margin-top: 3%;
+	    width: 100%;
+	    margin-bottom: 4%;
+	}
+	
+    }
+    
+    .grid.grid-stretched-layout > li > h2 {
+	font-size: 1.9rem;
+	padding: 5px 15px 20px 15px;
+	margin-bottom: 0;
+    }
+    
+    .grid.grid-stretched-layout li:last-child {
+	    padding-bottom: 1%;
+	}
+}
+
+
+
+
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+    .grid.grid-stretched-layout li p.button a {
+	width: 100%;
+	display: block;
+	box-sizing: border-box;
+	font-size: 1.2em;
+     }
+
+}
+
+/**** CONTACT US PAGE - Stretched / full width / blog-section grid  - end ****/
+
+/*=====================================================================================*/
+
+/**** OUR BLOG - Our blog-posts - Default grid extension for our blog page - beginning ****/
+
+.blog-post {
+    
+    h2 {
+	min-height: 47px;
+	margin-top: 3%;
+    }
+    
+    h3 {
+	min-height: 53px;
+    }
+    h2, h3 {
+	clear: both;
+    }
+
+    .blog-summary {
+	min-height: 106px;
+      }
+}
+
+@media screen and (max-width: 639px) {
+    .blog-post {
+	.blog-summary {
+	    min-height: initial;
+	    margin-bottom: 10px;
+	}
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 764px) {
+    .blog-post {
+	h2, h3 {
+	    min-height: 3em;
+	}
+
+	.blog-summary {
+	    min-height: 9.3em;
+	  }
+    }
+    
+}
+
+@media screen and (min-width: 765px) and (max-width: 1023px) {
+    .blog-post {
+	h2, h3 {
+	    min-height: 4em;
+	}
+
+	.blog-summary {
+	    min-height: 12em;
+	  }
+    }
+    
+}
+
+
+/**** OUR BLOG - Our blog-posts - Default grid extension for our blog page - end ****/
+
+/*=====================================================================================*/
+

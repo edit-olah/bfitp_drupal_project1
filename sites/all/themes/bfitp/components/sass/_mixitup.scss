@@ -1,0 +1,771 @@
+/* 
+    Created on : 06-Jan-2015, 08:02:58
+    Author     : Edit
+*/
+// _mixitup.scss
+// ============
+
+
+/*================================= MIX IT UP ================================================*/
+
+
+/* ===================== mix it up GLOBAL styles - beginning ======================*/
+
+/********* mix it up buttons / control bar - beginning **************/
+
+.control-bar {
+    background: #768174;
+    //background: rgba(185, 200, 181, .4);
+    background: $primaryBG;
+    margin-top: 2.5%;    
+    margin-bottom: 1.5%;
+    padding: 10px;
+    overflow: hidden;
+    font-family: $zerowidthFont;
+    font-size: 0; // adjusting typographic CSS properties that affect the site layout's whitespace
+    position: relative;
+
+    label {
+	color: lighten($greenBG2, 25);
+	margin: 0 5px;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	font-family: $baseFont;
+    }
+
+    .group {
+	display: inline-block;
+	font-family: $baseFont;
+	font-size: 1rem;
+
+	button {
+	    font-family: $baseFont;
+	    font-size: 1.3rem;
+	    line-height: 1.3;
+	    color: $primaryFontColor;
+	    background: $primaryBG;
+	    background-color: rgba(83,90,81,.5);
+	    border: 2px dashed rgba(171, 243, 129, .1);
+	    text-decoration: none;
+	    padding: 5px 10px;
+	    min-width: 70px;
+	    font-weight: $bold;
+	    border-radius: 3px;
+	    margin-bottom: 6px;
+
+	    &:hover, &:focus, &.active {
+		background: $primaryFontColor;
+		border: 2px dashed rgba(83,90,81,.5);
+		color: $primaryBG;
+
+	    }
+	}
+    }
+
+    .filter-buttons {
+	button {
+	    @include mixitupRect(10px, 5%);
+	}
+
+    }  
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 534px) {
+    .control-bar{
+	
+	.group{
+	    button{
+		padding: 3px 7px;
+	    }
+	}
+	
+	.filter-buttons{
+	    width:100%;
+	    
+	    button{
+		display: block;
+		min-width: initial;
+		width: 100%;
+		text-align: left;
+		margin-bottom: .7%;
+	    }
+	}
+    }
+}
+
+
+@media screen and (max-width: 727px) {
+    .control-bar {
+	label{
+	    display: block;
+	    margin: .4em .1em;
+	}
+    }
+}
+@media screen and (max-width: 823px) {
+     .control-bar {
+	.group:first-child {
+	    margin-bottom: 1%;
+	}
+    }
+}
+
+
+
+/********* mix it up buttons / control bar  - end **************/
+
+/********* mix it up grid - beginning **************/
+
+.mixItUp-container > * {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    font-family: $baseFont;
+    font-size: 1rem;
+}
+
+.mixItUp-container {
+    @include mixitupContainer;
+    
+    .mix, .portfoMix {
+	@include mixitupMix;
+	@include mixitupRect(20px, 5%);
+    }
+}
+
+
+/********* mix it up grid - end **************/
+
+/* ================================ mix it up GLOBAL styles - end ======================================*/
+
+
+
+
+
+
+
+/* =============================== Skills section - beginning ======================================*/
+
+/********* Skills - buttons / control bar - beginning **************/
+
+#Skills {
+    .control-bar {
+	display: inline-block;
+	width: 37%;
+	vertical-align: top;
+	margin: 7px 0 0 2%;
+	padding: 13px 3%;
+	
+	.group{
+	    width: 100%;
+	    
+	    button{
+		  width: 100%;
+		  text-align: left;
+		  
+		  &[data-filter="all"], &[data-filter="none"]{
+		      width:39%;
+		      text-align: center;
+		  }
+	    }
+	}
+	.filter-buttons {
+	    label{
+		margin-bottom: 10px;
+	    }
+	    
+	    button[data-filter=".webdev"]:after{
+		border-right-color: $lightGreen;
+	    }
+	    button[data-filter=".drupal"]:after{
+		border-right-color: $drupalBlue;
+	    }
+	    button[data-filter=".threeD"]:after{
+		border-right-color: $lightOrange;
+	    }
+	    button[data-filter=".animation"]:after{
+		border-right-color: darken($lightOrange,20);
+	    }
+	    button[data-filter=".drawing"]:after{
+		border-right-color: lighten($lightMagneta,10);
+	    }
+	    button[data-filter=".markup"]:after{
+		border-right-color: lighten($lightGreen, 20);
+	    }
+	    button[data-filter=".extension-language"]:after{
+		border-right-color: lighten($lightGreen, 10);
+	    }
+	    button[data-filter=".dynamic-programming-language"]:after{
+		border-right-color: $lightGreen;
+	    }
+	    button[data-filter=".code-library"]:after{
+		border-right-color: darken($lightGreen, 15);
+	    }	
+	    button[data-filter=".frontend-automation"]:after{
+		border-right-color: lighten($semiDarkTurq,40);
+	    }	
+	    button[data-filter=".version-control"]:after{
+		border-right-color: $lightTurq;
+	    }		
+	    button[data-filter=".virtualization"]:after{
+		border-right-color: $lightOrange;
+	    }
+	    button[data-filter=".terminal-emulator"]:after{
+		border-right-color: $semiLightOrange;
+	    }
+	    button[data-filter=".cut-up"]:after{
+		border-right-color: darken($semiLightOrange, 20);
+	    }
+	    button[data-filter=".cms"]:after{
+		border-right-color: lighten($semiDarkTurq,23);
+	    }
+	    button[data-filter=".additional"]:after{
+		border-right-color: $lightMagneta;
+	    }	
+
+	} 
+    }	
+}
+
+/*** Skills - buttons / control bar - end ***/
+
+/*** Skills - grid - beginning ***/
+
+#SkillsContainer {
+    display: inline-block;
+    width: 59%;
+    vertical-align: top;
+    margin-top: 7px;
+    //mixin override - beginning
+    
+    .mix {
+	@include mixitupRect(10px, 2%);
+	margin-bottom: .7%;
+	width: 49%;
+	min-height: 49px;
+    }
+    .gap {
+	width: 24.5%;
+    }
+    //mixin override - end
+    
+    
+    .mix.webdev:after {
+	border-right-color: $lightGreen;
+    }
+    .mix.cms:after{
+	border-right-color: lighten($semiDarkTurq,23);
+    }
+    .mix.drupal:after {
+	border-right-color: $drupalBlue;
+    }    
+    .mix.threeD:after {
+	border-right-color: $lightOrange;
+    }
+    .mix.animation:after {
+	border-right-color: darken($lightOrange,20);
+    }
+    .mix.drawing:after {
+	border-right-color:  lighten($lightMagneta,10);
+    }
+    .mix.markup:after{
+	border-right-color: lighten($lightGreen, 20);
+    }
+    .mix.extension-language:after{
+	border-right-color: lighten($lightGreen, 10);
+    }
+    .mix.dynamic-programming-language:after{
+	border-right-color: $lightGreen;
+    }
+    .mix.code-library:after{
+	border-right-color: darken($lightGreen, 15);
+    }	
+    .mix.frontend-automation:after{
+	border-right-color: lighten($semiDarkTurq,40);
+    }	
+    .mix.version-control:after{
+	border-right-color: $lightTurq;
+    }		
+    .mix.virtualization:after{
+	border-right-color: $lightOrange;
+    }
+    .mix.terminal-emulator:after{
+	border-right-color: $semiLightOrange;
+    }
+    .mix.cut-up:after{
+	border-right-color: darken($semiLightOrange, 20);
+    }
+    .mix.additional:after{
+	border-right-color: $lightMagneta;
+    }	
+    
+}
+
+@media screen and (max-width: 481px){
+    #SkillsContainer {
+	.mix {
+	    width: $mixitupWidth1;
+	    min-height: initial;
+	    line-height: 1;
+	    margin-bottom: 6px;
+	    
+	    p {
+		padding: .1em 1.5em;
+		font-size: 1.2rem;
+		line-height: 1.2;
+	    }
+	}
+	
+	.gap {
+	    width: $mixitupWidth1;
+	}
+
+    }
+
+}
+
+@media screen and (min-width: 482px) and (max-width: 551px){
+    #SkillsContainer {
+	.mix {
+	    width: $mixitupWidth2;
+	    min-height: 60px;
+	    margin-bottom: 6px;
+	    
+	    p {
+		padding: .1em 1.5em;
+		font-size: 1.3rem;
+		line-height: 1.3;
+	    }
+	}
+	
+	.gap {
+	    width: $mixitupWidth2;
+	}
+
+    }
+      
+}
+
+@media screen and (min-width: 550px) and  (max-width: 648px) {
+    #SkillsContainer {
+	.mix {
+	    min-height: 60px;
+	    margin-bottom: 6px;
+	}
+    }
+}
+
+
+@media screen and (min-width: 649px) and (max-width: 831px) {
+    #SkillsContainer {
+	.mix {
+	    min-height: 57px;
+	    margin-bottom: 6px;
+	}
+    }
+}
+
+
+@media screen and (max-width: 1002px) {
+    #Skills{
+	.control-bar {
+	    label{
+		display: block;
+	    }
+	    .filter-buttons{
+		button{
+		    margin-bottom: 6px;
+		}
+	    }
+	}
+    }    
+    
+    #SkillsContainer {
+	.mix {
+	    margin-bottom: 6px;
+	}
+    }
+    
+
+}
+
+@media screen and (max-width: 530px) {
+    #Skills{
+	.control-bar {
+	    display: none;
+	}
+    }
+    
+    #SkillsContainer {
+	width: 100%;
+	
+	.mix{
+	    &:after{
+		border-right-color: transparent !important;
+	    }
+	}
+    }
+}
+
+@media screen and (min-width: 465px) and (max-width: 530px) {
+    
+    #SkillsContainer {
+	width: 100%;
+	
+    }
+}
+
+
+/* for where list of skills has more content in the individual list items - beginning */
+
+@media screen and (max-width: 1002px) {
+    #SkillsContainer.more-content{
+	.mix {
+	    min-height: 60px;
+	}
+    }
+}
+
+@media screen and (max-width: 481px){
+    #SkillsContainer.more-content{
+	.mix {
+	    min-height: initial;
+	}
+    }
+}
+
+
+@media screen and (min-width: 482px) and (max-width: 433px){
+    #SkillsContainer.more-content{
+	.mix {
+	    min-height: 76px;
+	}
+    }
+}
+
+@media screen and (min-width: 530px) and (max-width: 551px){
+    #SkillsContainer.more-content{
+	.mix {
+	    min-height: 92px;
+	}
+    }
+}
+
+@media screen and (min-width: 552px) and  (max-width: 622px) {
+    
+    #SkillsContainer.more-content{
+	.mix {
+	    min-height: 70px;
+	}
+    }
+}
+
+/* for where list of skills has more content in the individual list items - end */
+
+
+/*** Skills - grid - end ***/
+
+/* ============================= Skills section - end ============================================*/
+
+
+/* ============================= Portfolio section - beginning =============================*/
+
+
+
+/*** Portfolio - buttons / control bar - beginning ***/
+
+#Portfolio {
+    .control-bar {
+	.group{
+	   
+	    &:first-child {
+		margin-bottom: 1%;
+	    }
+	}
+	
+	.filter-buttons {
+	    width: 100%;
+	    
+	    button {
+		width: 10.8%;
+		min-height: 46px;
+		min-width: initial;
+		vertical-align: top;
+	    }
+	}
+	
+	.filter-buttons {
+	    button[data-filter=".html"]:after{
+		border-right-color: $lightTurq;
+	    }
+	    button[data-filter=".css"]:after{
+		border-right-color: darken($lightTurq,27);
+	    }
+	    button[data-filter=".sass"]:after{
+		border-right-color: darken($lightTurq,40);
+	    }
+	    button[data-filter=".css-animation"]:after{
+		border-right-color: darken($lightTurq,52);
+	    }
+	    button[data-filter=".drupal-project"]:after{
+		border-right-color: $drupalBlue;
+	    }
+	    button[data-filter=".website-project"]:after{
+		border-right-color: $secondaryFontColor;
+	    }
+	    button[data-filter=".js-jquery"]:after{
+		border-right-color: $semiLightMagneta;
+	    }
+	    button[data-filter=".angularjs"]:after{
+		border-right-color: $semiDarkMagneta;
+	    }
+	    
+	}  
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 535px) {
+    #Portfolio{
+	.control-bar {
+	    label{
+		display: block;
+	    }
+	    .filter-buttons {
+		button {
+		   width: 100%;
+		   min-height: 30px;
+		   padding: 5px 10px 0;
+		}
+	    }
+	}
+    }
+}
+
+@media screen and (min-width: 536px) and (max-width: 639px) {
+    #Portfolio{
+	.control-bar {
+	    label{
+		display: block;
+	    }
+	    .filter-buttons {
+		button {
+		   width: 49%;
+		   min-height: 30px;
+		}
+	    }
+	}
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 818px) {
+    #Portfolio{
+	.control-bar {
+	    label{
+		display: block;
+		margin: .4em .1em;
+	    }
+	    .filter-buttons {
+		button {
+		   width: 32%;
+		   min-height: 30px;
+		}
+	    }
+	}
+    }
+}
+
+@media screen and (min-width: 819px) and (max-width: 884px) {
+    #Portfolio{
+	.control-bar {
+	    label{
+		display: block;
+	    }
+	    .filter-buttons {
+		button {
+		   width: 24.4%;
+		   min-height: 30px;
+		}
+	    }
+	}
+    }
+}
+
+@media screen and (min-width: 885px) and (max-width: 1083px) {
+    #Portfolio{
+	.control-bar {
+	    label{
+		display: block;
+	    }
+	    .filter-buttons {
+		display: block;
+		
+		button {
+		   width: 11.8%;
+		   font-size: 1.2em;
+		}
+	    }
+	}
+    }
+}
+
+/*** Portfolio - buttons / control bar - end ***/
+
+/*** Portfolio - grid - beginning ***/
+
+#PortfolioContainer {
+  
+    .portfoMix {
+	padding: 10px;
+	box-sizing: border-box;
+
+	img {
+	    width: 100%;
+	    height: auto;
+	    margin: 0 auto;
+	}
+
+	h3 {
+	    font-size: 1.4em;
+	    line-height: 1.4;
+	    margin-top: 1%;
+	    padding-bottom: 2%;
+	    min-height: 41px;
+	}
+
+	h4 {
+	    font-size: 1.3em;
+	    line-height: 1.3;
+	    margin-top: 1%;
+	    padding-bottom: 5%;
+	    color: $primaryFontColor;
+	    min-height: 39px;
+	}
+
+	.button{
+	    width: 100%;
+	    margin-bottom: 0;
+	    padding: 0;
+
+	    a {
+		background-color: lighten($primaryBG, 13);
+		font-size: 1.1em;
+
+		&:hover {
+		    border: 2px dashed lighten($primaryBG, 28);
+		}
+
+	    }
+	}
+    }
+
+    .portfoMix.html:after {
+	  border-right-color: $lightTurq;
+    }
+    .portfoMix.css:after {
+	  border-right-color: darken($lightTurq,27);
+    }
+    .portfoMix.sass:after {
+	  border-right-color: darken($lightTurq,40);
+    }
+    .portfoMix.css-animation:after {
+	  border-right-color: darken($lightTurq,52);
+    }
+    .portfoMix.drupal-project:after {
+	  border-right-color: $drupalBlue;
+    }
+    .portfoMix.website-project:after {
+	  border-right-color: $secondaryFontColor;
+    }
+    .portfoMix.js-jquery:after {
+	  border-right-color: $semiLightMagneta;
+    }
+    .portfoMix.angularjs:after {
+	  border-right-color:  $semiDarkMagneta;
+    }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+     #PortfolioContainer { 
+	 
+	.gap {
+	    width: $mixitupWidth2;
+	}
+	 
+	.portfoMix {
+	    
+	    width: $mixitupWidth2;
+	    
+	    
+	    
+	    .button{
+
+		a {
+		    font-size: 1em;
+		}
+	    }
+	}
+    }
+}
+
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
+     #PortfolioContainer { 
+	 
+	.gap {
+	    width: $mixitupWidth3;
+	}
+	 
+	.portfoMix {
+	    
+	    width: $mixitupWidth3;
+	    
+	    
+	    
+	    .button{
+
+		a {
+		    font-size: 1.1em;
+		}
+	    }
+	}
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 808px) {
+     #PortfolioContainer {  
+	.portfoMix {
+	    .button{
+
+		a {
+		    font-size: .9em;
+		}
+	    }
+	}
+    }
+}
+
+@media screen and (min-width: 809px) and (max-width: 863px) {
+     #PortfolioContainer {  
+	.portfoMix {
+	    .button{
+
+		a {
+		    font-size: 1em;
+		}
+	    }
+	}
+    }
+}
+
+/*** Portfolio - grid - end ***/
+
+/* =============================== Portfolio section - end =========================================*/
+
+
+

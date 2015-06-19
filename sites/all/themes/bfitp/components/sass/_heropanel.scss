@@ -1,0 +1,191 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-Apr-2015, 15:00:27
+    Author     : Edit
+*/
+// _heropanel.scss
+// ============
+
+/*================================= HERO PANEL =================================*/
+
+
+/**************************** intrinsic ratio HERO PANEL - beginning ************************/
+
+#Hero {
+    position: relative;
+    padding-bottom: 31%;
+    height: 0;
+    
+}
+
+.heroContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/images/bfitp_hero_panel_bg_1300x404_flipped.jpg) 0 0 no-repeat;
+    background-size: 100% auto;
+    
+
+    .heroText {
+	width: 44%;
+	margin-left: 3%;
+	margin-top: 2%;
+    }
+    
+    
+    h1, h2, p {
+	background-color: rgba(0,0,0,0.6);
+	padding: 15px;
+	color: lighten($primaryFontColor, 20);
+	
+    }
+
+    h1 {
+	font-size: 2.2em;
+    }
+    
+    h2 {
+	font-size: 1.6em;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    
+    #Hero {
+	//position: static;
+	height: 1%;
+	padding-bottom: 0%;
+    }
+    
+    .heroContent {
+	position: static;
+	
+	.heroText {
+	    
+	    clear: both;
+	    width: 100%;
+	    margin-left: 0%;
+	    margin-top: 0%;
+	    padding-top: 33%;
+	    
+	}
+	
+	 h1, h2, p {
+	    padding: 10px 15px;
+	    background-color: rgba(0,0,0,0.2);
+	    color: lighten($primaryFontColor, 10);
+	    box-sizing: border-box;
+	}
+	
+	h1 {
+	    display: none;
+	}
+	
+	
+	
+	h2 {
+	     font-size: 1.25em;
+	}
+	
+	p {
+	    border-bottom: 2px dashed lighten($primaryBG, 1);
+	}
+    }
+}
+
+
+
+@media screen and (min-width: 640px) and (max-width:760px) {
+
+    .heroContent {
+    
+	.heroText {
+	    width: 78%;
+	}
+
+	h1 {
+	    font-size: 1.5em;
+	    margin-bottom: .3em;
+	}
+
+	h2 {
+	    font-size: 1.3em;
+	    margin-bottom: .3em;
+	}
+	
+	h1, h2, p {
+	    padding: 7px;
+	}
+    }
+}
+
+
+@media screen and (min-width: 761px) and (max-width:790px) {
+
+    .heroContent {
+    
+	.heroText {
+	    width: 78%;
+	}
+
+	h1 {
+	    font-size: 1.5em;
+	    margin-bottom: .4em;
+	}
+
+	h2 {
+	    font-size: 1.3em;
+	    margin-bottom: .4em;
+	}
+	
+	h1, h2, p {
+	    padding: 9px;
+	}
+    }
+}
+
+
+@media screen and (min-width: 791px) and (max-width:850px) {
+    .heroContent {
+    
+	.heroText {
+	    width: 78%;
+	}
+    
+	h1 {
+	    font-size: 1.7em;
+	    margin-bottom: .5em;
+	}
+
+	h2 {
+	    font-size: 1.4em;
+	    margin-bottom: .5em;
+	}
+
+	h1, h2, p {
+	    padding: 11px;
+	}
+    }
+}
+
+
+@media screen and (min-width: 851px) and (max-width:895px) {
+    .heroContent .heroText {
+	width: 65%;
+    }
+}
+
+
+@media screen and (min-width: 896px) and (max-width:990px) {
+    .heroContent .heroText {
+	width: 50%;
+    }
+}
+
+/********* intrinsic ratio HERO PANEL - end **************/

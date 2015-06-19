@@ -1,0 +1,16 @@
+name = Barefoot in the Park
+description = A Barefoot in the Park theme for Drupal 7 developed by Edit Olah in 2015.
+
+core = 7.x
+
+regions[header] = Header
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Left sidebar
+regions[sidebar_second] = Right sidebar
+regions[footer] = Footer
+
+scripts[] = js/script.js
+
+stylesheets[all][] = css/style.css

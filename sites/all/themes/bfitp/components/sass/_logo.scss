@@ -1,0 +1,81 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-Apr-2015, 14:52:01
+    Author     : Edit
+*/
+// _logo.scss
+// ============
+
+
+/*================================= BFITP LOGO =================================*/
+
+
+.logo-container {
+    float: left;
+    font-size: 1rem;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 0 10px;
+    
+    .logo {
+	display:block;
+	width:290px;
+	height:70px;
+	background:url(/images/logo_with_text_290x70.png) no-repeat;
+	text-decoration:none; 
+	text-indent:-9999px; 
+	margin: 5px 0;
+	background-position: 0%; 
+    }
+}
+
+#TopBanner .logo-container {
+    margin: 1% 0 1% 10%;
+}
+
+
+
+
+@media screen and (max-width: 639px) {
+    
+
+    .logo-container {
+	clear: both;
+	width: 100%;
+	height: auto;
+	margin-top: 0;	
+	margin-bottom: 0;
+	padding: 0;
+	
+	.logo {
+	    width: 100%;
+	    background-position: 50%;
+	    margin-top: 5px;	    
+	}
+    }
+    
+    .logo-container.fixedNavPage-logoContainer {
+	float: right;
+	clear: initial;
+	width:80%;
+	    
+	.logo {
+	    background-position: 0%;
+	}
+    }
+}
+
+@media screen and (max-width: 364px) {
+    .logo-container.fixedNavPage-logoContainer {
+	clear: both;
+	width: 100%;
+	.logo {
+	    background-position: 50%;
+	}
+    }
+    
+}

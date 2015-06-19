@@ -1,0 +1,3277 @@
+/* line 5, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* 
+    Created on : 06-Jan-2015, 07:56:17
+    Author     : Edit
+*/
+/*=========================== RESET - beginning ============================*/
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+/* line 21, ../components/sass/_base.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font: inherit;
+}
+
+/* line 43, ../components/sass/_base.scss */
+body {
+  line-height: 1;
+}
+
+/* line 47, ../components/sass/_base.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 52, ../components/sass/_base.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 56, ../components/sass/_base.scss */
+nav ul {
+  list-style: none;
+}
+
+/* line 60, ../components/sass/_base.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 64, ../components/sass/_base.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 70, ../components/sass/_base.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+/* line 79, ../components/sass/_base.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+/* line 86, ../components/sass/_base.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 93, ../components/sass/_base.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 97, ../components/sass/_base.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 102, ../components/sass/_base.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+/* line 108, ../components/sass/_base.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 117, ../components/sass/_base.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/*=========================== RESET - end ============================*/
+/*
+Source/Author: Call Me Nick
+https://github.com/callmenick/Animating-Hamburger-Icons
+*/
+/* =============================================================================
+  BOX SIZING & CLEARFIX
+============================================================================= */
+/* line 134, ../components/sass/_base.scss */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* line 140, ../components/sass/_base.scss */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08-Feb-2015, 21:08:01
+    Author     : Edit
+*/
+@font-face {
+  font-family: sourceCodeProNormal;
+  src: url(./fonts/SourceCodePro-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'zero-width';
+  src: url("./fonts/zero-width.eot");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'zero-width';
+  src: url("//:") format("No-IE-404"), url("./fonts/zero-width.woff") format("woff"), url("./fonts/zero-width.svg") format("svg"), url("./fonts/zero-width.otf") format("opentype"), url("./fonts/zero-width.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Example:
+@font-face {
+    font-family: 'uglyqua';
+    src: url('./fonts/uglyqua-webfont.eot');
+    src: url('./fonts/uglyqua-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/uglyqua-webfont.woff') format('woff'),
+         url('./fonts/uglyqua-webfont.ttf') format('truetype'),
+         url('./fonts/uglyqua-webfont.svg#uglyquaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+*/
+/* 
+    Created on : 06-Jan-2015, 07:57:18
+    Author     : Edit
+*/
+/* 
+    Created on : 06-Jan-2015, 07:59:51
+    Author     : Edit
+*/
+ /*background: url($image) no-repeat 50% 20% ; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+
+ -webkit-transition: all 0.3s ease-out;
+ -moz-transition: all 0.3s ease-out;
+ -o-transition: all 0.3s ease-out;
+ transition: all 0.3s ease-out;
+
+ @media (min-width: 801px) {
+  height: 350px;
+ }
+
+ @media (max-width: 800px) {
+  height: 150px;
+ }
+
+ @media (max-width: 300px) {
+  height: 100px;
+ }*/
+/* 
+    Created on : 07-Jan-2015, 21:52:49
+    Author     : Edit
+*/
+/*================== GLOBAL LAYOUTS BASE - beginning ========================*/
+/* line 11, ../components/sass/_layout.scss */
+html {
+  width: 100%;
+  font-size: 62.5%;
+}
+
+/* line 16, ../components/sass/_layout.scss */
+body {
+  background: #3A3F39;
+  font-family: sourceCodeProNormal, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #B9C8B5;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  max-width: 2000px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 32, ../components/sass/_layout.scss */
+.clear {
+  clear: both;
+  width: 100%;
+  line-height: 0;
+  font-size: 0;
+}
+
+/*
+.leftContainer {
+    float:left;
+}
+
+.rightContainer {
+    float: right;
+}
+*/
+/* line 48, ../components/sass/_layout.scss */
+.leftContainer, .rightContainer {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 52, ../components/sass/_layout.scss */
+.max-height-applied {
+  max-height: 4.2em;
+}
+
+/* line 56, ../components/sass/_layout.scss */
+.click-follow {
+  cursor: pointer;
+}
+
+/*================== GLOBAL LAYOUTS BASE - end ========================*/
+/*============ GLOBAL TEXTS - beginning ===============*/
+/* line 67, ../components/sass/_layout.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: sourceCodeProNormal, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #85E14F;
+  font-weight: 600;
+}
+
+/* line 73, ../components/sass/_layout.scss */
+h1 {
+  font-size: 1.7em;
+  color: #a3e87b;
+  margin-bottom: .7em;
+  line-height: 1.6;
+}
+
+/* line 80, ../components/sass/_layout.scss */
+h2 {
+  font-size: 1.5em;
+  color: #85E14F;
+  margin-bottom: .6em;
+  line-height: 1.4;
+}
+
+/* line 88, ../components/sass/_layout.scss */
+h3 {
+  font-size: 1.3em;
+  margin-bottom: .5em;
+  line-height: 1.3;
+}
+
+/* line 94, ../components/sass/_layout.scss */
+.sidebar-header {
+  margin: 0 25px .5em;
+}
+
+/* line 99, ../components/sass/_layout.scss */
+a {
+  text-decoration: none;
+  color: #6adcba;
+  font-weight: 600;
+}
+
+/* line 106, ../components/sass/_layout.scss */
+a:hover {
+  text-decoration: underline;
+  color: #B9C8B5;
+}
+
+/* line 112, ../components/sass/_layout.scss */
+a, p, li {
+  font-size: 1.3em;
+  line-height: 1.5;
+  margin-bottom: .5em;
+}
+
+/* line 118, ../components/sass/_layout.scss */
+ul, li {
+  list-style-type: none;
+}
+
+/* line 122, ../components/sass/_layout.scss */
+.bold {
+  font-weight: 700;
+}
+
+/* line 126, ../components/sass/_layout.scss */
+.semiBold {
+  font-weight: 600;
+}
+
+/* line 130, ../components/sass/_layout.scss */
+.large-text {
+  font-size: 1.5em;
+}
+
+/* line 134, ../components/sass/_layout.scss */
+.semi-large-text {
+  font-size: 1.3em;
+}
+
+/* line 138, ../components/sass/_layout.scss */
+.highlighted {
+  color: #a3e87b;
+}
+
+/* line 142, ../components/sass/_layout.scss */
+.extraPadding {
+  padding: 15px 0px;
+}
+
+/* line 146, ../components/sass/_layout.scss */
+.button {
+  display: inline-block;
+}
+/* line 149, ../components/sass/_layout.scss */
+.button a {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  padding: 5px 10px;
+  font-size: 1.2em;
+  background-color: #6b7569;
+  border: 2px dashed #464c45;
+  border-radius: 3px;
+}
+/* line 160, ../components/sass/_layout.scss */
+.button a:hover {
+  background-color: #464c45;
+  border: 2px dashed #6b7569;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 170, ../components/sass/_layout.scss */
+  h1 {
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 1002px) and (max-width: 1040px) {
+  /* line 178, ../components/sass/_layout.scss */
+  .email a {
+    font-size: 1em;
+    white-space: nowrap;
+  }
+}
+/*============ GLOBAL TEXTS - end ===============*/
+/*====================== GLOBAL LAYOUT - beginning ========================*/
+/* line 192, ../components/sass/_layout.scss */
+.container,
+#HeaderWrapper {
+  width: 100%;
+  max-width: 1024px;
+}
+
+/* line 198, ../components/sass/_layout.scss */
+.container {
+  margin: 0 auto;
+}
+
+/* line 202, ../components/sass/_layout.scss */
+#HeaderWrapper {
+  margin: 0 auto;
+}
+
+/* line 206, ../components/sass/_layout.scss */
+#OuterHeaderWrapper {
+  width: 100%;
+  position: fixed;
+  height: auto;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: #3A3F39;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+}
+
+/* line 218, ../components/sass/_layout.scss */
+.fixedNavPage {
+  margin-top: 133px;
+}
+
+/* line 222, ../components/sass/_layout.scss */
+.page {
+  padding: 15px 25px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 229, ../components/sass/_layout.scss */
+  .container, #HeaderWrapper {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  /* line 234, ../components/sass/_layout.scss */
+  .page {
+    float: left;
+    clear: both;
+    width: 100%;
+    padding: 15px 0;
+  }
+}
+@media screen and (max-width: 364px) {
+  /* line 243, ../components/sass/_layout.scss */
+  .fixedNavPage {
+    margin-top: 170px;
+  }
+}
+@media screen and (min-width: 365px) and (max-width: 639px) {
+  /* line 249, ../components/sass/_layout.scss */
+  .fixedNavPage {
+    margin-top: 125px;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  /* line 256, ../components/sass/_layout.scss */
+  .page {
+    padding: 15px 15px;
+  }
+
+  /* line 260, ../components/sass/_layout.scss */
+  .fixedNavPage {
+    margin-top: 130px;
+  }
+}
+/***************============= fluid grid MAIN NAVIGATION - beginning ==============**************/
+/* line 267, ../components/sass/_layout.scss */
+#MainNav {
+  margin-top: 10px;
+}
+
+/* line 271, ../components/sass/_layout.scss */
+.nav {
+  width: 60%;
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
+  font-family: "zero-width";
+  font-size: 0.1px;
+}
+/* line 281, ../components/sass/_layout.scss */
+.nav li {
+  display: inline;
+  width: 19%;
+  padding-top: 3%;
+  margin-bottom: 1%;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: sourceCodeProNormal, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 291, ../components/sass/_layout.scss */
+.nav a {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 20px 12px;
+  line-height: 1;
+  text-decoration: none;
+  color: #bfcabc;
+  font-weight: 700;
+  font-size: 1.4em;
+  font-family: sourceCodeProNormal, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  white-space: nowrap;
+  border: 2px solid transparent;
+}
+
+/* line 307, ../components/sass/_layout.scss */
+.nav:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 314, ../components/sass/_layout.scss */
+.nav a:hover,
+.nav li.current a {
+  color: #dbedd6;
+  background-color: #535a51;
+  border-radius: 3px;
+  border: 2px dashed #464c45;
+  text-decoration: none;
+}
+
+/*.nav .placeholder {
+    padding: 0;
+}*/
+@media screen and (max-width: 593px) {
+  /* line 329, ../components/sass/_layout.scss */
+  .nav a:link {
+    padding: 20px 1%;
+  }
+}
+@media screen and (max-width: 639px) {
+  /* line 338, ../components/sass/_layout.scss */
+  #MainNav {
+    margin-top: 0;
+  }
+
+  /* line 342, ../components/sass/_layout.scss */
+  .nav {
+    clear: both;
+    width: 100%;
+    background: #2e322d;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+    margin-top: 0;
+  }
+  /* line 349, ../components/sass/_layout.scss */
+  .nav li {
+    padding-top: 0%;
+  }
+  /* line 354, ../components/sass/_layout.scss */
+  .nav a:link {
+    padding: 20px 2%;
+    line-height: 1;
+    font-weight: 400;
+    font-size: 0.85em;
+  }
+  /* line 361, ../components/sass/_layout.scss */
+  .nav a:hover {
+    border: 2px dashed #464c45;
+  }
+  /* line 365, ../components/sass/_layout.scss */
+  .nav a:active {
+    border: 2px dashed #464c45;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 678px) {
+  /* line 373, ../components/sass/_layout.scss */
+  .nav {
+    width: 50%;
+  }
+  /* line 376, ../components/sass/_layout.scss */
+  .nav a {
+    font-size: .9em;
+    padding: 20px 3px;
+  }
+}
+@media screen and (min-width: 679px) and (max-width: 708px) {
+  /* line 386, ../components/sass/_layout.scss */
+  .nav {
+    width: 53%;
+  }
+  /* line 389, ../components/sass/_layout.scss */
+  .nav a {
+    font-size: 1em;
+    padding: 20px 5px;
+  }
+}
+@media screen and (min-width: 709px) and (max-width: 789px) {
+  /* line 401, ../components/sass/_layout.scss */
+  .nav {
+    width: 55%;
+  }
+  /* line 404, ../components/sass/_layout.scss */
+  .nav a {
+    font-size: 1em;
+    padding: 20px 7px;
+  }
+}
+@media screen and (min-width: 790px) and (max-width: 869px) {
+  /* line 414, ../components/sass/_layout.scss */
+  .nav {
+    width: 56%;
+  }
+  /* line 417, ../components/sass/_layout.scss */
+  .nav a {
+    font-size: 1.05em;
+  }
+}
+@media screen and (min-width: 870px) and (max-width: 890px) {
+  /* line 427, ../components/sass/_layout.scss */
+  .nav {
+    width: 57%;
+  }
+  /* line 430, ../components/sass/_layout.scss */
+  .nav a {
+    font-size: 1.2em;
+  }
+}
+/***************============= fluid grid MAIN NAVIGATION - end ==============**************/
+/***************============= FOOTER - beginning ==============**************/
+/* line 441, ../components/sass/_layout.scss */
+#Footer {
+  clear: both;
+  background: #2e322d;
+}
+/* line 445, ../components/sass/_layout.scss */
+#Footer .container {
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+/* line 449, ../components/sass/_layout.scss */
+#Footer .container p {
+  margin-bottom: 0;
+  padding: 20px 0px;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 459, ../components/sass/_layout.scss */
+  #Footer .container {
+    padding: 0 15px;
+  }
+
+  /* line 463, ../components/sass/_layout.scss */
+  #Footer .container p {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  /* line 470, ../components/sass/_layout.scss */
+  #Footer .container {
+    padding: 0 15px;
+  }
+}
+/***************============= FOOTER - end ==============**************/
+/*============================ GLOBAL LAYOUT - end ==============================*/
+/*=========================== HOME PAGE LAYOUT - beginning =================================*/
+/**************************** ABOUT US -home page- ************************/
+/* line 487, ../components/sass/_layout.scss */
+#AboutUsContentHolder {
+  padding: 15px 25px;
+  background-color: #4b524a;
+  border-radius: 3px;
+  border: 2px dashed #3f443e;
+}
+
+/* line 496, ../components/sass/_layout.scss */
+#HomePortfolio .grid li {
+  width: 49%;
+  padding-bottom: .5%;
+  padding-top: .5%;
+}
+/* line 501, ../components/sass/_layout.scss */
+#HomePortfolio .grid li .grid-contentHolder {
+  padding: 10px 25px;
+}
+/* line 504, ../components/sass/_layout.scss */
+#HomePortfolio .grid li .leftContainer {
+  width: 32%;
+}
+/* line 507, ../components/sass/_layout.scss */
+#HomePortfolio .grid li .rightContainer {
+  width: 63%;
+  margin-left: 2%;
+}
+/* line 512, ../components/sass/_layout.scss */
+#HomePortfolio .grid li h2 {
+  min-width: 110px;
+}
+/* line 516, ../components/sass/_layout.scss */
+#HomePortfolio .grid li h3 {
+  min-height: 32px;
+  min-width: 114px;
+}
+/* line 520, ../components/sass/_layout.scss */
+#HomePortfolio .grid li img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 0;
+}
+/* line 526, ../components/sass/_layout.scss */
+#HomePortfolio .grid li .button {
+  margin-top: 20px;
+  width: 100%;
+}
+/* line 530, ../components/sass/_layout.scss */
+#HomePortfolio .grid li .button a {
+  padding: 5px 10px;
+  font-size: 1.1em;
+  width: 100%;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 542, ../components/sass/_layout.scss */
+  #AboutUsContentHolder {
+    padding: 15px 15px;
+  }
+}
+@media screen and (max-width: 493px) {
+  /* line 549, ../components/sass/_layout.scss */
+  #HomePortfolio {
+    padding: 0;
+  }
+  /* line 552, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li {
+    display: block;
+    width: 100%;
+    padding: 15px;
+  }
+  /* line 557, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .grid-contentHolder {
+    padding: 0;
+  }
+  /* line 560, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .leftContainer {
+    width: 40%;
+  }
+  /* line 564, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li img {
+    width: 79%;
+  }
+  /* line 567, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .rightContainer {
+    width: 55%;
+  }
+  /* line 569, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .rightContainer h3 {
+    padding-top: 5%;
+    min-height: 45px;
+  }
+  /* line 574, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .button {
+    width: 179%;
+    margin-left: -79%;
+    margin-top: 18%;
+  }
+  /* line 579, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .button a {
+    font-size: 1.1em;
+  }
+}
+@media screen and (min-width: 494px) and (max-width: 529px) {
+  /* line 593, ../components/sass/_layout.scss */
+  #HomePortfolio {
+    padding: 0;
+  }
+  /* line 597, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li {
+    padding: 15px;
+  }
+  /* line 600, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .grid-contentHolder {
+    padding: 0;
+  }
+  /* line 605, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .leftContainer {
+    width: 45%;
+  }
+  /* line 608, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .rightContainer {
+    width: 49%;
+  }
+  /* line 612, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .button {
+    width: 203%;
+    margin-left: -103%;
+    margin-top: 25%;
+  }
+  /* line 617, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .button a {
+    font-size: .9em;
+  }
+}
+@media screen and (min-width: 530px) and (max-width: 749px) {
+  /* line 636, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .leftContainer {
+    width: 40%;
+  }
+  /* line 639, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .rightContainer {
+    width: 50%;
+  }
+  /* line 642, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .button {
+    width: 200%;
+    margin-left: -89%;
+    margin-top: 40%;
+  }
+  /* line 646, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .button a {
+    font-size: .9em;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 885px) {
+  /* line 664, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .leftContainer {
+    width: 40%;
+  }
+  /* line 668, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .rightContainer {
+    width: 55%;
+  }
+  /* line 671, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .button {
+    width: 182%;
+    margin-left: -82%;
+    margin-top: 43%;
+  }
+  /* line 676, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .button a {
+    padding: 5px 7px;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 886px) and (max-width: 949px) {
+  /* line 692, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .leftContainer {
+    width: 40%;
+  }
+  /* line 695, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .rightContainer {
+    width: 53%;
+  }
+  /* line 699, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .button {
+    width: 100%;
+  }
+  /* line 701, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .button a {
+    padding: 5px 7px;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 950px) and (max-width: 1023px) {
+  /* line 717, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .grid-contentHolder {
+    min-height: initial;
+  }
+  /* line 720, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li h4 {
+    margin-bottom: 15px;
+  }
+  /* line 724, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .leftContainer {
+    width: 33%;
+  }
+  /* line 727, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .rightContainer {
+    width: 59%;
+  }
+  /* line 731, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .button {
+    width: 100%;
+  }
+  /* line 734, ../components/sass/_layout.scss */
+  #HomePortfolio .grid li .button a {
+    padding: 5px 7px;
+    font-size: 1.2rem;
+  }
+}
+/*=========================== HOME PAGE LAYOUT - end =========================================================*/
+/*======================= OUR PORTFOLIO PAGE LAYOUT - beginning ==============================================*/
+/* line 751, ../components/sass/_layout.scss */
+#OurPortfolioContentHolder {
+  padding: 15px 25px;
+}
+
+/* line 758, ../components/sass/_layout.scss */
+#OurPortfolioGrid .grid-contentHolder img {
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 767, ../components/sass/_layout.scss */
+  #OurPortfolioContentHolder {
+    padding: 15px 15px;
+  }
+
+  /* line 773, ../components/sass/_layout.scss */
+  #OurPortfolioGrid .grid-contentHolder img {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 802px) {
+  /* line 783, ../components/sass/_layout.scss */
+  #OurPortfolioGrid .grid-contentHolder h3 {
+    min-height: 35px;
+  }
+}
+/*======================= OUR PORTFOLIO PAGE LAYOUT - end ===================================================*/
+/*========================== OUR BLOG PAGE LAYOUT - beginning ==============================================*/
+/* line 798, ../components/sass/_layout.scss */
+#OurBlogGrid h1 {
+  padding: 5px 0 10px;
+}
+/* line 805, ../components/sass/_layout.scss */
+#OurBlogGrid .grid-contentHolder img {
+  width: 100%;
+}
+/* line 811, ../components/sass/_layout.scss */
+#OurBlogGrid .grid li {
+  padding-bottom: 1%;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 824, ../components/sass/_layout.scss */
+  #OurBlogGrid h1 {
+    padding: 0 15px 10px;
+  }
+}
+/*========================== OUR BLOG PAGE LAYOUT - end ==========================================================*/
+/*====================== CONTACT US PAGE LAYOUT - beginning ====================================================*/
+/* line 840, ../components/sass/_layout.scss */
+.contactText {
+  padding: 15px 25px;
+}
+
+/* line 845, ../components/sass/_layout.scss */
+.wrapper-decoImg {
+  position: relative;
+  height: 0;
+}
+
+/* line 850, ../components/sass/_layout.scss */
+.container-decoImg {
+  position: relative;
+  left: -108%;
+  padding-bottom: 103%;
+  height: 0;
+  width: 209%;
+}
+/* line 857, ../components/sass/_layout.scss */
+.container-decoImg .decoImg {
+  position: absolute;
+  top: 6%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/images/pittypang_ghost3_696x413.png) 0 0 no-repeat;
+  background-size: 83% auto;
+  border: 2px dashed #6b7569;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 872, ../components/sass/_layout.scss */
+  .contactText {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 900px) {
+  /* line 879, ../components/sass/_layout.scss */
+  .wrapper-decoImg {
+    display: none;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1023px) {
+  /* line 886, ../components/sass/_layout.scss */
+  .container-decoImg {
+    left: -108%;
+    width: 207%;
+  }
+}
+/*====================== CONTACT US PAGE LAYOUT - end ================================================================*/
+/*===================== INDIVIDUAL PORTFOLIO PAGES LAYOUTS - beginning ===============================================*/
+/* line 899, ../components/sass/_layout.scss */
+#About, #Skills, #Portfolio, #DetailPageHeader, #DetailPageMainContent, #ContactIndi {
+  margin-bottom: 2%;
+  padding-bottom: 1%;
+  background-color: #4b524a;
+  border-radius: 3px;
+  border: 2px dashed #3f443e;
+  padding: 15px 15px;
+}
+
+/*===================== INDIVIDUAL PORTFOLIO PAGES LAYOUTS - end =====================================================*/
+/*===================== DETAIL PAGES LAYOUTS (resume, blog article, portfolio work) - beginning =======================*/
+/*** detail page GLOBAL STYLES - beginning ***/
+/* line 920, ../components/sass/_layout.scss */
+.summary p {
+  color: #c1f0a6;
+}
+
+/* line 925, ../components/sass/_layout.scss */
+#DetailPageHeader {
+  width: 100%;
+}
+/* line 931, ../components/sass/_layout.scss */
+#DetailPageHeader .leftContainer {
+  width: 21%;
+}
+/* line 934, ../components/sass/_layout.scss */
+#DetailPageHeader .leftContainer img {
+  width: 100%;
+}
+/* line 939, ../components/sass/_layout.scss */
+#DetailPageHeader .rightContainer {
+  margin-top: 5%;
+  margin-left: 4%;
+  width: 68%;
+}
+/* line 944, ../components/sass/_layout.scss */
+#DetailPageHeader .rightContainer h1 {
+  font-size: 1.9em;
+}
+/* line 948, ../components/sass/_layout.scss */
+#DetailPageHeader .rightContainer h2 {
+  font-size: 1.8em;
+}
+/* line 952, ../components/sass/_layout.scss */
+#DetailPageHeader .rightContainer h3 {
+  font-size: 1.7em;
+}
+
+/* line 964, ../components/sass/_layout.scss */
+#DetailPageMainContent .container {
+  margin-bottom: 2%;
+}
+/* line 969, ../components/sass/_layout.scss */
+#DetailPageMainContent .personalSummary ul {
+  width: 100%;
+  list-style-type: circle;
+  list-style-position: outside;
+  list-style-image: none;
+  padding: 0 0 0 17px;
+}
+/* line 976, ../components/sass/_layout.scss */
+#DetailPageMainContent .personalSummary ul li {
+  list-style-type: circle;
+  list-style-position: outside;
+  list-style-image: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 459px) {
+  /* line 987, ../components/sass/_layout.scss */
+  #DetailPageHeader .leftContainer {
+    width: 30%;
+  }
+  /* line 991, ../components/sass/_layout.scss */
+  #DetailPageHeader .rightContainer {
+    width: 60%;
+    margin-top: 0;
+  }
+  /* line 995, ../components/sass/_layout.scss */
+  #DetailPageHeader .rightContainer h1 {
+    font-size: 1.6em;
+  }
+  /* line 999, ../components/sass/_layout.scss */
+  #DetailPageHeader .rightContainer h2 {
+    font-size: 1.4em;
+  }
+  /* line 1003, ../components/sass/_layout.scss */
+  #DetailPageHeader .rightContainer h3 {
+    font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 460px) and (max-width: 640px) {
+  /* line 1013, ../components/sass/_layout.scss */
+  #DetailPageHeader .rightContainer {
+    margin-left: 0;
+    padding-left: 5px;
+    margin-top: 0;
+  }
+  /* line 1018, ../components/sass/_layout.scss */
+  #DetailPageHeader .rightContainer h1 {
+    font-size: 1.6em;
+  }
+  /* line 1022, ../components/sass/_layout.scss */
+  #DetailPageHeader .rightContainer h2 {
+    font-size: 1.4em;
+  }
+  /* line 1026, ../components/sass/_layout.scss */
+  #DetailPageHeader .rightContainer h3 {
+    font-size: 1.3em;
+  }
+}
+/*** detail page GLOBAL STYLES - end ***/
+/*** 2-column main content page - beginning ***/
+/* line 1042, ../components/sass/_layout.scss */
+#DetailPageMainContent .leftContainer {
+  width: 70%;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+/* line 1048, ../components/sass/_layout.scss */
+#DetailPageMainContent .rightContainer {
+  width: 28%;
+}
+/* line 1050, ../components/sass/_layout.scss */
+#DetailPageMainContent .rightContainer .grid {
+  padding: 20px 10px 0 10px;
+  background-color: #535a51;
+}
+/* line 1054, ../components/sass/_layout.scss */
+#DetailPageMainContent .rightContainer .grid li {
+  border-bottom: 2px dashed #464c45;
+}
+/* line 1056, ../components/sass/_layout.scss */
+#DetailPageMainContent .rightContainer .grid li:last-child {
+  border-bottom: none;
+}
+/* line 1061, ../components/sass/_layout.scss */
+#DetailPageMainContent .rightContainer .grid .grid-contentHolder {
+  padding: 0px 15px;
+}
+/* line 1065, ../components/sass/_layout.scss */
+#DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a {
+  font-size: 1em;
+  padding: 5px 8px;
+}
+/* line 1071, ../components/sass/_layout.scss */
+#DetailPageMainContent .rightContainer .grid .grid-contentHolder img {
+  width: 100%;
+}
+
+/* line 1080, ../components/sass/_layout.scss */
+#DetailPageMainContent.blog-post-article {
+  padding: 25px 15px;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 1087, ../components/sass/_layout.scss */
+  #DetailPageMainContent .leftContainer {
+    display: block;
+    width: 100%;
+  }
+  /* line 1092, ../components/sass/_layout.scss */
+  #DetailPageMainContent .rightContainer {
+    display: block;
+    width: 100%;
+  }
+  /* line 1096, ../components/sass/_layout.scss */
+  #DetailPageMainContent .rightContainer h2 {
+    margin-top: 25px;
+    padding-top: 25px;
+    margin-bottom: 20px;
+    border-top: 3px dashed #5f675d;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 770px) {
+  /* line 1110, ../components/sass/_layout.scss */
+  #DetailPageMainContent .leftContainer {
+    width: 65%;
+  }
+  /* line 1113, ../components/sass/_layout.scss */
+  #DetailPageMainContent .rightContainer {
+    width: 33%;
+  }
+  /* line 1116, ../components/sass/_layout.scss */
+  #DetailPageMainContent .rightContainer .grid .grid-contentHolder {
+    padding: 0px 5px;
+  }
+}
+/*** portfolio project detail page - beginning ***/
+/* line 1128, ../components/sass/_layout.scss */
+#DetailPageHeader.portfolio-project-header .leftContainer {
+  width: 45%;
+}
+/* line 1131, ../components/sass/_layout.scss */
+#DetailPageHeader.portfolio-project-header .rightContainer {
+  width: 50%;
+  margin-top: 1%;
+  margin-left: 3.5%;
+}
+
+/* line 1139, ../components/sass/_layout.scss */
+#DetailPageMainContent #SidebarContent {
+  border: 2px dashed #5f675d;
+  background-color: #464c45;
+  padding: 10px;
+}
+/* line 1143, ../components/sass/_layout.scss */
+#DetailPageMainContent #SidebarContent .sidebar-section {
+  padding: 15px 0 20px 0;
+  border-bottom: 2px dashed #5f675d;
+}
+/* line 1147, ../components/sass/_layout.scss */
+#DetailPageMainContent #SidebarContent .sidebar-section:last-child {
+  border-bottom: none;
+}
+
+@media screen and (max-width: 460px) {
+  /* line 1156, ../components/sass/_layout.scss */
+  #DetailPageHeader.portfolio-project-header .leftContainer {
+    display: block;
+    width: 100%;
+  }
+  /* line 1161, ../components/sass/_layout.scss */
+  #DetailPageHeader.portfolio-project-header .rightContainer {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+/*** portfolio project detail page - end ***/
+/*** 2-column main content page - end ***/
+/*===================== DETAIL PAGES LAYOUTS (resume, blog article, portfolio work) - end =======================*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-Apr-2015, 14:52:01
+    Author     : Edit
+*/
+/*================================= BFITP LOGO =================================*/
+/* line 17, ../components/sass/_logo.scss */
+.logo-container {
+  float: left;
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: 0 10px;
+}
+/* line 24, ../components/sass/_logo.scss */
+.logo-container .logo {
+  display: block;
+  width: 290px;
+  height: 70px;
+  background: url(/images/logo_with_text_290x70.png) no-repeat;
+  text-decoration: none;
+  text-indent: -9999px;
+  margin: 5px 0;
+  background-position: 0%;
+}
+
+/* line 36, ../components/sass/_logo.scss */
+#TopBanner .logo-container {
+  margin: 1% 0 1% 10%;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 46, ../components/sass/_logo.scss */
+  .logo-container {
+    clear: both;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  /* line 54, ../components/sass/_logo.scss */
+  .logo-container .logo {
+    width: 100%;
+    background-position: 50%;
+    margin-top: 5px;
+  }
+
+  /* line 61, ../components/sass/_logo.scss */
+  .logo-container.fixedNavPage-logoContainer {
+    float: right;
+    clear: initial;
+    width: 80%;
+  }
+  /* line 66, ../components/sass/_logo.scss */
+  .logo-container.fixedNavPage-logoContainer .logo {
+    background-position: 0%;
+  }
+}
+@media screen and (max-width: 364px) {
+  /* line 73, ../components/sass/_logo.scss */
+  .logo-container.fixedNavPage-logoContainer {
+    clear: both;
+    width: 100%;
+  }
+  /* line 76, ../components/sass/_logo.scss */
+  .logo-container.fixedNavPage-logoContainer .logo {
+    background-position: 50%;
+  }
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-Apr-2015, 14:53:39
+    Author     : Edit
+*/
+/*================================= TOP-NAV =================================*/
+/* line 15, ../components/sass/_topnav.scss */
+#HeaderWrapper.full-width {
+  width: 100%;
+}
+
+/* line 19, ../components/sass/_topnav.scss */
+#TopBanner {
+  width: 100%;
+}
+
+/* line 23, ../components/sass/_topnav.scss */
+.topNav {
+  width: 60%;
+  padding: 0 6%;
+  box-sizing: border-box;
+  margin-top: 3%;
+}
+/* line 29, ../components/sass/_topnav.scss */
+.topNav li {
+  padding-top: 0;
+}
+/* line 32, ../components/sass/_topnav.scss */
+.topNav a {
+  border: 2px dashed rgba(189, 222, 55, 0.1);
+}
+/* line 35, ../components/sass/_topnav.scss */
+.topNav a:link {
+  padding: 2% 5%;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 45, ../components/sass/_topnav.scss */
+  #TopBanner .logo-container {
+    clear: initial;
+    margin-left: 0;
+  }
+  /* line 49, ../components/sass/_topnav.scss */
+  #TopBanner .logo-container .logo {
+    padding: 2% 0;
+    margin: 0;
+  }
+
+  /* line 56, ../components/sass/_topnav.scss */
+  .nav.topNav {
+    clear: both;
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0;
+    padding: 1%;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+  }
+  /* line 67, ../components/sass/_topnav.scss */
+  .nav.topNav a:link {
+    padding: 2% 3% !important;
+    margin: 0 1.5%;
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 460px) {
+  /* line 79, ../components/sass/_topnav.scss */
+  .nav.topNav a:link {
+    font-size: .85em;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  /* line 86, ../components/sass/_topnav.scss */
+  #TopBanner .logo-container {
+    margin-left: 1.7%;
+    margin-bottom: 1%;
+  }
+
+  /* line 90, ../components/sass/_topnav.scss */
+  .nav.topNav {
+    width: 50%;
+    padding: 0 .5%;
+    margin-top: 4.5%;
+  }
+  /* line 95, ../components/sass/_topnav.scss */
+  .nav.topNav a:link {
+    font-size: 1em;
+    padding: 2% 3%;
+  }
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-Apr-2015, 14:56:39
+    Author     : Edit
+*/
+/*================================= FULL-WIDTH PAGE NAV =================================*/
+/* line 17, ../components/sass/_pagenav.scss */
+#PageNav {
+  background: #bdde37;
+  background: rgba(189, 222, 55, 0.8);
+}
+
+/* line 23, ../components/sass/_pagenav.scss */
+.nav.full-width {
+  float: none;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: .5% 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+/* line 32, ../components/sass/_pagenav.scss */
+.nav.full-width li {
+  padding-top: 0;
+}
+/* line 35, ../components/sass/_pagenav.scss */
+.nav.full-width a {
+  color: #3A3F39;
+  padding: .7% 3%;
+}
+
+/* line 43, ../components/sass/_pagenav.scss */
+.nav.full-width a:hover,
+.nav.full-width li.current a {
+  color: #e1f0a4;
+  background: #3A3F39;
+  background-color: rgba(83, 90, 81, 0.5);
+  border: 2px dashed rgba(189, 222, 55, 0.3);
+  text-decoration: none;
+}
+
+/* line 52, ../components/sass/_pagenav.scss */
+.backToTopButton {
+  float: right;
+  display: block;
+  margin-bottom: 0;
+  font-size: 1.2em;
+  line-height: 1.2;
+  padding: 5px 0 5px 5px;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 63, ../components/sass/_pagenav.scss */
+  #PageNav {
+    width: 100%;
+  }
+  /* line 66, ../components/sass/_pagenav.scss */
+  #PageNav nav {
+    display: none;
+  }
+  /* line 69, ../components/sass/_pagenav.scss */
+  #PageNav nav .nav {
+    clear: initial;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 364px) {
+  /* line 79, ../components/sass/_pagenav.scss */
+  #PageNav {
+    width: 81%;
+    float: right;
+    margin-top: -52px;
+  }
+  /* line 84, ../components/sass/_pagenav.scss */
+  #PageNav .nav.full-width li {
+    width: 93%;
+    display: block;
+    padding: 0;
+    margin: 8px;
+    border-bottom: 2px dashed #ffffff;
+  }
+  /* line 91, ../components/sass/_pagenav.scss */
+  #PageNav .nav.full-width li a:link {
+    padding: 8px 5px;
+    width: 100%;
+    border: none;
+  }
+}
+@media screen and (min-width: 365px) and (max-width: 449px) {
+  /* line 102, ../components/sass/_pagenav.scss */
+  #PageNav {
+    width: 100%;
+    float: initial;
+    clear: both;
+    margin-top: 0px;
+  }
+  /* line 108, ../components/sass/_pagenav.scss */
+  #PageNav .nav.full-width li {
+    width: 43%;
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 3px 12px;
+    border-bottom: 2px dashed #ffffff;
+  }
+  /* line 116, ../components/sass/_pagenav.scss */
+  #PageNav .nav.full-width li a:link {
+    padding: 8px 5px;
+    width: 100%;
+    border: none;
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 641px) {
+  /* line 130, ../components/sass/_pagenav.scss */
+  #PageNav .nav.full-width li a:link {
+    padding: 12px 5px;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  /* line 139, ../components/sass/_pagenav.scss */
+  .nav.full-width {
+    background: transparent;
+    min-height: 38px;
+  }
+  /* line 142, ../components/sass/_pagenav.scss */
+  .nav.full-width a {
+    font-size: 1.1em;
+    padding: 1% 3%;
+  }
+}
+/* Page nav styling in connection with hamburger menu - beginning */
+/* line 152, ../components/sass/_pagenav.scss */
+#PageNav .cmn-toggle-switch__htx {
+  float: left;
+  top: -52px;
+}
+
+/* Page nav styling in connection with hamburger menu - end */
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-Apr-2015, 15:00:27
+    Author     : Edit
+*/
+/*================================= HERO PANEL =================================*/
+/**************************** intrinsic ratio HERO PANEL - beginning ************************/
+/* line 18, ../components/sass/_heropanel.scss */
+#Hero {
+  position: relative;
+  padding-bottom: 31%;
+  height: 0;
+}
+
+/* line 25, ../components/sass/_heropanel.scss */
+.heroContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/images/bfitp_hero_panel_bg_1300x404_flipped.jpg) 0 0 no-repeat;
+  background-size: 100% auto;
+}
+/* line 35, ../components/sass/_heropanel.scss */
+.heroContent .heroText {
+  width: 44%;
+  margin-left: 3%;
+  margin-top: 2%;
+}
+/* line 42, ../components/sass/_heropanel.scss */
+.heroContent h1, .heroContent h2, .heroContent p {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  color: #f0f3f0;
+}
+/* line 49, ../components/sass/_heropanel.scss */
+.heroContent h1 {
+  font-size: 2.2em;
+}
+/* line 53, ../components/sass/_heropanel.scss */
+.heroContent h2 {
+  font-size: 1.6em;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 60, ../components/sass/_heropanel.scss */
+  #Hero {
+    height: 1%;
+    padding-bottom: 0%;
+  }
+
+  /* line 66, ../components/sass/_heropanel.scss */
+  .heroContent {
+    position: static;
+  }
+  /* line 69, ../components/sass/_heropanel.scss */
+  .heroContent .heroText {
+    clear: both;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 0%;
+    padding-top: 33%;
+  }
+  /* line 79, ../components/sass/_heropanel.scss */
+  .heroContent h1, .heroContent h2, .heroContent p {
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #d5ded2;
+    box-sizing: border-box;
+  }
+  /* line 86, ../components/sass/_heropanel.scss */
+  .heroContent h1 {
+    display: none;
+  }
+  /* line 92, ../components/sass/_heropanel.scss */
+  .heroContent h2 {
+    font-size: 1.25em;
+  }
+  /* line 96, ../components/sass/_heropanel.scss */
+  .heroContent p {
+    border-bottom: 2px dashed #3c423b;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 760px) {
+  /* line 108, ../components/sass/_heropanel.scss */
+  .heroContent .heroText {
+    width: 78%;
+  }
+  /* line 112, ../components/sass/_heropanel.scss */
+  .heroContent h1 {
+    font-size: 1.5em;
+    margin-bottom: .3em;
+  }
+  /* line 117, ../components/sass/_heropanel.scss */
+  .heroContent h2 {
+    font-size: 1.3em;
+    margin-bottom: .3em;
+  }
+  /* line 122, ../components/sass/_heropanel.scss */
+  .heroContent h1, .heroContent h2, .heroContent p {
+    padding: 7px;
+  }
+}
+@media screen and (min-width: 761px) and (max-width: 790px) {
+  /* line 133, ../components/sass/_heropanel.scss */
+  .heroContent .heroText {
+    width: 78%;
+  }
+  /* line 137, ../components/sass/_heropanel.scss */
+  .heroContent h1 {
+    font-size: 1.5em;
+    margin-bottom: .4em;
+  }
+  /* line 142, ../components/sass/_heropanel.scss */
+  .heroContent h2 {
+    font-size: 1.3em;
+    margin-bottom: .4em;
+  }
+  /* line 147, ../components/sass/_heropanel.scss */
+  .heroContent h1, .heroContent h2, .heroContent p {
+    padding: 9px;
+  }
+}
+@media screen and (min-width: 791px) and (max-width: 850px) {
+  /* line 157, ../components/sass/_heropanel.scss */
+  .heroContent .heroText {
+    width: 78%;
+  }
+  /* line 161, ../components/sass/_heropanel.scss */
+  .heroContent h1 {
+    font-size: 1.7em;
+    margin-bottom: .5em;
+  }
+  /* line 166, ../components/sass/_heropanel.scss */
+  .heroContent h2 {
+    font-size: 1.4em;
+    margin-bottom: .5em;
+  }
+  /* line 171, ../components/sass/_heropanel.scss */
+  .heroContent h1, .heroContent h2, .heroContent p {
+    padding: 11px;
+  }
+}
+@media screen and (min-width: 851px) and (max-width: 895px) {
+  /* line 179, ../components/sass/_heropanel.scss */
+  .heroContent .heroText {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 896px) and (max-width: 990px) {
+  /* line 186, ../components/sass/_heropanel.scss */
+  .heroContent .heroText {
+    width: 50%;
+  }
+}
+/********* intrinsic ratio HERO PANEL - end **************/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-Apr-2015, 14:57:52
+    Author     : Edit
+*/
+/*================================= GRIDS =================================*/
+/****************** Default grid - beginning **********************/
+/* line 18, ../components/sass/_grid.scss */
+.grid {
+  margin-bottom: 3%;
+  text-align: justify;
+  font-family: "zero-width";
+  font-size: 0.1px;
+}
+/* line 25, ../components/sass/_grid.scss */
+.grid li {
+  font-family: sourceCodeProNormal, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  display: inline-block;
+  width: 32%;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  margin-bottom: 1%;
+  background-color: #535a51;
+  border-radius: 3px;
+  border: 2px dashed #464c45;
+  vertical-align: top;
+}
+/* line 39, ../components/sass/_grid.scss */
+.grid li h2, .grid li h3, .grid li p {
+  text-align: left;
+}
+/* line 44, ../components/sass/_grid.scss */
+.grid li h2 {
+  margin-bottom: .5em;
+  color: #ABF381;
+}
+/* line 49, ../components/sass/_grid.scss */
+.grid li h3 {
+  margin-bottom: .8em;
+}
+/* line 56, ../components/sass/_grid.scss */
+.grid li .email a {
+  font-size: 1em;
+  word-wrap: break-word;
+}
+/* line 62, ../components/sass/_grid.scss */
+.grid li .button {
+  width: 100%;
+}
+/* line 65, ../components/sass/_grid.scss */
+.grid li .button a {
+  width: 100%;
+  padding: 7px 15px;
+}
+/* line 72, ../components/sass/_grid.scss */
+.grid .gap {
+  width: 32%;
+  height: 0;
+  padding: 0;
+  padding-bottom: 0 !important;
+  border: 0;
+}
+/* line 79, ../components/sass/_grid.scss */
+.grid:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 88, ../components/sass/_grid.scss */
+.grid-contentHolder {
+  font-size: 1rem;
+  padding: 0px 25px;
+  box-sizing: border-box;
+}
+/* line 93, ../components/sass/_grid.scss */
+.grid-contentHolder img {
+  width: 12em;
+  height: auto;
+  margin-right: 3%;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 105, ../components/sass/_grid.scss */
+  .grid li {
+    width: 100%;
+    padding-top: 1%;
+    margin-bottom: 2%;
+    box-sizing: border-box;
+  }
+  /* line 111, ../components/sass/_grid.scss */
+  .grid li h2 {
+    margin-top: 1.3em;
+    min-height: initial;
+  }
+  /* line 116, ../components/sass/_grid.scss */
+  .grid li .sidebar-header {
+    margin: 1.3em 15px .5em;
+  }
+  /* line 120, ../components/sass/_grid.scss */
+  .grid li h3 {
+    margin-bottom: .8em;
+    min-height: initial;
+  }
+  /* line 125, ../components/sass/_grid.scss */
+  .grid li p {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    min-height: initial;
+  }
+  /* line 134, ../components/sass/_grid.scss */
+  .grid li .button a {
+    padding: 5px 10px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 1.2em;
+  }
+  /* line 146, ../components/sass/_grid.scss */
+  .grid li .grid-contentHolder {
+    padding: 0px 15px 10px 15px;
+  }
+  /* line 149, ../components/sass/_grid.scss */
+  .grid li .grid-contentHolder img {
+    width: 11em;
+    margin-top: 3%;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 767px) {
+  /* line 161, ../components/sass/_grid.scss */
+  .grid li {
+    width: 49%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 170, ../components/sass/_grid.scss */
+  .grid li {
+    width: 32%;
+    padding-top: 3%;
+    margin-bottom: 2%;
+    box-sizing: border-box;
+  }
+  /* line 176, ../components/sass/_grid.scss */
+  .grid li h2 {
+    margin-bottom: .7em;
+  }
+  /* line 181, ../components/sass/_grid.scss */
+  .grid li h3 {
+    margin-bottom: .5em;
+  }
+  /* line 186, ../components/sass/_grid.scss */
+  .grid li .button {
+    width: 100%;
+  }
+  /* line 188, ../components/sass/_grid.scss */
+  .grid li .button a {
+    width: 100%;
+    white-space: nowrap;
+    display: block;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    clear: both;
+  }
+  /* line 200, ../components/sass/_grid.scss */
+  .grid .gap {
+    width: 32%;
+  }
+  /* line 204, ../components/sass/_grid.scss */
+  .grid .grid-contentHolder {
+    min-height: 156px;
+    box-sizing: border-box;
+  }
+  /* line 208, ../components/sass/_grid.scss */
+  .grid .grid-contentHolder img {
+    padding-bottom: 15px;
+  }
+}
+/**** Default grid - end ****/
+/*=====================================================================================*/
+/********** CONTACT US PAGE - Stretched / full width / blog-section grid - beginning ***************/
+/* line 227, ../components/sass/_grid.scss */
+.grid.grid-stretched-layout li {
+  width: 32%;
+  padding-bottom: 0%;
+}
+/* line 232, ../components/sass/_grid.scss */
+.grid.grid-stretched-layout img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto 4%;
+  float: none;
+  display: block;
+}
+/* line 241, ../components/sass/_grid.scss */
+.grid.grid-stretched-layout .grid-contentHolder {
+  width: 100%;
+  padding: 0px 25px 11px 25px;
+}
+/* line 245, ../components/sass/_grid.scss */
+.grid.grid-stretched-layout .grid-contentHolder p.min-height-applied {
+  min-height: 70px;
+  box-sizing: border-box;
+}
+/* line 250, ../components/sass/_grid.scss */
+.grid.grid-stretched-layout .grid-contentHolder .email {
+  min-height: 60px;
+  box-sizing: border-box;
+}
+/* line 254, ../components/sass/_grid.scss */
+.grid.grid-stretched-layout .grid-contentHolder .socialIcons {
+  padding: 5px;
+  margin-bottom: 6%;
+}
+/* line 258, ../components/sass/_grid.scss */
+.grid.grid-stretched-layout .grid-contentHolder .socialIcons img {
+  width: 13%;
+  height: auto;
+  padding: 4px;
+  margin: 0;
+  display: inline;
+}
+
+/* line 272, ../components/sass/_grid.scss */
+.grid.grid-stretched-layout > li:last-child {
+  border: 2px dashed #353a34;
+  background-color: #464c45;
+}
+
+/* line 276, ../components/sass/_grid.scss */
+.grid.grid-stretched-layout > li:last-child .grid.grid-full-width > li {
+  background-color: #464c45;
+}
+
+/* line 281, ../components/sass/_grid.scss */
+.grid.grid-full-width > li {
+  width: 100%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px dashed #292c28;
+  padding-top: 15px;
+}
+
+/* line 290, ../components/sass/_grid.scss */
+.grid.grid-stretched-layout > li:last-child .grid.grid-full-width > li:last-child {
+  border-bottom: 0;
+}
+
+/* line 294, ../components/sass/_grid.scss */
+.grid.grid-full-width > li:first-child {
+  padding-top: 0;
+}
+
+/* line 298, ../components/sass/_grid.scss */
+.grid.grid-stretched-layout > li > h2 {
+  font-size: 1.7rem;
+  line-height: 1.8rem;
+  padding: 0 25px;
+  margin-bottom: 20px;
+}
+
+/* line 305, ../components/sass/_grid.scss */
+.grid-stretched-layout .grid-full-width.blog-section p.button a, .grid-stretched-layout .grid-full-width.blog-section button a {
+  padding: 5px 10px;
+}
+
+/* line 310, ../components/sass/_grid.scss */
+.grid-full-width.blog-section {
+  margin-bottom: 0px;
+}
+/* line 314, ../components/sass/_grid.scss */
+.grid-full-width.blog-section li img {
+  margin-bottom: 1.4em;
+}
+/* line 318, ../components/sass/_grid.scss */
+.grid-full-width.blog-section li h3 {
+  font-size: 1.3em;
+  line-height: 1.3;
+  margin-bottom: 1em;
+}
+/* line 324, ../components/sass/_grid.scss */
+.grid-full-width.blog-section li h4 {
+  font-size: 1.2em;
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+/* line 330, ../components/sass/_grid.scss */
+.grid-full-width.blog-section li p {
+  margin-bottom: 0.64em;
+}
+/* line 335, ../components/sass/_grid.scss */
+.grid-full-width.blog-section li .button a:hover {
+  background-color: #3f443e;
+}
+
+@media screen and (max-width: 900px) {
+  /* line 347, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout li {
+    width: 49%;
+  }
+
+  /* line 353, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout > li:last-child {
+    clear: both;
+    width: 100%;
+  }
+
+  /* line 358, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout > li .grid.grid-full-width > li {
+    width: 100%;
+  }
+  /* line 361, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout > li .grid.grid-full-width > li img {
+    width: 50%;
+    height: auto;
+    float: left;
+    margin-right: 3%;
+    padding-top: 0px;
+    padding-bottom: 0;
+    margin-bottom: 1%;
+  }
+  /* line 371, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout > li .grid.grid-full-width > li p {
+    clear: both;
+  }
+}
+@media screen and (max-width: 639px) {
+  /* line 381, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout {
+    margin-bottom: 1%;
+  }
+  /* line 385, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout li {
+    clear: both;
+    width: 100%;
+    padding-bottom: 5%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 393, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout .grid-contentHolder {
+    padding: 0 15px;
+  }
+  /* line 396, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout .grid-contentHolder img {
+    width: 70%;
+    margin: 4% auto;
+  }
+  /* line 400, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout .grid-contentHolder .email {
+    min-height: initial;
+    box-sizing: border-box;
+  }
+  /* line 404, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout .grid-contentHolder p.min-height-applied {
+    min-height: initial;
+  }
+  /* line 407, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout .grid-contentHolder .socialIcons {
+    margin: 0 auto 1%;
+    width: 70%;
+  }
+  /* line 410, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout .grid-contentHolder .socialIcons img {
+    padding: 2%;
+  }
+  /* line 416, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout .grid-contentHolder .button a {
+    font-size: 1.4em;
+  }
+
+  /* line 423, ../components/sass/_grid.scss */
+  .grid.grid-full-width > li {
+    padding-top: 0%;
+  }
+
+  /* line 428, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout > li .grid.grid-full-width > li img {
+    padding-top: 0%;
+    margin-top: 3%;
+    width: 100%;
+    margin-bottom: 4%;
+  }
+
+  /* line 437, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout > li > h2 {
+    font-size: 1.9rem;
+    padding: 5px 15px 20px 15px;
+    margin-bottom: 0;
+  }
+
+  /* line 443, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout li:last-child {
+    padding-bottom: 1%;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  /* line 452, ../components/sass/_grid.scss */
+  .grid.grid-stretched-layout li p.button a, .grid.grid-stretched-layout li button a {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    font-size: 1.2em;
+  }
+}
+/**** CONTACT US PAGE - Stretched / full width / blog-section grid  - end ****/
+/*=====================================================================================*/
+/**** OUR BLOG - Our blog-posts - Default grid extension for our blog page - beginning ****/
+/* line 469, ../components/sass/_grid.scss */
+.blog-post h2 {
+  min-height: 47px;
+  margin-top: 3%;
+}
+/* line 474, ../components/sass/_grid.scss */
+.blog-post h3 {
+  min-height: 53px;
+}
+/* line 477, ../components/sass/_grid.scss */
+.blog-post h2, .blog-post h3 {
+  clear: both;
+}
+/* line 481, ../components/sass/_grid.scss */
+.blog-post .blog-summary {
+  min-height: 106px;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 488, ../components/sass/_grid.scss */
+  .blog-post .blog-summary {
+    min-height: initial;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 764px) {
+  /* line 497, ../components/sass/_grid.scss */
+  .blog-post h2, .blog-post h3 {
+    min-height: 3em;
+  }
+  /* line 501, ../components/sass/_grid.scss */
+  .blog-post .blog-summary {
+    min-height: 9.3em;
+  }
+}
+@media screen and (min-width: 765px) and (max-width: 1023px) {
+  /* line 510, ../components/sass/_grid.scss */
+  .blog-post h2, .blog-post h3 {
+    min-height: 4em;
+  }
+  /* line 514, ../components/sass/_grid.scss */
+  .blog-post .blog-summary {
+    min-height: 12em;
+  }
+}
+/**** OUR BLOG - Our blog-posts - Default grid extension for our blog page - end ****/
+/*=====================================================================================*/
+/* 
+    Created on : 06-Jan-2015, 08:02:58
+    Author     : Edit
+*/
+/*================================= MIX IT UP ================================================*/
+/* ===================== mix it up GLOBAL styles - beginning ======================*/
+/********* mix it up buttons / control bar - beginning **************/
+/* line 16, ../components/sass/_mixitup.scss */
+.control-bar {
+  background: #768174;
+  background: #3A3F39;
+  margin-top: 2.5%;
+  margin-bottom: 1.5%;
+  padding: 10px;
+  overflow: hidden;
+  font-family: "zero-width";
+  font-size: 0;
+  position: relative;
+}
+/* line 28, ../components/sass/_mixitup.scss */
+.control-bar label {
+  color: #e1f0a4;
+  margin: 0 5px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: sourceCodeProNormal, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 38, ../components/sass/_mixitup.scss */
+.control-bar .group {
+  display: inline-block;
+  font-family: sourceCodeProNormal, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+}
+/* line 43, ../components/sass/_mixitup.scss */
+.control-bar .group button {
+  font-family: sourceCodeProNormal, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.3;
+  color: #B9C8B5;
+  background: #3A3F39;
+  background-color: rgba(83, 90, 81, 0.5);
+  border: 2px dashed rgba(171, 243, 129, 0.1);
+  text-decoration: none;
+  padding: 5px 10px;
+  min-width: 70px;
+  font-weight: 700;
+  border-radius: 3px;
+  margin-bottom: 6px;
+}
+/* line 58, ../components/sass/_mixitup.scss */
+.control-bar .group button:hover, .control-bar .group button:focus, .control-bar .group button.active {
+  background: #B9C8B5;
+  border: 2px dashed rgba(83, 90, 81, 0.5);
+  color: #3A3F39;
+}
+/* line 68, ../components/sass/_mixitup.scss */
+.control-bar .filter-buttons button {
+  position: relative;
+}
+/* line 31, ../components/sass/_mixins.scss */
+.control-bar .filter-buttons button:before {
+  content: '';
+  display: inline-block;
+  padding-top: 5%;
+  vertical-align: middle;
+}
+/* line 37, ../components/sass/_mixins.scss */
+.control-bar .filter-buttons button:after {
+  content: '';
+  position: absolute;
+  border: 10px solid transparent;
+  border-right-color: white;
+  top: -10px;
+  left: -10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media screen and (min-width: 320px) and (max-width: 534px) {
+  /* line 81, ../components/sass/_mixitup.scss */
+  .control-bar .group button {
+    padding: 3px 7px;
+  }
+  /* line 86, ../components/sass/_mixitup.scss */
+  .control-bar .filter-buttons {
+    width: 100%;
+  }
+  /* line 89, ../components/sass/_mixitup.scss */
+  .control-bar .filter-buttons button {
+    display: block;
+    min-width: initial;
+    width: 100%;
+    text-align: left;
+    margin-bottom: .7%;
+  }
+}
+@media screen and (max-width: 727px) {
+  /* line 103, ../components/sass/_mixitup.scss */
+  .control-bar label {
+    display: block;
+    margin: .4em .1em;
+  }
+}
+@media screen and (max-width: 823px) {
+  /* line 111, ../components/sass/_mixitup.scss */
+  .control-bar .group:first-child {
+    margin-bottom: 1%;
+  }
+}
+/********* mix it up buttons / control bar  - end **************/
+/********* mix it up grid - beginning **************/
+/* line 123, ../components/sass/_mixitup.scss */
+.mixItUp-container > * {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  font-family: sourceCodeProNormal, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+}
+
+/* line 131, ../components/sass/_mixitup.scss */
+.mixItUp-container {
+  text-align: justify;
+  font-family: "zero-width";
+  font-size: 0.1px;
+  box-sizing: border-box;
+  min-height: 200px;
+  overflow: hidden;
+  padding: 0;
+}
+/* line 18, ../components/sass/_mixins.scss */
+.mixItUp-container:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+/* line 23, ../components/sass/_mixins.scss */
+.mixItUp-container .gap {
+  width: 23%;
+}
+/* line 134, ../components/sass/_mixitup.scss */
+.mixItUp-container .mix, .mixItUp-container .portfoMix {
+  display: none;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 2%;
+  vertical-align: top;
+  width: 23%;
+  min-height: 60px;
+  border: 2px dashed #585f56;
+  position: relative;
+}
+/* line 61, ../components/sass/_mixins.scss */
+.mixItUp-container .mix p, .mixItUp-container .portfoMix p {
+  line-height: 1.2;
+  font-size: 1.3rem;
+  padding: 0 .8em;
+  color: #e3e9e1;
+}
+/* line 31, ../components/sass/_mixins.scss */
+.mixItUp-container .mix:before, .mixItUp-container .portfoMix:before {
+  content: '';
+  display: inline-block;
+  padding-top: 5%;
+  vertical-align: middle;
+}
+/* line 37, ../components/sass/_mixins.scss */
+.mixItUp-container .mix:after, .mixItUp-container .portfoMix:after {
+  content: '';
+  position: absolute;
+  border: 20px solid transparent;
+  border-right-color: white;
+  top: -20px;
+  left: -20px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/********* mix it up grid - end **************/
+/* ================================ mix it up GLOBAL styles - end ======================================*/
+/* =============================== Skills section - beginning ======================================*/
+/********* Skills - buttons / control bar - beginning **************/
+/* line 156, ../components/sass/_mixitup.scss */
+#Skills .control-bar {
+  display: inline-block;
+  width: 37%;
+  vertical-align: top;
+  margin: 7px 0 0 2%;
+  padding: 13px 3%;
+}
+/* line 163, ../components/sass/_mixitup.scss */
+#Skills .control-bar .group {
+  width: 100%;
+}
+/* line 166, ../components/sass/_mixitup.scss */
+#Skills .control-bar .group button {
+  width: 100%;
+  text-align: left;
+}
+/* line 170, ../components/sass/_mixitup.scss */
+#Skills .control-bar .group button[data-filter="all"], #Skills .control-bar .group button[data-filter="none"] {
+  width: 39%;
+  text-align: center;
+}
+/* line 177, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons label {
+  margin-bottom: 10px;
+}
+/* line 181, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".webdev"]:after {
+  border-right-color: #ABF381;
+}
+/* line 184, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".drupal"]:after {
+  border-right-color: #137CC1;
+}
+/* line 187, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".threeD"]:after {
+  border-right-color: #FFB587;
+}
+/* line 190, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".animation"]:after {
+  border-right-color: #ff7621;
+}
+/* line 193, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".drawing"]:after {
+  border-right-color: #f8b0c9;
+}
+/* line 196, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".markup"]:after {
+  border-right-color: #e9fcde;
+}
+/* line 199, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".extension-language"]:after {
+  border-right-color: #caf7b0;
+}
+/* line 202, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".dynamic-programming-language"]:after {
+  border-right-color: #ABF381;
+}
+/* line 205, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".code-library"]:after {
+  border-right-color: #7cec3b;
+}
+/* line 208, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".frontend-automation"]:after {
+  border-right-color: #4bedbd;
+}
+/* line 211, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".version-control"]:after {
+  border-right-color: #76DFC0;
+}
+/* line 214, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".virtualization"]:after {
+  border-right-color: #FFB587;
+}
+/* line 217, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".terminal-emulator"]:after {
+  border-right-color: #FF9959;
+}
+/* line 220, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".cut-up"]:after {
+  border-right-color: #f25d00;
+}
+/* line 223, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".cms"]:after {
+  border-right-color: #15cc96;
+}
+/* line 226, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button[data-filter=".additional"]:after {
+  border-right-color: #F481A9;
+}
+
+/*** Skills - buttons / control bar - end ***/
+/*** Skills - grid - beginning ***/
+/* line 238, ../components/sass/_mixitup.scss */
+#SkillsContainer {
+  display: inline-block;
+  width: 59%;
+  vertical-align: top;
+  margin-top: 7px;
+}
+/* line 245, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix {
+  position: relative;
+  margin-bottom: .7%;
+  width: 49%;
+  min-height: 49px;
+}
+/* line 31, ../components/sass/_mixins.scss */
+#SkillsContainer .mix:before {
+  content: '';
+  display: inline-block;
+  padding-top: 2%;
+  vertical-align: middle;
+}
+/* line 37, ../components/sass/_mixins.scss */
+#SkillsContainer .mix:after {
+  content: '';
+  position: absolute;
+  border: 10px solid transparent;
+  border-right-color: white;
+  top: -10px;
+  left: -10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* line 251, ../components/sass/_mixitup.scss */
+#SkillsContainer .gap {
+  width: 24.5%;
+}
+/* line 257, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.webdev:after {
+  border-right-color: #ABF381;
+}
+/* line 260, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.cms:after {
+  border-right-color: #15cc96;
+}
+/* line 263, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.drupal:after {
+  border-right-color: #137CC1;
+}
+/* line 266, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.threeD:after {
+  border-right-color: #FFB587;
+}
+/* line 269, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.animation:after {
+  border-right-color: #ff7621;
+}
+/* line 272, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.drawing:after {
+  border-right-color: #f8b0c9;
+}
+/* line 275, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.markup:after {
+  border-right-color: #e9fcde;
+}
+/* line 278, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.extension-language:after {
+  border-right-color: #caf7b0;
+}
+/* line 281, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.dynamic-programming-language:after {
+  border-right-color: #ABF381;
+}
+/* line 284, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.code-library:after {
+  border-right-color: #7cec3b;
+}
+/* line 287, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.frontend-automation:after {
+  border-right-color: #4bedbd;
+}
+/* line 290, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.version-control:after {
+  border-right-color: #76DFC0;
+}
+/* line 293, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.virtualization:after {
+  border-right-color: #FFB587;
+}
+/* line 296, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.terminal-emulator:after {
+  border-right-color: #FF9959;
+}
+/* line 299, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.cut-up:after {
+  border-right-color: #f25d00;
+}
+/* line 302, ../components/sass/_mixitup.scss */
+#SkillsContainer .mix.additional:after {
+  border-right-color: #F481A9;
+}
+
+@media screen and (max-width: 481px) {
+  /* line 310, ../components/sass/_mixitup.scss */
+  #SkillsContainer .mix {
+    width: 98%;
+    min-height: initial;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  /* line 316, ../components/sass/_mixitup.scss */
+  #SkillsContainer .mix p {
+    padding: .1em 1.5em;
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+  /* line 323, ../components/sass/_mixitup.scss */
+  #SkillsContainer .gap {
+    width: 98%;
+  }
+}
+@media screen and (min-width: 482px) and (max-width: 551px) {
+  /* line 333, ../components/sass/_mixitup.scss */
+  #SkillsContainer .mix {
+    width: 49%;
+    min-height: 60px;
+    margin-bottom: 6px;
+  }
+  /* line 338, ../components/sass/_mixitup.scss */
+  #SkillsContainer .mix p {
+    padding: .1em 1.5em;
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+  /* line 345, ../components/sass/_mixitup.scss */
+  #SkillsContainer .gap {
+    width: 49%;
+  }
+}
+@media screen and (min-width: 550px) and (max-width: 648px) {
+  /* line 355, ../components/sass/_mixitup.scss */
+  #SkillsContainer .mix {
+    min-height: 60px;
+    margin-bottom: 6px;
+  }
+}
+@media screen and (min-width: 649px) and (max-width: 831px) {
+  /* line 365, ../components/sass/_mixitup.scss */
+  #SkillsContainer .mix {
+    min-height: 57px;
+    margin-bottom: 6px;
+  }
+}
+@media screen and (max-width: 1002px) {
+  /* line 376, ../components/sass/_mixitup.scss */
+  #Skills .control-bar label {
+    display: block;
+  }
+  /* line 380, ../components/sass/_mixitup.scss */
+  #Skills .control-bar .filter-buttons button {
+    margin-bottom: 6px;
+  }
+
+  /* line 388, ../components/sass/_mixitup.scss */
+  #SkillsContainer .mix {
+    margin-bottom: 6px;
+  }
+}
+@media screen and (max-width: 530px) {
+  /* line 398, ../components/sass/_mixitup.scss */
+  #Skills .control-bar {
+    display: none;
+  }
+
+  /* line 403, ../components/sass/_mixitup.scss */
+  #SkillsContainer {
+    width: 100%;
+  }
+  /* line 407, ../components/sass/_mixitup.scss */
+  #SkillsContainer .mix:after {
+    border-right-color: transparent !important;
+  }
+}
+@media screen and (min-width: 465px) and (max-width: 530px) {
+  /* line 416, ../components/sass/_mixitup.scss */
+  #SkillsContainer {
+    width: 100%;
+  }
+}
+/* for where list of skills has more content in the individual list items - beginning */
+@media screen and (max-width: 1002px) {
+  /* line 427, ../components/sass/_mixitup.scss */
+  #SkillsContainer.more-content .mix {
+    min-height: 60px;
+  }
+}
+@media screen and (max-width: 481px) {
+  /* line 435, ../components/sass/_mixitup.scss */
+  #SkillsContainer.more-content .mix {
+    min-height: initial;
+  }
+}
+@media screen and (min-width: 482px) and (max-width: 433px) {
+  /* line 444, ../components/sass/_mixitup.scss */
+  #SkillsContainer.more-content .mix {
+    min-height: 76px;
+  }
+}
+@media screen and (min-width: 530px) and (max-width: 551px) {
+  /* line 452, ../components/sass/_mixitup.scss */
+  #SkillsContainer.more-content .mix {
+    min-height: 92px;
+  }
+}
+@media screen and (min-width: 552px) and (max-width: 622px) {
+  /* line 461, ../components/sass/_mixitup.scss */
+  #SkillsContainer.more-content .mix {
+    min-height: 70px;
+  }
+}
+/* for where list of skills has more content in the individual list items - end */
+/*** Skills - grid - end ***/
+/* ============================= Skills section - end ============================================*/
+/* ============================= Portfolio section - beginning =============================*/
+/*** Portfolio - buttons / control bar - beginning ***/
+/* line 485, ../components/sass/_mixitup.scss */
+#Portfolio .control-bar .group:first-child, #DetailPageHeader .control-bar .group:first-child, #DetailPageMainContent .control-bar .group:first-child, #ContactIndi .control-bar .group:first-child {
+  margin-bottom: 1%;
+}
+/* line 490, ../components/sass/_mixitup.scss */
+#Portfolio .control-bar .filter-buttons, #DetailPageHeader .control-bar .filter-buttons, #DetailPageMainContent .control-bar .filter-buttons, #ContactIndi .control-bar .filter-buttons {
+  width: 100%;
+}
+/* line 493, ../components/sass/_mixitup.scss */
+#Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
+  width: 10.8%;
+  min-height: 46px;
+  min-width: initial;
+  vertical-align: top;
+}
+/* line 502, ../components/sass/_mixitup.scss */
+#Portfolio .control-bar .filter-buttons button[data-filter=".html"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".html"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".html"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".html"]:after {
+  border-right-color: #76DFC0;
+}
+/* line 505, ../components/sass/_mixitup.scss */
+#Portfolio .control-bar .filter-buttons button[data-filter=".css"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".css"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".css"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".css"]:after {
+  border-right-color: #26a580;
+}
+/* line 508, ../components/sass/_mixitup.scss */
+#Portfolio .control-bar .filter-buttons button[data-filter=".sass"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".sass"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".sass"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".sass"]:after {
+  border-right-color: #1a6f56;
+}
+/* line 511, ../components/sass/_mixitup.scss */
+#Portfolio .control-bar .filter-buttons button[data-filter=".css-animation"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".css-animation"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".css-animation"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".css-animation"]:after {
+  border-right-color: #0e3d30;
+}
+/* line 514, ../components/sass/_mixitup.scss */
+#Portfolio .control-bar .filter-buttons button[data-filter=".drupal-project"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".drupal-project"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".drupal-project"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".drupal-project"]:after {
+  border-right-color: #137CC1;
+}
+/* line 517, ../components/sass/_mixitup.scss */
+#Portfolio .control-bar .filter-buttons button[data-filter=".website-project"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".website-project"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".website-project"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".website-project"]:after {
+  border-right-color: #859900;
+}
+/* line 520, ../components/sass/_mixitup.scss */
+#Portfolio .control-bar .filter-buttons button[data-filter=".js-jquery"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".js-jquery"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".js-jquery"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".js-jquery"]:after {
+  border-right-color: #E24F83;
+}
+/* line 523, ../components/sass/_mixitup.scss */
+#Portfolio .control-bar .filter-buttons button[data-filter=".angularjs"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".angularjs"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".angularjs"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".angularjs"]:after {
+  border-right-color: #830E37;
+}
+
+@media screen and (min-width: 320px) and (max-width: 535px) {
+  /* line 534, ../components/sass/_mixitup.scss */
+  #Portfolio .control-bar label, #DetailPageHeader .control-bar label, #DetailPageMainContent .control-bar label, #ContactIndi .control-bar label {
+    display: block;
+  }
+  /* line 538, ../components/sass/_mixitup.scss */
+  #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
+    width: 100%;
+    min-height: 30px;
+    padding: 5px 10px 0;
+  }
+}
+@media screen and (min-width: 536px) and (max-width: 639px) {
+  /* line 551, ../components/sass/_mixitup.scss */
+  #Portfolio .control-bar label, #DetailPageHeader .control-bar label, #DetailPageMainContent .control-bar label, #ContactIndi .control-bar label {
+    display: block;
+  }
+  /* line 555, ../components/sass/_mixitup.scss */
+  #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
+    width: 49%;
+    min-height: 30px;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 818px) {
+  /* line 567, ../components/sass/_mixitup.scss */
+  #Portfolio .control-bar label, #DetailPageHeader .control-bar label, #DetailPageMainContent .control-bar label, #ContactIndi .control-bar label {
+    display: block;
+    margin: .4em .1em;
+  }
+  /* line 572, ../components/sass/_mixitup.scss */
+  #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
+    width: 32%;
+    min-height: 30px;
+  }
+}
+@media screen and (min-width: 819px) and (max-width: 884px) {
+  /* line 584, ../components/sass/_mixitup.scss */
+  #Portfolio .control-bar label, #DetailPageHeader .control-bar label, #DetailPageMainContent .control-bar label, #ContactIndi .control-bar label {
+    display: block;
+  }
+  /* line 588, ../components/sass/_mixitup.scss */
+  #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
+    width: 24.4%;
+    min-height: 30px;
+  }
+}
+@media screen and (min-width: 885px) and (max-width: 1083px) {
+  /* line 600, ../components/sass/_mixitup.scss */
+  #Portfolio .control-bar label, #DetailPageHeader .control-bar label, #DetailPageMainContent .control-bar label, #ContactIndi .control-bar label {
+    display: block;
+  }
+  /* line 603, ../components/sass/_mixitup.scss */
+  #Portfolio .control-bar .filter-buttons, #DetailPageHeader .control-bar .filter-buttons, #DetailPageMainContent .control-bar .filter-buttons, #ContactIndi .control-bar .filter-buttons {
+    display: block;
+  }
+  /* line 606, ../components/sass/_mixitup.scss */
+  #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
+    width: 11.8%;
+    font-size: 1.2em;
+  }
+}
+/*** Portfolio - buttons / control bar - end ***/
+/*** Portfolio - grid - beginning ***/
+/* line 621, ../components/sass/_mixitup.scss */
+#PortfolioContainer .portfoMix {
+  padding: 10px;
+  box-sizing: border-box;
+}
+/* line 625, ../components/sass/_mixitup.scss */
+#PortfolioContainer .portfoMix img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+/* line 631, ../components/sass/_mixitup.scss */
+#PortfolioContainer .portfoMix h3 {
+  font-size: 1.4em;
+  line-height: 1.4;
+  margin-top: 1%;
+  padding-bottom: 2%;
+  min-height: 41px;
+}
+/* line 639, ../components/sass/_mixitup.scss */
+#PortfolioContainer .portfoMix h4 {
+  font-size: 1.3em;
+  line-height: 1.3;
+  margin-top: 1%;
+  padding-bottom: 5%;
+  color: #B9C8B5;
+  min-height: 39px;
+}
+/* line 648, ../components/sass/_mixitup.scss */
+#PortfolioContainer .portfoMix .button {
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0;
+}
+/* line 653, ../components/sass/_mixitup.scss */
+#PortfolioContainer .portfoMix .button a {
+  background-color: #5a6258;
+  font-size: 1.1em;
+}
+/* line 657, ../components/sass/_mixitup.scss */
+#PortfolioContainer .portfoMix .button a:hover {
+  border: 2px dashed #7f8a7d;
+}
+/* line 665, ../components/sass/_mixitup.scss */
+#PortfolioContainer .portfoMix.html:after {
+  border-right-color: #76DFC0;
+}
+/* line 668, ../components/sass/_mixitup.scss */
+#PortfolioContainer .portfoMix.css:after {
+  border-right-color: #26a580;
+}
+/* line 671, ../components/sass/_mixitup.scss */
+#PortfolioContainer .portfoMix.sass:after {
+  border-right-color: #1a6f56;
+}
+/* line 674, ../components/sass/_mixitup.scss */
+#PortfolioContainer .portfoMix.css-animation:after {
+  border-right-color: #0e3d30;
+}
+/* line 677, ../components/sass/_mixitup.scss */
+#PortfolioContainer .portfoMix.drupal-project:after {
+  border-right-color: #137CC1;
+}
+/* line 680, ../components/sass/_mixitup.scss */
+#PortfolioContainer .portfoMix.website-project:after {
+  border-right-color: #859900;
+}
+/* line 683, ../components/sass/_mixitup.scss */
+#PortfolioContainer .portfoMix.js-jquery:after {
+  border-right-color: #E24F83;
+}
+/* line 686, ../components/sass/_mixitup.scss */
+#PortfolioContainer .portfoMix.angularjs:after {
+  border-right-color: #830E37;
+}
+
+@media screen and (min-width: 320px) and (max-width: 639px) {
+  /* line 695, ../components/sass/_mixitup.scss */
+  #PortfolioContainer .gap {
+    width: 49%;
+  }
+  /* line 699, ../components/sass/_mixitup.scss */
+  #PortfolioContainer .portfoMix {
+    width: 49%;
+  }
+  /* line 707, ../components/sass/_mixitup.scss */
+  #PortfolioContainer .portfoMix .button a {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 767px) {
+  /* line 719, ../components/sass/_mixitup.scss */
+  #PortfolioContainer .gap {
+    width: 32%;
+  }
+  /* line 723, ../components/sass/_mixitup.scss */
+  #PortfolioContainer .portfoMix {
+    width: 32%;
+  }
+  /* line 731, ../components/sass/_mixitup.scss */
+  #PortfolioContainer .portfoMix .button a {
+    font-size: 1.1em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 808px) {
+  /* line 745, ../components/sass/_mixitup.scss */
+  #PortfolioContainer .portfoMix .button a {
+    font-size: .9em;
+  }
+}
+@media screen and (min-width: 809px) and (max-width: 863px) {
+  /* line 758, ../components/sass/_mixitup.scss */
+  #PortfolioContainer .portfoMix .button a {
+    font-size: 1em;
+  }
+}
+/*** Portfolio - grid - end ***/
+/* =============================== Portfolio section - end =========================================*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05-May-2015, 17:56:48
+    Author     : Edit
+*/
+/*================================= CONTACT MODULE =================================*/
+/* line 16, ../components/sass/_contactmodule.scss */
+#ContactIndi {
+  width: 100%;
+  padding-bottom: 10px;
+}
+/* line 24, ../components/sass/_contactmodule.scss */
+#ContactIndi .leftContainer {
+  width: 65%;
+}
+/* line 28, ../components/sass/_contactmodule.scss */
+#ContactIndi .rightContainer {
+  width: 33%;
+}
+/* line 30, ../components/sass/_contactmodule.scss */
+#ContactIndi .rightContainer img {
+  width: 80%;
+  max-width: 80%;
+  height: auto;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+/* line 39, ../components/sass/_contactmodule.scss */
+#ContactIndi .highlighted {
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+/* line 44, ../components/sass/_contactmodule.scss */
+#ContactIndi .contactDetails {
+  background-color: #444a43;
+  padding: 3px 10px 0;
+  border-bottom: 2px dashed #788276;
+}
+/* line 50, ../components/sass/_contactmodule.scss */
+#ContactIndi .email {
+  margin: .5em 0 1.5em;
+}
+/* line 54, ../components/sass/_contactmodule.scss */
+#ContactIndi .buttons {
+  margin-bottom: 15px;
+}
+/* line 58, ../components/sass/_contactmodule.scss */
+#ContactIndi .button {
+  width: 48%;
+}
+/* line 60, ../components/sass/_contactmodule.scss */
+#ContactIndi .button a {
+  font-size: 1.1em;
+  line-height: 1.1;
+  padding: 4px 8px;
+}
+/* line 68, ../components/sass/_contactmodule.scss */
+#ContactIndi .socialIcons {
+  width: 98%;
+  padding: 10px 0;
+}
+/* line 75, ../components/sass/_contactmodule.scss */
+#ContactIndi .socialIcons a img {
+  width: 2.5em;
+}
+
+@media screen and (max-width: 580px) {
+  /* line 85, ../components/sass/_contactmodule.scss */
+  #ContactIndi .leftContainer {
+    width: 75%;
+  }
+  /* line 88, ../components/sass/_contactmodule.scss */
+  #ContactIndi .rightContainer {
+    width: 22%;
+  }
+  /* line 91, ../components/sass/_contactmodule.scss */
+  #ContactIndi .rightContainer img {
+    margin-top: 15%;
+  }
+  /* line 96, ../components/sass/_contactmodule.scss */
+  #ContactIndi .email {
+    margin: 1em 0 1.5em;
+  }
+  /* line 98, ../components/sass/_contactmodule.scss */
+  #ContactIndi .email a {
+    font-size: .9em;
+  }
+}
+@media screen and (max-width: 627px) {
+  /* line 110, ../components/sass/_contactmodule.scss */
+  #ContactIndi .button {
+    width: 98%;
+  }
+  /* line 113, ../components/sass/_contactmodule.scss */
+  #ContactIndi .button a {
+    font-size: 1.1em;
+    line-height: 1.1;
+  }
+}
+@media screen and (max-width: 395px) {
+  /* line 124, ../components/sass/_contactmodule.scss */
+  #ContactIndi .button a {
+    font-size: .85em;
+    padding: 10px 7px;
+  }
+  /* line 130, ../components/sass/_contactmodule.scss */
+  #ContactIndi .email a {
+    word-wrap: break-word;
+  }
+}
+@media screen and (min-width: 628px) and (max-width: 778px) {
+  /* line 140, ../components/sass/_contactmodule.scss */
+  #ContactIndi .button a {
+    font-size: .9em;
+    line-height: .9;
+    padding: 8px 2px 8px 8px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  /* line 152, ../components/sass/_contactmodule.scss */
+  #ContactIndi .rightContainer img {
+    max-width: initial;
+    width: 95%;
+  }
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07-May-2015, 16:14:50
+    Author     : Edit
+*/
+/*================================= HAMBURGER MENU NAV =================================*/
+/**
+
+ * Source/Author: Call Me Nick
+https://github.com/callmenick/Animating-Hamburger-Icons
+
+ * Toggle Switch Globals
+ *
+ * All switches should take on the class `cmn-toggle-switch` as well as their
+ * variant that will give them unique properties. This class is an overview
+ * class that acts as a reset for all versions of the icon.
+*/
+/* line 31, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+  height: 52px;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* line 51, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch:focus {
+  outline: none;
+}
+
+/* line 55, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch span {
+  display: block;
+  position: absolute;
+  top: 24px;
+  left: 10px;
+  right: 10px;
+  height: 4px;
+  background: white;
+}
+
+/* line 65, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch span::before,
+.cmn-toggle-switch span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  content: "";
+}
+
+/* line 76, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch span::before {
+  top: -14px;
+}
+
+/* line 80, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch span::after {
+  bottom: -14px;
+}
+
+/*
+
+
+ * Style 2
+ * 
+ * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
+ * down to center and transform into an "x".
+ */
+/* line 95, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch__htx {
+  background: #bdde37;
+  background: rgba(189, 222, 55, 0.8);
+}
+
+/* line 100, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch__htx span {
+  -webkit-transition: background 0s 0.3s;
+  transition: background 0s 0.3s;
+}
+
+/* line 105, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch__htx span::before,
+.cmn-toggle-switch__htx span::after {
+  -webkit-transition-duration: 0.3s, 0.3s;
+  transition-duration: 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0s;
+  transition-delay: 0.3s, 0s;
+}
+
+/* line 113, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch__htx span::before {
+  -webkit-transition-property: top, -webkit-transform;
+  transition-property: top, transform;
+}
+
+/* line 118, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch__htx span::after {
+  -webkit-transition-property: bottom, -webkit-transform;
+  transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+/* line 125, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch__htx.active {
+  background: #bdde37;
+  background: rgba(125, 150, 25, 0.8);
+}
+
+/* line 131, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch__htx.active span {
+  background: none;
+}
+
+/* line 135, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch__htx.active span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 142, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch__htx.active span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 149, ../components/sass/_hamburger.scss */
+.cmn-toggle-switch__htx.active span::before,
+.cmn-toggle-switch__htx.active span::after {
+  -webkit-transition-delay: 0s, 0.3s;
+  transition-delay: 0s, 0.3s;
+}
+
+@media screen and (max-width: 639px) {
+  /* line 156, ../components/sass/_hamburger.scss */
+  .cmn-toggle-switch {
+    display: block;
+  }
+
+  /* line 160, ../components/sass/_hamburger.scss */
+  .cmn-toggle-switch__htx {
+    float: left;
+    top: 27px;
+  }
+}
+@media screen and (max-width: 364px) {
+  /* line 167, ../components/sass/_hamburger.scss */
+  .cmn-toggle-switch__htx {
+    top: 0;
+  }
+}
