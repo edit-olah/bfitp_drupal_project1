@@ -49,6 +49,9 @@ and open the template in the editor.
     
     .email{
 	margin: .5em 0 1.5em;
+	a{
+	    font-size: $smallFontSize;
+	}
     }
     
     .buttons{
@@ -58,9 +61,9 @@ and open the template in the editor.
     .button{
 	width: 48%;
 	a{
-	    font-size: 1.1em;
+	    font-size: 1em;
 	    line-height: 1.1;
-	    padding: 4px 8px;
+	    padding: 8px;
 	}
     }
    
@@ -80,23 +83,21 @@ and open the template in the editor.
    
 }
 
-@media screen and (max-width: 580px) {
+
+@media screen and (max-width: 394px) {
     #ContactIndi {
-	.leftContainer {
-	    width: 75%;
-	}
-	.rightContainer {
-	    width: 22%;
-	    
-	    img {
-		  margin-top: 15%;
+	.email{
+	    a {
+	    word-wrap: break-word;
+	    font-size: 1em;
 	    }
 	}
 	
-	.email{
-	    margin: 1em 0 1.5em;
-	    a {
-		font-size: .9em;
+	.socialIcons{
+	    a{
+		img{
+		    width: 2.4em;
+		}
 	    }
 	}
     }
@@ -105,9 +106,30 @@ and open the template in the editor.
 
 
 
-@media screen and (max-width: 627px) {
+
+@media screen and (max-width: 684px) {
     #ContactIndi {
-	.button{
+	.leftContainer {
+	    width: 75%;
+	    
+	    header {
+		h1 {
+		    padding-left: 0;
+		}
+	    }
+	    
+	    span {
+		font-size: 1.3em;
+	    }
+	}
+	.rightContainer {
+	    width: 22%;
+	    
+	    img {
+		  margin-top: 15%;
+	    }
+	}
+	.button {
 	    width: 98%;
 	    
 	    a{
@@ -118,33 +140,31 @@ and open the template in the editor.
     }
 }
 
-@media screen and (max-width: 395px) {
+@media screen and (max-width: 360px) {
     #ContactIndi {
-	.button{
-	    a{
-		font-size: .85em;
-		padding: 10px 7px;
+	
+	.button {
+	    a {
+		font-size: .9em;
 	    }
 	}
+    }  
+}
+
+
+@media screen and (min-width: 395px) and (max-width: 684px) {
+    #ContactIndi {
+	
 	.email{
+	    margin: 1em 0 1.5em;
 	    a {
-	    word-wrap: break-word;
+		word-wrap: break-word;
+		font-size: 1.1em;
 	    }
 	}
     }
 }
 
-@media screen and (min-width: 628px) and (max-width: 778px) {
-    #ContactIndi {
-	.button{
-	    a{
-		font-size: .9em;
-		line-height: .9;
-		padding: 8px 2px 8px 8px;
-	    }
-	}
-    }
-}
 
 @media screen and (min-width: 320px) and (max-width: 1023px) {
     #ContactIndi {

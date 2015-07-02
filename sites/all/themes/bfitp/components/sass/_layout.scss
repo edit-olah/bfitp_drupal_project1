@@ -71,14 +71,18 @@ body {
 }
 
 h1 {
-    font-size: 1.7em;
+    font-size: $extraLargeFontSize;
     color: lighten($semiLightGreen, 10);
     margin-bottom: .7em;
     line-height: 1.6;
 }
 
+.page header h1 {
+  padding: 5px 0 10px;
+}
+
 h2 {
-    font-size: 1.5em;
+    font-size: $semiLargeFontSize;
     color: $semiLightGreen;
     margin-bottom: .6em;
     line-height: 1.4;
@@ -86,13 +90,13 @@ h2 {
 }
 
 h3 {
-    font-size: 1.3em;
+    font-size: $defaultFontSize;
     margin-bottom: .5em;
     line-height: 1.3;
 }
 
 .sidebar-header{
-    margin: 0 25px .5em;
+    margin: 0 25px 25px;
 }
 
 
@@ -110,7 +114,7 @@ a:hover {
 }
 
 a, p, li {
-    font-size: 1.3em;
+    font-size: $defaultFontSize;
     line-height: 1.5;
     margin-bottom: .5em;
 }
@@ -128,11 +132,11 @@ ul, li {
 }
 
 .large-text{
-   font-size: $largeFontSize; 
+   font-size: $semiLargeFontSize; 
 }
 
 .semi-large-text{
-   font-size: $semiLargeFontSize;
+   font-size: $defaultFontSize;
 }
 
 .highlighted{
@@ -140,7 +144,7 @@ ul, li {
 }
 
 .extraPadding{
-    padding: 15px 0px;
+    padding: 0 0 15px 0;
 }
 
 .button {
@@ -168,7 +172,11 @@ ul, li {
 @media screen and (max-width: 639px) {
     
     h1 {
-	font-size: 1.5em;
+	font-size: $semiLargeFontSize;
+    }
+    
+    .page header h1 {
+	padding: 0 15px 10px;
     }
     
 }
@@ -296,7 +304,7 @@ ul, li {
 	text-decoration: none;
 	color: #bfcabc;
 	font-weight: 700;
-	font-size: 1.4em;
+	font-size: $semiLargeFontSize;
 	font-family: $baseFont;
 	white-space: nowrap;
 	border: 2px solid transparent;
@@ -528,9 +536,9 @@ ul, li {
 		width: 100%;
 		
 		a {
-		    padding: 5px 10px;
+		    padding: 5px 9px;
 		    font-size: 1.1em;
-		    width: 100%;
+		    width: 101%;
 		}
 	    } 
 	}
@@ -745,100 +753,16 @@ ul, li {
 /*=========================== HOME PAGE LAYOUT - end =========================================================*/
 
 
-
-/*======================= OUR PORTFOLIO PAGE LAYOUT - beginning ==============================================*/
-
-#OurPortfolioContentHolder {
-    padding: $defaultPadding;
-    
-}
-
-#OurPortfolioGrid {
-    .grid-contentHolder {
-	img {
-	    margin-bottom: 12px;
-	}
-    }
-}
-
-@media screen and (max-width: 639px) {
-        
-  
-    #OurPortfolioContentHolder {
-	padding: $secondaryPadding;
-    }
-    
-    #OurPortfolioGrid {
-	.grid-contentHolder {
-	    img {
-		margin-bottom: 0px;
-	    }
-	}
-    }
-}
-
-@media screen and (min-width: 767px) and (max-width: 802px) {
-    #OurPortfolioGrid {
-	.grid-contentHolder {
-	    h3{
-		min-height: 35px;
-	    }
-	}
-    }
-}
-
-/*======================= OUR PORTFOLIO PAGE LAYOUT - end ===================================================*/
-
-
-
-/*========================== OUR BLOG PAGE LAYOUT - beginning ==============================================*/
-
-#OurBlogGrid {
-    
-    h1 {
-	padding: 5px 0 10px;
-    }
-    
-    .grid-contentHolder {
-
-
-	img {
-	    width: 100%;
-	}
-	
-    }
-    
-    .grid li {
-	padding-bottom: 1%;
-    }
-    
-}
-
-
-
-
-@media screen and (max-width: 639px) {
-    
-    #OurBlogGrid {
-    
-	h1 {
-	    padding: 0 15px 10px;
-	}
-    }
-}
-
-
-
-
-/*========================== OUR BLOG PAGE LAYOUT - end ==========================================================*/
-
-
-
 /*====================== CONTACT US PAGE LAYOUT - beginning ====================================================*/
 
+#ContactUsGrid{
+    .button{
+	margin-bottom: 1.5em;
+    }
+}
 
 .contactText {
-    padding: $defaultPadding;
+    padding: 0;
     
 }
 
@@ -850,18 +774,18 @@ ul, li {
 .container-decoImg {
     position: relative;
     left: -108%;
-    padding-bottom: 103%;
+    padding-bottom: 132%;
     height: 0;
     width: 209%;
     
     .decoImg {
 	position: absolute;
-	top: 6%;
+	top: 5%;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	background: url(/images/pittypang_ghost3_696x413.png) 0 0 no-repeat;
-	background-size: 83% auto;
+	background-size: 106% auto;
 	border: 2px dashed lighten($primaryBG, 20);
     }
 
@@ -923,34 +847,34 @@ button {
 }
 
 #DetailPageHeader {
-    //float:left;
     width: 100%;
     
     @extend #Portfolio;
     
     .leftContainer {
-	width: 21%;
+	width: 48%;
+	padding-top: 0.7%;
 	
 	img {
 	    width: 100%;
 	}
     }
     
+    h1 {
+	font-size: 1.9em;
+	padding-bottom: 0;
+    }
+    
     .rightContainer {
-	margin-top: 5%;
-	margin-left: 4%;
-	width: 68%;
+	margin-left: 3%;
+	width: 47%;
 	
-	h1 {
-	    font-size: 1.9em;
-	}
-
 	h2 {
-	    font-size: 1.8em;
+	    font-size: $xxLargeFontSize;
 	}
 
 	h3 {
-	    font-size: 1.7em;
+	    font-size: $extraLargeFontSize;
 	}
     }
     
@@ -982,49 +906,64 @@ button {
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 459px) {
+@media screen and (min-width: 320px) and (max-width: 459px) {  
     #DetailPageHeader {
+
 	.leftContainer {
-	    width: 30%;
+	    width: 100%;
+	    display: block;
+	}
+	
+	h1 {
+	    font-size: $largeFontSize;
+	    padding: 0;
 	}
 	
 	.rightContainer {
-	    width: 60%;
-	    margin-top: 0;
-	    
-	    h1 {
-		font-size: 1.6em;
-	    }
+	    display: block;
+	    width: 100%;
+	    margin-top: 1%;
+	    margin-left: 0;
+
 	    
 	    h2 {
-		font-size: 1.4em;
+		font-size: $semiLargeFontSize;
 	    }
 	    
 	    h3 {
-		font-size: 1.3em;
+		font-size: $defaultFontSize;
 	    }
 	}
     }
 }
 
 @media screen and (min-width: 460px) and (max-width: 640px) {
+
     #DetailPageHeader {
 	
+	.leftContainer {
+	    width: 100%;
+	    display: block;
+	}
+	
+	h1 {
+	    font-size: $largeFontSize;
+	    padding: 0;
+	}
 	.rightContainer {
+	    display: block;
+	    width: 100%;
+	    margin-top: 1%;
 	    margin-left: 0;
-	    padding-left: 5px;
-	    margin-top: 0;
 	    
-	    h1 {
-		font-size: 1.6em;
-	    }
+
 	    
 	    h2 {
-		font-size: 1.4em;
+		font-size: $semiLargeFontSize;
 	    }
 	    
 	    h3 {
-		font-size: 1.3em;
+		font-size: $defaultFontSize;
 	    }	    
 	    
 	    
