@@ -50,6 +50,7 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
   <meta name="viewport" content="width=device-width">
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>

@@ -82,7 +82,7 @@
                         <nav>
                             <ul class="nav">
                                 <li class="current"><a href="#home">Home</a></li>
-                                <li><a href="#About-us">About us</a></li>
+                                <li><a class="pageNavLinkHome" href="About-us">About us</a></li>
                                 <li><a href="/portfolio.html">Portfolio</a></li>
                                 <li><a href="/blog.html">Blog</a></li>
                                 <li><a href="/contact-us.html">Contact us</a></li>
