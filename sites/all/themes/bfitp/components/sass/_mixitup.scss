@@ -67,13 +67,6 @@
     .filter-buttons {
 	button {
 	    @include mixitupRect(10px, 5%);
-	
-	    /* this stops the colour-coded top left label for sorting being 
-	     displayed, remove this when colour-coding makes sense due to 
-	     content development */
-	    &:after {
-		content: initial;
-	    }	    
 	}
 
     }  
@@ -197,6 +190,22 @@
 		  }
 	    }
 	}
+	
+	.filter-buttons {
+	    button {
+		@include mixitupRect(10px, 5%);
+
+		/* this stops the colour-coded top left label for sorting being 
+		 displayed, remove this when colour-coding makes sense due to 
+		 content development */
+		&:after {
+		    content: initial;
+		}	    
+	    }
+
+	}
+	
+	
 	.filter-buttons {
 	    label{
 		margin-bottom: 10px;

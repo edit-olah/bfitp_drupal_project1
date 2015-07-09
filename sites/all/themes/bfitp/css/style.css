@@ -223,24 +223,60 @@ and open the template in the editor.
     Created on : 08-Feb-2015, 21:08:01
     Author     : Edit
 */
+/*
 @font-face {
-  font-family: sourceCodeProNormal;
-  src: url(./fonts/SourceCodePro-Regular.otf);
-  font-weight: normal;
-  font-style: normal;
+    font-family: sourceCodeProNormal;
+    src: url(./fonts/SourceCodePro-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face{
+    font-family: 'zero-width';
+    src: url('./fonts/zero-width.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'zero-width';
+    src: url('//:') format("No-IE-404"),
+         url('./fonts/zero-width.woff') format('woff'),
+         url('./fonts/zero-width.svg') format('svg'),
+         url('./fonts/zero-width.otf') format('opentype'),
+         url('./fonts/zero-width.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+/*
 @font-face {
-  font-family: 'zero-width';
-  src: url("./fonts/zero-width.eot");
-  font-weight: normal;
-  font-style: normal;
+    font-family: Source Code Pro;
+    src: url('http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,500,600,700');
+    font-weight: normal;
+    font-style: normal;
 }
-@font-face {
-  font-family: 'zero-width';
-  src: url("//:") format("No-IE-404"), url("./fonts/zero-width.woff") format("woff"), url("./fonts/zero-width.svg") format("svg"), url("./fonts/zero-width.otf") format("opentype"), url("./fonts/zero-width.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+
+
+
+@font-face{
+    font-family: 'zero-width';
+    src: url('//cdn.jsdelivr.net/font-zero-width/1.0.0/zero-width.eot');
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face{
+    font-family: 'zero-width';
+    src: url(http://:/) format("No-IE-404"),
+         url('//cdn.jsdelivr.net/font-zero-width/1.0.0/zero-width.woff') format('woff'),
+         url('//cdn.jsdelivr.net/font-zero-width/1.0.0/zero-width.svg') format('svg'),
+         url('//cdn.jsdelivr.net/font-zero-width/1.0.0/zero-width.otf') format('opentype'),
+	 url('//cdn.jsdelivr.net/font-zero-width/1.0.0/zero-width.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
 /* 
     Created on : 06-Jan-2015, 07:57:18
     Author     : Edit
@@ -613,7 +649,7 @@ ul, li {
 }*/
 @media screen and (max-width: 593px) {
   /* line 337, ../components/sass/_layout.scss */
-  .nav a:link {
+  .nav a:link, .nav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:hover, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .nav a:hover, .nav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .nav a:active, .nav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a.active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .nav a.active, .nav .grid-full-width.blog-section li h3 a:hover, .grid-full-width.blog-section li h3 .nav a:hover, .nav .grid-full-width.blog-section li h3 a:active, .grid-full-width.blog-section li h3 .nav a:active, .nav .grid-full-width.blog-section li h3 a.active, .grid-full-width.blog-section li h3 .nav a.active, .nav .grid-full-width.blog-section li .button a:hover, .grid-full-width.blog-section li .button .nav a:hover, .nav .grid-full-width.blog-section li .button a:active, .grid-full-width.blog-section li .button .nav a:active, .nav .grid-full-width.blog-section li .button a.active, .grid-full-width.blog-section li .button .nav a.active {
     padding: 20px 1%;
   }
 }
@@ -636,7 +672,7 @@ ul, li {
     padding-top: 0%;
   }
   /* line 362, ../components/sass/_layout.scss */
-  .nav a:link {
+  .nav a:link, .nav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:hover, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .nav a:hover, .nav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .nav a:active, .nav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a.active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .nav a.active, .nav .grid-full-width.blog-section li h3 a:hover, .grid-full-width.blog-section li h3 .nav a:hover, .nav .grid-full-width.blog-section li h3 a:active, .grid-full-width.blog-section li h3 .nav a:active, .nav .grid-full-width.blog-section li h3 a.active, .grid-full-width.blog-section li h3 .nav a.active, .nav .grid-full-width.blog-section li .button a:hover, .grid-full-width.blog-section li .button .nav a:hover, .nav .grid-full-width.blog-section li .button a:active, .grid-full-width.blog-section li .button .nav a:active, .nav .grid-full-width.blog-section li .button a.active, .grid-full-width.blog-section li .button .nav a.active {
     padding: 20px 2%;
     line-height: 1;
     font-weight: 400;
@@ -1125,84 +1161,87 @@ ul, li {
   #DetailPageHeader .leftContainer {
     width: 100%;
     display: block;
+    margin: 0 auto;
   }
-  /* line 949, ../components/sass/_layout.scss */
+  /* line 950, ../components/sass/_layout.scss */
   #DetailPageHeader h1 {
     font-size: 1.6em;
     padding: 0;
   }
-  /* line 953, ../components/sass/_layout.scss */
+  /* line 954, ../components/sass/_layout.scss */
   #DetailPageHeader .rightContainer {
     display: block;
     width: 100%;
     margin-top: 1%;
     margin-left: 0;
   }
-  /* line 961, ../components/sass/_layout.scss */
+  /* line 962, ../components/sass/_layout.scss */
   #DetailPageHeader .rightContainer h2 {
     font-size: 1.5em;
   }
-  /* line 965, ../components/sass/_layout.scss */
+  /* line 966, ../components/sass/_layout.scss */
   #DetailPageHeader .rightContainer h3 {
     font-size: 1.4em;
   }
 }
 /*** detail page GLOBAL STYLES - end ***/
 /*** 2-column main content page - beginning ***/
-/* line 981, ../components/sass/_layout.scss */
+/* line 982, ../components/sass/_layout.scss */
 #DetailPageMainContent .leftContainer {
   width: 70%;
   padding-right: 10px;
   box-sizing: border-box;
 }
-/* line 987, ../components/sass/_layout.scss */
+/* line 988, ../components/sass/_layout.scss */
 #DetailPageMainContent .rightContainer {
   width: 28%;
 }
-/* line 989, ../components/sass/_layout.scss */
+/* line 990, ../components/sass/_layout.scss */
 #DetailPageMainContent .rightContainer .grid {
   padding: 20px 10px 0 10px;
   background-color: #535a51;
 }
-/* line 993, ../components/sass/_layout.scss */
+/* line 994, ../components/sass/_layout.scss */
 #DetailPageMainContent .rightContainer .grid li {
   border-bottom: 2px dashed #464c45;
+  margin-left: 0;
 }
-/* line 995, ../components/sass/_layout.scss */
+/* line 998, ../components/sass/_layout.scss */
 #DetailPageMainContent .rightContainer .grid li:last-child {
   border-bottom: none;
 }
-/* line 1000, ../components/sass/_layout.scss */
+/* line 1003, ../components/sass/_layout.scss */
 #DetailPageMainContent .rightContainer .grid .grid-contentHolder {
   padding: 0px 15px;
 }
-/* line 1004, ../components/sass/_layout.scss */
+/* line 1007, ../components/sass/_layout.scss */
 #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a {
   font-size: 1em;
   padding: 5px 8px;
+  color: #6adcba;
 }
-/* line 1010, ../components/sass/_layout.scss */
+/* line 1025, ../components/sass/_layout.scss */
 #DetailPageMainContent .rightContainer .grid .grid-contentHolder img {
   width: 100%;
 }
 
-/* line 1019, ../components/sass/_layout.scss */
+/* line 1034, ../components/sass/_layout.scss */
 #DetailPageMainContent.blog-post-article {
   padding: 25px 15px;
 }
 
 @media screen and (max-width: 639px) {
-  /* line 1026, ../components/sass/_layout.scss */
+  /* line 1041, ../components/sass/_layout.scss */
   #DetailPageMainContent .leftContainer {
     display: block;
     width: 100%;
   }
-  /* line 1031, ../components/sass/_layout.scss */
+  /* line 1046, ../components/sass/_layout.scss */
   #DetailPageMainContent .rightContainer {
     display: block;
     width: 100%;
   }
-  /* line 1035, ../components/sass/_layout.scss */
+  /* line 1050, ../components/sass/_layout.scss */
   #DetailPageMainContent .rightContainer h2 {
     margin-top: 25px;
     padding-top: 25px;
@@ -1211,54 +1250,54 @@ ul, li {
   }
 }
 @media screen and (min-width: 640px) and (max-width: 770px) {
-  /* line 1049, ../components/sass/_layout.scss */
+  /* line 1064, ../components/sass/_layout.scss */
   #DetailPageMainContent .leftContainer {
     width: 65%;
   }
-  /* line 1052, ../components/sass/_layout.scss */
+  /* line 1067, ../components/sass/_layout.scss */
   #DetailPageMainContent .rightContainer {
     width: 33%;
   }
-  /* line 1055, ../components/sass/_layout.scss */
+  /* line 1070, ../components/sass/_layout.scss */
   #DetailPageMainContent .rightContainer .grid .grid-contentHolder {
     padding: 0px 5px;
   }
 }
 /*** portfolio project detail page - beginning ***/
-/* line 1067, ../components/sass/_layout.scss */
+/* line 1082, ../components/sass/_layout.scss */
 #DetailPageHeader.portfolio-project-header .leftContainer {
   width: 45%;
 }
-/* line 1070, ../components/sass/_layout.scss */
+/* line 1085, ../components/sass/_layout.scss */
 #DetailPageHeader.portfolio-project-header .rightContainer {
   width: 50%;
   margin-top: 1%;
   margin-left: 3.5%;
 }
 
-/* line 1078, ../components/sass/_layout.scss */
+/* line 1093, ../components/sass/_layout.scss */
 #DetailPageMainContent #SidebarContent {
   border: 2px dashed #5f675d;
   background-color: #464c45;
   padding: 10px;
 }
-/* line 1082, ../components/sass/_layout.scss */
+/* line 1097, ../components/sass/_layout.scss */
 #DetailPageMainContent #SidebarContent .sidebar-section {
   padding: 15px 0 20px 0;
   border-bottom: 2px dashed #5f675d;
 }
-/* line 1086, ../components/sass/_layout.scss */
+/* line 1101, ../components/sass/_layout.scss */
 #DetailPageMainContent #SidebarContent .sidebar-section:last-child {
   border-bottom: none;
 }
 
 @media screen and (max-width: 460px) {
-  /* line 1095, ../components/sass/_layout.scss */
+  /* line 1110, ../components/sass/_layout.scss */
   #DetailPageHeader.portfolio-project-header .leftContainer {
     display: block;
     width: 100%;
   }
-  /* line 1100, ../components/sass/_layout.scss */
+  /* line 1115, ../components/sass/_layout.scss */
   #DetailPageHeader.portfolio-project-header .rightContainer {
     display: block;
     width: 100%;
@@ -1291,7 +1330,7 @@ and open the template in the editor.
   display: block;
   width: 290px;
   height: 70px;
-  background: url(/images/logo_with_text_290x70.png) no-repeat;
+  background: url(http://eoslamp.dev:8080/project1/sites/default/files/logo_with_text_290x70.png) no-repeat;
   text-decoration: none;
   text-indent: -9999px;
   margin: 5px 0;
@@ -1378,7 +1417,7 @@ and open the template in the editor.
   border: 2px dashed rgba(189, 222, 55, 0.1);
 }
 /* line 35, ../components/sass/_topnav.scss */
-.topNav a:link {
+.topNav a:link, .topNav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:hover, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .topNav a:hover, .topNav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .topNav a:active, .topNav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a.active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .topNav a.active, .topNav .grid-full-width.blog-section li h3 a:hover, .grid-full-width.blog-section li h3 .topNav a:hover, .topNav .grid-full-width.blog-section li h3 a:active, .grid-full-width.blog-section li h3 .topNav a:active, .topNav .grid-full-width.blog-section li h3 a.active, .grid-full-width.blog-section li h3 .topNav a.active, .topNav .grid-full-width.blog-section li .button a:hover, .grid-full-width.blog-section li .button .topNav a:hover, .topNav .grid-full-width.blog-section li .button a:active, .grid-full-width.blog-section li .button .topNav a:active, .topNav .grid-full-width.blog-section li .button a.active, .grid-full-width.blog-section li .button .topNav a.active {
   padding: 2% 5%;
   font-size: 1.2em;
 }
@@ -1405,7 +1444,7 @@ and open the template in the editor.
     box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
   }
   /* line 67, ../components/sass/_topnav.scss */
-  .nav.topNav a:link {
+  .nav.topNav a:link, .nav.topNav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:hover, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .nav.topNav a:hover, .nav.topNav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .nav.topNav a:active, .nav.topNav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a.active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .nav.topNav a.active, .nav.topNav .grid-full-width.blog-section li h3 a:hover, .grid-full-width.blog-section li h3 .nav.topNav a:hover, .nav.topNav .grid-full-width.blog-section li h3 a:active, .grid-full-width.blog-section li h3 .nav.topNav a:active, .nav.topNav .grid-full-width.blog-section li h3 a.active, .grid-full-width.blog-section li h3 .nav.topNav a.active, .nav.topNav .grid-full-width.blog-section li .button a:hover, .grid-full-width.blog-section li .button .nav.topNav a:hover, .nav.topNav .grid-full-width.blog-section li .button a:active, .grid-full-width.blog-section li .button .nav.topNav a:active, .nav.topNav .grid-full-width.blog-section li .button a.active, .grid-full-width.blog-section li .button .nav.topNav a.active {
     padding: 2% 3% !important;
     margin: 0 1.5%;
     font-size: 1em;
@@ -1413,7 +1452,7 @@ and open the template in the editor.
 }
 @media screen and (max-width: 460px) {
   /* line 79, ../components/sass/_topnav.scss */
-  .nav.topNav a:link {
+  .nav.topNav a:link, .nav.topNav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:hover, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .nav.topNav a:hover, .nav.topNav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .nav.topNav a:active, .nav.topNav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a.active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .nav.topNav a.active, .nav.topNav .grid-full-width.blog-section li h3 a:hover, .grid-full-width.blog-section li h3 .nav.topNav a:hover, .nav.topNav .grid-full-width.blog-section li h3 a:active, .grid-full-width.blog-section li h3 .nav.topNav a:active, .nav.topNav .grid-full-width.blog-section li h3 a.active, .grid-full-width.blog-section li h3 .nav.topNav a.active, .nav.topNav .grid-full-width.blog-section li .button a:hover, .grid-full-width.blog-section li .button .nav.topNav a:hover, .nav.topNav .grid-full-width.blog-section li .button a:active, .grid-full-width.blog-section li .button .nav.topNav a:active, .nav.topNav .grid-full-width.blog-section li .button a.active, .grid-full-width.blog-section li .button .nav.topNav a.active {
     font-size: .85em;
   }
 }
@@ -1431,7 +1470,7 @@ and open the template in the editor.
     margin-top: 4.5%;
   }
   /* line 95, ../components/sass/_topnav.scss */
-  .nav.topNav a:link {
+  .nav.topNav a:link, .nav.topNav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:hover, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .nav.topNav a:hover, .nav.topNav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .nav.topNav a:active, .nav.topNav #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a.active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .nav.topNav a.active, .nav.topNav .grid-full-width.blog-section li h3 a:hover, .grid-full-width.blog-section li h3 .nav.topNav a:hover, .nav.topNav .grid-full-width.blog-section li h3 a:active, .grid-full-width.blog-section li h3 .nav.topNav a:active, .nav.topNav .grid-full-width.blog-section li h3 a.active, .grid-full-width.blog-section li h3 .nav.topNav a.active, .nav.topNav .grid-full-width.blog-section li .button a:hover, .grid-full-width.blog-section li .button .nav.topNav a:hover, .nav.topNav .grid-full-width.blog-section li .button a:active, .grid-full-width.blog-section li .button .nav.topNav a:active, .nav.topNav .grid-full-width.blog-section li .button a.active, .grid-full-width.blog-section li .button .nav.topNav a.active {
     font-size: 1em;
     padding: 2% 3%;
   }
@@ -1523,7 +1562,7 @@ and open the template in the editor.
     border-bottom: 2px dashed #ffffff;
   }
   /* line 92, ../components/sass/_pagenav.scss */
-  #PageNav .nav.full-width li a:link {
+  #PageNav .nav.full-width li a:link, #PageNav .nav.full-width li #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:hover, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button #PageNav .nav.full-width li a:hover, #PageNav .nav.full-width li #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button #PageNav .nav.full-width li a:active, #PageNav .nav.full-width li #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a.active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button #PageNav .nav.full-width li a.active, #PageNav .nav.full-width .grid-full-width.blog-section li h3 a:hover, .grid-full-width.blog-section #PageNav .nav.full-width li h3 a:hover, #PageNav .nav.full-width .grid-full-width.blog-section li h3 a:active, .grid-full-width.blog-section #PageNav .nav.full-width li h3 a:active, #PageNav .nav.full-width .grid-full-width.blog-section li h3 a.active, .grid-full-width.blog-section #PageNav .nav.full-width li h3 a.active, #PageNav .nav.full-width .grid-full-width.blog-section li .button a:hover, .grid-full-width.blog-section #PageNav .nav.full-width li .button a:hover, #PageNav .nav.full-width .grid-full-width.blog-section li .button a:active, .grid-full-width.blog-section #PageNav .nav.full-width li .button a:active, #PageNav .nav.full-width .grid-full-width.blog-section li .button a.active, .grid-full-width.blog-section #PageNav .nav.full-width li .button a.active {
     padding: 8px 5px;
     width: 100%;
     border: none;
@@ -1547,7 +1586,7 @@ and open the template in the editor.
     border-bottom: 2px dashed #ffffff;
   }
   /* line 117, ../components/sass/_pagenav.scss */
-  #PageNav .nav.full-width li a:link {
+  #PageNav .nav.full-width li a:link, #PageNav .nav.full-width li #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:hover, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button #PageNav .nav.full-width li a:hover, #PageNav .nav.full-width li #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button #PageNav .nav.full-width li a:active, #PageNav .nav.full-width li #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a.active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button #PageNav .nav.full-width li a.active, #PageNav .nav.full-width .grid-full-width.blog-section li h3 a:hover, .grid-full-width.blog-section #PageNav .nav.full-width li h3 a:hover, #PageNav .nav.full-width .grid-full-width.blog-section li h3 a:active, .grid-full-width.blog-section #PageNav .nav.full-width li h3 a:active, #PageNav .nav.full-width .grid-full-width.blog-section li h3 a.active, .grid-full-width.blog-section #PageNav .nav.full-width li h3 a.active, #PageNav .nav.full-width .grid-full-width.blog-section li .button a:hover, .grid-full-width.blog-section #PageNav .nav.full-width li .button a:hover, #PageNav .nav.full-width .grid-full-width.blog-section li .button a:active, .grid-full-width.blog-section #PageNav .nav.full-width li .button a:active, #PageNav .nav.full-width .grid-full-width.blog-section li .button a.active, .grid-full-width.blog-section #PageNav .nav.full-width li .button a.active {
     padding: 8px 5px;
     width: 100%;
     border: none;
@@ -1555,17 +1594,24 @@ and open the template in the editor.
 }
 @media screen and (min-width: 450px) and (max-width: 641px) {
   /* line 131, ../components/sass/_pagenav.scss */
-  #PageNav .nav.full-width li a:link {
-    padding: 12px 5px;
+  #PageNav .nav.full-width li a:link, #PageNav .nav.full-width li #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:hover, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button #PageNav .nav.full-width li a:hover, #PageNav .nav.full-width li #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button #PageNav .nav.full-width li a:active, #PageNav .nav.full-width li #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a.active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button #PageNav .nav.full-width li a.active, #PageNav .nav.full-width .grid-full-width.blog-section li h3 a:hover, .grid-full-width.blog-section #PageNav .nav.full-width li h3 a:hover, #PageNav .nav.full-width .grid-full-width.blog-section li h3 a:active, .grid-full-width.blog-section #PageNav .nav.full-width li h3 a:active, #PageNav .nav.full-width .grid-full-width.blog-section li h3 a.active, .grid-full-width.blog-section #PageNav .nav.full-width li h3 a.active, #PageNav .nav.full-width .grid-full-width.blog-section li .button a:hover, .grid-full-width.blog-section #PageNav .nav.full-width li .button a:hover, #PageNav .nav.full-width .grid-full-width.blog-section li .button a:active, .grid-full-width.blog-section #PageNav .nav.full-width li .button a:active, #PageNav .nav.full-width .grid-full-width.blog-section li .button a.active, .grid-full-width.blog-section #PageNav .nav.full-width li .button a.active {
+    padding: 2% 2%;
+    font-size: 0.9em;
+    font-weight: 700;
+  }
+
+  /* line 139, ../components/sass/_pagenav.scss */
+  .backToTopButton {
+    font-size: 1.2em;
   }
 }
 @media screen and (min-width: 640px) and (max-width: 1023px) {
-  /* line 140, ../components/sass/_pagenav.scss */
+  /* line 146, ../components/sass/_pagenav.scss */
   .nav.full-width {
     background: transparent;
     min-height: 38px;
   }
-  /* line 143, ../components/sass/_pagenav.scss */
+  /* line 149, ../components/sass/_pagenav.scss */
   .nav.full-width a {
     font-size: 1.1em;
     padding: 1% 3%;
@@ -1573,7 +1619,7 @@ and open the template in the editor.
   }
 }
 /* Page nav styling in connection with hamburger menu - beginning */
-/* line 154, ../components/sass/_pagenav.scss */
+/* line 160, ../components/sass/_pagenav.scss */
 #PageNav .cmn-toggle-switch__htx {
   float: left;
   top: -52px;
@@ -2032,42 +2078,48 @@ and open the template in the editor.
 }
 /* line 322, ../components/sass/_grid.scss */
 .grid-full-width.blog-section li h3 {
+  font-size: 1rem;
+}
+/* line 325, ../components/sass/_grid.scss */
+.grid-full-width.blog-section li h3 a:link, .grid-full-width.blog-section li h3 #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:hover, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .grid-full-width.blog-section li h3 a:hover, .grid-full-width.blog-section li h3 #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a:active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .grid-full-width.blog-section li h3 a:active, .grid-full-width.blog-section li h3 #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button a.active, #DetailPageMainContent .rightContainer .grid .grid-contentHolder .button .grid-full-width.blog-section li h3 a.active, .grid-full-width.blog-section li h3 a:hover, .grid-full-width.blog-section li h3 a:active, .grid-full-width.blog-section li h3 a.active, .grid-full-width.blog-section li h3 .button a:hover, .grid-full-width.blog-section li .button h3 a:hover, .grid-full-width.blog-section li h3 .button a:active, .grid-full-width.blog-section li .button h3 a:active, .grid-full-width.blog-section li h3 .button a.active, .grid-full-width.blog-section li .button h3 a.active {
   font-size: 1.4em;
   line-height: 1.3;
+  color: #85E14F;
   margin-bottom: 1em;
 }
-/* line 328, ../components/sass/_grid.scss */
+/* line 345, ../components/sass/_grid.scss */
 .grid-full-width.blog-section li h4 {
   font-size: 1.2em;
   line-height: 1.2;
   margin-bottom: 1em;
 }
-/* line 334, ../components/sass/_grid.scss */
+/* line 351, ../components/sass/_grid.scss */
 .grid-full-width.blog-section li p {
-  margin-bottom: 0.64em;
+  margin-bottom: 1.5em;
 }
-/* line 339, ../components/sass/_grid.scss */
+/* line 356, ../components/sass/_grid.scss */
 .grid-full-width.blog-section li .button a:hover {
   background-color: #3f443e;
+  color: #6adcba;
 }
 
 @media screen and (max-width: 900px) {
-  /* line 351, ../components/sass/_grid.scss */
+  /* line 380, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout li {
     width: 49%;
   }
 
-  /* line 357, ../components/sass/_grid.scss */
+  /* line 386, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout > li:last-child {
     clear: both;
     width: 100%;
   }
 
-  /* line 362, ../components/sass/_grid.scss */
+  /* line 391, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout > li .grid.grid-full-width > li {
     width: 100%;
   }
-  /* line 365, ../components/sass/_grid.scss */
+  /* line 394, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout > li .grid.grid-full-width > li img {
     width: 50%;
     height: auto;
@@ -2077,17 +2129,17 @@ and open the template in the editor.
     padding-bottom: 0;
     margin-bottom: 1%;
   }
-  /* line 375, ../components/sass/_grid.scss */
+  /* line 404, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout > li .grid.grid-full-width > li p {
     clear: both;
   }
 }
 @media screen and (max-width: 639px) {
-  /* line 385, ../components/sass/_grid.scss */
+  /* line 414, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout {
     margin-bottom: 1%;
   }
-  /* line 389, ../components/sass/_grid.scss */
+  /* line 418, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout li {
     clear: both;
     width: 100%;
@@ -2095,48 +2147,48 @@ and open the template in the editor.
     padding-left: 0;
     padding-right: 0;
   }
-  /* line 396, ../components/sass/_grid.scss */
+  /* line 425, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout li h2.sidebar-header {
     margin: 15px 25px;
   }
-  /* line 401, ../components/sass/_grid.scss */
+  /* line 430, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout .grid-contentHolder {
     padding: 0 15px;
   }
-  /* line 404, ../components/sass/_grid.scss */
+  /* line 433, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout .grid-contentHolder img {
     width: 70%;
     margin: 4% auto;
   }
-  /* line 408, ../components/sass/_grid.scss */
+  /* line 437, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout .grid-contentHolder .email {
     min-height: initial;
     box-sizing: border-box;
   }
-  /* line 412, ../components/sass/_grid.scss */
+  /* line 441, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout .grid-contentHolder p.min-height-applied {
     min-height: initial;
   }
-  /* line 415, ../components/sass/_grid.scss */
+  /* line 444, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout .grid-contentHolder .socialIcons {
     margin: 0 auto 1%;
     width: 70%;
   }
-  /* line 418, ../components/sass/_grid.scss */
+  /* line 447, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout .grid-contentHolder .socialIcons img {
     padding: 2%;
   }
-  /* line 424, ../components/sass/_grid.scss */
+  /* line 453, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout .grid-contentHolder .button a {
     font-size: 1.4em;
   }
 
-  /* line 431, ../components/sass/_grid.scss */
+  /* line 460, ../components/sass/_grid.scss */
   .grid.grid-full-width > li {
     padding-top: 0%;
   }
 
-  /* line 436, ../components/sass/_grid.scss */
+  /* line 465, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout > li .grid.grid-full-width > li img {
     padding-top: 0%;
     margin-top: 3%;
@@ -2144,20 +2196,20 @@ and open the template in the editor.
     margin-bottom: 4%;
   }
 
-  /* line 445, ../components/sass/_grid.scss */
+  /* line 474, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout > li > h2 {
     font-size: 1.9rem;
     padding: 5px 15px 20px 15px;
     margin-bottom: 0;
   }
 
-  /* line 451, ../components/sass/_grid.scss */
+  /* line 480, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout li:last-child {
     padding-bottom: 1%;
   }
 }
 @media screen and (min-width: 640px) and (max-width: 1023px) {
-  /* line 460, ../components/sass/_grid.scss */
+  /* line 489, ../components/sass/_grid.scss */
   .grid.grid-stretched-layout li p.button a, .grid.grid-stretched-layout li button a {
     width: 100%;
     display: block;
@@ -2168,66 +2220,66 @@ and open the template in the editor.
 /**** CONTACT US PAGE - Stretched / full width / blog-section grid  - end ****/
 /*=====================================================================================*/
 /**** BLOG INDEX PAGES - My/Our blog-posts - Default grid extension for blog index pages - beginning ****/
-/* line 478, ../components/sass/_grid.scss */
+/* line 507, ../components/sass/_grid.scss */
 .blog-post h2 {
   min-height: 47px;
   margin-top: 3%;
 }
-/* line 483, ../components/sass/_grid.scss */
+/* line 512, ../components/sass/_grid.scss */
 .blog-post h3 {
   min-height: 53px;
 }
-/* line 486, ../components/sass/_grid.scss */
+/* line 515, ../components/sass/_grid.scss */
 .blog-post h2, .blog-post h3 {
   clear: both;
 }
-/* line 490, ../components/sass/_grid.scss */
+/* line 519, ../components/sass/_grid.scss */
 .blog-post img {
   width: 100%;
 }
-/* line 494, ../components/sass/_grid.scss */
+/* line 523, ../components/sass/_grid.scss */
 .blog-post .blog-summary {
   min-height: 10em;
 }
 
 @media screen and (max-width: 639px) {
-  /* line 501, ../components/sass/_grid.scss */
+  /* line 530, ../components/sass/_grid.scss */
   .blog-post .blog-summary {
     min-height: initial;
     margin-bottom: 10px;
   }
 
-  /* line 509, ../components/sass/_grid.scss */
+  /* line 538, ../components/sass/_grid.scss */
   .grid-contentHolder.blog-post article img {
     width: 100%;
   }
 }
 @media screen and (min-width: 640px) and (max-width: 764px) {
-  /* line 518, ../components/sass/_grid.scss */
+  /* line 547, ../components/sass/_grid.scss */
   .blog-post h2, .blog-post h3 {
     min-height: 5em;
   }
-  /* line 522, ../components/sass/_grid.scss */
+  /* line 551, ../components/sass/_grid.scss */
   .blog-post .blog-summary {
     min-height: 10.2em;
   }
 }
 @media screen and (min-width: 765px) and (max-width: 1023px) {
-  /* line 531, ../components/sass/_grid.scss */
+  /* line 560, ../components/sass/_grid.scss */
   .blog-post h2, .blog-post h3 {
     min-height: 5em;
   }
-  /* line 535, ../components/sass/_grid.scss */
+  /* line 564, ../components/sass/_grid.scss */
   .blog-post .blog-summary {
     min-height: 12em;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 825px) {
-  /* line 546, ../components/sass/_grid.scss */
+  /* line 575, ../components/sass/_grid.scss */
   .blog-post h3 {
     min-height: 5em;
   }
-  /* line 550, ../components/sass/_grid.scss */
+  /* line 579, ../components/sass/_grid.scss */
   .blog-post .blog-summary {
     min-height: 14em;
   }
@@ -2294,9 +2346,6 @@ and open the template in the editor.
 /* line 68, ../components/sass/_mixitup.scss */
 .control-bar .filter-buttons button {
   position: relative;
-  /* this stops the colour-coded top left label for sorting being 
-   displayed, remove this when colour-coding makes sense due to 
-   content development */
 }
 /* line 31, ../components/sass/_mixins.scss */
 .control-bar .filter-buttons button:before {
@@ -2318,21 +2367,17 @@ and open the template in the editor.
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 74, ../components/sass/_mixitup.scss */
-.control-bar .filter-buttons button:after {
-  content: initial;
-}
 
 @media screen and (min-width: 320px) and (max-width: 534px) {
-  /* line 88, ../components/sass/_mixitup.scss */
+  /* line 81, ../components/sass/_mixitup.scss */
   .control-bar .group button {
     padding: 3px 7px;
   }
-  /* line 93, ../components/sass/_mixitup.scss */
+  /* line 86, ../components/sass/_mixitup.scss */
   .control-bar .filter-buttons {
     width: 100%;
   }
-  /* line 96, ../components/sass/_mixitup.scss */
+  /* line 89, ../components/sass/_mixitup.scss */
   .control-bar .filter-buttons button {
     display: block;
     min-width: initial;
@@ -2342,21 +2387,21 @@ and open the template in the editor.
   }
 }
 @media screen and (max-width: 727px) {
-  /* line 110, ../components/sass/_mixitup.scss */
+  /* line 103, ../components/sass/_mixitup.scss */
   .control-bar label {
     display: block;
     margin: .4em .1em;
   }
 }
 @media screen and (max-width: 823px) {
-  /* line 118, ../components/sass/_mixitup.scss */
+  /* line 111, ../components/sass/_mixitup.scss */
   .control-bar .group:first-child {
     margin-bottom: 1%;
   }
 }
 /********* mix it up buttons / control bar  - end **************/
 /********* mix it up grid - beginning **************/
-/* line 130, ../components/sass/_mixitup.scss */
+/* line 123, ../components/sass/_mixitup.scss */
 .mixItUp-container > * {
   display: inline-block;
   vertical-align: top;
@@ -2365,7 +2410,7 @@ and open the template in the editor.
   font-size: 1rem;
 }
 
-/* line 138, ../components/sass/_mixitup.scss */
+/* line 131, ../components/sass/_mixitup.scss */
 .mixItUp-container {
   text-align: justify;
   font-family: "zero-width";
@@ -2385,7 +2430,7 @@ and open the template in the editor.
 .mixItUp-container .gap {
   width: 23%;
 }
-/* line 141, ../components/sass/_mixitup.scss */
+/* line 134, ../components/sass/_mixitup.scss */
 .mixItUp-container .mix, .mixItUp-container .portfoMix {
   display: none;
   background: rgba(255, 255, 255, 0.2);
@@ -2423,14 +2468,14 @@ and open the template in the editor.
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 146, ../components/sass/_mixitup.scss */
+/* line 139, ../components/sass/_mixitup.scss */
 .mixItUp-container .mix {
   background: transparent;
   border-style: solid;
   border-width: 2px 5px 5px 2px;
   border-color: transparent transparent rgba(215, 215, 215, 0.05) rgba(215, 215, 215, 0.05);
 }
-/* line 157, ../components/sass/_mixitup.scss */
+/* line 150, ../components/sass/_mixitup.scss */
 .mixItUp-container .mix p {
   margin-top: -10px;
 }
@@ -2439,7 +2484,7 @@ and open the template in the editor.
 /* ================================ mix it up GLOBAL styles - end ======================================*/
 /* =============================== Skills section - beginning ======================================*/
 /********* Skills - buttons / control bar - beginning **************/
-/* line 180, ../components/sass/_mixitup.scss */
+/* line 173, ../components/sass/_mixitup.scss */
 #Skills .control-bar {
   display: inline-block;
   width: 37%;
@@ -2447,104 +2492,135 @@ and open the template in the editor.
   margin: 7px 0 0 2%;
   padding: 13px 3%;
 }
-/* line 187, ../components/sass/_mixitup.scss */
+/* line 180, ../components/sass/_mixitup.scss */
 #Skills .control-bar .group {
   width: 100%;
 }
-/* line 190, ../components/sass/_mixitup.scss */
+/* line 183, ../components/sass/_mixitup.scss */
 #Skills .control-bar .group button {
   width: 100%;
   text-align: left;
 }
-/* line 194, ../components/sass/_mixitup.scss */
+/* line 187, ../components/sass/_mixitup.scss */
 #Skills .control-bar .group button[data-filter="all"], #Skills .control-bar .group button[data-filter="none"] {
   width: 39%;
   text-align: center;
 }
+/* line 195, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button {
+  position: relative;
+  /* this stops the colour-coded top left label for sorting being 
+   displayed, remove this when colour-coding makes sense due to 
+   content development */
+}
+/* line 31, ../components/sass/_mixins.scss */
+#Skills .control-bar .filter-buttons button:before {
+  content: '';
+  display: inline-block;
+  padding-top: 5%;
+  vertical-align: middle;
+}
+/* line 37, ../components/sass/_mixins.scss */
+#Skills .control-bar .filter-buttons button:after {
+  content: '';
+  position: absolute;
+  border: 10px solid transparent;
+  border-right-color: white;
+  top: -10px;
+  left: -10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 /* line 201, ../components/sass/_mixitup.scss */
+#Skills .control-bar .filter-buttons button:after {
+  content: initial;
+}
+/* line 210, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons label {
   margin-bottom: 10px;
 }
-/* line 205, ../components/sass/_mixitup.scss */
+/* line 214, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".webdev"]:after {
   border-right-color: #ABF381;
 }
-/* line 208, ../components/sass/_mixitup.scss */
+/* line 217, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".drupal"]:after {
   border-right-color: #137CC1;
 }
-/* line 211, ../components/sass/_mixitup.scss */
+/* line 220, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".threeD"]:after {
   border-right-color: #FFB587;
 }
-/* line 214, ../components/sass/_mixitup.scss */
+/* line 223, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".animation"]:after {
   border-right-color: #ff7621;
 }
-/* line 217, ../components/sass/_mixitup.scss */
+/* line 226, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".drawing"]:after {
   border-right-color: #f8b0c9;
 }
-/* line 220, ../components/sass/_mixitup.scss */
+/* line 229, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".markup"]:after {
   border-right-color: #e9fcde;
 }
-/* line 223, ../components/sass/_mixitup.scss */
+/* line 232, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".extension-language"]:after {
   border-right-color: #caf7b0;
 }
-/* line 226, ../components/sass/_mixitup.scss */
+/* line 235, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".dynamic-programming-language"]:after {
   border-right-color: #ABF381;
 }
-/* line 229, ../components/sass/_mixitup.scss */
+/* line 238, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".code-library"]:after {
   border-right-color: #7cec3b;
 }
-/* line 232, ../components/sass/_mixitup.scss */
+/* line 241, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".frontend-automation"]:after {
   border-right-color: #4bedbd;
 }
-/* line 235, ../components/sass/_mixitup.scss */
+/* line 244, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".version-control"]:after {
   border-right-color: #76DFC0;
 }
-/* line 238, ../components/sass/_mixitup.scss */
+/* line 247, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".virtualization"]:after {
   border-right-color: #FFB587;
 }
-/* line 241, ../components/sass/_mixitup.scss */
+/* line 250, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".terminal-emulator"]:after {
   border-right-color: #FF9959;
 }
-/* line 244, ../components/sass/_mixitup.scss */
+/* line 253, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".cut-up"]:after {
   border-right-color: #f25d00;
 }
-/* line 247, ../components/sass/_mixitup.scss */
+/* line 256, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".cms"]:after {
   border-right-color: #15cc96;
 }
-/* line 250, ../components/sass/_mixitup.scss */
+/* line 259, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button[data-filter=".additional"]:after {
   border-right-color: #F481A9;
 }
 
 /*** Skills - buttons / control bar - end ***/
 /*** Skills - grid - beginning ***/
-/* line 262, ../components/sass/_mixitup.scss */
+/* line 271, ../components/sass/_mixitup.scss */
 #SkillsContainer {
   display: inline-block;
   width: 59%;
   vertical-align: top;
   margin-top: 7px;
 }
-/* line 268, ../components/sass/_mixitup.scss */
+/* line 277, ../components/sass/_mixitup.scss */
 #SkillsContainer h2 {
   display: block;
   font-size: 1.4rem;
 }
-/* line 272, ../components/sass/_mixitup.scss */
+/* line 281, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix {
   position: relative;
   width: 49%;
@@ -2574,175 +2650,175 @@ and open the template in the editor.
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 281, ../components/sass/_mixitup.scss */
+/* line 290, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix:after {
   content: initial;
 }
-/* line 285, ../components/sass/_mixitup.scss */
+/* line 294, ../components/sass/_mixitup.scss */
 #SkillsContainer .gap {
   width: 24.5%;
 }
-/* line 291, ../components/sass/_mixitup.scss */
+/* line 300, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.webdev:after {
   border-right-color: #ABF381;
 }
-/* line 294, ../components/sass/_mixitup.scss */
+/* line 303, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.cms:after {
   border-right-color: #15cc96;
 }
-/* line 297, ../components/sass/_mixitup.scss */
+/* line 306, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.drupal:after {
   border-right-color: #137CC1;
 }
-/* line 300, ../components/sass/_mixitup.scss */
+/* line 309, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.threeD:after {
   border-right-color: #FFB587;
 }
-/* line 303, ../components/sass/_mixitup.scss */
+/* line 312, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.animation:after {
   border-right-color: #ff7621;
 }
-/* line 306, ../components/sass/_mixitup.scss */
+/* line 315, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.drawing:after {
   border-right-color: #f8b0c9;
 }
-/* line 309, ../components/sass/_mixitup.scss */
+/* line 318, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.markup:after {
   border-right-color: #e9fcde;
 }
-/* line 312, ../components/sass/_mixitup.scss */
+/* line 321, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.extension-language:after {
   border-right-color: #caf7b0;
 }
-/* line 315, ../components/sass/_mixitup.scss */
+/* line 324, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.dynamic-programming-language:after {
   border-right-color: #ABF381;
 }
-/* line 318, ../components/sass/_mixitup.scss */
+/* line 327, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.code-library:after {
   border-right-color: #7cec3b;
 }
-/* line 321, ../components/sass/_mixitup.scss */
+/* line 330, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.frontend-automation:after {
   border-right-color: #4bedbd;
 }
-/* line 324, ../components/sass/_mixitup.scss */
+/* line 333, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.version-control:after {
   border-right-color: #76DFC0;
 }
-/* line 327, ../components/sass/_mixitup.scss */
+/* line 336, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.virtualization:after {
   border-right-color: #FFB587;
 }
-/* line 330, ../components/sass/_mixitup.scss */
+/* line 339, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.terminal-emulator:after {
   border-right-color: #FF9959;
 }
-/* line 333, ../components/sass/_mixitup.scss */
+/* line 342, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.cut-up:after {
   border-right-color: #f25d00;
 }
-/* line 336, ../components/sass/_mixitup.scss */
+/* line 345, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix.additional:after {
   border-right-color: #F481A9;
 }
 
 @media screen and (max-width: 445px) {
-  /* line 344, ../components/sass/_mixitup.scss */
+  /* line 353, ../components/sass/_mixitup.scss */
   #SkillsContainer .mix {
     width: 98%;
     min-height: initial;
     line-height: 1;
     margin-bottom: 6px;
   }
-  /* line 350, ../components/sass/_mixitup.scss */
+  /* line 359, ../components/sass/_mixitup.scss */
   #SkillsContainer .mix p {
     padding: .1em 1.5em;
     font-size: 1.2rem;
     line-height: 1.2;
   }
-  /* line 357, ../components/sass/_mixitup.scss */
+  /* line 366, ../components/sass/_mixitup.scss */
   #SkillsContainer .gap {
     width: 98%;
   }
 }
 @media screen and (min-width: 531px) and (max-width: 648px) {
-  /* line 367, ../components/sass/_mixitup.scss */
+  /* line 376, ../components/sass/_mixitup.scss */
   #SkillsContainer .mix {
     min-height: 48px;
     margin-bottom: 6px;
   }
 }
 @media screen and (min-width: 649px) and (max-width: 831px) {
-  /* line 377, ../components/sass/_mixitup.scss */
+  /* line 386, ../components/sass/_mixitup.scss */
   #SkillsContainer .mix {
     min-height: 48px;
     margin-bottom: 5px;
   }
 }
 @media screen and (max-width: 1002px) {
-  /* line 388, ../components/sass/_mixitup.scss */
+  /* line 397, ../components/sass/_mixitup.scss */
   #Skills .control-bar label {
     display: block;
   }
-  /* line 392, ../components/sass/_mixitup.scss */
+  /* line 401, ../components/sass/_mixitup.scss */
   #Skills .control-bar .filter-buttons button {
     margin-bottom: 5px;
   }
 
-  /* line 400, ../components/sass/_mixitup.scss */
+  /* line 409, ../components/sass/_mixitup.scss */
   #SkillsContainer .mix {
     margin-bottom: 6px;
   }
 }
 @media screen and (max-width: 530px) {
-  /* line 410, ../components/sass/_mixitup.scss */
+  /* line 419, ../components/sass/_mixitup.scss */
   #Skills .control-bar {
     display: none;
   }
 
-  /* line 415, ../components/sass/_mixitup.scss */
+  /* line 424, ../components/sass/_mixitup.scss */
   #SkillsContainer {
     width: 100%;
   }
-  /* line 419, ../components/sass/_mixitup.scss */
+  /* line 428, ../components/sass/_mixitup.scss */
   #SkillsContainer .mix:after {
     border-right-color: transparent !important;
   }
 }
 @media screen and (min-width: 465px) and (max-width: 530px) {
-  /* line 428, ../components/sass/_mixitup.scss */
+  /* line 437, ../components/sass/_mixitup.scss */
   #SkillsContainer {
     width: 100%;
   }
 }
 /* for where list of skills has more content in the individual list items - beginning */
 @media screen and (max-width: 1002px) {
-  /* line 439, ../components/sass/_mixitup.scss */
+  /* line 448, ../components/sass/_mixitup.scss */
   #SkillsContainer.more-content .mix {
     min-height: 60px;
   }
 }
 @media screen and (max-width: 481px) {
-  /* line 447, ../components/sass/_mixitup.scss */
+  /* line 456, ../components/sass/_mixitup.scss */
   #SkillsContainer.more-content .mix {
     min-height: initial;
   }
 }
 @media screen and (min-width: 482px) and (max-width: 433px) {
-  /* line 456, ../components/sass/_mixitup.scss */
+  /* line 465, ../components/sass/_mixitup.scss */
   #SkillsContainer.more-content .mix {
     min-height: 76px;
   }
 }
 @media screen and (min-width: 530px) and (max-width: 551px) {
-  /* line 464, ../components/sass/_mixitup.scss */
+  /* line 473, ../components/sass/_mixitup.scss */
   #SkillsContainer.more-content .mix {
     min-height: 92px;
   }
 }
 @media screen and (min-width: 552px) and (max-width: 622px) {
-  /* line 473, ../components/sass/_mixitup.scss */
+  /* line 482, ../components/sass/_mixitup.scss */
   #SkillsContainer.more-content .mix {
     min-height: 70px;
   }
@@ -2752,60 +2828,60 @@ and open the template in the editor.
 /* ============================= Skills section - end ============================================*/
 /* ============================= Portfolio section - beginning =============================*/
 /*** Portfolio - buttons / control bar - beginning ***/
-/* line 497, ../components/sass/_mixitup.scss */
+/* line 506, ../components/sass/_mixitup.scss */
 #Portfolio .control-bar .group:first-child, #DetailPageHeader .control-bar .group:first-child, #DetailPageMainContent .control-bar .group:first-child, #ContactIndi .control-bar .group:first-child {
   margin-bottom: 1%;
 }
-/* line 502, ../components/sass/_mixitup.scss */
+/* line 511, ../components/sass/_mixitup.scss */
 #Portfolio .control-bar .filter-buttons, #DetailPageHeader .control-bar .filter-buttons, #DetailPageMainContent .control-bar .filter-buttons, #ContactIndi .control-bar .filter-buttons {
   width: 100%;
 }
-/* line 505, ../components/sass/_mixitup.scss */
+/* line 514, ../components/sass/_mixitup.scss */
 #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
   width: 10.8%;
   min-height: 46px;
   min-width: initial;
   vertical-align: top;
 }
-/* line 514, ../components/sass/_mixitup.scss */
+/* line 523, ../components/sass/_mixitup.scss */
 #Portfolio .control-bar .filter-buttons button[data-filter=".html"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".html"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".html"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".html"]:after {
   border-right-color: #76DFC0;
 }
-/* line 517, ../components/sass/_mixitup.scss */
+/* line 526, ../components/sass/_mixitup.scss */
 #Portfolio .control-bar .filter-buttons button[data-filter=".css"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".css"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".css"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".css"]:after {
   border-right-color: #26a580;
 }
-/* line 520, ../components/sass/_mixitup.scss */
+/* line 529, ../components/sass/_mixitup.scss */
 #Portfolio .control-bar .filter-buttons button[data-filter=".sass"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".sass"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".sass"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".sass"]:after {
   border-right-color: #1a6f56;
 }
-/* line 523, ../components/sass/_mixitup.scss */
+/* line 532, ../components/sass/_mixitup.scss */
 #Portfolio .control-bar .filter-buttons button[data-filter=".css-animation"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".css-animation"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".css-animation"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".css-animation"]:after {
   border-right-color: #0e3d30;
 }
-/* line 526, ../components/sass/_mixitup.scss */
+/* line 535, ../components/sass/_mixitup.scss */
 #Portfolio .control-bar .filter-buttons button[data-filter=".drupal-project"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".drupal-project"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".drupal-project"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".drupal-project"]:after {
   border-right-color: #137CC1;
 }
-/* line 529, ../components/sass/_mixitup.scss */
+/* line 538, ../components/sass/_mixitup.scss */
 #Portfolio .control-bar .filter-buttons button[data-filter=".website-project"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".website-project"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".website-project"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".website-project"]:after {
   border-right-color: #859900;
 }
-/* line 532, ../components/sass/_mixitup.scss */
+/* line 541, ../components/sass/_mixitup.scss */
 #Portfolio .control-bar .filter-buttons button[data-filter=".js-jquery"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".js-jquery"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".js-jquery"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".js-jquery"]:after {
   border-right-color: #E24F83;
 }
-/* line 535, ../components/sass/_mixitup.scss */
+/* line 544, ../components/sass/_mixitup.scss */
 #Portfolio .control-bar .filter-buttons button[data-filter=".angularjs"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".angularjs"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".angularjs"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".angularjs"]:after {
   border-right-color: #830E37;
 }
 
 @media screen and (min-width: 320px) and (max-width: 535px) {
-  /* line 546, ../components/sass/_mixitup.scss */
+  /* line 555, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar label, #DetailPageHeader .control-bar label, #DetailPageMainContent .control-bar label, #ContactIndi .control-bar label {
     display: block;
   }
-  /* line 550, ../components/sass/_mixitup.scss */
+  /* line 559, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
     width: 100%;
     min-height: 30px;
@@ -2813,49 +2889,49 @@ and open the template in the editor.
   }
 }
 @media screen and (min-width: 536px) and (max-width: 639px) {
-  /* line 563, ../components/sass/_mixitup.scss */
+  /* line 572, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar label, #DetailPageHeader .control-bar label, #DetailPageMainContent .control-bar label, #ContactIndi .control-bar label {
     display: block;
   }
-  /* line 567, ../components/sass/_mixitup.scss */
+  /* line 576, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
     width: 49%;
     min-height: 30px;
   }
 }
 @media screen and (min-width: 640px) and (max-width: 818px) {
-  /* line 579, ../components/sass/_mixitup.scss */
+  /* line 588, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar label, #DetailPageHeader .control-bar label, #DetailPageMainContent .control-bar label, #ContactIndi .control-bar label {
     display: block;
     margin: .4em .1em;
   }
-  /* line 584, ../components/sass/_mixitup.scss */
+  /* line 593, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
     width: 32%;
     min-height: 30px;
   }
 }
 @media screen and (min-width: 819px) and (max-width: 884px) {
-  /* line 596, ../components/sass/_mixitup.scss */
+  /* line 605, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar label, #DetailPageHeader .control-bar label, #DetailPageMainContent .control-bar label, #ContactIndi .control-bar label {
     display: block;
   }
-  /* line 600, ../components/sass/_mixitup.scss */
+  /* line 609, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
     width: 24.4%;
     min-height: 30px;
   }
 }
 @media screen and (min-width: 885px) and (max-width: 1083px) {
-  /* line 612, ../components/sass/_mixitup.scss */
+  /* line 621, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar label, #DetailPageHeader .control-bar label, #DetailPageMainContent .control-bar label, #ContactIndi .control-bar label {
     display: block;
   }
-  /* line 615, ../components/sass/_mixitup.scss */
+  /* line 624, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar .filter-buttons, #DetailPageHeader .control-bar .filter-buttons, #DetailPageMainContent .control-bar .filter-buttons, #ContactIndi .control-bar .filter-buttons {
     display: block;
   }
-  /* line 618, ../components/sass/_mixitup.scss */
+  /* line 627, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
     width: 11.8%;
     font-size: 1.2em;
@@ -2863,18 +2939,18 @@ and open the template in the editor.
 }
 /*** Portfolio - buttons / control bar - end ***/
 /*** Portfolio - grid - beginning ***/
-/* line 633, ../components/sass/_mixitup.scss */
+/* line 642, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix {
   padding: 10px;
   box-sizing: border-box;
 }
-/* line 637, ../components/sass/_mixitup.scss */
+/* line 646, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix img {
   width: 100%;
   height: auto;
   margin: 0 auto;
 }
-/* line 643, ../components/sass/_mixitup.scss */
+/* line 652, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix h3 {
   font-size: 1.4em;
   line-height: 1.4;
@@ -2883,7 +2959,7 @@ and open the template in the editor.
   padding-bottom: 2%;
   min-height: 41px;
 }
-/* line 652, ../components/sass/_mixitup.scss */
+/* line 661, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix h4 {
   font-size: 1.3em;
   line-height: 1.3;
@@ -2892,90 +2968,90 @@ and open the template in the editor.
   color: #B9C8B5;
   min-height: 39px;
 }
-/* line 661, ../components/sass/_mixitup.scss */
+/* line 670, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix .button {
   width: 100%;
   margin-bottom: 0;
   padding: 0;
 }
-/* line 666, ../components/sass/_mixitup.scss */
+/* line 675, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix .button a {
   background-color: #5a6258;
   font-size: 1.1em;
 }
-/* line 670, ../components/sass/_mixitup.scss */
+/* line 679, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix .button a:hover {
   border: 2px dashed #7f8a7d;
 }
-/* line 678, ../components/sass/_mixitup.scss */
+/* line 687, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix.html:after {
   border-right-color: #76DFC0;
 }
-/* line 681, ../components/sass/_mixitup.scss */
+/* line 690, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix.css:after {
   border-right-color: #26a580;
 }
-/* line 684, ../components/sass/_mixitup.scss */
+/* line 693, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix.sass:after {
   border-right-color: #1a6f56;
 }
-/* line 687, ../components/sass/_mixitup.scss */
+/* line 696, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix.css-animation:after {
   border-right-color: #0e3d30;
 }
-/* line 690, ../components/sass/_mixitup.scss */
+/* line 699, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix.drupal-project:after {
   border-right-color: #137CC1;
 }
-/* line 693, ../components/sass/_mixitup.scss */
+/* line 702, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix.website-project:after {
   border-right-color: #859900;
 }
-/* line 696, ../components/sass/_mixitup.scss */
+/* line 705, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix.js-jquery:after {
   border-right-color: #E24F83;
 }
-/* line 699, ../components/sass/_mixitup.scss */
+/* line 708, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix.angularjs:after {
   border-right-color: #830E37;
 }
 
 @media screen and (min-width: 320px) and (max-width: 639px) {
-  /* line 708, ../components/sass/_mixitup.scss */
+  /* line 717, ../components/sass/_mixitup.scss */
   #PortfolioContainer .gap {
     width: 49%;
   }
-  /* line 712, ../components/sass/_mixitup.scss */
+  /* line 721, ../components/sass/_mixitup.scss */
   #PortfolioContainer .portfoMix {
     width: 49%;
   }
-  /* line 720, ../components/sass/_mixitup.scss */
+  /* line 729, ../components/sass/_mixitup.scss */
   #PortfolioContainer .portfoMix .button a {
     font-size: 1em;
   }
 }
 @media screen and (min-width: 640px) and (max-width: 767px) {
-  /* line 732, ../components/sass/_mixitup.scss */
+  /* line 741, ../components/sass/_mixitup.scss */
   #PortfolioContainer .gap {
     width: 32%;
   }
-  /* line 736, ../components/sass/_mixitup.scss */
+  /* line 745, ../components/sass/_mixitup.scss */
   #PortfolioContainer .portfoMix {
     width: 32%;
   }
-  /* line 744, ../components/sass/_mixitup.scss */
+  /* line 753, ../components/sass/_mixitup.scss */
   #PortfolioContainer .portfoMix .button a {
     font-size: 1.1em;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 808px) {
-  /* line 758, ../components/sass/_mixitup.scss */
+  /* line 767, ../components/sass/_mixitup.scss */
   #PortfolioContainer .portfoMix .button a {
     font-size: .9em;
   }
 }
 @media screen and (min-width: 809px) and (max-width: 863px) {
-  /* line 771, ../components/sass/_mixitup.scss */
+  /* line 780, ../components/sass/_mixitup.scss */
   #PortfolioContainer .portfoMix .button a {
     font-size: 1em;
   }
@@ -3094,29 +3170,39 @@ and open the template in the editor.
   }
   /* line 135, ../components/sass/_contactmodule.scss */
   #ContactIndi .button a {
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.1;
+    padding: 8px 2%;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (min-width: 685px) and (max-width: 770px) {
   /* line 147, ../components/sass/_contactmodule.scss */
   #ContactIndi .button a {
     font-size: .9em;
+    line-height: 1.1;
+    padding: 8px 2%;
+  }
+}
+@media screen and (max-width: 360px) {
+  /* line 161, ../components/sass/_contactmodule.scss */
+  #ContactIndi .button a {
+    font-size: .85em;
+    padding: 8px 2%;
   }
 }
 @media screen and (min-width: 395px) and (max-width: 684px) {
-  /* line 158, ../components/sass/_contactmodule.scss */
+  /* line 173, ../components/sass/_contactmodule.scss */
   #ContactIndi .email {
     margin: 1em 0 1.5em;
   }
-  /* line 160, ../components/sass/_contactmodule.scss */
+  /* line 175, ../components/sass/_contactmodule.scss */
   #ContactIndi .email a {
     word-wrap: break-word;
     font-size: 1.1em;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 1023px) {
-  /* line 172, ../components/sass/_contactmodule.scss */
+  /* line 187, ../components/sass/_contactmodule.scss */
   #ContactIndi .rightContainer img {
     max-width: initial;
     width: 95%;

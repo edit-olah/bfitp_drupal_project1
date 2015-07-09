@@ -133,19 +133,34 @@ and open the template in the editor.
 	    width: 98%;
 	    
 	    a{
-		font-size: 1.1em;
+		font-size: 1em;
 		line-height: 1.1;
+		padding: 8px 2%;
 	    }
 	}
     }
 }
+
+@media screen and (min-width: 685px) and (max-width: 770px) {
+    #ContactIndi {
+	.button {
+	    a{
+		font-size: .9em;
+		line-height: 1.1;
+		padding: 8px 2%;
+	    }
+	}
+    }
+}
+
 
 @media screen and (max-width: 360px) {
     #ContactIndi {
 	
 	.button {
 	    a {
-		font-size: .9em;
+		font-size: .85em;
+		padding: 8px 2%;
 	    }
 	}
     }  

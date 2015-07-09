@@ -129,9 +129,15 @@ and open the template in the editor.
     #PageNav {
 	.nav.full-width li {
 	    a:link {
-		padding: 12px 5px;
+		padding: 2% 2%;
+		font-size: 0.9em;
+		font-weight: 700;
 	    }
 	}
+    }
+    
+    .backToTopButton {
+	font-size: 1.2em;
     }
 }
 
