@@ -17,8 +17,9 @@ function bfitp_timeout ($time){
     }, $time);
 };
 
+(function($){
 
-$( document ).ready(function() {
+$(document).ready(function() {
     
     // Instantiate MixItUp:
     
@@ -165,5 +166,5 @@ $( document ).ready(function() {
 
 });
 
-
+})(jQuery);
 
