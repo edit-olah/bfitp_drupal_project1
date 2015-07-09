@@ -11,6 +11,6 @@ regions[sidebar_first] = Left sidebar
 regions[sidebar_second] = Right sidebar
 regions[footer] = Footer
 
-scripts[] = js/script.js
+scripts[] = /builds/development/js/script.js
 
 stylesheets[all][] = css/style.css
