@@ -14,7 +14,7 @@
 			<?php if(isset($field_top_section_image)){
 			    print '<img alt="' . $field_top_section_image[0]['alt'] . 
 				    '" alt="' . $field_top_section_image[0]['title'] . 
-				    '" src="' . image_style_url('general_square', $field_top_section_image[0]['uri']) .'" />';
+				    '" src="' . image_style_url('detail_page_header_image', $field_top_section_image[0]['uri']) .'" />';
 			} ?>
 		    </div><!--/.leftContainer -->
 
