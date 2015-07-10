@@ -5,27 +5,27 @@
 	<header>
 	    <div id="Hero">
 		<div class="heroContent"
-		<?php if(isset($field_hero_image[0]['uri'])) {
-		   drupal_add_css('html body .heroContent{background:url(' . file_create_url($field_hero_image[0]['uri']) . ') 0 0 no-repeat; background-size: 100% auto;}', $option['type'] = 'inline');
-		} ?>
-	    >
-		<div class="container">
-		    <div class="heroText">
-			<section>
-			    <?php if(isset($field_hero_title[0]['value'])){
-				print '<h1>' . $field_hero_title[0]['value'] . '</h1>';
-			    } ?>
-			    <?php if(isset($field_tagline[0]['value'])){
-				print '<h2 class="tagline">' . $field_tagline[0]['value'] . '</h2>';
-			    } ?>
-			    <?php if(isset($body[0]['value'])){
-				print '<div class="summary">' . $body[0]['value'] . '</div><!-- /.summary -->';
-			    } ?>
-			</section>
-		    </div><!-- /.heroText -->
-		</div><!-- /.container -->
-	    </div><!-- /.heroContent -->
-	    </div><!-- / .page#Hero -->
+		    <?php if(isset($field_hero_image[0]['uri'])) {
+		       drupal_add_css('html body .heroContent{background:url(' . file_create_url($field_hero_image[0]['uri']) . ') 0 0 no-repeat; background-size: 100% auto;}', $option['type'] = 'inline');
+		    } ?>
+		>
+		    <div class="container">
+			<div class="heroText">
+			    <section>
+				<?php if(isset($field_hero_title[0]['value'])){
+				    print '<h1>' . $field_hero_title[0]['value'] . '</h1>';
+				} ?>
+				<?php if(isset($field_tagline[0]['value'])){
+				    print '<h2 class="tagline">' . $field_tagline[0]['value'] . '</h2>';
+				} ?>
+				<?php if(isset($body[0]['value'])){
+				    print '<div class="summary">' . $body[0]['value'] . '</div><!-- /.summary -->';
+				} ?>
+			    </section>
+			</div><!-- /.heroText -->
+		    </div><!-- /.container -->
+		</div><!-- /.heroContent -->
+	    </div><!-- / #Hero -->
 	</header>
 	<!--  HERO Panel/page end -->
 
