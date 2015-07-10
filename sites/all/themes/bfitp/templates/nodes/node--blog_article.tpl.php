@@ -50,7 +50,7 @@
 			<section>
 			    <header>
 				<?php if(isset($field_first_section_header_2[0][value])){
-				    print '<h2><span class="smallTextHeader">' . $field_first_section_header_2[0][value] . '</span></h2>';
+				    print '<h2>' . $field_first_section_header_2[0][value] . '</h2>';
 				} ?>
 			    </header>
 			    

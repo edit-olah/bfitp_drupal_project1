@@ -73,59 +73,30 @@
 			</div><!-- /.gridContentHolder -->
 			<div class="wrapper-decoImg">
 			    <div class="container-decoImg">
-				<div class="decoImg">
+				<div class="decoImg"
+				     <?php if(isset($field_contact_us_filler_image[0]['uri'])) {
+					drupal_add_css('html body .container-decoImg .decoImg{background:url(' . file_create_url($field_contact_us_filler_image[0]['uri']) . ') 0 0 no-repeat; background-size: 106% auto;}', $option['type'] = 'inline');
+				    } ?>
+				>
 				</div>
 			    </div>
 			</div>
 		    </li>
 		    <li>
 			<section>
-
 			    <header>
-				<h2 class="sidebar-header">
-				    Latest blog posts
-				</h2>
+				<?php if(isset($field_body_header_2[0][value])){
+				    print '<h2 class="sidebar-header">' . $field_body_header_2[0][value] . '</h2>';
+				} ?>
 			    </header>
+			    
+			    <?php if (isset($field_additional_info_block_ref['und'][0])) {
+				$delta = explode(":", $field_additional_info_block_ref['und'][0]['moddelta']);
+				$printBlock = module_invoke($delta[0], 'block_view', $delta[1]);
+				print render($printBlock['content']);
 
-			    <ul class="grid grid-full-width blog-section">
-				<li class="click-follow">
-				    <div class="grid-contentHolder">
-					<article>
-					    <img alt="" src="images/bfitp_placeholder_img_540x108.png" >
-					    <h3>Blog post 1</h3>
-					    <h4>Subtitle / summary</h4>
-					    <p>Bacon ipsum dolor amet ground round meatloaf ham hock swine tenderloin tongue pork 
-						belly flank brisket...</p>
-					    <p class="button"><a href="#">More details >></a></p>
-					</article>
-				    </div><!-- /.grid-contentHolder -->
-				</li>
-				<li class="click-follow">
-				    <div class="grid-contentHolder">
-					<article>
-					    <img alt="" src="images/bfitp_placeholder_img_540x108.png" >
-					    <h3>Blog post 2</h3>
-					    <h4>Subtitle / summary</h4>
-					    <p>Bacon ipsum dolor amet ground round meatloaf ham hock swine tenderloin tongue pork 
-						belly flank brisket...</p>
-					    <p class="button"><a href="#">More details >></a></p>
-					</article>
-				    </div><!-- /.grid-contentHolder -->
-				</li>
-				<li class="click-follow">
-				    <div class="grid-contentHolder">
-					<article>
-					    <img alt="" src="images/bfitp_placeholder_img_540x108.png" >
-					    <h3>Blog post 3</h3>
-					    <h4>Subtitle / summary</h4>
-					    <p>Bacon ipsum dolor amet ground round meatloaf ham hock swine tenderloin tongue pork 
-						belly flank brisket...</p>
-					    <p class="button"><a href="#">More details >></a></p>
-					</article>
-				    </div><!-- /.grid-contentHolder -->
-				</li>
-
-			    </ul><!-- /.grid -->
+			    } ?>
+			    
 			</section>
 		    </li>				
 		</ul><!-- /.grid.grid-stretched-layout -->
