@@ -78,18 +78,7 @@
             <header>
                 <div class="container">
                    
-                    <div id="MainNav">
-                        <nav>
-                            <ul class="nav">
-                                <li class="current"><a href="#home">Home</a></li>
-                                <li><a class="pageNavLinkHome" href="About-us">About us</a></li>
-                                <li><a href="/portfolio.html">Portfolio</a></li>
-                                <li><a href="/blog.html">Blog</a></li>
-                                <li><a href="/contact-us.html">Contact us</a></li>
-                            </ul>
-                            
-                        </nav>
-                    </div><!-- /#MainNav -->
+		    <?php print render($page['header']);?>
                     
                      <div class="logo-container">
 			 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><span class="logo">Barefoot in the Park</span></a></div>
