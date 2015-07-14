@@ -1,7 +1,7 @@
 <main>
     <div id="MainContent">
 
-	<!-- CONTACT PAGE beginning -->
+	<!-- INTRO TEXT SECTION beginning -->
 
 	<div class="page" id="Contact">
 	    <header>
@@ -22,55 +22,128 @@
 	    </header>
 	</div><!-- / .page#Contact -->
 
-	<!-- CONTACT PAGE end -->
+	<!-- INTRO TEXT SECTION end -->
 
 
-	<!-- OUR PORTFOLIO GRID beginning -->
+	<!-- CONTACT DETAILS CALLOUT BOXES GRID beginning -->
 
 	<div class="page" id="ContactUsGrid">
 
 	    <div class="container">
 		<ul class="grid grid-stretched-layout">
 		    <li>
-			<div class="grid-contentHolder">
-			    <article>
-				<img alt="" src="images/bfitp_placeholder_img_300x120.png" >
-				<h2>Contact Peter</h2>
-				<p>Peter Whyte</p>
-				<p>Web developer</p>
-				<p class="min-height-applied">HTML5, CSS3, PHP, JavaScript, jQuery, Drupal, Angular.js</p>
-				<p class="email">Email: <a href="mailto:peter.whyte@barefootinthepark.co.uk" class="min-height-applied">peter.whyte@barefootinthepark.co.uk</a></p>
+			<?php if(isset($field_callout_boxes[0]['target_id'])){ 
+			    $contact = node_load($field_callout_boxes[0]['target_id']);
+			?>
+			    <div class="grid-contentHolder">
+				<article>
+				    <?php if(isset($contact->field_landscape_profile_image)){
+					print '<img alt="' . $contact->field_landscape_profile_image['und'][0]['alt'] . 
+						'" alt="' . $contact->field_landscape_profile_image['und'][0]['title'] . 
+						'" src="' . image_style_url('landscape_profile_img', $contact->field_landscape_profile_image['und'][0]['uri']) .'" />';
+				    } ?>
+				    <?php if(isset($contact->field_contact_highlighted_text['und'][0]['value'])){
+					print '<h2>Contact ' . $contact->field_contact_highlighted_text['und'][0]['value'] . '</h2>';
+				    }?>
+				    <?php if(isset($contact->field_contact_highlighted_text['und'][0]['value']) && 
+					isset($contact->field_contact_highlighted_text_2['und'][0]['value'])){
+					    print '<h2>' . $contact->field_contact_highlighted_text['und'][0]['value'] 
+						    . ' ' . $contact->field_contact_highlighted_text_2['und'][0]['value']
+						    . '</h2>';
+				    }?>
+				    <?php if(isset($contact->field_contact_highlighted_text_3['und'][0]['value'])){
+					print '<h3>' 
+						. $contact->field_contact_highlighted_text_3['und'][0]['value'] 
+					    . '</h3>';
+				    }?>
+				    <?php if(isset($contact->field_contact_me_skills['und'][0]['value'])){
+					print '<p class="min-height-applied">' 
+						. $contact->field_contact_me_skills['und'][0]['value'] 
+					    . '</p>';
+				    }?>
+				    <?php if(isset($contact->field_contact_me_email_label['und'][0]['value']) 
+					&& isset($contact->field_contact_me_email['und'][0]['url']) 
+					&& isset($contact->field_contact_me_email['und'][0]['title'])){
+					    print '<p class="email">' . $contact->field_contact_me_email_label['und'][0]['value'] 
+						    . ' ' 
+						    . '<a href="' . $contact->field_contact_me_email['und'][0]['url'] 
+						    . '">' . $contact->field_contact_me_email['und'][0]['title']
+						    . '</a>' 
+						. '</p>';
+				    }?>
+				    <?php if(isset($contact->field_contact_me_social_links['und'][0]['value'])){
+					print '<div class="socialIcons max-height-applied">' . 
+					    $contact->field_contact_me_social_links['und'][0]['value']
+					. '</div><!-- /.socialIcons -->';
+				    }?>
 
-				<div class="socialIcons">
-				    <a href="#" target="_blank"><img alt="LinkedIn icon" src="images/linkedin_icon.png" ></a>
-				    <a href="#" target="_blank"><img alt="email icon" src="images/email_icon.png" ></a>
-				    <a href="#" target="_blank"><img alt="twitter icon" src="images/twitter_icon.png" ></a>
-				    <a href="#" target="_blank"><img alt="instagram icon" src="images/instagram_icon.png" ></a>
-				    <a href="#" target="_blank"><img alt="web icon" src="images/web_icon.png" ></a>
-				</div><!-- /.socialIcons -->
-				<p class="button"><a href="/peter-whyte.html">More about Peter >></a></p>
-			    </article>
-			</div><!-- /.gridContentHolder -->
+				    <?php if(isset($contact->field_contact_highlighted_text['und'][0]['value'])){
+					    print '<p class="button">' 
+						    . '<a href="' . '/' . $contact->field_contact_highlighted_text['und'][0]['value'] . '-' . $contact->field_contact_highlighted_text_2['und'][0]['value']. '">' 
+							. 'See ' . $contact->field_contact_highlighted_text['und'][0]['value'] . '\'s portfolio >>'
+						    . '</a>' 
+						. '</p>';
+				    }?>
+				</article>
+			    </div><!-- /.gridContentHolder -->
+			<?php } ?>
 		    </li>
 		    <li>
-			<div class="grid-contentHolder">
-			    <article>
-				<img alt="" src="images/bfitp_placeholder_img_300x120.png" >
-				<h2>Contact Edit</h2>
-				<p>Edit Olah</p>
-				<p>Web developer</p>
-				<p class="min-height-applied">HTML5, CSS3, JavaScript, jQuery, SASS, Gulp</p>
-				<p class="email">Email: <a href="mailto:edit.olah@barefootinthepark.co.uk" class="min-height-applied">edit.olah@barefootinthepark.co.uk</a></p>
-				<div class="socialIcons">
-				    <a href="https://uk.linkedin.com/in/editolah" target="_blank"><img alt="LinkedIn icon" src="images/linkedin_icon.png" ></a>
-				    <a href="#" target="_blank"><img alt="email icon" src="images/email_icon.png" ></a>
-				    <a href="#" target="_blank"><img alt="twitter icon" src="images/twitter_icon.png" ></a>
-				    <a href="#" target="_blank"><img alt="instagram icon" src="images/instagram_icon.png" ></a>
-				    <a href="#" target="_blank"><img alt="web icon" src="images/web_icon.png" ></a>
-				</div><!-- /.socialIcons -->
-				<p class="button"><a href="/edit-olah.html">More about Edit >></a></p>
-			    </article>
-			</div><!-- /.gridContentHolder -->
+			<?php if(isset($field_callout_boxes[1]['target_id'])){ 
+			    $contact2 = node_load($field_callout_boxes[1]['target_id']);
+			?>
+			    <div class="grid-contentHolder">
+				<article>
+				    <?php if(isset($contact2->field_landscape_profile_image)){
+					print '<img alt="' . $contact2->field_landscape_profile_image['und'][0]['alt'] . 
+						'" alt="' . $contact2->field_landscape_profile_image['und'][0]['title'] . 
+						'" src="' . image_style_url('landscape_profile_img', $contact2->field_landscape_profile_image['und'][0]['uri']) .'" />';
+				    } ?>
+				    <?php if(isset($contact2->field_contact_highlighted_text['und'][0]['value'])){
+					print '<h2>Contact ' . $contact2->field_contact_highlighted_text['und'][0]['value'] . '</h2>';
+				    }?>
+				    <?php if(isset($contact2->field_contact_highlighted_text['und'][0]['value']) && 
+					isset($contact2->field_contact_highlighted_text_2['und'][0]['value'])){
+					    print '<h2>' . $contact2->field_contact_highlighted_text['und'][0]['value'] 
+						    . ' ' . $contact2->field_contact_highlighted_text_2['und'][0]['value']
+						    . '</h2>';
+				    }?>
+				    <?php if(isset($contact2->field_contact_highlighted_text_3['und'][0]['value'])){
+					print '<h3>' 
+						. $contact2->field_contact_highlighted_text_3['und'][0]['value'] 
+					    . '</h3>';
+				    }?>
+				    <?php if(isset($contact2->field_contact_me_skills['und'][0]['value'])){
+					print '<p class="min-height-applied">' 
+						. $contact2->field_contact_me_skills['und'][0]['value'] 
+					    . '</p>';
+				    }?>
+				    <?php if(isset($contact2->field_contact_me_email_label['und'][0]['value']) 
+					&& isset($contact2->field_contact_me_email['und'][0]['url']) 
+					&& isset($contact2->field_contact_me_email['und'][0]['title'])){
+					    print '<p class="email">' . $contact2->field_contact_me_email_label['und'][0]['value'] 
+						    . ' ' 
+						    . '<a href="' . $contact2->field_contact_me_email['und'][0]['url'] 
+						    . '">' . $contact2->field_contact_me_email['und'][0]['title']
+						    . '</a>' 
+						. '</p>';
+				    }?>
+				    <?php if(isset($contact2->field_contact_me_social_links['und'][0]['value'])){
+					print '<div class="socialIcons max-height-applied">' . 
+					    $contact2->field_contact_me_social_links['und'][0]['value']
+					. '</div><!-- /.socialIcons -->';
+				    }?>
+
+				    <?php if(isset($contact2->field_contact_highlighted_text['und'][0]['value'])){
+					    print '<p class="button">' 
+						    . '<a href="' . '/' . $contact2->field_contact_highlighted_text['und'][0]['value'] . '-' . $contact2->field_contact_highlighted_text_2['und'][0]['value']. '">' 
+							. 'See ' . $contact2->field_contact_highlighted_text['und'][0]['value'] . '\'s portfolio >>'
+						    . '</a>' 
+						. '</p>';
+				    }?>
+				</article>
+			    </div><!-- /.gridContentHolder -->
+			<?php } ?>
 			<div class="wrapper-decoImg">
 			    <div class="container-decoImg">
 				<div class="decoImg"
@@ -83,10 +156,11 @@
 			</div>
 		    </li>
 		    <li>
+			<!-- SIDEBAR beginning -->
 			<section>
 			    <header>
-				<?php if(isset($field_body_header_2[0][value])){
-				    print '<h2 class="sidebar-header">' . $field_body_header_2[0][value] . '</h2>';
+				<?php if(isset($field_body_header_2[0]['value'])){
+				    print '<h2 class="sidebar-header">' . $field_body_header_2[0]['value'] . '</h2>';
 				} ?>
 			    </header>
 			    
@@ -98,14 +172,15 @@
 			    } ?>
 			    
 			</section>
+			<!-- SIDEBAR end -->
 		    </li>				
 		</ul><!-- /.grid.grid-stretched-layout -->
 
 	    </div><!-- /.container -->
 
-	</div> <!-- /.page#OurPortfolioGrid -->
+	</div> <!-- /.page#ContactUsGrid -->
 
-	<!-- HOME PORTFOLIO PAGE end -->                  
+	<!-- CONTACT DETAILS CALLOUT BOXES GRID end -->                  
 
 
 
