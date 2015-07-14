@@ -1,7 +1,7 @@
 <main>
     <div id="MainContent">
 	<article>
-	<!-- RESUME HEADER PAGE beginning -->
+	<!-- HEADER beginning -->
 
 	<div class="page" id="DetailPageHeader">
 	    <header>
@@ -19,14 +19,14 @@
 		    </div><!--/.leftContainer -->
 
 		    <div class="rightContainer">
-			<?php if(isset($field_top_section_header_1[0][value])){
-			    print '<h2>' . $field_top_section_header_1[0][value] . '</h2>';
+			<?php if(isset($field_top_section_header_1[0]['value'])){
+			    print '<h2>' . $field_top_section_header_1[0]['value'] . '</h2>';
 			} ?>
-			<?php if(isset($field_top_section_header_2[0][value])){
-			    print '<h2>' . $field_top_section_header_2[0][value] . '</h2>';
+			<?php if(isset($field_top_section_header_2[0]['value'])){
+			    print '<h2>' . $field_top_section_header_2[0]['value'] . '</h2>';
 			} ?>
-			<?php if(isset($field_top_section_header_3[0][value])){
-			    print '<h3 class="tagline">' . $field_top_section_header_3[0][value] . '</h3>';
+			<?php if(isset($field_top_section_header_3[0]['value'])){
+			    print '<h3 class="tagline">' . $field_top_section_header_3[0]['value'] . '</h3>';
 			} ?>
 		    </div> <!--/.rightContainer -->
 
@@ -34,9 +34,9 @@
 	    </header>
 	</div> <!-- /.page#DetailPageHeader -->
 
-	<!-- RESUME HEADER PAGE end -->		    
+	<!-- HEADER end -->		    
 
-	<!-- ABOUT EDIT PAGE beginning -->
+	<!-- MAIN CONTENT beginning -->
 
 	<div class="page" id="DetailPageMainContent">
 	    <?php if(isset($body[0]['value'])){
@@ -45,55 +45,99 @@
 
 	</div><!-- / .page#DetailPageMainContent -->
 
-	<!-- ABOUT EDIT PAGE end -->
+	<!-- MAIN CONTENT end -->
 
        </article> 
 
 
-	<!-- CONTACT EDIT PAGE beginning -->
+	<?php if(isset($field_entity_ref[0]['target_id'])){ 
+	    $contact = node_load($field_entity_ref[0]['target_id']);
+	?>
+	<!-- INDIVIDUAL CONTACT SECTION beginning -->
+		    
+	    <div class="page" id="ContactIndi">
+		<section>
+		    <div class="container">
 
-	<div class="page" id="ContactIndi">
-	    <section>
-		<div class="container">
+			<div class="leftContainer">
+			    <header>
+				<h1><?php print $contact->title;?></h1>
+				<?php if(isset($contact->field_body_header_2['und'][0]['value'])){
+				    print '<h2>' . $contact->field_body_header_2['und'][0]['value'] . '</h2>';
+				}?>
+				<?php if(isset($contact->body['und'][0]['value'])){
+				    print $contact->body['und'][0]['value'];
+				}?>
 
-		    <div class='leftContainer'>
-			<header>
-			    <h1>Contact Edit</h1>
-			    <h2>
-				Get in touch
-			    </h2>
-			    <p>If you are interested in hiring me, please drop me an email. I would be happy to send you my up-to-date resume.</p>
-			</header>
+			    </header>
 
-			<div class="contactDetails">
-			    <p class="highlighted"><span class='bold large-text'>Edit Olah</span>, <span class='semiBold semi-large-text'>Web developer</span></p>
+			    <div class="contactDetails"> 
+				<p class="highlighted">
+				    <?php if(isset($contact->field_contact_highlighted_text['und'][0]['value']) && 
+					isset($contact->field_contact_highlighted_text_2['und'][0]['value'])){
+					    print '<span class="bold large-text">' 
+						    . $contact->field_contact_highlighted_text['und'][0]['value'] 
+						    . ' ' 
+						    . $contact->field_contact_highlighted_text_2['und'][0]['value'] 
+						. '</span>,';
+				    }?>
+				    <?php if(isset($contact->field_contact_highlighted_text_3['und'][0]['value'])){
+					print '<span class="semiBold semi-large-text">' 
+						. $contact->field_contact_highlighted_text_3['und'][0]['value'] 
+					    . '</span>';
+				    }?>
+				</p>
 
+				<?php if(isset($contact->field_contact_me_email_label['und'][0]['value']) 
+				    && isset($contact->field_contact_me_email['und'][0]['url']) 
+				    && isset($contact->field_contact_me_email['und'][0]['title'])){
+					print '<p class="email">' . $contact->field_contact_me_email_label['und'][0]['value'] 
+						. ' ' 
+						. '<a href="' . $contact->field_contact_me_email['und'][0]['url'] 
+						. '">' . $contact->field_contact_me_email['und'][0]['title']
+						. '</a>' 
+					    . '</p>';
+				}?>
 
-			    <p class="email">Email: <a href="mailto:edit.olah@barefootinthepark.co.uk" class="min-height-applied">edit.olah@barefootinthepark.co.uk</a></p>
-
-			    <div class="buttons">
-				<p class="button"><a href="/edit-olah.html">See Edit's portfolio >></a></p>
-				<p class="button"><a href="/edit-olah-blog.html">Go to Edit's blog >></a></p>
+				<div class="buttons">
+				    <?php if(isset($contact->field_contact_highlighted_text['und'][0]['value']) 
+					&& isset($contact->field_contact_highlighted_text_2['und'][0]['value'])){
+					    print '<p class="button">' 
+						    . '<a href="' . '/' . $contact->field_contact_highlighted_text['und'][0]['value'] . '-' . $contact->field_contact_highlighted_text_2['und'][0]['value'] . '">' 
+							. 'See ' . $contact->field_contact_highlighted_text['und'][0]['value'] . '\'s portfolio >>'
+						    . '</a>' 
+						. '</p>'
+						. '<p class="button">'
+						    . '<a href="' . '/' . $contact->field_contact_highlighted_text['und'][0]['value'] . '-' . $contact->field_contact_highlighted_text_2['und'][0]['value'] . '-blog">'
+							. 'Go to ' . $contact->field_contact_highlighted_text['und'][0]['value'] . '\'s blog >>' 
+						    . '</a>' 
+						. '</p>';
+				    }?>
+				</div>
 			    </div>
-			</div>
-			<div class="socialIcons max-height-applied">
-			    <a href="https://uk.linkedin.com/in/editolah" target="_blank"><img alt="LinkedIn icon" src="images/linkedin_icon.png" ></a>
-			    <a href="#" target="_blank"><img alt="email icon" src="images/email_icon.png" ></a>
-			    <a href="#" target="_blank"><img alt="twitter icon" src="images/twitter_icon.png" ></a>
-			    <a href="#" target="_blank"><img alt="instagram icon" src="images/instagram_icon.png" ></a>
-			    <a href="#" target="_blank"><img alt="web icon" src="images/web_icon.png" ></a>
-			</div><!-- /.socialIcons -->
-		    </div><!--/.leftContainer -->
+			    <?php if(isset($contact->field_contact_me_social_links['und'][0]['value'])){
+				print '<div class="socialIcons max-height-applied">' . 
+				    $contact->field_contact_me_social_links['und'][0]['value']
+				. '</div><!-- /.socialIcons -->';
+			    }?>
+			</div><!--/.leftContainer -->
 
-		    <div class='rightContainer'>
-			<img alt="" src="images/bfitp_placeholder_img_300x300.png" >
-		    </div> <!--/.rightContainer -->
+			<div class="rightContainer">
+			    <?php if(isset($contact->field_contact_me_profile_image)){
+				print '<img alt="' . $contact->field_contact_me_profile_image['und'][0]['alt'] . 
+					'" alt="' . $contact->field_contact_me_profile_image['und'][0]['title'] . 
+					'" src="' . image_style_url('general_square', $contact->field_contact_me_profile_image['und'][0]['uri']) .'" />';
+			    } ?>
 
-		</div><!-- /.container -->
-	    </section>
-	</div> <!-- /.page#ContactIndi -->
+			</div> <!--/.rightContainer -->
 
-	<!-- CONTACT EDIT PAGE end -->
+		    </div><!-- /.container -->
+		</section>
+	    </div> <!-- /.page#ContactIndi -->
+
+	    <!-- INDIVIDUAL CONTACT SECTION end -->
+	
+	<?php } ?>
 
     </div><!-- / #MainContent -->
 </main>
