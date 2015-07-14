@@ -758,6 +758,11 @@ ul, li {
 #ContactUsGrid{
     .button{
 	margin-bottom: 1.8em;
+	
+	a {
+	    font-size: 1.1em;
+	    padding: 7px 3%;
+	}
     }
 }
 
@@ -798,7 +803,16 @@ ul, li {
 
     }
 }
-
+@media screen and (min-width:640px) and (max-width: 650px) {
+    #ContactUsGrid{
+	.button{
+	    a {
+		font-size: 1em;
+	    }
+	}
+    }
+    
+}
 @media screen and (max-width: 900px) {
     .wrapper-decoImg {
 	display: none;
@@ -811,6 +825,27 @@ ul, li {
 	left: -108%;
 	width: 207%;
     }
+}
+@media screen and (min-width: 768px) and (max-width:1023px) {
+    #ContactUsGrid {
+	.grid {
+	    li {
+		h3 {
+		  min-height: initial;  
+		}
+	    }
+	}
+    }
+}
+@media screen and (min-width:900px) and (max-width: 950px) {
+    #ContactUsGrid{
+	.button{
+	    a {
+		font-size: 1em;
+	    }
+	}
+    }
+    
 }
 
 /*====================== CONTACT US PAGE LAYOUT - end ================================================================*/

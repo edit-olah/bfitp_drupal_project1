@@ -60,6 +60,9 @@ and open the template in the editor.
     
     .button{
 	width: 48%;
+	&:first-child{
+	    margin-right: 2%;
+	}
 	a{
 	    font-size: 1em;
 	    line-height: 1.1;
@@ -141,13 +144,30 @@ and open the template in the editor.
     }
 }
 
-@media screen and (min-width: 685px) and (max-width: 770px) {
+@media screen and (min-width: 685px) and (max-width: 699px) {
     #ContactIndi {
 	.button {
+	    &:first-child {
+		margin-right: 1%;
+	    }
+	    a{
+		padding: 8px .7%;
+		font-size: .9em;
+	    }
+	}
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 795px) {
+    #ContactIndi {
+	.button {
+	    &:first-child {
+		margin-right: 1%;
+	    }
 	    a{
 		font-size: .9em;
 		line-height: 1.1;
-		padding: 8px 2%;
+		padding: 8px 1.8%;
 	    }
 	}
     }

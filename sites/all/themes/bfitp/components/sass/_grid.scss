@@ -45,6 +45,11 @@ and open the template in the editor.
 	    margin-bottom: .5em;
 	    color: $lightGreen;
 	    margin-top: 3%;
+	    
+	    a{
+		@extend h2;
+		 font-size: 1em;
+	    }
 	}
 
 	h3 {
@@ -252,16 +257,16 @@ and open the template in the editor.
 	}
 	
 	.email {
-	    min-height: 60px;
+	    min-height: 4em;
 	    box-sizing: border-box;
 	    font-size: $smallFontSize;
 	}
 	.socialIcons {
 	    padding: 5px;
-	    margin-bottom: 6%;
+	    margin-bottom: 4%;
 	    
 	    img {
-		width: 13%;
+		width: 15%;
 		height: auto;
 		padding: 4px;
 		margin: 0;
@@ -441,12 +446,17 @@ and open the template in the editor.
 	    }
 	    p.min-height-applied {
 		min-height: initial;
+		margin-top: 2%;
+	    }
+	    .max-height-applied {
+		max-height: 6em;
 	    }
 	    .socialIcons {
-		margin: 0 auto 1%;
-		width: 70%;
+		margin: 0 auto 2%;
+		width: 80%;
 		img {
 		    padding: 2%;
+		    width: 16%;
 		 }
 
 	    }
