@@ -60,39 +60,36 @@
 				
 			    </header>
 			    <div id="SidebarContent">
-				<div class="sidebar-section">
-				    <section>
-					<h3>Heading 3</h3>
-					<p>Swine biltong boudin tri-tip filet mignon pork sirloin.</p>
-					<p>Swine biltong boudin tri-tip kevin landjaeger tri-tip beef ribs flank.</p>
-					<a>Relevant link</a>
-				    </section>
-				</div>
 
-				<div class="sidebar-section">
-				    <section>
-					<h3>Heading 3</h3>
-					<p>Swine biltong boudin tri-tip filet mignon pork sirloin.</p>
-					<p>Swine biltong boudin tri-tip kevin landjaeger tri-tip beef ribs flank.</p>
-					<a>Relevant link</a>
-				    </section>
-				</div>
-				<div class="sidebar-section">
-				    <section>
-					<h3>Heading 3</h3>
-					<p>Swine biltong boudin tri-tip filet mignon pork sirloin.</p>
-					<p>Swine biltong boudin tri-tip kevin landjaeger tri-tip beef ribs flank.</p>
-					<a>Relevant link</a>
-				    </section>
-				</div>
-				<div class="sidebar-section">
-				    <section>
-					<h3>Heading 3</h3>
-					<p>Swine biltong boudin tri-tip filet mignon pork sirloin.</p>
-					<p>Swine biltong boudin tri-tip kevin landjaeger tri-tip beef ribs flank.</p>
-					<a>Relevant link</a>
-				    </section>
-				</div>
+				<?php 
+				    if(isset($field_sidebar_section[0]['value'])){
+					foreach($field_sidebar_section as $item){
+					    $collection = entity_load('field_collection_item', array($item['value']));
+					    $collection = $collection[$item['value']];
+//					   
+					?>
+					    <div class="sidebar-section">
+						<section>
+						    <?php if(isset($collection->field_sidebar_section_header)){
+							print '<h3>' . $collection->field_sidebar_section_header['und'][0]['value'] . '</h3>';
+						    } ?>
+						    <?php if(isset($collection->field_sidebar_section_text)){
+							print '<p>' . $collection->field_sidebar_section_text['und'][0]['value'] . '</p>';
+						    } ?>
+						    <?php if(isset($collection->field_sidebar_section_text)){
+							print '<a href="' . $collection->field_sidebar_section_link['und'][0]['url'] . '">' . $collection->field_sidebar_section_link['und'][0]['title'] . '</a>';
+						    } ?>
+						</section>
+					    </div>	
+					    
+					    
+					 <?php   
+					    
+					}
+				    }
+				    
+				?>
+				
 			    </div><!-- /#SidebarContent -->
 			</aside>
 		    </div><!--/.rightContainer -->
