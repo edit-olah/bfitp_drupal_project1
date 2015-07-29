@@ -1,0 +1,7 @@
+;$Id$
+
+name = bfitp general
+description = test
+core = 7.x
+package = barefoot
+files[] = bfitp_general.module

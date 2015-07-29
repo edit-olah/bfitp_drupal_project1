@@ -1,0 +1,203 @@
+<?php
+/**
+ * implement hook_block_info
+ */
+function bfitp_general_block_info() {
+  
+  $blocks['dynamic_menu'] = array(
+    'info' => t('Dynamic Menu'),
+  );
+//  $blocks['petes_test_block'] = array(
+//      'info' => t('Petes test block'),
+//  );
+
+  return $blocks;
+}
+
+/**
+ * implement hook_block_view
+ * $delta name of the block
+ */
+function bfitp_general_block_view($delta = '') {
+  // This example is adapted from node.module.
+  $block = array();
+
+  switch ($delta) {
+      case 'dynamic_menu':
+	$block['content'] = bfitp_general_dynamic_menu();
+      break;
+//      case 'petes_test_block':
+//	  $block['content'] = petes_test_block_function();
+//	  break;
+  };
+  
+  return $block;
+  
+}
+
+function bfitp_general_dynamic_menu(){
+//	var_dump(arg(1)); //get me the 2nd argument in the url (/node/5)
+
+    $output = '';
+    $output .= '<div id="MainNav"><nav>';
+    // load the content of the current page and put it into page_type variable
+    $page_type = node_load(arg(1));
+    
+    
+    // if 'type' is equal to 'home_page' or 'index_page' or 'contact_us_page' in the loaded content and
+    // page is NOT Edit's blog /node/18, Peter's blog /node/19, then
+    // print this menu item within the navigation
+    if(arg(1) != 18 AND arg(1) != 19 AND $page_type->type === 'home_page' || $page_type->type === 'index_page' || $page_type === 'contact_us_page') {
+	
+	$output .= '<ul class="nav">';
+	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
+	$output .= '<li><a class="pageNavLinkHome" href="'.$front_page.'About-us">' .t('About us') .'</a></li>';
+	$output .= '<li><a href="/portfolio">' .t('Portfolio') .'</a></li>';
+	$output .= '<li><a href="/blog">' .t('Blog') .'</a></li>';
+	$output .= '<li><a href="/contact-us">' .t('Contact us') .'</a></li>';
+	$output .= '</ul>';
+	
+    }
+
+
+    // if page is either edit-olah-blog /node/18, peter-whyte-blog /node/19, then
+    // print this menu item within the navigation                       
+    if(arg(1) == 18 || arg(1) == 19) {
+	$output .= '<ul class="topNav">';
+	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
+
+	if(arg(1) == 18){
+	     $output .= '<li><a href="/edit-olah">' .t('Edit\'s Portfolio') .'</a></li>';
+	     $output .= '<li><a href="edit-olah-resume">' .t('Edit\'s Resume') .'</a></li>';
+	 }
+	 if(arg(1) == 19){
+	     $output .= '<li><a href="/peter-whyte">' .t('Peter\'s Portfolio') .'</a></li>';
+	     $output .= '<li><a href="peter-whyte-resume">' .t('Peter\'s Resume') .'</a></li>';
+	 }                      
+
+	$output .= '</ul>';
+	
+
+    }
+    
+    // if 'type' is 'profile_page' and the page is either edit-olah /node/5, peter-whyte /node/22, then
+    // print this menu item within the navigation  
+    if($page_type->type === 'profile_page'){
+	$output .= '<ul class="topNav">';
+	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
+	if(arg(1) == 5){
+	     $output .= '<li><a href="/edit-olah-blog">' .t('Edit\'s Blog') .'</a></li>';
+	     $output .= '<li><a href="edit-olah-resume">' .t('Edit\'s Resume') .'</a></li>';
+	 }
+	 if(arg(1) == 22){
+	     $output .= '<li><a href="/peter-whyte-blog">' .t('Peter\'s Blog') .'</a></li>';
+	     $output .= '<li><a href="peter-whyte-resume">' .t('Peter\'s Resume') .'</a></li>';
+	 } 
+	$output .= '</ul>';
+    }
+    
+    
+    // if 'type' is 'resume_page' and page is either edit-olah-resume /node/8, peter-whyte-resume /node/23, then
+    // print this menu item within the navigation  
+    if($page_type->type === 'resume_page'){
+	$output .= '<ul class="topNav">';
+	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
+	if(arg(1) == 8){
+	    $output .= '<li><a href="edit-olah">' .t('Edit\'s Portfolio') .'</a></li>';
+	     $output .= '<li><a href="/edit-olah-blog">' .t('Edit\'s Blog') .'</a></li>';
+	     
+	 }
+	 if(arg(1) == 23){
+	     $output .= '<li><a href="peter-whyte">' .t('Peter\'s Portfolio') .'</a></li>';
+	     $output .= '<li><a href="/peter-whyte-blog">' .t('Peter\'s Blog') .'</a></li>';
+	 } 
+	$output .= '</ul>';
+    }  
+    
+    
+    
+    // if 'type' is 'blog_article', then
+    // print this menu item within the navigation  
+     if($page_type->type === 'blog_article'){
+	
+	$output .= '<ul class="topNav">';
+	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
+	// if bfr cookie is set
+	if(isset($_COOKIE['bfr'])) {
+	    // take the string with bfr cookie's value in it and slice it up at the 
+	    // commas and put the slices into an array called cookieValue
+	    $cookieValue = explode(',', $_COOKIE['bfr']);
+	    // grab the first item in the array and put it into a variable called referrer
+	    $referrer = $cookieValue[0];
+	    
+	    switch ($referrer) {
+		case '18': // if referrer's value is equal to 18, print this on the page
+		    $output .= '<li>'.l(t('Edit\'s Blog'), 'node/18') .'</li>';
+		    break;
+		case '19': // if referrer's value is equal to 19, print this on the page
+		    $output .= '<li>' .l(t('Peter\'s Blog'), 'node/19') .'</li>';
+		    break;
+		default: // otherwise, print this on the page
+		    $output .= '<li><a href="'.$GLOBALS['base_url'].'/blog">' .t('Blog') .'</a></li>';
+		    break;
+	    }
+	} else { // if cookie is not set, print this on the page
+	    $output .= '<li><a href="'.$GLOBALS['base_url'].'/blog">' .t('Blog') .'</a></li>';
+	}
+	
+	$output .= '<li><a href="'.$GLOBALS['base_url'].'/contact-us">' .t('Contact us') .'</a></li>';
+	$output .= '</ul>';
+     }
+    
+     
+    // if 'type' is 'portfolio_work_detail_page', then
+    // print this menu item within the navigation  
+     if($page_type->type === 'portfolio_work_detail_page'){
+	$output .= '<ul class="topNav">';
+	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
+	
+		if(isset($_SERVER['HTTP_REFERER'])) { 
+	    $referer =  $_SERVER['HTTP_REFERER']; 
+	    $refererUrl = explode('/', $referer);
+	    $refererLast = end($refererUrl);
+	    switch ($refererLast) {
+		case 'edit-olah-blog':
+		    $output .= '<li><a href="'.$GLOBALS['base_url'].'/'.$refererLast.'">' .t('Edit\'s Portfolio') .'</a></li>';
+		    break;
+		case 'peter-whyte-blog':
+		    $output .= '<li><a href="'.$GLOBALS['base_url'].'/'.$refererLast.'">' .t('Peter\'s Portfolio') .'</a></li>';
+		    break;
+		default:
+		    $output .= '<li><a href="portfolio">' .t('Portfolio') .'</a></li>';
+		    break;
+	    }
+	}
+
+	$output .= '<li><a href="/contact-us">' .t('Contact us') .'</a></li>';
+	$output .= '</ul>';
+     }   
+    
+    
+    $output .= '</nav></div><!-- /#MainNav -->';
+    
+    $block = array(
+	'message' => array(
+	  '#type' => 'markup',
+	  '#markup' => $output,
+	),
+      );
+      return $block;
+}
+  
+//function petes_test_block_function() {
+//    $output = '';
+//    $output .= 'This is a test';
+//    
+//    $block = array(
+//	'message' => array(
+//	    '#type' => 'markup',
+//	    '#markup' => $output,
+//	),
+//    );
+//    return $block;
+//}
