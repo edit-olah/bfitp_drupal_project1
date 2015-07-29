@@ -1,0 +1,21 @@
+
+/* 
+    Created on : 28-Jul-2015, 09:21:00
+    Author     : Edit
+*/
+
+
+/* Drupal admin view adjustments - beginning */
+
+body.logged-in.node-type-profile-page{
+    padding-top: 172px !important;
+    
+    #OuterHeaderWrapper{
+	top: 27px;
+    }
+    .fixedNavPage {
+	margin-top: 0px;
+    }
+}
+
+/* Drupal admin view adjustments - end */

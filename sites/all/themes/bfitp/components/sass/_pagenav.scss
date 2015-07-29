@@ -30,12 +30,16 @@ and open the template in the editor.
     background: transparent;
     
     li {
-	padding-top: 0;
+	padding-top: .1%;
+	width: 20%;
+	margin-top: .5%;
+	margin-bottom: .5%;
     }
     a {
 	color: $primaryBG;
-	padding: .5% 3%;
+	padding: 2.5% 10%;
 	font-size: 1.2em;
+	display: inline;
 	
     }
     
