@@ -72,22 +72,133 @@
  * @ingroup themeable
  */
 ?>
+ <?php
+    // name cookie (bfr = barefoot referrer)
+    $cookieName = 'bfr';
+    // set node id as cookie value
+    $cookieValue = $node->nid;
+    
+    // if bfr cookie is set
+    if(isset($_COOKIE[$cookieName])) {
+	// take the string with the cookie value in it and slice it up at the 
+	// commas and put the slices into an array called cookieRawValue
+	$cookieRawValue = explode(',', $_COOKIE[$cookieName]);
+	
+	// if cookieValue(current page's node id) is not equal to the first 
+	// item in the array of the sliced up cookie value string
+	if($cookieValue != $cookieRawValue[0]){
+	    //if there are more than 1 items in the sliced up cookie value string
+	    // and the second item in the sliced up cookie value string is not equal to the current node id
+	    if(count($cookieRawValue) > 1 && $cookieRawValue[1] != $cookieValue){
+		// in the cookie value string, shift the current node id first, so we can use it as a referrer node id
+		$cookieValue = $cookieRawValue[1].  ',' . $cookieValue;
+	    }else{
+		// otherwise, in the cookie value string, append the current node id at end of the string
+		$cookieValue = $cookieRawValue[0].  ',' . $cookieValue;
+	    }
+	    
+	    
+	}else{
+	    // otherwise, keep/confirm the same value and don't do anything
+	    $cookieValue = $_COOKIE[$cookieName];
+	}
+    }
+    
+    // set bfr cookie
+    setcookie($cookieName, $cookieValue);
+    
+    // if page type is blog_article, delete cookie
+    $page_type = node_load(arg(1));
+    if($page_type->type === 'blog_article'){
+	setcookie("bfr", "", time() - 3600);
+    }
+ ?>
+
 
 <!--==============================header=================================-->
+    <?php
+
+	if(isset($node->type) && $node->type === 'profile_page'){
+	    print '<div id="OuterHeaderWrapper">';
+	}
+    ?>
         <div id="HeaderWrapper">
             <header>
                 <div class="container">
                    
 		    <?php print render($page['header']);?>
                     
-                     <div class="logo-container">
-			 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><span class="logo">Barefoot in the Park</span></a></div>
+                     <div class="logo-container <?php 
+			if(isset($node->type) && $node->type === 'profile_page'){
+			   print 'fixedNavPage-logoContainer';
+			}
+		     ?>">
+			 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><span class="logo">Barefoot in the Park</span></a>
+		     </div>
+		    
+		    <?php
+			if(isset($node->type) && $node->type === 'profile_page'){
+			?>
+			    <button class="cmn-toggle-switch cmn-toggle-switch__htx">
+				<span>toggle menu</span>
+			    </button>
+		    <?php } ?>
+		    
 		     <div class="clear"></div>
                 </div><!-- /.container -->
             </header>
         </div><!-- /#HeaderWrapper -->
-
 	
+
+
+    <?php
+	if(isset($node->type) && $node->type === 'profile_page'){ 
+    ?>
+	    <!-- PAGE NAV beginning -->
+
+	    <div id="PageNav">
+
+		<nav>
+		    <ul class="nav full-width">
+			
+			<?php 
+			    print '<li><a class="pageNavLink" href="Hero">Back to top</a></li>';
+			    
+			    if(isset($node->field_first_section_menu_item['und'][0]['value'])){
+				print '<li><a class="pageNavLink" href="About">'
+				. $node->field_first_section_menu_item['und'][0]['value']
+				.'</a></li>';
+			    }
+			
+			    if(isset($node->field_second_section_menu_item['und'][0]['value'])){
+				print '<li><a class="pageNavLink" href="Skills">'
+				. $node->field_second_section_menu_item['und'][0]['value']
+				.'</a></li>';
+			    }
+			    
+			    if(isset($node->field_third_section_menu_item['und'][0]['value'])){
+				print '<li><a class="pageNavLink" href="Portfolio">'
+				. $node->field_third_section_menu_item['und'][0]['value']
+				.'</a></li>';
+			    }
+			    // title is always set
+			    $name = explode(' ', $node->title);
+			    print '<li><a class="pageNavLink" href="ContactIndi">' . t('Contact') . ' ' .  $name[0] . '</a></li>';
+			?>	
+			
+		    </ul><!--.nav.full-width -->
+		    <!--<div class="clear"></div>-->
+		</nav>
+	    </div><!-- /#PageNav -->
+
+	    <!-- PAGE NAV end -->
+	    
+    <?php 
+	}
+	if(isset($node->type) && $node->type === 'profile_page'){
+	    print '</div><!-- /#OuterHeaderWrapper -->';
+	}
+    ?>
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb"><?php print $breadcrumb; ?></div>
     <?php endif; ?>
