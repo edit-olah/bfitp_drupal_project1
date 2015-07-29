@@ -80,43 +80,39 @@
 			    } ?>
 			</section>
 
-			<!-- Mix it up section beginning -->
-			<section>
 
-			    <?php if (isset($field_second_section_block_ref['und'][0])) {
-				$delta = explode(":", $field_second_section_block_ref['und'][0]['moddelta']);
-				$printBlock = module_invoke($delta[0], 'block_view', $delta[1]);
-				print render($printBlock['content']);
-
-			    } ?>
-
-			    <div id="SkillsContainer" class="edits-skills mixItUp-container">
+			<?php 
+			    if(isset($field_skills_mixitup_fc[0]['value'])){
+			?>
 				
-				<h2 class="extraPadding">List of skills</h2>
-				
-				<div class="mix markup" data-my-order="1"><p>HTML</p></div>
-				<div class="mix extension-language" data-my-order="2"><p>CSS</p></div>
-				<div class="mix extension-language" data-my-order="3"><p>SASS</p></div>
-				<div class="mix dynamic-programming-language" data-my-order="4"><p>JavaScript</p></div>				    
-				<div class="mix code-library" data-my-order="5"><p>jQuery</p></div>
-				<div class="mix cms drupal" data-my-order="6"><p>Drupal</p></div>
-				<div class="mix dynamic-programming-language" data-my-order="7"><p>PHP</p></div>				    
-				<div class="mix frontend-automation" data-my-order="8"><p>Gulp</p></div>
-				<div class="mix version-control" data-my-order="9"><p>Git</p></div>
-				<div class="mix version-control" data-my-order="10"><p>SVN</p></div>
-				<div class="mix virtualization" data-my-order="11"><p>Oracle VM Virtual Box</p></div>
-				<div class="mix terminal-emulator" data-my-order="12"><p>PuTTY</p></div>
-				<div class="mix cut-up" data-my-order="13"><p>Adobe Photoshop</p></div>
-				<div class="mix cut-up" data-my-order="14"><p>Adobe Illustrator</p></div>
-				<div class="mix cms" data-my-order="15"><p>Other CMSs</p></div>
-				<div class="mix additional" data-my-order="16"><p>Third-party APIs</p></div>
-				<div class="mix additional" data-my-order="17"><p>Web fonts</p></div>
-				<div class="mix additional" data-my-order="18"><p>FTP</p></div>
-				<div class="mix additional" data-my-order="19"><p>MySQL Workbench</p></div>
+			    <!-- Mix it up section beginning -->
+			    <section>
+
+				<div id="SkillsContainer" class="edits-skills mixItUp-container">
+
+				    <h2 class="extraPadding">List of skills</h2>
+
+				    <?php
+					
+					foreach($field_skills_mixitup_fc as $number=>$item){
+					    $skill = entity_load('field_collection_item', array($item['value']));
+					    $skill = $skill[$item['value']];
+					    $skillClass = '';
+					    
+					    foreach($skill->field_skill_category['und'] as $skillCategory){
+						$skillClass .= $skillCategory['value'] . ' ';
+					    }
+					    
+					    print '<div class="mix ' . $skillClass . '" data-my-order="'. $number .'"><p>' . $skill->field_skill_text['und'][0]['value'] . '</p></div>';
+					}
+				    ?>
+			    
 				<div class="gap"></div>
 				<div class="gap"></div>
-			    </div><!--/#Container -->
-
+				
+			    </div><!--/#SkillsContainer -->
+			   
+			    
 			    <div class="control-bar">
 				<div class="group">
 				    <label>Show:</label>
@@ -125,24 +121,21 @@
 				</div><!--/.group -->
 				<div class="group filter-buttons">
 				    <label>Filter:</label>
-				    <button class="filter" data-filter=".markup">Markup</button>
-				    <button class="filter" data-filter=".extension-language">Extension Language</button>
-				    <button class="filter" data-filter=".dynamic-programming-language">Dynamically-typed Programming Language</button>
-				    <button class="filter" data-filter=".code-library">Library</button>
-				    <button class="filter" data-filter=".drupal">Drupal</button>
-				    <button class="filter" data-filter=".cms">Content Management</button>
-				    <button class="filter" data-filter=".frontend-automation">Frontend Automation</button>
-				    <button class="filter" data-filter=".version-control">Version Control</button>
-				    <button class="filter" data-filter=".virtualization">Virtualisation</button>
-				    <button class="filter" data-filter=".terminal-emulator">Terminal Emulator</button>
-				    <button class="filter" data-filter=".cut-up">Cut-up</button>
-				    <button class="filter" data-filter=".additional">Additional</button>
+				    
+				    <?php 
+					$fields = field_info_field('field_skill_category');
+					foreach($fields["settings"]['allowed_values'] as $key=>$value){
+					    print '<button class="filter" data-filter=".' . $key . '">'. $value .'</button>';
+					}
+				    ?>		    
+
 				</div><!--/.group.filter-buttons -->
 				<div class="arrowDown"></div>
 
 			    </div><!--/.control-bar -->				
 			</section>
 		    <!-- Mix it up section end -->
+		    <?php } ?>
 		    </article>
 		</div><!-- /.container -->
 
@@ -171,14 +164,14 @@
 		
 		<!-- Mix it up section beginning -->
 		
-		    field_third_section_block_ref
+		   
 		
-		    <?php if (isset($field_third_section_block_ref['und'][0])) {
-			$delta = explode(":", $field_third_section_block_ref['und'][0]['moddelta']);
-			$printBlock = module_invoke($delta[0], 'block_view', $delta[1]);
-			print render($printBlock['content']);
-
-		    } ?>
+		    <?php //if (isset($field_third_section_block_ref['und'][0])) {
+//			$delta = explode(":", $field_third_section_block_ref['und'][0]['moddelta']);
+//			$printBlock = module_invoke($delta[0], 'block_view', $delta[1]);
+//			print render($printBlock['content']);
+//
+//		    } ?>
 		
 		    <section>
 			<div class="control-bar">
@@ -393,6 +386,7 @@
 			</div><!--/.leftContainer -->
 
 			<div class="rightContainer">
+			    <a class="backToTopButton" href="Hero">Back to top</a>
 			    <?php if(isset($contact->field_contact_me_profile_image)){
 				print '<img alt="' . $contact->field_contact_me_profile_image['und'][0]['alt'] . 
 					'" alt="' . $contact->field_contact_me_profile_image['und'][0]['title'] . 
