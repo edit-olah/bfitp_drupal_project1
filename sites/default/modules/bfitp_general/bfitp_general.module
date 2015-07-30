@@ -44,17 +44,17 @@ function bfitp_general_dynamic_menu(){
     $page_type = node_load(arg(1));
     
     
-    // if 'type' is equal to 'home_page' or 'index_page' or 'contact_us_page' in the loaded content and
+    // if 'type' is equal to 'home_page' or 'index_page' or 'contact_us_page' or 'basic_page' in the loaded content and
     // page is NOT Edit's blog /node/18, Peter's blog /node/19, then
     // print this menu item within the navigation
-    if(arg(1) != 18 AND arg(1) != 19 AND $page_type->type === 'home_page' || $page_type->type === 'index_page' || $page_type === 'contact_us_page') {
+    if(arg(1) != 18 AND arg(1) != 19 AND $page_type->type === 'home_page' || $page_type->type === 'index_page' || $page_type->type === 'contact_us_page' || $page_type->type === 'basic_page') {
 	
 	$output .= '<ul class="nav">';
 	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
 	$output .= '<li><a class="pageNavLinkHome" href="'.$front_page.'About-us">' .t('About us') .'</a></li>';
-	$output .= '<li><a href="/portfolio">' .t('Portfolio') .'</a></li>';
-	$output .= '<li><a href="/blog">' .t('Blog') .'</a></li>';
-	$output .= '<li><a href="/contact-us">' .t('Contact us') .'</a></li>';
+	$output .= '<li><a href="'.$GLOBALS['base_url'].'/portfolio">' .t('Portfolio') .'</a></li>';
+	$output .= '<li><a href="'.$GLOBALS['base_url'].'/blog">' .t('Blog') .'</a></li>';
+	$output .= '<li><a href="'.$GLOBALS['base_url'].'/contact-us">' .t('Contact us') .'</a></li>';
 	$output .= '</ul>';
 	
     }
@@ -67,12 +67,12 @@ function bfitp_general_dynamic_menu(){
 	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
 
 	if(arg(1) == 18){
-	     $output .= '<li><a href="/edit-olah">' .t('Edit\'s Portfolio') .'</a></li>';
-	     $output .= '<li><a href="edit-olah-resume">' .t('Edit\'s Resume') .'</a></li>';
+	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah">' .t('Edit\'s Portfolio') .'</a></li>';
+	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah-resume">' .t('Edit\'s Resume') .'</a></li>';
 	 }
 	 if(arg(1) == 19){
-	     $output .= '<li><a href="/peter-whyte">' .t('Peter\'s Portfolio') .'</a></li>';
-	     $output .= '<li><a href="peter-whyte-resume">' .t('Peter\'s Resume') .'</a></li>';
+	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte">' .t('Peter\'s Portfolio') .'</a></li>';
+	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte-resume">' .t('Peter\'s Resume') .'</a></li>';
 	 }                      
 
 	$output .= '</ul>';
@@ -86,12 +86,12 @@ function bfitp_general_dynamic_menu(){
 	$output .= '<ul class="topNav">';
 	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
 	if(arg(1) == 5){
-	     $output .= '<li><a href="/edit-olah-blog">' .t('Edit\'s Blog') .'</a></li>';
-	     $output .= '<li><a href="edit-olah-resume">' .t('Edit\'s Resume') .'</a></li>';
+	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah-blog">' .t('Edit\'s Blog') .'</a></li>';
+	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah-resume">' .t('Edit\'s Resume') .'</a></li>';
 	 }
 	 if(arg(1) == 22){
-	     $output .= '<li><a href="/peter-whyte-blog">' .t('Peter\'s Blog') .'</a></li>';
-	     $output .= '<li><a href="peter-whyte-resume">' .t('Peter\'s Resume') .'</a></li>';
+	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte-blog">' .t('Peter\'s Blog') .'</a></li>';
+	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte-resume">' .t('Peter\'s Resume') .'</a></li>';
 	 } 
 	$output .= '</ul>';
     }
@@ -103,13 +103,13 @@ function bfitp_general_dynamic_menu(){
 	$output .= '<ul class="topNav">';
 	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
 	if(arg(1) == 8){
-	    $output .= '<li><a href="edit-olah">' .t('Edit\'s Portfolio') .'</a></li>';
-	     $output .= '<li><a href="/edit-olah-blog">' .t('Edit\'s Blog') .'</a></li>';
+	    $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah">' .t('Edit\'s Portfolio') .'</a></li>';
+	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah-blog">' .t('Edit\'s Blog') .'</a></li>';
 	     
 	 }
 	 if(arg(1) == 23){
-	     $output .= '<li><a href="peter-whyte">' .t('Peter\'s Portfolio') .'</a></li>';
-	     $output .= '<li><a href="/peter-whyte-blog">' .t('Peter\'s Blog') .'</a></li>';
+	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte">' .t('Peter\'s Portfolio') .'</a></li>';
+	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte-blog">' .t('Peter\'s Blog') .'</a></li>';
 	 } 
 	$output .= '</ul>';
     }  
@@ -168,12 +168,12 @@ function bfitp_general_dynamic_menu(){
 		    $output .= '<li><a href="'.$GLOBALS['base_url'].'/'.$refererLast.'">' .t('Peter\'s Portfolio') .'</a></li>';
 		    break;
 		default:
-		    $output .= '<li><a href="portfolio">' .t('Portfolio') .'</a></li>';
+		    $output .= '<li><a href="'.$GLOBALS['base_url'].'portfolio">' .t('Portfolio') .'</a></li>';
 		    break;
 	    }
 	}
 
-	$output .= '<li><a href="/contact-us">' .t('Contact us') .'</a></li>';
+	$output .= '<li><a href="'.$GLOBALS['base_url'].'/contact-us">' .t('Contact us') .'</a></li>';
 	$output .= '</ul>';
      }   
     
