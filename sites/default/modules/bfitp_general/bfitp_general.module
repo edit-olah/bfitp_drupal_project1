@@ -189,6 +189,7 @@ function bfitp_general_dynamic_menu(){
       return $block;
 }
   
+
 //function petes_test_block_function() {
 //    $output = '';
 //    $output .= 'This is a test';
@@ -200,4 +201,59 @@ function bfitp_general_dynamic_menu(){
 //	),
 //    );
 //    return $block;
-//}
+
+
+function portfolio_mixitup($user){
+    $mixitupFilter = '';
+    $mixitupFilter .= '<div class="control-bar">
+			<div class="group">
+			    <label>Show:</label>
+			    <button class="filter-portfo" data-filter="all">All</button>
+			    <button class="filter-portfo" data-filter="none">None</button>
+			</div><!--/.group -->
+			<div class="group filter-buttons">
+			<label>Filter:</label>';
+			
+    $mixitupFilter .= '<button class="filter-portfo" data-filter=".html">HTML5</button>
+			<button class="filter-portfo" data-filter=".css">CSS</button>
+			<button class="filter-portfo" data-filter=".sass">SASS</button>
+			<button class="filter-portfo" data-filter=".css-animation">CSS Animation</button>
+			<button class="filter-portfo" data-filter=".drupal-project">Drupal Project</button>
+			<button class="filter-portfo" data-filter=".website-project">Website Project</button>
+			<button class="filter-portfo" data-filter=".js-jquery">JavaScript / jQuery</button>';
+	
+
+    
+    $mixitupFilter .= '</div><!--/.group.filter-buttons -->
+		      <div class="arrowDown"></div>
+		     </div><!--/.control-bar -->';
+	    
+    $portfolioContainer = '';
+    $portfolioContainer .= '<div id="PortfolioContainer" class="mixItUp-container">';
+    $projects = db_query("SELECT n.title
+			    FROM node n
+			    INNER JOIN field_data_field_created_by user ON n.nid = user.entity_id
+			    WHERE n.type = 'portfolio_work_detail_page'
+			    AND user.field_created_by_target_id = :user;", array(':user'=>$user))->fetchAll();
+    
+    foreach($projects as $project){
+	
+//	$portfolioContainer .= '<p style="display:block;">' . $project->title . '</p>';
+	$portfolioContainer .= '<div class="portfoMix click-follow html css sass" data-my-order="1">
+				<section>
+//				    <img alt="" src="images/bfitp_placeholder_img_template_280x140.png" >
+				    <h3>' . $project->title . '</h3>
+//				    <h4>HTML, CSS, SASS, Compass</h4>
+//				    <p class="button"><a href="/portfolio-project.html">More details >> </a></p>
+				</section>
+			    </div><!--/.portfoMix -->';
+    }
+    
+
+    $portfolioContainer .= '<div class="gap"></div>
+			    <div class="gap"></div>
+			    </div><!--/#PortfolioContainer -->';
+    
+   return $mixitupFilter . $portfolioContainer;
+   
+}

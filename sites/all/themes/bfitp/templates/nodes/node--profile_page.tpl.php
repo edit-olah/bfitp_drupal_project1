@@ -170,16 +170,16 @@
 //			$delta = explode(":", $field_third_section_block_ref['und'][0]['moddelta']);
 //			$printBlock = module_invoke($delta[0], 'block_view', $delta[1]);
 //			print render($printBlock['content']);
-//
+			print portfolio_mixitup($nid);
 //		    } ?>
 		
 		    <section>
-			<div class="control-bar">
+<!--			<div class="control-bar">
 			    <div class="group">
 				<label>Show:</label>
 				<button class="filter-portfo" data-filter="all">All</button>
 				<button class="filter-portfo" data-filter="none">None</button>
-			    </div><!--/.group -->
+			    </div>/.group 
 			    <div class="group filter-buttons">
 				<label>Filter:</label>
 				<button class="filter-portfo" data-filter=".html">HTML5</button>
@@ -189,10 +189,10 @@
 				<button class="filter-portfo" data-filter=".drupal-project">Drupal Project</button>
 				<button class="filter-portfo" data-filter=".website-project">Website Project</button>
 				<button class="filter-portfo" data-filter=".js-jquery">JavaScript / jQuery</button>
-			    </div><!--/.group.filter-buttons -->
+			    </div>/.group.filter-buttons 
 			    <div class="arrowDown"></div>
 
-			</div><!--/.control-bar -->
+			</div>/.control-bar -->
 
 			<div id="PortfolioContainer" class="mixItUp-container">
 			    <div class="portfoMix click-follow html css sass" data-my-order="1">
