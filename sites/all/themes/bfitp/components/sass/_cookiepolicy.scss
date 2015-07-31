@@ -1,0 +1,25 @@
+#sliding-popup .popup-content #popup-buttons button {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background:#464c45;
+    color:#D2DECF;
+    text-shadow: none;
+    border: 2px solid #45613F;
+    font-family: $baseFont;
+    font-weight: $medium;
+}
+
+#sliding-popup .popup-content #popup-buttons button:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #464c45), color-stop(1, #6b7569) );
+    background:-moz-linear-gradient( center top, #464c45 5%, #6b7569 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#464c45', endColorstr='#6b7569');
+    background-color:#464c45;
+    border: 2px solid #6b7569;
+    text-decoration:none;
+}
+
+#sliding-popup .popup-content #popup-text {
+    color: $primaryFontColor;
+    font-size: 11px;
+}
