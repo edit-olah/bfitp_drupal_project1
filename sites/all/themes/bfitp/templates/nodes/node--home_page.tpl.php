@@ -103,11 +103,13 @@
 						}?>
 						<?php if(isset($contact->field_contact_highlighted_text['und'][0]['value']) 
 						    && isset($contact->field_contact_highlighted_text_2['und'][0]['value'])){
+							
 							print '<p class="button">' 
-								. '<a href="' . '/' . $contact->field_contact_highlighted_text['und'][0]['value'] . '-' . $contact->field_contact_highlighted_text_2['und'][0]['value'] . '">' 
-								    . 'Go to ' . $contact->field_contact_highlighted_text['und'][0]['value'] . '\'s portfolio >>'
-								. '</a>' 
+								    . l('Go to ' . $contact->field_contact_highlighted_text['und'][0]['value'] 
+									    . '\'s portfolio >>', 'node/' 
+									    . $contact->field_created_by['und'][0]['target_id']) 
 							    . '</p>';
+							
 						}?>
 					    </section>
 					</div>
