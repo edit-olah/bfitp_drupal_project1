@@ -155,7 +155,7 @@
 			} ?>
 			<section>
 			    <?php if(isset($field_third_section_header_2[0]['value'])){
-				print '<h2 class="tagline">' . $field_third_section_header_2[0]['value'] . '</h2>';
+				print '<h2>' . $field_third_section_header_2[0]['value'] . '</h2>';
 			    } ?>
 			    <?php if(isset($field_third_section_text[0]['value'])){
 				print $field_third_section_text[0]['value'];
@@ -164,145 +164,15 @@
 		
 		<!-- Mix it up section beginning -->
 		
-		   
-		
-		    <?php //if (isset($field_third_section_block_ref['und'][0])) {
-//			$delta = explode(":", $field_third_section_block_ref['und'][0]['moddelta']);
-//			$printBlock = module_invoke($delta[0], 'block_view', $delta[1]);
-//			print render($printBlock['content']);
-			print portfolio_mixitup($nid);
-//		    } ?>
-		
-		    <section>
-<!--			<div class="control-bar">
-			    <div class="group">
-				<label>Show:</label>
-				<button class="filter-portfo" data-filter="all">All</button>
-				<button class="filter-portfo" data-filter="none">None</button>
-			    </div>/.group 
-			    <div class="group filter-buttons">
-				<label>Filter:</label>
-				<button class="filter-portfo" data-filter=".html">HTML5</button>
-				<button class="filter-portfo" data-filter=".css">CSS</button>
-				<button class="filter-portfo" data-filter=".sass">SASS</button>
-				<button class="filter-portfo" data-filter=".css-animation">CSS Animation</button>
-				<button class="filter-portfo" data-filter=".drupal-project">Drupal Project</button>
-				<button class="filter-portfo" data-filter=".website-project">Website Project</button>
-				<button class="filter-portfo" data-filter=".js-jquery">JavaScript / jQuery</button>
-			    </div>/.group.filter-buttons 
-			    <div class="arrowDown"></div>
+			<section>
 
-			</div>/.control-bar -->
+			    <?php 
+				// pass in the node id for the particular profile page that is specific to a user
+				print portfolio_mixitup($nid);
+	//		    } ?>
 
-			<div id="PortfolioContainer" class="mixItUp-container">
-			    <div class="portfoMix click-follow html css sass" data-my-order="1">
-				<section>
-				    <img alt="" src="images/bfitp_placeholder_img_template_280x140.png" >
-				    <h3>Portfolio Project 1</h3>
-				    <h4>HTML, CSS, SASS, Compass</h4>
-				    <p class="button"><a href="/portfolio-project.html">More details >> </a></p>
-				</section>
-			    </div><!--/.portfoMix -->
-			    <div class="portfoMix click-follow css-animation" data-my-order="2">
-				<section>
-				    <img alt="" src="images/bfitp_placeholder_img_template_280x140.png" >
-				    <h3>Portfolio Project 2</h3>
-				    <h4>CSS3 animation</h4>
-				    <p class="button"><a href="/portfolio-project.html">More details >> </a></p>
-				</section>
-			    </div><!--/.portfoMix -->
-			    <div class="portfoMix click-follow drupal-project" data-my-order="3">
-				<section>
-				    <img alt="" src="images/bfitp_placeholder_img_template_280x140.png" >
-				    <h3>Portfolio Project 3</h3>
-				    <h4>Drupal7</h4>
-				    <p class="button"><a href="/portfolio-project.html">More details >> </a></p>
-				</section>
-			    </div><!--/.portfoMix -->
-			    <div class="portfoMix click-follow website-project" data-my-order="4">
-				<section>
-				    <img alt="" src="images/bfitp_placeholder_img_template_280x140.png" >
-				    <h3>Portfolio Project 4</h3>
-				    <h4>Micro-site</h4>
-				    <p class="button"><a href="/portfolio-project.html">More details >> </a></p>
-				</section>
-			    </div><!--/.portfoMix -->
-			    <div class="portfoMix click-follow js-jquery" data-my-order="5">
-				<section>
-				    <img alt="" src="images/bfitp_placeholder_img_template_280x140.png" >
-				    <h3>Portfolio Project 5</h3>
-				    <h4>JavaScript, jQuery</h4>
-				    <p class="button"><a href="/portfolio-project.html">More details >> </a></p>
-				</section>
-			    </div><!--/.portfoMix -->
-			    <div class="portfoMix click-follow drupal-project" data-my-order="6">
-				<section>
-				    <img alt="" src="images/bfitp_placeholder_img_template_280x140.png" >
-				    <h3>Portfolio Project 6</h3>
-				    <h4>Drupal test</h4>
-				    <p class="button"><a href="/portfolio-project.html">More details >> </a></p>
-				</section>
-			    </div><!--/.portfoMix -->
-			    <div class="portfoMix click-follow css" data-my-order="7">
-				<section>
-				    <img alt="" src="images/bfitp_placeholder_img_template_280x140.png" >
-				    <h3>Portfolio Project 7</h3>
-				    <h4>parallax test</h4>
-				    <p class="button"><a href="/portfolio-project.html">More details >> </a></p>
-				</section>
-			    </div><!--/.portfoMix -->
-			    <div class="portfoMix click-follow html" data-my-order="8">
-				<section>
-				    <img alt="" src="images/bfitp_placeholder_img_template_280x140.png" >
-				    <h3>Portfolio Project 8</h3>
-				    <h4>SVG test</h4>
-				    <p class="button"><a href="/portfolio-project.html">More details >> </a></p>
-				</section>
-			    </div><!--/.portfoMix -->
-			    <div class="portfoMix click-follow css" data-my-order="9">
-				<section>
-				    <img alt="" src="images/bfitp_placeholder_img_template_280x140.png" >
-				    <h3>Portfolio Project 9</h3>
-				    <h4>CSS</h4>
-				    <p class="button"><a href="/portfolio-project.html">More details >> </a></p>
-				</section>
-			    </div><!--/.portfoMix -->
-			    <div class="portfoMix click-follow css-animation" data-my-order="10">
-				<section>
-				    <img alt="" src="images/bfitp_placeholder_img_template_280x140.png" >
-				    <h3>Portfolio Project 10</h3>
-				    <h4>CSS Animation</h4>
-				    <p class="button"><a href="/portfolio-project.html">More details >> </a></p>
-				</section>
-			    </div><!--/.portfoMix -->
-			    <div class="portfoMix click-follow drupal-project" data-my-order="11">
-				<section>
-				    <img alt="" src="images/bfitp_placeholder_img_template_280x140.png" >
-				    <h3>Portfolio Project 11</h3>
-				    <h4>Drupal8 test</h4>
-				    <p class="button"><a href="/portfolio-project.html">More details >> </a></p>
-				</section>
-			    </div><!--/.portfoMix -->
-			    <div class="portfoMix click-follow website-project" data-my-order="12">
-				<section>
-				    <img alt="" src="images/bfitp_placeholder_img_template_280x140.png" >
-				    <h3>Portfolio Project 12</h3>
-				    <h4>Micro-site</h4>
-				    <p class="button"><a href="/portfolio-project.html">More details >> </a></p>
-				</section>
-			    </div><!--/.portfoMix -->
-			    <div class="portfoMix click-follow drupal-project" data-my-order="13">
-				<section>
-				    <img alt="" src="images/bfitp_placeholder_img_template_280x140.png" >
-				    <h3>Portfolio Project 13</h3>
-				    <h4>Drupal custom module</h4>
-				    <p class="button"><a href="/portfolio-project.html">More details >> </a></p>
-				</section>
-			    </div><!--/.portfoMix -->
-			    <div class="gap"></div>
-			    <div class="gap"></div>
-			</div><!--/#PortfolioContainer -->
-		    </section>
+
+			</section>
 		<!-- Mix it up section end -->
 
 		</article>    
@@ -389,7 +259,7 @@
 			    <a class="backToTopButton" href="Hero">Back to top</a>
 			    <?php if(isset($contact->field_contact_me_profile_image)){
 				print '<img alt="' . $contact->field_contact_me_profile_image['und'][0]['alt'] . 
-					'" alt="' . $contact->field_contact_me_profile_image['und'][0]['title'] . 
+					'" title="' . $contact->field_contact_me_profile_image['und'][0]['title'] . 
 					'" src="' . image_style_url('general_square', $contact->field_contact_me_profile_image['und'][0]['uri']) .'" />';
 			    } ?>
 
