@@ -58,7 +58,6 @@ and open the template in the editor.
 @media screen and (max-width: 639px) {
     
     #Hero {
-	//position: static;
 	height: 1%;
 	padding-bottom: 0%;
     }
@@ -175,16 +174,9 @@ and open the template in the editor.
 }
 
 
-@media screen and (min-width: 851px) and (max-width:895px) {
+@media screen and (min-width: 851px) and (max-width:990px) {
     .heroContent .heroText {
-	width: 65%;
-    }
-}
-
-
-@media screen and (min-width: 896px) and (max-width:990px) {
-    .heroContent .heroText {
-	width: 50%;
+	width: 66%;
     }
 }
 
