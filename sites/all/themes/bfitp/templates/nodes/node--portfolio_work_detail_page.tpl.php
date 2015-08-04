@@ -12,7 +12,7 @@
 			   
 			   <?php if(isset($field_detail_page_header_image)){
 				print '<img alt="' . $field_detail_page_header_image[0]['alt'] . 
-					'" alt="' . $field_detail_page_header_image[0]['title'] . 
+					'" title="' . $field_detail_page_header_image[0]['title'] . 
 					'" src="' . image_style_url('portfolio_header_460x230', $field_detail_page_header_image[0]['uri']) .'" />';
 			    } ?>
 			</div><!--/.leftContainer -->
@@ -66,7 +66,7 @@
 					foreach($field_sidebar_section as $item){
 					    $collection = entity_load('field_collection_item', array($item['value']));
 					    $collection = $collection[$item['value']];
-//					   
+					   
 					?>
 					    <div class="sidebar-section">
 						<section>
