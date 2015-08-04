@@ -50,8 +50,8 @@ function bfitp_general_dynamic_menu(){
     if(arg(1) != 18 AND arg(1) != 19 AND $page_type->type === 'home_page' || $page_type->type === 'index_page' || $page_type->type === 'contact_us_page' || $page_type->type === 'basic_page') {
 	
 	$output .= '<ul class="nav">';
-	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
-	$output .= '<li><a class="pageNavLinkHome" href="'.$front_page.'About-us">' .t('About us') .'</a></li>';
+	$output .= '<li><a href="' .  url('<front>') . '">' . t('Home') . '</a></li>';
+	$output .= '<li><a class="pageNavLinkHome" href="'. url('<front>').'?section=About-us">' .t('About us') .'</a></li>';
 	$output .= '<li><a href="'.$GLOBALS['base_url'].'/portfolio">' .t('Portfolio') .'</a></li>';
 	$output .= '<li><a href="'.$GLOBALS['base_url'].'/blog">' .t('Blog') .'</a></li>';
 	$output .= '<li><a href="'.$GLOBALS['base_url'].'/contact-us">' .t('Contact us') .'</a></li>';
@@ -64,7 +64,7 @@ function bfitp_general_dynamic_menu(){
     // print this menu item within the navigation                       
     if(arg(1) == 18 || arg(1) == 19) {
 	$output .= '<ul class="topNav">';
-	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
+	$output .= '<li><a href="' .  url('<front>') . '">' . t('Home') . '</a></li>';
 
 	if(arg(1) == 18){
 	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah">' .t('Edit\'s Portfolio') .'</a></li>';
@@ -84,7 +84,7 @@ function bfitp_general_dynamic_menu(){
     // print this menu item within the navigation  
     if($page_type->type === 'profile_page'){
 	$output .= '<ul class="topNav">';
-	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
+	$output .= '<li><a href="' .  url('<front>') . '">' . t('Home') . '</a></li>';
 	if(arg(1) == 5){
 	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah-blog">' .t('Edit\'s Blog') .'</a></li>';
 	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah-resume">' .t('Edit\'s Resume') .'</a></li>';
@@ -101,7 +101,7 @@ function bfitp_general_dynamic_menu(){
     // print this menu item within the navigation  
     if($page_type->type === 'resume_page'){
 	$output .= '<ul class="topNav">';
-	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
+	$output .= '<li><a href="' .  url('<front>') . '">' . t('Home') . '</a></li>';
 	if(arg(1) == 8){
 	    $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah">' .t('Edit\'s Portfolio') .'</a></li>';
 	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah-blog">' .t('Edit\'s Blog') .'</a></li>';
@@ -121,7 +121,7 @@ function bfitp_general_dynamic_menu(){
      if($page_type->type === 'blog_article'){
 	
 	$output .= '<ul class="topNav">';
-	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
+	$output .= '<li><a href="' .  url('<front>') . '">' . t('Home') . '</a></li>';
 	// if bfr cookie is set
 	if(isset($_COOKIE['bfr'])) {
 	    // take the string with bfr cookie's value in it and slice it up at the 
@@ -154,7 +154,7 @@ function bfitp_general_dynamic_menu(){
     // print this menu item within the navigation  
      if($page_type->type === 'portfolio_work_detail_page'){
 	$output .= '<ul class="topNav">';
-	$output .= '<li><a href="' . $front_page . '">' . t('Home') . '</a></li>';
+	$output .= '<li><a href="' .  url('<front>') . '">' . t('Home') . '</a></li>';
 	
 		if(isset($_SERVER['HTTP_REFERER'])) { 
 	    $referer =  $_SERVER['HTTP_REFERER']; 
@@ -214,41 +214,69 @@ function portfolio_mixitup($user){
 			<div class="group filter-buttons">
 			<label>Filter:</label>';
 			
-    $mixitupFilter .= '<button class="filter-portfo" data-filter=".html">HTML5</button>
-			<button class="filter-portfo" data-filter=".css">CSS</button>
-			<button class="filter-portfo" data-filter=".sass">SASS</button>
-			<button class="filter-portfo" data-filter=".css-animation">CSS Animation</button>
-			<button class="filter-portfo" data-filter=".drupal-project">Drupal Project</button>
-			<button class="filter-portfo" data-filter=".website-project">Website Project</button>
-			<button class="filter-portfo" data-filter=".js-jquery">JavaScript / jQuery</button>';
-	
-
+    
+			// 'SELECT' distinct --- removes duplicates
+			// 'AS' gives an alias, you need this with SELECT - probably because you are changing a column name
+			// This database query returns all category names for a person that got selected on their individual portfolio work/project pages
+    $categories = db_query("SELECT distinct category.entity_id AS cid, category.field_portfolio_work_category_value AS categoryClass
+			    FROM node n
+			    INNER JOIN field_data_field_created_by user ON n.nid = user.entity_id
+			    INNER JOIN field_data_field_portfolio_work_category category ON n.nid = category.entity_id
+			    WHERE n.type = 'portfolio_work_detail_page'
+			    AND user.field_created_by_target_id = :userid
+			    GROUP BY category.field_portfolio_work_category_value;", array(':userid'=>$user))->fetchAll();
+    
+    $field = field_info_field('field_portfolio_work_category');
+    $category_values = list_allowed_values($field);
+    $categorybynodeid = array();
+    foreach($categories as $category){
+	$mixitupFilter .= '<button class="filter-portfo" data-filter=".' . $category->categoryClass . '">'.$category_values[$category->categoryClass].'</button>&nbsp;';
+	//$category is an object so this is how you get the values of it
+	$categorybynodeid[] = array($category->cid=>$category->categoryClass);
+    }
     
     $mixitupFilter .= '</div><!--/.group.filter-buttons -->
-		      <div class="arrowDown"></div>
 		     </div><!--/.control-bar -->';
 	    
     $portfolioContainer = '';
     $portfolioContainer .= '<div id="PortfolioContainer" class="mixItUp-container">';
-    $projects = db_query("SELECT n.title
+    // 'FROM node n' --- get all of the data from the 'node' table (shorten node to / with alias of 'n')
+    // 'INNER JOIN field_data_field_created_by' --- add data from 'field_data_field_created_by' table (shorten / alias 'field_data_field_created_by' to 'user')
+    // 'ON' --- match value from one table with the corresponding value from another table
+    // 'n.nid' --- 'nid' from 'node' table is the same as 'entity_id' from 'field_data_field_created_by_user' alias 'user' table
+    // 'WHERE' --- filter results by content type or 'n.type' is 'portfolio_work_detail_page'
+    // 'AND' --- add another filter, the value of 'field_created_by_target_id' from 'field_data_field_created_by_user' alias 'user' table is the value of the variable that we pass into our function (function portfolio_mixitup($user))
+    // last row explanation: 'user.field_created_by_target_id = :userid;"' --- ';"' end of MySQL query. So we use a made-up variable instead of the specific value of a nodeid '5', called 'userid', this variable can be anything,
+    //    and we put it into an array, where we identify ':userid' with the '$user' variable that we are going to use to pass into our function. 'fetchAll()' is a Drupal command to get all matching data.
+    // 'SELECT distinct n.title' --- we are just asking about the title
+    // 'SELECT distinct n.title, n.nid, img.field_detail_page_header_image_fid as imgid' --- we are asking about multiple values: node title, node id, 'field_detail_page_header_image_fid' (image field id) from the 'img' table (which is just the table for 'field_data_field_detail_page_header_image' field aliased earlier as 'img') shortened / aliased as 'imgid'.
+    $projects = db_query("SELECT distinct n.title, n.nid, img.field_detail_page_header_image_fid as imgid
 			    FROM node n
 			    INNER JOIN field_data_field_created_by user ON n.nid = user.entity_id
+			    INNER JOIN field_data_field_detail_page_header_image img ON n.nid = img.entity_id
 			    WHERE n.type = 'portfolio_work_detail_page'
-			    AND user.field_created_by_target_id = :user;", array(':user'=>$user))->fetchAll();
+			    AND user.field_created_by_target_id = :userid;", array(':userid'=>$user))->fetchAll();
     
     foreach($projects as $project){
-	
-//	$portfolioContainer .= '<p style="display:block;">' . $project->title . '</p>';
-	$portfolioContainer .= '<div class="portfoMix click-follow html css sass" data-my-order="1">
+	$imguri = file_load($project->imgid);
+	$categoryClassList = '';
+	foreach($categorybynodeid as $porfolioWorkPageId){
+	    if($porfolioWorkPageId[$project->nid] != null){
+		$categoryClassList .= $porfolioWorkPageId[$project->nid] . ' ';
+	    }
+	};
+
+	$portfolioContainer .= '<div class="portfoMix click-follow '. $categoryClassList .'">
 				<section>
-//				    <img alt="" src="images/bfitp_placeholder_img_template_280x140.png" >
+				    <img alt="' . $project->title . 
+					'" title="' . $project->title . 
+					'" src="' . image_style_url('portfolio_header_460x230', $imguri->uri) .'" />
 				    <h3>' . $project->title . '</h3>
-//				    <h4>HTML, CSS, SASS, Compass</h4>
-//				    <p class="button"><a href="/portfolio-project.html">More details >> </a></p>
+				    <h4>'.$categoryClassList.'</h4>
+				    <p class="button">' . l('More details >>', 'node/' . $project->nid) . '</p>
 				</section>
-			    </div><!--/.portfoMix -->';
+			    </div><!--/.portfoMix -->&nbsp;';
     }
-    
 
     $portfolioContainer .= '<div class="gap"></div>
 			    <div class="gap"></div>
