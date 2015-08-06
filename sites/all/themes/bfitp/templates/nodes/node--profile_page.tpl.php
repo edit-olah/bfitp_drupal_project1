@@ -184,7 +184,7 @@
 	<!-- PORTFOLIO SECTION end -->
 
 	<?php if(isset($field_entity_ref[0]['target_id'])){ 
-	    $contact = node_load($field_entity_ref[0]['target_id']);
+	    $contact = $field_entity_ref[0]['entity'];
 	?>
 	<!-- INDIVIDUAL CONTACT SECTION beginning -->
 		    

@@ -33,7 +33,7 @@
 		<ul class="grid grid-stretched-layout">
 		    <li>
 			<?php if(isset($field_callout_boxes[0]['target_id'])){ 
-			    $contact = node_load($field_callout_boxes[0]['target_id']);
+			    $contact = $field_callout_boxes[0]['entity'];
 			?>
 			    <div class="grid-contentHolder">
 				<article>
@@ -78,19 +78,20 @@
 				    }?>
 
 				    <?php if(isset($contact->field_contact_highlighted_text['und'][0]['value'])){
-					    print '<p class="button">' 
-						    . '<a href="' . '/' . $contact->field_contact_highlighted_text['und'][0]['value'] . '-' . $contact->field_contact_highlighted_text_2['und'][0]['value']. '">' 
-							. 'See ' . $contact->field_contact_highlighted_text['und'][0]['value'] . '\'s portfolio >>'
-						    . '</a>' 
-						. '</p>';
+					print '<p class="button">' 
+					    . l('See ' . $contact->field_contact_highlighted_text['und'][0]['value'] 
+					    . '\'s portfolio >>', 'node/' 
+					    . $contact->field_created_by['und'][0]['target_id']) 
+					. '</p>';
 				    }?>
+				    
 				</article>
 			    </div><!-- /.gridContentHolder -->
 			<?php } ?>
 		    </li>
 		    <li>
 			<?php if(isset($field_callout_boxes[1]['target_id'])){ 
-			    $contact2 = node_load($field_callout_boxes[1]['target_id']);
+			    $contact2 = $field_callout_boxes[1]['entity'];
 			?>
 			    <div class="grid-contentHolder">
 				<article>
@@ -135,11 +136,11 @@
 				    }?>
 
 				    <?php if(isset($contact2->field_contact_highlighted_text['und'][0]['value'])){
-					    print '<p class="button">' 
-						    . '<a href="' . '/' . $contact2->field_contact_highlighted_text['und'][0]['value'] . '-' . $contact2->field_contact_highlighted_text_2['und'][0]['value']. '">' 
-							. 'See ' . $contact2->field_contact_highlighted_text['und'][0]['value'] . '\'s portfolio >>'
-						    . '</a>' 
-						. '</p>';
+					print '<p class="button">' 
+					    . l('See ' . $contact2->field_contact_highlighted_text['und'][0]['value'] 
+					    . '\'s portfolio >>', 'node/' 
+					    . $contact2->field_created_by['und'][0]['target_id']) 
+					. '</p>';
 				    }?>
 				</article>
 			    </div><!-- /.gridContentHolder -->

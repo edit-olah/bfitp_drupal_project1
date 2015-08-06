@@ -57,26 +57,12 @@
 
 		<ul class="grid">
 		    
-		    <?php if(isset($field_callout_boxes[0]['target_id'])){
-			// create an array
-			$nodesToLoad = array();
-			
-			//get the target_id for all nodes that we want to load 
-			//here and put it into an array, where we don't specify a 
-			//key-value pair, so it just adds the value to the next 
-			//available slot
-			foreach($field_callout_boxes as $callout_box){
-			    $nodesToLoad[] = $callout_box['target_id'];
-			}
-			
-			//load all contents of multiple nodes using the array 
-			//we created above and put all that into a variable
-			$contacts = node_load_multiple($nodesToLoad);
-			
-			//for each node that we have the content for in the 
-			//$contacts variable, put the content into a variable 
-			//called $contact and print out the followings 
-			foreach ($contacts as $contact){
+		    <?php if(isset($field_callout_boxes[0]['target_id'])){		
+			//Put the values of each entity reference in the field: 'field_callout_boxes'
+			// into the variable called '$contacts' 
+			foreach ($field_callout_boxes as $contacts){
+			    // access all fields of each entity in '$contacts' and put them into '$contact' variable
+			    $contact = $contacts['entity'];
 			    ?>
 			    <li class="click-follow">
 				    <div class="grid-contentHolder">
