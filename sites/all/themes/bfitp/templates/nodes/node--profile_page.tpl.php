@@ -40,7 +40,7 @@
 
 	    <div class="container">
 
-		<a class="backToTopButton" href="Hero">Back to top</a>
+		<a class="backToTopButton" href="Hero"><?php print t('Back to top'); ?></a>
 
 		<article>
 		    <?php if(isset($field_first_section_header_1[0]['value'])){
@@ -65,7 +65,7 @@
 	<div class="page" id="Skills">
 
 		<div class="container">
-		    <a class="backToTopButton" href="Hero">Back to top</a>
+		    <a class="backToTopButton" href="Hero"><?php print t('Back to top'); ?></a>
 		    <article>
 			
 			<?php if(isset($field_second_section_header_1[0]['value'])){
@@ -147,7 +147,7 @@
 
 	<div class="page" id="Portfolio">
 	    <div class="container">
-		<a class="backToTopButton" href="Hero">Back to top</a>
+		<a class="backToTopButton" href="Hero"><?php print t('Back to top'); ?></a>
 		<article>
 		    
 		    <?php if(isset($field_third_section_header_1[0]['value'])){
@@ -256,7 +256,7 @@
 			</div><!--/.leftContainer -->
 
 			<div class="rightContainer">
-			    <a class="backToTopButton" href="Hero">Back to top</a>
+			    <a class="backToTopButton" href="Hero"><?php print t('Back to top'); ?></a>
 			    <?php if(isset($contact->field_contact_me_profile_image)){
 				print '<img alt="' . $contact->field_contact_me_profile_image['und'][0]['alt'] . 
 					'" title="' . $contact->field_contact_me_profile_image['und'][0]['title'] . 

@@ -131,9 +131,8 @@
                      <div class="logo-container <?php 
 			if(isset($node->type) && $node->type === 'profile_page'){
 			   print 'fixedNavPage-logoContainer';
-			}
-		     ?>">
-			 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><span class="logo">Barefoot in the Park</span></a>
+			}?>">
+			 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><span class="logo"><?php print t('Barefoot in the Park'); ?></span></a>
 		     </div>
 		    
 		    <?php
@@ -162,7 +161,7 @@
 		    <ul class="nav full-width">
 			
 			<?php 
-			    print '<li><a class="pageNavLink" href="Hero">Back to top</a></li>';
+			    print '<li><a class="pageNavLink" href="Hero">' . t('Back to top') . '</a></li>';
 			    
 			    if(isset($node->field_first_section_menu_item['und'][0]['value'])){
 				print '<li><a class="pageNavLink" href="About">'
