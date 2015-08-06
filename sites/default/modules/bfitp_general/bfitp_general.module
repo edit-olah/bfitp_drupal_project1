@@ -285,3 +285,48 @@ function portfolio_mixitup($user){
    return $mixitupFilter . $portfolioContainer;
    
 }
+
+// returns related blog articles
+
+function get_related($taxonomyIds, $currentArticle){
+    $related_articles = db_query("SELECT distinct node.title, node.nid, subt.field_top_section_header_3_value AS subt, summary.body_summary AS summary, img.field_detail_page_header_image_fid AS imgId
+				FROM taxonomy_index a
+				INNER JOIN node ON a.nid = node.nid
+				INNER JOIN field_data_field_top_section_header_3 subt ON node.nid = subt.entity_id
+				INNER JOIN field_data_body summary ON node.nid = summary.entity_id
+				INNER JOIN field_data_field_detail_page_header_image img ON node.nid = img.entity_id
+				WHERE tid IN (:tids)
+				AND node.nid <> :currentArticle
+				LIMIT 3", array(':tids'=>$taxonomyIds, ':currentArticle'=>$currentArticle))->fetchAll();
+    return $related_articles;
+    
+}
+
+// ellipse function
+function ellipse($initial_text, $n_chars){
+
+    // maximum number of characters specified for the summary text in 
+    // the callout boxes in the blog index view, $n_chars = 150;
+    
+    // ellipse characters to end the strings with in a variable
+    $ellipse = '...';
+    // Strip HTML and PHP tags from the string and put the content into 
+    // a variable called summary text
+    $summary_text = strip_tags($initial_text);
+
+
+    // if the string in the variable is longer then the set number of 
+    // charachters specified for the summary text 
+    if(strlen($summary_text) > $n_chars)
+    {
+ //Find the numeric position of the first occurrence of 'space' 
+ //in the string within the number of specified charachters and 
+ //put it into a variable called cut index
+ $cut_index = strpos($summary_text,' ',$n_chars);
+ //return part of the string from the first character to the 
+ //number in the cut index variable and concatenate the ellipse 
+ //at the end of it
+ $summary_text = substr($summary_text,0,($cut_index===false? $n_chars: $cut_index)).$ellipse;
+    }
+    return $summary_text;
+}
