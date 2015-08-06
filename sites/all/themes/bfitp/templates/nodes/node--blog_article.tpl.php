@@ -49,19 +49,70 @@
 		    
 		    <div class="rightContainer">
 			<section>
-			    <header>
-				<?php if(isset($field_first_section_header_2[0]['value'])){
-				    print '<h2>' . $field_first_section_header_2[0]['value'] . '</h2>';
-				} ?>
-			    </header>
+			    <?php 
+				$taxonomyTermsUsed = '';
+				foreach($field_taxonomy_terms as $term){
+				    // creating a string of taxonomy terms
+				    $taxonomyTermsUsed .= $term['tid'] . ',';
+				}
+				// take off the last comma of the string
+				$taxonomyTermsUsed = rtrim($taxonomyTermsUsed, ",");
+				// we pass the two variables into our function in the bfitp_general.module file, whatever the function returns we pass into a variable
+				$related_articles = get_related($taxonomyTermsUsed, $nid);
+				// count articles and if there is at least one output 'related blog posts' section
+				if(count($related_articles) > 0) {
+				    ?>
+				    <header>
+					<h2> Related blog posts </h2>
+				    </header>
 			    
-			    <?php if (isset($field_additional_info_block_ref['und'][0])) {
-				$delta = explode(":", $field_additional_info_block_ref['und'][0]['moddelta']);
-				$printBlock = module_invoke($delta[0], 'block_view', $delta[1]);
-				print render($printBlock['content']);
+				    <ul class="grid grid-full-width blog-section">
 
-			    } ?>
+				    <?php 
+
+					foreach($related_articles as $related_article){
+				    ?>
+					    <li class="click-follow">
+						<div class="grid-contentHolder">
+						    <article>
+							
+							<?php 
+							    // imgId, title, subt, summary, and nid are 
+							    // comming from the database query from the 
+							    // custom module file bfitp_general.module
+							    $imguri = file_load($related_article->imgId); 
+							    print '<img alt="' . $related_article->title . 
+							    '" title="' . $related_article->title . 
+							    '" src="' . image_style_url('detail_page_header_image', $imguri->uri) .'" />';
+							?>
+							<h3><?php print $related_article->title; ?></h3>
+							<h4><?php print $related_article->subt; ?></h4>
+							<p><?php print ellipse($related_article->summary, 70); ?></p>
+							<p class="button"><?php print l('More details >>', 'node/' . $related_article->nid); ?> </p>
+						    </article>
+						</div><!-- /.grid-contentHolder -->
+					    </li>
+					<?php
+					}
+				    ?>
+				    </ul>
+				<?php
+				    
+				} else {
+				    
+				    // if there are no related articles by taxonomy, output 'latest blog posts' block view
+				    print '<header><h2> Latest blog posts </h2></header>';
+				    
 			    
+				    if (isset($field_additional_info_block_ref['und'][0])) {
+					$delta = explode(":", $field_additional_info_block_ref['und'][0]['moddelta']);
+					$printBlock = module_invoke($delta[0], 'block_view', $delta[1]);
+					print render($printBlock['content']);
+
+				    }
+				    
+				}
+			    ?>
 			    
 			</section>
 		    </div><!--/.rightContainer -->
@@ -74,10 +125,8 @@
 	    <!-- MAIN CONTENT end -->
 
 
-
-
 	    <?php if(isset($field_entity_ref[0]['target_id'])){ 
-		$contact = node_load($field_entity_ref[0]['target_id']);
+		$contact = $field_entity_ref[0]['entity'];
 	    ?>
 	    <!-- INDIVIDUAL CONTACT SECTION beginning -->
 
@@ -151,7 +200,7 @@
 			    <div class="rightContainer">
 				<?php if(isset($contact->field_contact_me_profile_image)){
 				    print '<img alt="' . $contact->field_contact_me_profile_image['und'][0]['alt'] . 
-					    '" alt="' . $contact->field_contact_me_profile_image['und'][0]['title'] . 
+					    '" title="' . $contact->field_contact_me_profile_image['und'][0]['title'] . 
 					    '" src="' . image_style_url('general_square', $contact->field_contact_me_profile_image['und'][0]['uri']) .'" />';
 				} ?>
 
