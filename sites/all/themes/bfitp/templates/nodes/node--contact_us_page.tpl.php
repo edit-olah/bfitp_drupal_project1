@@ -39,7 +39,7 @@
 				<article>
 				    <?php if(isset($contact->field_landscape_profile_image)){
 					print '<img alt="' . $contact->field_landscape_profile_image['und'][0]['alt'] . 
-						'" alt="' . $contact->field_landscape_profile_image['und'][0]['title'] . 
+						'" title="' . $contact->field_landscape_profile_image['und'][0]['title'] . 
 						'" src="' . image_style_url('landscape_profile_img', $contact->field_landscape_profile_image['und'][0]['uri']) .'" />';
 				    } ?>
 				    <?php if(isset($contact->field_contact_highlighted_text['und'][0]['value'])){
@@ -97,7 +97,7 @@
 				<article>
 				    <?php if(isset($contact2->field_landscape_profile_image)){
 					print '<img alt="' . $contact2->field_landscape_profile_image['und'][0]['alt'] . 
-						'" alt="' . $contact2->field_landscape_profile_image['und'][0]['title'] . 
+						'" title="' . $contact2->field_landscape_profile_image['und'][0]['title'] . 
 						'" src="' . image_style_url('landscape_profile_img', $contact2->field_landscape_profile_image['und'][0]['uri']) .'" />';
 				    } ?>
 				    <?php if(isset($contact2->field_contact_highlighted_text['und'][0]['value'])){

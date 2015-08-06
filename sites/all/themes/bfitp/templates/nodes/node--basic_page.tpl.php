@@ -11,7 +11,7 @@
 			<div class="leftContainer">
 			    <?php if(isset($field_detail_page_header_image )){
 				print '<img alt="' . $field_detail_page_header_image [0]['alt'] . 
-					'" alt="' . $field_detail_page_header_image [0]['title'] . 
+					'" title="' . $field_detail_page_header_image [0]['title'] . 
 					'" src="' . image_style_url('detail_page_header_image', $field_detail_page_header_image [0]['uri']) .'" />';
 			    } ?>
 			</div><!--/.leftContainer -->

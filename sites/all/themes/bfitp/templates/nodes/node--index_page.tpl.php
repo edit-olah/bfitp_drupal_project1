@@ -134,7 +134,7 @@
 				<div class="rightContainer">
 				    <?php if(isset($contact->field_contact_me_profile_image)){
 					print '<img alt="' . $contact->field_contact_me_profile_image['und'][0]['alt'] . 
-						'" alt="' . $contact->field_contact_me_profile_image['und'][0]['title'] . 
+						'" title="' . $contact->field_contact_me_profile_image['und'][0]['title'] . 
 						'" src="' . image_style_url('general_square', $contact->field_contact_me_profile_image['und'][0]['uri']) .'" />';
 				    } ?>
 				   
