@@ -19,3 +19,87 @@ body.logged-in.node-type-profile-page{
 }
 
 /* Drupal admin view adjustments - end */
+
+
+/* Drupal login page styling - beginning */
+
+body.not-front.not-logged-in.page-user{
+    #MainContentWrapper {
+	padding-top: 2em;
+    }
+    ul.primary {
+	max-width: 1024px;
+	margin: 0 auto;
+	height: 5em;
+	display: block;
+	padding: 0;
+	
+	li{
+	    display: inline-block;
+	    
+	    a {
+		font-size: 1.6rem;
+		line-height: 1.6;
+		font-family: $baseFont;
+		color: $primaryFontColor;
+		background-color: lighten($primaryBG, 7);
+		border-radius: 3px;
+		border-width: 2px;
+		border-color: lighten($primaryBG, 2);
+		border-style: dashed dashed none dashed;
+		padding: .7em 1em;
+		display: inline-block;
+	    }
+	    &.active a, &:hover a {
+		color: lighten($primaryBG, 2);
+		background: $primaryFontColor;
+		border-color: lighten($primaryBG, 10);
+	    }
+	}
+    }   
+    .content{
+	max-width: 1024px;
+	margin: 0 auto;
+	label {
+	    font-size: $defaultFontSize;
+	    padding: 0.8em 0;
+	}
+	.description{
+	    @extend label;
+	}
+	input {
+	    min-height: 2em;
+	    margin-bottom: .5em;
+	}
+	input.form-submit {
+	    color: darken($lightTurq,3);
+	    font-weight: $semi-bold;
+	    box-sizing: border-box;
+	    margin-bottom: 0;
+	    padding: 1em;
+	    font-size: 1.2em;
+	    background-color: lighten($primaryBG, 20);
+	    border: 2px dashed lighten($primaryBG, 5);
+	    border-radius: 3px;
+	    font-size: 1.6rem;
+
+	    &:hover {
+		background-color: lighten($primaryBG, 5);
+		border: 2px dashed lighten($primaryBG, 20);
+		text-decoration:none;
+	    }
+	}
+
+    }
+    #Footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+    }
+}
+
+
+
+/* Drupal login page styling - end */
+
