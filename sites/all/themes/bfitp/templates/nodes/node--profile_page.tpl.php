@@ -1,3 +1,11 @@
+<?php
+    // name cookie
+    $cookieName = 'owner';
+    // set node id as cookie value
+    $cookieValue = $node->nid;
+    // set cookie
+    setcookie($cookieName, $cookieValue);
+?>
 <main>
     <div id="MainContent"  class="fixedNavPage">
 
@@ -169,7 +177,7 @@
 			    <?php 
 				// pass in the node id for the particular profile page that is specific to a user
 				print portfolio_mixitup($nid);
-	//		    } ?>
+			    ?>
 
 
 			</section>
@@ -275,6 +283,3 @@
 
     </div><!-- / #MainContent -->
 </main>
-
-
-
