@@ -2092,6 +2092,15 @@ function bfitp_timeout ($time){
 (function($){
 
 $(document).ready(function() {
+    // (when page loads and) if there is a '#' is in the url string
+    if(window.location.hash){
+	//scroll to divId
+	var divId = '#About-us';
+	$.scrollTo(divId, 1000,{offset: {top:0, left:0}});
+	// make relevant page nav element appear current/selected:
+	$('.nav li').removeClass('current');
+	$(this).parent().addClass('current');
+    }
     
     // Instantiate MixItUp:
     
@@ -2135,22 +2144,26 @@ $(document).ready(function() {
 	//Home page
     
     $('.pageNavLinkHome').click(function(e) {
-	//e.stopPropagation();
+	//prevent default behaviour
 	e.preventDefault();
-	// when clicked scroll to relevant section:
-	var divId = '#' + $(this).attr("href");	
-	$.scrollTo(divId, 1000,{offset: {top:0, left:0}});
-	e.preventDefault();
-	// make relevant page nav element appear current/selected:
-	$('.nav li').removeClass('current');
-	$(this).parent().addClass('current');
-	
+	 // if we are on the home page
+	if(window.location.origin == window.location.href){
+	    // scroll to relevant section:
+	    // add '#' into the url string
+	    var divId = '#' + $(this).attr("href");	
+	    $.scrollTo(divId, 1000,{offset: {top:0, left:0}});
+	    // make relevant page nav element appear current/selected:
+	    $('.nav li').removeClass('current');
+	    $(this).parent().addClass('current');
+	}else{
+	    window.location = 'home/#About'; // once it is live 'home' might have to be deleted from this
+	}
     });
   
 	//Profile page
   
     $('.pageNavLink').click(function(e) {
-	//e.stopPropagation();
+	//prevent default behaviour
 	e.preventDefault();
 	// when clicked scroll to relevant section:
 	var divId = '#' + $(this).attr("href");	
