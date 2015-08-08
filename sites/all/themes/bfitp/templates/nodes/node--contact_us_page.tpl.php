@@ -1,3 +1,8 @@
+<?php
+    // setting 'owner' cookie value to nothing/clearing cookie value
+    $cookieName = 'owner';
+    setcookie($cookieName, '');
+?>
 <main>
     <div id="MainContent">
 

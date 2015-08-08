@@ -1,3 +1,15 @@
+<?php
+    /* we want to check for two pages that have to be handled differently from other index_pages, 
+     * the node ids for these are 18: edit-olah-blog and 19: peter-whyte-blog
+     * we put these into an array and the '$profile_ids variable'
+     */
+    $profile_ids = array('18','19');
+    /* if the current page's node id ($nid) is NOT in the array specified above */
+    if(!in_array($nid, $profile_ids)){
+	//set cookie called 'owner' to nothing
+	setcookie('owner', '');
+    }
+?>
 <main>
     <div id="MainContent">
 
