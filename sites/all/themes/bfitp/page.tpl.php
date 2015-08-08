@@ -72,48 +72,6 @@
  * @ingroup themeable
  */
 ?>
- <?php
-    // name cookie (bfr = barefoot referrer)
-    $cookieName = 'bfr';
-    // set node id as cookie value
-    $cookieValue = $node->nid;
-    
-    // if bfr cookie is set
-    if(isset($_COOKIE[$cookieName])) {
-	// take the string with the cookie value in it and slice it up at the 
-	// commas and put the slices into an array called cookieRawValue
-	$cookieRawValue = explode(',', $_COOKIE[$cookieName]);
-	
-	// if cookieValue(current page's node id) is not equal to the first 
-	// item in the array of the sliced up cookie value string
-	if($cookieValue != $cookieRawValue[0]){
-	    //if there are more than 1 items in the sliced up cookie value string
-	    // and the second item in the sliced up cookie value string is not equal to the current node id
-	    if(count($cookieRawValue) > 1 && $cookieRawValue[1] != $cookieValue){
-		// in the cookie value string, shift the current node id first, so we can use it as a referrer node id
-		$cookieValue = $cookieRawValue[1].  ',' . $cookieValue;
-	    }else{
-		// otherwise, in the cookie value string, append the current node id at end of the string
-		$cookieValue = $cookieRawValue[0].  ',' . $cookieValue;
-	    }
-	    
-	    
-	}else{
-	    // otherwise, keep/confirm the same value and don't do anything
-	    $cookieValue = $_COOKIE[$cookieName];
-	}
-    }
-    
-    // set bfr cookie
-    setcookie($cookieName, $cookieValue);
-    
-    // if page type is blog_article, delete cookie
-    $page_type = node_load(arg(1));
-    if($page_type->type === 'blog_article'){
-	setcookie("bfr", "", time() - 3600);
-    }
- ?>
-
 
 <!--==============================header=================================-->
     <?php
@@ -198,11 +156,19 @@
 	    print '</div><!-- /#OuterHeaderWrapper -->';
 	}
     ?>
-    <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
 
-    <?php print $messages; ?>
+
+    <?php 
+	global $user;
+	if ( 
+	$user->uid ) {
+	    // Logged in user
+	    if(isset($breadcrumb)){
+		print $breadcrumb;
+	    }
+	    print $messages; 
+	}
+    ?>
       
     <!--==============================content================================-->
     
