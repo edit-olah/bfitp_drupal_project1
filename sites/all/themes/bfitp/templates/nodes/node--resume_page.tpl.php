@@ -61,14 +61,18 @@
 
 			<div class="leftContainer">
 			    <header>
-				<h1><?php print $contact->title;?></h1>
-				<?php if(isset($contact->field_body_header_2['und'][0]['value'])){
-				    print '<h2>' . $contact->field_body_header_2['und'][0]['value'] . '</h2>';
-				}?>
-				<?php if(isset($contact->body['und'][0]['value'])){
-				    print $contact->body['und'][0]['value'];
-				}?>
-
+				<div class="leftContainer subcontainer">
+				    <h1><?php print $contact->title;?></h1>
+				    <?php if(isset($contact->field_body_header_2['und'][0]['value'])){
+					print '<h2>' . $contact->field_body_header_2['und'][0]['value'] . '</h2>';
+				    }?>
+				    <?php if(isset($contact->body['und'][0]['value'])){
+					print $contact->body['und'][0]['value'];
+				    }?> 
+				</div>
+				<div class="rightContainer badge">
+				    <a class="membershipBadge" href="#">Drupal Association member</a>
+				</div>
 			    </header>
 
 			    <div class="contactDetails"> 
