@@ -119,11 +119,8 @@
 				    }?>
 				</div>
 			    </div>
-			    <?php if(isset($contact->field_contact_me_social_links['und'][0]['value'])){
-				print '<div class="socialIcons max-height-applied">' . 
-				    $contact->field_contact_me_social_links['und'][0]['value']
-				. '</div><!-- /.socialIcons -->';
-			    }?>
+			    
+			    
 			</div><!--/.leftContainer -->
 
 			<div class="rightContainer">
@@ -134,7 +131,20 @@
 			    } ?>
 
 			</div> <!--/.rightContainer -->
-
+			<?php     
+				if(isset($contact->field_social_icons_fc['und'][0]['value'])){
+			    ?>
+				<div class="socialIcons">
+				    <?php foreach($contact->field_social_icons_fc['und'] as $item){
+					$collection = entity_load('field_collection_item', array($item['value']));
+					$collection = $collection[$item['value']];
+					if(isset($collection->field_font_awesome_class_name['und'][0]['value'])){
+					    print '<div class="socialIcon"><a href="' . $collection->field_social_icon_link['und'][0]['url'] 
+						    . '" target="_blank"><i class="fa ' . $collection->field_font_awesome_class_name['und'][0]['value'] . '"></i></a></div>';
+					}  
+				    } // end of foreach ?>
+				</div>
+			    <?php } ?>
 		    </div><!-- /.container -->
 		</section>
 	    </div> <!-- /.page#ContactIndi -->

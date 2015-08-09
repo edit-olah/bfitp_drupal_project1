@@ -104,7 +104,7 @@
        </article> 
 
 
-	<?php if(isset($field_entity_ref[0]['target_id'])){ 
+	<?php if(isset($field_entity_ref[0]['target_id'])){
 	    $contact = $field_entity_ref[0]['entity'];
 	?>
 	<!-- INDIVIDUAL CONTACT SECTION beginning -->
@@ -115,14 +115,18 @@
 
 			<div class="leftContainer">
 			    <header>
-				<h1><?php print $contact->title;?></h1>
-				<?php if(isset($contact->field_body_header_2['und'][0]['value'])){
-				    print '<h2>' . $contact->field_body_header_2['und'][0]['value'] . '</h2>';
-				}?>
-				<?php if(isset($contact->body['und'][0]['value'])){
-				    print $contact->body['und'][0]['value'];
-				}?>
-
+				<div class="leftContainer subcontainer">
+				    <h1><?php print $contact->title;?></h1>
+				    <?php if(isset($contact->field_body_header_2['und'][0]['value'])){
+					print '<h2>' . $contact->field_body_header_2['und'][0]['value'] . '</h2>';
+				    }?>
+				    <?php if(isset($contact->body['und'][0]['value'])){
+					print $contact->body['und'][0]['value'];
+				    }?> 
+				</div>
+				<div class="rightContainer badge">
+				    <a class="membershipBadge" href="#">Drupal Association member</a>
+				</div>
 			    </header>
 
 			    <div class="contactDetails"> 
@@ -169,11 +173,8 @@
 				    }?>
 				</div>
 			    </div>
-			    <?php if(isset($contact->field_contact_me_social_links['und'][0]['value'])){
-				print '<div class="socialIcons max-height-applied">' . 
-				    $contact->field_contact_me_social_links['und'][0]['value']
-				. '</div><!-- /.socialIcons -->';
-			    }?>
+			    
+			    
 			</div><!--/.leftContainer -->
 
 			<div class="rightContainer">
@@ -184,7 +185,20 @@
 			    } ?>
 
 			</div> <!--/.rightContainer -->
-
+			<?php     
+				if(isset($contact->field_social_icons_fc['und'][0]['value'])){
+			    ?>
+				<div class="socialIcons">
+				    <?php foreach($contact->field_social_icons_fc['und'] as $item){
+					$collection = entity_load('field_collection_item', array($item['value']));
+					$collection = $collection[$item['value']];
+					if(isset($collection->field_font_awesome_class_name['und'][0]['value'])){
+					    print '<div class="socialIcon"><a href="' . $collection->field_social_icon_link['und'][0]['url'] 
+						    . '" target="_blank"><i class="fa ' . $collection->field_font_awesome_class_name['und'][0]['value'] . '"></i></a></div>';
+					}  
+				    } // end of foreach ?>
+				</div>
+			    <?php } ?>
 		    </div><!-- /.container -->
 		</section>
 	    </div> <!-- /.page#ContactIndi -->
