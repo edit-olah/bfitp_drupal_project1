@@ -91,9 +91,9 @@ and open the template in the editor.
    
     
     .socialIcons{
-	width: 98%;
+	width: 100%;
 	padding: 10px 0;
-	max-height: 5.2em;
+/*	max-height: 5.2em;*/
 	
 	a{
 	    
@@ -101,6 +101,28 @@ and open the template in the editor.
 		width: 2em;
 	    }
 	}
+	
+	.socialIcon {
+	    display: inline-block;
+	    border: 2px solid lighten($primaryBG, 25);
+	    box-sizing: border-box;
+	    padding: 0;
+	    background: lighten($primaryBG, 2);
+	    margin: 0 .5em 0 0;
+	    &:last-child {
+		margin: 0;
+	    }
+	    a {
+		padding: .6em;
+		margin: 0;
+		display: inline-block;
+		box-sizing: border-box;
+		font-size: 1.8em;
+		line-height: 1;
+		min-width: 2.1em;
+	    }
+	}
+	
     }
    
 }
@@ -125,10 +147,6 @@ and open the template in the editor.
     }
 }
 
-
-
-
-
 @media screen and (max-width: 684px) {
     #ContactIndi {
 	.leftContainer {
@@ -144,20 +162,32 @@ and open the template in the editor.
 		font-size: 1.3em;
 	    }
 	}
+	
+	.leftContainer.subcontainer {
+	    width: 100%;
+	    padding: 0;
+	}
 	.rightContainer {
 	    width: 22%;
 	    
 	    img {
 		  margin-top: 15%;
 	    }
+	    .membershipBadge {
+		float: none;
+		width: 36%;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 10px;
+		background-size: 100% auto;
+		height: 10em;
+	    }
 	}
-/*	.subcontainer {
-	    width: 100%;
-	}
+
 	.badge {
 	    display:block;
 	    width: 100%;
-	}*/
+	}
 	.button {
 	    width: 98%;
 	    
@@ -165,6 +195,18 @@ and open the template in the editor.
 		font-size: 1em;
 		line-height: 1.1;
 		padding: 8px 2%;
+	    }
+	}
+    }
+}
+
+@media screen and (max-width: 460px) {
+    #ContactIndi {
+	.rightContainer {
+	    .membershipBadge {
+		width: 50%;
+		background-size: 100% auto;
+		height: 9em;
 	    }
 	}
     }
