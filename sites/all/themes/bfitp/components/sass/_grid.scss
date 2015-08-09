@@ -233,6 +233,10 @@ and open the template in the editor.
 	width: 32%;
 	padding-bottom: 0%;
 	
+	h2 {
+	    margin-bottom: 1.5em;
+	}
+	
 	h2.sidebar-header{
 	    margin: 0 25px 15px;
 	}
@@ -241,7 +245,7 @@ and open the template in the editor.
     img {
 	width: 100%;
 	height: auto;
-	margin: 0 auto 4%;
+	margin: 0 auto 8%;
 	float: none;
 	display: block;
     }
