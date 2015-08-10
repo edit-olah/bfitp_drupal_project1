@@ -99,7 +99,15 @@ body.not-front.not-logged-in.page-user{
     }
 }
 
-
-
 /* Drupal login page styling - end */
 
+
+/* Drupal 404 page styling - beginning */
+
+.error404 {
+    a {
+	display: block;
+    }
+}
+
+/* Drupal 404 page styling - end */
