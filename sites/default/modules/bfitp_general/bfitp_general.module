@@ -41,13 +41,50 @@ function bfitp_general_dynamic_menu(){
      * page is NOT Edit's blog /node/18, Peter's blog /node/19, then
      * print this menu item within the navigation */
     if(arg(1) != 18 AND arg(1) != 19 AND $page_type->type === 'home_page' || $page_type->type === 'index_page' || $page_type->type === 'contact_us_page' || $page_type->type === 'basic_page') {
+	$activeClassHome = '';
+	$activeClassPortfolio = '';
+	$activeClassContactUs = '';
+	$activeClassBlog = '';
+	switch (arg(1)) {
+	    case '4':
+		$activeClassHome = '';
+		$activeClassPortfolio = '';
+		$activeClassContactUs = 'current';
+		$activeClassBlog = '';
+		break;
+	    case '17':
+		$activeClassHome = '';
+		$activeClassPortfolio = '';
+		$activeClassContactUs = '';
+		$activeClassBlog = 'current';
+		break;
+	    case '16':
+		$activeClassHome = '';
+		$activeClassPortfolio = 'current';
+		$activeClassContactUs = '';
+		$activeClassBlog = '';
+		break;
+	    case '1':
+		$activeClassHome = 'current';
+		$activeClassPortfolio = '';
+		$activeClassContactUs = '';
+		$activeClassBlog = '';
+		break;
+	    default:
+		$activeClassHome = '';
+		$activeClassPortfolio = '';
+		$activeClassContactUs = '';
+		$activeClassBlog = '';
+		break;
+	}
+	
 	
 	$output .= '<ul class="nav">';
-	$output .= '<li><a href="' .  url('<front>') . '">' . t('Home') . '</a></li>';
+	$output .= '<li class="'.$activeClassHome.'"><a href="' .  url('<front>') . '">' . t('Home') . '</a></li>';
 	$output .= '<li><a class="pageNavLinkHome" href="'.'About-us">' .t('About us') .'</a></li>';
-	$output .= '<li><a href="'.$GLOBALS['base_url'].'/portfolio">' .t('Portfolio') .'</a></li>';
-	$output .= '<li><a href="'.$GLOBALS['base_url'].'/blog">' .t('Blog') .'</a></li>';
-	$output .= '<li><a href="'.$GLOBALS['base_url'].'/contact-us">' .t('Contact us') .'</a></li>';
+	$output .= '<li class="'.$activeClassPortfolio.'"><a href="'.$GLOBALS['base_url'].'/portfolio">' .t('Portfolio') .'</a></li>';
+	$output .= '<li class="'.$activeClassBlog.'"><a href="'.$GLOBALS['base_url'].'/blog">' .t('Blog') .'</a></li>';
+	$output .= '<li class="'.$activeClassContactUs.'"><a href="'.$GLOBALS['base_url'].'/contact-us">' .t('Contact us') .'</a></li>';
 	$output .= '</ul>';
 	
     }
@@ -314,4 +351,19 @@ function ellipse($initial_text, $n_chars){
     }
     
     return $summary_text;
+}
+
+// modifying the breadcrumb
+
+function bfitp_breadcrumb($variables) {
+  $breadcrumb = $variables ['breadcrumb'];
+
+  if (!empty($breadcrumb)) {
+    // Provide a navigational heading to give context for breadcrumb links to
+    // screen-reader users. Make the heading invisible with .element-invisible.
+    $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+    $title = drupal_get_title();
+    $output .= '<div class="breadcrumb">' . implode(' » ', $breadcrumb) . ' » '. $title .'</div>';
+    return $output;
+  }
 }
