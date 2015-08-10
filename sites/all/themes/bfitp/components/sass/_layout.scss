@@ -36,15 +36,6 @@ body {
     line-height:0;
     font-size:0;
 }
-/*
-.leftContainer {
-    float:left;
-}
-
-.rightContainer {
-    float: right;
-}
-*/
 
 .leftContainer, .rightContainer{
     display: inline-block;
@@ -56,6 +47,22 @@ body {
 
 .click-follow{
     cursor: pointer;
+}
+
+#breadcrumb {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1% 0;
+    
+    .breadcrumb {
+	font-size: 1.2rem;
+	font-family: $baseFont;
+	font-weight: $semi-bold;
+	padding: 0 15px;
+	a {
+	    font-size: 1.2rem;
+	}
+    }
 }
 
 /*================== GLOBAL LAYOUTS BASE - end ========================*/
