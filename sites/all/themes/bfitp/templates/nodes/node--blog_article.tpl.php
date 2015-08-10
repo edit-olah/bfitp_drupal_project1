@@ -147,7 +147,7 @@
 				    }?> 
 				</div>
 				<div class="rightContainer badge">
-				    <a class="membershipBadge" href="#">Drupal Association member</a>
+				    <div class="membershipBadge">Drupal Association member</div>
 				</div>
 			    </header>
 
@@ -184,7 +184,7 @@
 					&& isset($contact->field_contact_highlighted_text_2['und'][0]['value'])){
 					    print '<p class="button">' 
 						    . '<a href="' . '/' . $contact->field_contact_highlighted_text['und'][0]['value'] . '-' . $contact->field_contact_highlighted_text_2['und'][0]['value'] . '">' 
-							. 'See ' . $contact->field_contact_highlighted_text['und'][0]['value'] . '\'s portfolio >>'
+							. 'Go to ' . $contact->field_contact_highlighted_text['und'][0]['value'] . '\'s portfolio >>'
 						    . '</a>' 
 						. '</p>'
 						. '<p class="button">'
