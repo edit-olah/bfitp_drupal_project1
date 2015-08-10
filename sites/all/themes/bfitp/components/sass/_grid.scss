@@ -234,7 +234,7 @@ and open the template in the editor.
 	padding-bottom: 0%;
 	
 	h2 {
-	    margin-bottom: 1.5em;
+	    margin-bottom: .5em;
 	}
 	
 	h2.sidebar-header{
@@ -245,7 +245,7 @@ and open the template in the editor.
     img {
 	width: 100%;
 	height: auto;
-	margin: 0 auto 8%;
+	margin: 0 auto 4%;
 	float: none;
 	display: block;
     }
@@ -253,7 +253,7 @@ and open the template in the editor.
     
     .grid-contentHolder {
 	width: 100%;
-	padding: 0px 25px;
+	padding: 14px 25px 0;
 	
 	p.min-height-applied {
 	    min-height: 70px;
@@ -289,7 +289,7 @@ and open the template in the editor.
 .grid.grid-stretched-layout > li:last-child .grid.grid-full-width > li {
     background-color: lighten($primaryBG, 5);
     margin-left: 0;
-    
+    margin-bottom: 0;
 }
 
 .grid.grid-full-width > li {
