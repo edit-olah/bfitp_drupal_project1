@@ -156,16 +156,16 @@
 	    print '</div><!-- /#OuterHeaderWrapper -->';
 	}
     ?>
-
-
+	    
+    <?php if ($breadcrumb): ?>
+	<div id="breadcrumb"><?php print $breadcrumb; ?></div>
+    <?php endif; ?>
+	
     <?php 
 	global $user;
 	if ( 
 	$user->uid ) {
 	    // Logged in user
-	    if(isset($breadcrumb)){
-		print $breadcrumb;
-	    }
 	    print $messages; 
 	}
     ?>
