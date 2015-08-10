@@ -161,12 +161,12 @@ function bfitp_general_dynamic_menu(){
 		    $output .= '<li>'.l(t('Peters\'s Portfolio'), 'node/22') .'</li>';
 		break;
 		default: // otherwise, print this on the page
-		    $output .= '<li><a href="'.$GLOBALS['base_url'].'portfolio">' .t('Portfolio') .'</a></li>';
+		    $output .= '<li><a href="'.$GLOBALS['base_url'].'/portfolio">' .t('Portfolio') .'</a></li>';
 		break;
 	    } // end of switch statement
 	} else { 
 		// if cookie is not set, print this on the page
-		$output .= '<li><a href="'.$GLOBALS['base_url'].'portfolio">' .t('Portfolio') .'</a></li>';
+		$output .= '<li><a href="'.$GLOBALS['base_url'].'/portfolio">' .t('Portfolio') .'</a></li>';
 	    }
 
 	$output .= '<li><a href="'.$GLOBALS['base_url'].'/contact-us">' .t('Contact us') .'</a></li>';
