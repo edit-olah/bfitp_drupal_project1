@@ -2136,7 +2136,7 @@ and open the template in the editor.
 }
 /* line 236, ../components/sass/_grid.scss */
 .grid.grid-stretched-layout li h2, .grid.grid-stretched-layout li h2 a {
-  margin-bottom: 1.5em;
+  margin-bottom: .5em;
 }
 /* line 240, ../components/sass/_grid.scss */
 .grid.grid-stretched-layout li h2.sidebar-header, .grid.grid-stretched-layout li h2 a.sidebar-header {
@@ -2146,14 +2146,14 @@ and open the template in the editor.
 .grid.grid-stretched-layout img {
   width: 100%;
   height: auto;
-  margin: 0 auto 8%;
+  margin: 0 auto 4%;
   float: none;
   display: block;
 }
 /* line 254, ../components/sass/_grid.scss */
 .grid.grid-stretched-layout .grid-contentHolder {
   width: 100%;
-  padding: 0px 25px;
+  padding: 14px 25px 0;
 }
 /* line 258, ../components/sass/_grid.scss */
 .grid.grid-stretched-layout .grid-contentHolder p.min-height-applied {
@@ -2190,6 +2190,7 @@ and open the template in the editor.
 .grid.grid-stretched-layout > li:last-child .grid.grid-full-width > li {
   background-color: #464c45;
   margin-left: 0;
+  margin-bottom: 0;
 }
 
 /* line 295, ../components/sass/_grid.scss */
@@ -2787,7 +2788,7 @@ and open the template in the editor.
 #SkillsContainer .mix {
   position: relative;
   width: 49%;
-  min-height: 40px;
+  min-height: 33px;
   margin-bottom: .5%;
   /* this stops the colour-coded top left label for sorting being 
    displayed, remove this when colour-coding makes sense due to 
@@ -3221,7 +3222,7 @@ and open the template in the editor.
 }
 /*** Portfolio - grid - end ***/
 /* =============================== Portfolio section - end =========================================*/
-/*
+/**
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
@@ -3236,15 +3237,15 @@ and open the template in the editor.
   width: 100%;
   padding-bottom: 10px;
 }
-/* line 24, ../components/sass/_contactmodule.scss */
+/* line 23, ../components/sass/_contactmodule.scss */
 #ContactIndi .leftContainer {
   width: 65%;
 }
-/* line 28, ../components/sass/_contactmodule.scss */
+/* line 27, ../components/sass/_contactmodule.scss */
 #ContactIndi .rightContainer {
   width: 33%;
 }
-/* line 30, ../components/sass/_contactmodule.scss */
+/* line 29, ../components/sass/_contactmodule.scss */
 #ContactIndi .rightContainer img {
   width: 80%;
   max-width: 80%;
@@ -3252,76 +3253,74 @@ and open the template in the editor.
   margin-top: 8%;
   margin-left: 20%;
 }
-/* line 38, ../components/sass/_contactmodule.scss */
+/* line 37, ../components/sass/_contactmodule.scss */
 #ContactIndi .rightContainer .membershipBadge {
   display: inline-block;
   float: right;
   width: 100%;
   height: 9em;
   background: url(http://eoslamp.dev:8080/project1/sites/default/files/drupal_association_member_217x217.png) 0 0 no-repeat;
-  background-size: 96% auto;
+  background-size: 92% auto;
   text-decoration: none;
   text-indent: -9999px;
   margin-top: 10px;
   background-position: 0%;
+  font-size: 1.4em;
+  line-height: 1.5;
+  margin-bottom: .5em;
 }
-/* line 51, ../components/sass/_contactmodule.scss */
+/* line 53, ../components/sass/_contactmodule.scss */
 #ContactIndi .subcontainer {
   width: 73%;
   padding: 0 3% 2% 0;
 }
-/* line 55, ../components/sass/_contactmodule.scss */
+/* line 57, ../components/sass/_contactmodule.scss */
 #ContactIndi .badge {
   width: 25%;
 }
-/* line 58, ../components/sass/_contactmodule.scss */
+/* line 60, ../components/sass/_contactmodule.scss */
 #ContactIndi .highlighted {
   margin-bottom: 0;
   margin-top: 1em;
 }
-/* line 63, ../components/sass/_contactmodule.scss */
+/* line 65, ../components/sass/_contactmodule.scss */
 #ContactIndi .contactDetails {
   background-color: #444a43;
   padding: 3px 10px 0;
   border-bottom: 2px dashed #788276;
 }
-/* line 69, ../components/sass/_contactmodule.scss */
+/* line 71, ../components/sass/_contactmodule.scss */
 #ContactIndi .email {
   margin: .5em 0 1.5em;
 }
-/* line 71, ../components/sass/_contactmodule.scss */
+/* line 73, ../components/sass/_contactmodule.scss */
 #ContactIndi .email a {
   font-size: 1.3em;
 }
-/* line 76, ../components/sass/_contactmodule.scss */
+/* line 78, ../components/sass/_contactmodule.scss */
 #ContactIndi .buttons {
   margin-bottom: 15px;
 }
-/* line 80, ../components/sass/_contactmodule.scss */
+/* line 82, ../components/sass/_contactmodule.scss */
 #ContactIndi .button {
   width: 48%;
 }
-/* line 82, ../components/sass/_contactmodule.scss */
+/* line 84, ../components/sass/_contactmodule.scss */
 #ContactIndi .button:first-child {
   margin-right: 2%;
 }
-/* line 85, ../components/sass/_contactmodule.scss */
+/* line 87, ../components/sass/_contactmodule.scss */
 #ContactIndi .button a {
   font-size: 1em;
   line-height: 1.1;
   padding: 8px;
 }
-/* line 93, ../components/sass/_contactmodule.scss */
+/* line 95, ../components/sass/_contactmodule.scss */
 #ContactIndi .socialIcons {
   width: 100%;
   padding: 10px 0;
-  /*	max-height: 5.2em;*/
 }
-/* line 100, ../components/sass/_contactmodule.scss */
-#ContactIndi .socialIcons a img {
-  width: 2em;
-}
-/* line 105, ../components/sass/_contactmodule.scss */
+/* line 99, ../components/sass/_contactmodule.scss */
 #ContactIndi .socialIcons .socialIcon {
   display: inline-block;
   border: 2px solid #788276;
@@ -3330,11 +3329,11 @@ and open the template in the editor.
   background: #3f443e;
   margin: 0 .5em 0 0;
 }
-/* line 112, ../components/sass/_contactmodule.scss */
+/* line 106, ../components/sass/_contactmodule.scss */
 #ContactIndi .socialIcons .socialIcon:last-child {
   margin: 0;
 }
-/* line 115, ../components/sass/_contactmodule.scss */
+/* line 109, ../components/sass/_contactmodule.scss */
 #ContactIndi .socialIcons .socialIcon a {
   padding: .6em;
   margin: 0;
@@ -3346,51 +3345,58 @@ and open the template in the editor.
 }
 
 @media screen and (max-width: 394px) {
-  /* line 134, ../components/sass/_contactmodule.scss */
+  /* line 128, ../components/sass/_contactmodule.scss */
   #ContactIndi .email a {
     word-wrap: break-word;
     font-size: 1em;
   }
-  /* line 142, ../components/sass/_contactmodule.scss */
-  #ContactIndi .socialIcons a img {
-    width: 1.6em;
-  }
 }
-@media screen and (max-width: 684px) {
-  /* line 152, ../components/sass/_contactmodule.scss */
+@media screen and (max-width: 779px) {
+  /* line 138, ../components/sass/_contactmodule.scss */
   #ContactIndi .leftContainer {
     width: 75%;
   }
-  /* line 156, ../components/sass/_contactmodule.scss */
+  /* line 142, ../components/sass/_contactmodule.scss */
   #ContactIndi .leftContainer header h1 {
     padding-left: 0;
   }
-  /* line 161, ../components/sass/_contactmodule.scss */
+  /* line 147, ../components/sass/_contactmodule.scss */
   #ContactIndi .leftContainer span {
     font-size: 1.3em;
   }
-  /* line 166, ../components/sass/_contactmodule.scss */
-  #ContactIndi .leftContainer.subcontainer {
-    width: 100%;
-    padding: 0;
-  }
-  /* line 170, ../components/sass/_contactmodule.scss */
+  /* line 152, ../components/sass/_contactmodule.scss */
   #ContactIndi .rightContainer {
     width: 22%;
   }
-  /* line 173, ../components/sass/_contactmodule.scss */
+  /* line 155, ../components/sass/_contactmodule.scss */
   #ContactIndi .rightContainer img {
     margin-top: 15%;
   }
-  /* line 176, ../components/sass/_contactmodule.scss */
+  /* line 158, ../components/sass/_contactmodule.scss */
   #ContactIndi .rightContainer .membershipBadge {
-    float: none;
-    width: 36%;
+    width: 100%;
     margin: 0 auto;
     display: block;
     margin-bottom: 10px;
-    background-size: 100% auto;
+    background-size: 90% auto;
     height: 10em;
+  }
+  /* line 169, ../components/sass/_contactmodule.scss */
+  #ContactIndi .button {
+    width: 98%;
+  }
+  /* line 172, ../components/sass/_contactmodule.scss */
+  #ContactIndi .button a {
+    font-size: 1em;
+    line-height: 1.1;
+    padding: 8px 2%;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 183, ../components/sass/_contactmodule.scss */
+  #ContactIndi .leftContainer.subcontainer {
+    width: 100%;
+    padding: 0;
   }
   /* line 187, ../components/sass/_contactmodule.scss */
   #ContactIndi .badge {
@@ -3398,60 +3404,76 @@ and open the template in the editor.
     width: 100%;
   }
   /* line 191, ../components/sass/_contactmodule.scss */
-  #ContactIndi .button {
-    width: 98%;
+  #ContactIndi .leftContainer {
+    width: 78%;
   }
   /* line 194, ../components/sass/_contactmodule.scss */
-  #ContactIndi .button a {
-    font-size: 1em;
-    line-height: 1.1;
-    padding: 8px 2%;
+  #ContactIndi .rightContainer {
+    width: 19%;
+  }
+  /* line 196, ../components/sass/_contactmodule.scss */
+  #ContactIndi .rightContainer img {
+    width: 100%;
+    max-width: 100%;
+  }
+  /* line 200, ../components/sass/_contactmodule.scss */
+  #ContactIndi .rightContainer .membershipBadge {
+    float: none;
+    width: 36%;
+  }
+  /* line 205, ../components/sass/_contactmodule.scss */
+  #ContactIndi .rightContainer.badge {
+    width: 100%;
   }
 }
-@media screen and (max-width: 460px) {
-  /* line 206, ../components/sass/_contactmodule.scss */
+@media screen and (max-width: 489px) {
+  /* line 214, ../components/sass/_contactmodule.scss */
   #ContactIndi .rightContainer .membershipBadge {
-    width: 50%;
-    background-size: 100% auto;
+    height: 6em;
+  }
+}
+@media screen and (min-width: 490px) and (max-width: 640px) {
+  /* line 225, ../components/sass/_contactmodule.scss */
+  #ContactIndi .rightContainer .membershipBadge {
     height: 9em;
   }
 }
-@media screen and (min-width: 685px) and (max-width: 699px) {
-  /* line 218, ../components/sass/_contactmodule.scss */
+@media screen and (min-width: 780px) and (max-width: 819px) {
+  /* line 235, ../components/sass/_contactmodule.scss */
   #ContactIndi .button:first-child {
     margin-right: 1%;
   }
-  /* line 221, ../components/sass/_contactmodule.scss */
+  /* line 238, ../components/sass/_contactmodule.scss */
   #ContactIndi .button a {
-    padding: 8px .7%;
-    font-size: .9em;
+    padding: 8px 4%;
+    font-size: .85em;
   }
 }
-@media screen and (min-width: 700px) and (max-width: 795px) {
-  /* line 232, ../components/sass/_contactmodule.scss */
+@media screen and (min-width: 820px) and (max-width: 930px) {
+  /* line 249, ../components/sass/_contactmodule.scss */
   #ContactIndi .button:first-child {
     margin-right: 1%;
   }
-  /* line 235, ../components/sass/_contactmodule.scss */
+  /* line 252, ../components/sass/_contactmodule.scss */
   #ContactIndi .button a {
     font-size: .9em;
     line-height: 1.1;
     padding: 8px 1.8%;
   }
 }
-@media screen and (max-width: 360px) {
-  /* line 249, ../components/sass/_contactmodule.scss */
+@media screen and (max-width: 420px) {
+  /* line 266, ../components/sass/_contactmodule.scss */
   #ContactIndi .button a {
     font-size: .85em;
     padding: 8px 2%;
   }
 }
 @media screen and (min-width: 395px) and (max-width: 684px) {
-  /* line 261, ../components/sass/_contactmodule.scss */
+  /* line 278, ../components/sass/_contactmodule.scss */
   #ContactIndi .email {
     margin: 1em 0 1.5em;
   }
-  /* line 263, ../components/sass/_contactmodule.scss */
+  /* line 280, ../components/sass/_contactmodule.scss */
   #ContactIndi .email a {
     word-wrap: break-word;
     font-size: 1.1em;
@@ -3730,6 +3752,13 @@ body.not-front.not-logged-in.page-user #Footer {
 }
 
 /* Drupal login page styling - end */
+/* Drupal 404 page styling - beginning */
+/* line 108, ../components/sass/_drupaladmin.scss */
+.error404 a {
+  display: block;
+}
+
+/* Drupal 404 page styling - end */
 /* line 1, ../components/sass/_cookiepolicy.scss */
 #sliding-popup .popup-content #popup-buttons button {
   -moz-box-shadow: none;
