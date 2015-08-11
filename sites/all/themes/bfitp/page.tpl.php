@@ -103,6 +103,11 @@
 		    
 		     <div class="clear"></div>
                 </div><!-- /.container -->
+		
+		<?php if ($breadcrumb): ?>
+		    <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+		<?php endif; ?>
+		    
             </header>
         </div><!-- /#HeaderWrapper -->
 	
@@ -156,10 +161,6 @@
 	    print '</div><!-- /#OuterHeaderWrapper -->';
 	}
     ?>
-	    
-    <?php if ($breadcrumb): ?>
-	<div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
 	
     <?php 
 	global $user;
@@ -173,9 +174,9 @@
     <!--==============================content================================-->
     
     <div id="MainContentWrapper">
-      <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-      <?php print render($page['help']); ?>
-      <?php print render($page['content']); ?>
+	<?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+	<?php print render($page['help']); ?>
+	<?php print render($page['content']); ?>
 
     </div>
     <!--==============================footer================================-->
