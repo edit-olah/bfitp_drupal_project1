@@ -250,7 +250,6 @@ th {
   width: 100%;
   position: fixed;
   height: auto;
-  //min-height: 129px;
   left: 0;
   top: 0;
   z-index: 10;
@@ -259,7 +258,7 @@ th {
 }
 
 .fixedNavPage { 
-    margin-top: 133px;
+    margin-top: 175px;
 }
 
 .page {
@@ -284,24 +283,35 @@ th {
 
 @media screen and (max-width: 364px) {
     .fixedNavPage {
-      margin-top: 170px;
+      margin-top: 200px;
     }
 }
 
-@media screen and (min-width: 365px) and (max-width: 639px) {
+@media screen and (min-width: 375px) and (max-width: 449px) {
     .fixedNavPage {
-	margin-top:  125px;
+	margin-top:  165px;
     }
 }
 
+@media screen and (min-width: 450px) and (max-width: 871px) {
+
+    
+    .fixedNavPage {
+	margin-top: 155px;
+    }
+}
+
+/*@media screen and (min-width: 870px) and (max-width: 1023px) {
+
+    .fixedNavPage {
+	margin-top: 175px;
+    }
+}*/
+    
 @media screen and (min-width: 640px) and (max-width: 1023px) {
 
     .page {
 	padding: $secondaryPadding;
-    }
-    
-    .fixedNavPage {
-	margin-top: 130px;
     }
 }
 
