@@ -1,4 +1,6 @@
-
+(function($){
+    
+    
 // defining bftip_timeout function for page nav and hamburger menu icon behaviour, and put it into a global variable:
 
 var pageNavTimeout;
@@ -17,7 +19,7 @@ function bfitp_timeout ($time){
     }, $time);
 };
 
-(function($){
+
 
 $(document).ready(function() {
     // (when page loads and) if there is a '#' is in the url string
@@ -96,7 +98,7 @@ $(document).ready(function() {
 	e.preventDefault();
 	// when clicked scroll to relevant section:
 	var divId = '#' + $(this).attr("href");	
-	$.scrollTo(divId, 1000,{offset: {top:-160, left:0}});
+	$.scrollTo(divId, 1000,{offset: {top:-200, left:0}});
 	
 	// make relevant page nav element appear current/selected: 
 	$('.pageNavLink').parent().removeClass('current');
