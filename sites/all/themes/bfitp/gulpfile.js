@@ -1,29 +1,31 @@
 // gulp plugin variables
+
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     concat = require('gulp-concat'),
     compass = require('gulp-compass'),
     //connect = require('gulp-connect'),
-    gulpif = require('gulp-if'),
-    uglify = require('gulp-uglify');
+    gulpif = require('gulp-if');
+    //uglify = require('gulp-uglify');
     //minifyHTML = require('gulp-minify-html'),
     //browserify = require('gulp-browserify');
     
 var env,
-     jsSources,
-     sassSources,
-     htmlSources,
-     outputDir,
-     sassStyle;
+    jsSources,
+    sassSources,
+    htmlSources,
+    outputDir,
+    sassStyle;
     
 env = process.env.NODE_ENV || 'development';
     
 if (env==='development') {
     outputDir = 'builds/development/';
     sassStyle = 'expanded';
-//} else {
-    //outputDir = 'builds/production/';
+} else {
+    outputDir = 'builds/production/';
     //sassStyle = 'compressed';
+    sassStyle = 'expanded';
 }
      
     
@@ -72,12 +74,12 @@ gulp.task('html', function () {
       //.pipe(connect.reload());
 });
 
-gulp.task('connect', function () {
-    connect.server({
-        root: outputDir,
-        livereload: true
-    });
-});
+//gulp.task('connect', function () {
+//    connect.server({
+//        root: outputDir,
+//        livereload: true
+//    });
+//});
 
 gulp.task('watch', function () {
     gulp.watch(jsSources, ['js']);
