@@ -79,7 +79,7 @@ function wysiwyg_ckeditor_version($editor) {
     // version:'3.0 RC',revision:'3753'
     // version:'3.0.1',revision:'4391'
      if(preg_match('/version:"(.*?)",revision:"(.*?)"/i', $line, $version)) {  
-      fclose($library);
+      //fclose($library);
       // Version numbers need to have three parts since 3.0.1.
       //$version[1] = preg_replace('/^(\d+)\.(\d+)$/', '${1}.${2}.0', $version[1]);
       return $version[1] . '.' . $version[2];
