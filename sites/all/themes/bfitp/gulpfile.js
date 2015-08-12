@@ -22,10 +22,9 @@ env = process.env.NODE_ENV || 'development';
 if (env==='development') {
     outputDir = 'builds/development/';
     sassStyle = 'expanded';
-} else {
-    outputDir = 'builds/production/';
+//} else {
+    //outputDir = 'builds/production/';
     //sassStyle = 'compressed';
-    sassStyle = 'expanded';
 }
      
     
