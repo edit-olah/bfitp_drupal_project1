@@ -1,4 +1,4 @@
-/* 
+/** 
     Created on : 06-Jan-2015, 08:02:58
     Author     : Edit
 */
@@ -15,7 +15,6 @@
 
 .control-bar {
     background: #768174;
-    //background: rgba(185, 200, 181, .4);
     background: $primaryBG;
     margin-top: 2.5%;    
     margin-bottom: 1.5%;
@@ -75,6 +74,7 @@
 
 
 @media screen and (min-width: 320px) and (max-width: 534px) {
+    
     .control-bar{
 	
 	.group{
@@ -99,6 +99,7 @@
 
 
 @media screen and (max-width: 727px) {
+    
     .control-bar {
 	label{
 	    display: block;
@@ -106,7 +107,9 @@
 	}
     }
 }
+
 @media screen and (max-width: 823px) {
+    
      .control-bar {
 	.group:first-child {
 	    margin-bottom: 1%;
@@ -114,9 +117,9 @@
     }
 }
 
-
-
 /********* mix it up buttons / control bar  - end **************/
+
+
 
 /********* mix it up grid - beginning **************/
 
@@ -139,7 +142,6 @@
     .mix {
 	background: transparent;
 	border-style: solid;
-	//border-width: 2px 0 0 2px;
 	border-width: 2px 5px 5px 2px;
 	border-color: 
 	    transparent 
@@ -195,11 +197,11 @@
 	    button {
 		@include mixitupRect(10px, 5%);
 
-		/* this stops the colour-coded top left label for sorting being 
+		/* this hides the colour-coded top left label for sorting being 
 		 displayed, remove this when colour-coding makes sense due to 
 		 content development */
 		&:after {
-		    content: initial;
+		    content: initial; // in IE this is not supported
 		}	    
 	    }
 
@@ -284,11 +286,11 @@
 	min-height: 33px;
 	margin-bottom: .5%;
 	
-	    /* this stops the colour-coded top left label for sorting being 
+	    /* this hides the colour-coded top left label for sorting being 
 	     displayed, remove this when colour-coding makes sense due to 
 	     content development */
 	    &:after {
-		content: initial;
+		content: initial; // in IE this is not supported
 	    }
     }
     .gap {
@@ -349,6 +351,7 @@
 }
 
 @media screen and (max-width: 445px){
+    
     #SkillsContainer {
 	.mix {
 	    width: $mixitupWidth1;
@@ -366,12 +369,11 @@
 	.gap {
 	    width: $mixitupWidth1;
 	}
-
     }
-
 }
 
 @media screen and (min-width: 531px) and  (max-width: 648px) {
+    
     #SkillsContainer {
 	.mix {
 	    min-height: 48px;
@@ -382,6 +384,7 @@
 
 
 @media screen and (min-width: 649px) and (max-width: 831px) {
+    
     #SkillsContainer {
 	.mix {
 	    min-height: 48px;
@@ -392,6 +395,7 @@
 
 
 @media screen and (max-width: 1002px) {
+    
     #Skills{
 	.control-bar {
 	    label{
@@ -410,11 +414,10 @@
 	    margin-bottom: 6px;
 	}
     }
-    
-
 }
 
 @media screen and (max-width: 530px) {
+    
     #Skills{
 	.control-bar {
 	    display: none;
@@ -444,6 +447,7 @@
 /* for where list of skills has more content in the individual list items - beginning */
 
 @media screen and (max-width: 1002px) {
+    
     #SkillsContainer.more-content{
 	.mix {
 	    min-height: 60px;
@@ -452,6 +456,7 @@
 }
 
 @media screen and (max-width: 481px){
+    
     #SkillsContainer.more-content{
 	.mix {
 	    min-height: initial;
@@ -461,6 +466,7 @@
 
 
 @media screen and (min-width: 482px) and (max-width: 433px){
+    
     #SkillsContainer.more-content{
 	.mix {
 	    min-height: 76px;
@@ -469,6 +475,7 @@
 }
 
 @media screen and (min-width: 530px) and (max-width: 551px){
+    
     #SkillsContainer.more-content{
 	.mix {
 	    min-height: 92px;
@@ -493,8 +500,8 @@
 /* ============================= Skills section - end ============================================*/
 
 
-/* ============================= Portfolio section - beginning =============================*/
 
+/* ============================= Portfolio section - beginning =============================*/
 
 
 /*** Portfolio - buttons / control bar - beginning ***/
@@ -544,22 +551,23 @@
 	    button[data-filter=".angularjs"]:after{
 		border-right-color: $semiDarkMagneta;
 	    }
-	    
 	}  
     }
 }
 
 @media screen and (min-width: 320px) and (max-width: 535px) {
+    
     #Portfolio{
 	.control-bar {
 	    label{
 		display: block;
 	    }
+	    
 	    .filter-buttons {
 		button {
-		   width: 100%;
-		   min-height: 30px;
-		   padding: 5px 10px 0;
+		    width: 100%;
+		    min-height: 30px;
+		    padding: 5px 10px 0;
 		}
 	    }
 	}
@@ -567,15 +575,17 @@
 }
 
 @media screen and (min-width: 536px) and (max-width: 639px) {
+    
     #Portfolio{
 	.control-bar {
 	    label{
 		display: block;
 	    }
+	    
 	    .filter-buttons {
 		button {
-		   width: 49%;
-		   min-height: 30px;
+		    width: 49%;
+		    min-height: 30px;
 		}
 	    }
 	}
@@ -583,16 +593,18 @@
 }
 
 @media screen and (min-width: 640px) and (max-width: 818px) {
+    
     #Portfolio{
 	.control-bar {
 	    label{
 		display: block;
 		margin: .4em .1em;
 	    }
+	    
 	    .filter-buttons {
 		button {
-		   width: 32%;
-		   min-height: 30px;
+		    width: 32%;
+		    min-height: 30px;
 		}
 	    }
 	}
@@ -600,15 +612,17 @@
 }
 
 @media screen and (min-width: 819px) and (max-width: 884px) {
+    
     #Portfolio{
 	.control-bar {
 	    label{
 		display: block;
 	    }
+	    
 	    .filter-buttons {
 		button {
-		   width: 24.4%;
-		   min-height: 30px;
+		    width: 24.4%;
+		    min-height: 30px;
 		}
 	    }
 	}
@@ -616,17 +630,19 @@
 }
 
 @media screen and (min-width: 885px) and (max-width: 1083px) {
+    
     #Portfolio{
 	.control-bar {
 	    label{
 		display: block;
 	    }
+	    
 	    .filter-buttons {
 		display: block;
 		
 		button {
-		   width: 11.8%;
-		   font-size: 1.2em;
+		    width: 11.8%;
+		    font-size: 1.2em;
 		}
 	    }
 	}
@@ -685,44 +701,42 @@
     }
 
     .portfoMix.html:after {
-	  border-right-color: $lightTurq;
+	border-right-color: $lightTurq;
     }
     .portfoMix.css:after {
-	  border-right-color: darken($lightTurq,27);
+	border-right-color: darken($lightTurq,27);
     }
     .portfoMix.sass:after {
-	  border-right-color: darken($lightTurq,40);
+	border-right-color: darken($lightTurq,40);
     }
     .portfoMix.css-animation:after {
-	  border-right-color: darken($lightTurq,52);
+	border-right-color: darken($lightTurq,52);
     }
     .portfoMix.drupal-project:after {
-	  border-right-color: $drupalBlue;
+	border-right-color: $drupalBlue;
     }
     .portfoMix.website-project:after {
-	  border-right-color: $secondaryFontColor;
+	border-right-color: $secondaryFontColor;
     }
     .portfoMix.js-jquery:after {
-	  border-right-color: $semiLightMagneta;
+	border-right-color: $semiLightMagneta;
     }
     .portfoMix.angularjs:after {
-	  border-right-color:  $semiDarkMagneta;
+	border-right-color:  $semiDarkMagneta;
     }
 }
 
 
 @media screen and (min-width: 320px) and (max-width: 639px) {
-     #PortfolioContainer { 
+    
+    #PortfolioContainer { 
 	 
 	.gap {
 	    width: $mixitupWidth2;
 	}
 	 
 	.portfoMix {
-	    
 	    width: $mixitupWidth2;
-	    
-	    
 	    
 	    .button{
 
@@ -736,20 +750,16 @@
 
 
 @media screen and (min-width: 640px) and (max-width: 767px) {
-     #PortfolioContainer { 
-	 
+    
+    #PortfolioContainer {
 	.gap {
 	    width: $mixitupWidth3;
 	}
 	 
 	.portfoMix {
-	    
 	    width: $mixitupWidth3;
 	    
-	    
-	    
 	    .button{
-
 		a {
 		    font-size: 1.1em;
 		}
@@ -760,10 +770,10 @@
 
 
 @media screen and (min-width: 768px) and (max-width: 808px) {
-     #PortfolioContainer {  
+    
+    #PortfolioContainer {  
 	.portfoMix {
 	    .button{
-
 		a {
 		    font-size: .9em;
 		}
@@ -773,10 +783,10 @@
 }
 
 @media screen and (min-width: 809px) and (max-width: 863px) {
-     #PortfolioContainer {  
+    
+    #PortfolioContainer {  
 	.portfoMix {
 	    .button{
-
 		a {
 		    font-size: 1em;
 		}
@@ -788,6 +798,3 @@
 /*** Portfolio - grid - end ***/
 
 /* =============================== Portfolio section - end =========================================*/
-
-
-

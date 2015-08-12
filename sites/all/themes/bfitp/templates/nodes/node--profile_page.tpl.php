@@ -63,7 +63,7 @@
 		</article>
 	    </div><!-- /.container -->
 
-	</div><!-- / .page#About -->
+	</div><!-- /.page#About -->
 
 	<!-- ABOUT ME SECTION end -->
 
@@ -118,7 +118,7 @@
 				<div class="gap"></div>
 				<div class="gap"></div>
 				
-			    </div><!--/#SkillsContainer -->
+			    </div><!--/#SkillsContainer.edits-skills.mixItUp-container -->
 			   
 			    
 			    <div class="control-bar">
@@ -138,8 +138,7 @@
 				    ?>		    
 
 				</div><!--/.group.filter-buttons -->
-				<div class="arrowDown"></div>
-
+				
 			    </div><!--/.control-bar -->				
 			</section>
 		    <!-- Mix it up section end -->
@@ -147,7 +146,7 @@
 		    </article>
 		</div><!-- /.container -->
 
-	</div> <!-- /.page#Skills -->
+	</div><!-- /.page#Skills -->
 
 	<!-- SKILLS SECTION end -->
 
@@ -211,10 +210,10 @@
 				    <?php if(isset($contact->body['und'][0]['value'])){
 					print $contact->body['und'][0]['value'];
 				    }?> 
-				</div>
+				</div><!-- /.leftContainer.subcontainer -->
 				<div class="rightContainer badge">
 				    <div class="membershipBadge">Drupal Association member</div>
-				</div>
+				</div><!-- /.rightContainer.badge -->
 			    </header>
 
 			    <div class="contactDetails"> 
@@ -259,11 +258,11 @@
 						    . '</a>' 
 						. '</p>';
 				    }?>
-				</div>
-			    </div>
+				</div><!-- /.buttons -->
+			    </div><!-- /.contactDetails -->
 			    
 			    
-			</div><!--/.leftContainer -->
+			</div><!-- /.leftContainer -->
 
 			<div class="rightContainer">
 			    <a class="backToTopButton" href="Hero"><?php print t('Back to top'); ?></a>
@@ -273,7 +272,7 @@
 					'" src="' . image_style_url('general_square', $contact->field_contact_me_profile_image['und'][0]['uri']) .'" />';
 			    } ?>
 
-			</div> <!--/.rightContainer -->
+			</div><!-- /.rightContainer -->
 			<?php     
 				if(isset($contact->field_social_icons_fc['und'][0]['value'])){
 			    ?>
@@ -286,7 +285,7 @@
 						    . '" target="_blank"><i class="fa ' . $collection->field_font_awesome_class_name['und'][0]['value'] . '"></i></a></div>';
 					}  
 				    } // end of foreach ?>
-				</div>
+				</div><!-- /.socialIcons -->
 			    <?php } ?>
 		    </div><!-- /.container -->
 		</section>
@@ -296,5 +295,5 @@
 	
 	<?php } ?>
 
-    </div><!-- / #MainContent -->
+    </div><!-- /#MainContent.fixedNavPage -->
 </main>

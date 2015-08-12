@@ -1,15 +1,9 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
+/**
     Created on : 10-Apr-2015, 14:56:39
     Author     : Edit
 */
 // _pagenav.scss
 // ============
-
 
 
 /*================================= FULL-WIDTH PAGE NAV =================================*/
@@ -28,7 +22,6 @@ and open the template in the editor.
 	text-align: justify; 
 	font-family: $zerowidthFont;
 	font-size: 0.1px; // adjusting typographic CSS properties that affect the site layout's whitespace
-
 
 	li {
 	    display: inline-block;
@@ -106,7 +99,6 @@ and open the template in the editor.
 		}
 	    }
 	}
-
     }
 }
 
@@ -129,13 +121,13 @@ and open the template in the editor.
 		    width: 100%;
 		    border: none;
 		}
-
 	    }
 	}
     }
 }
 
 @media screen and (min-width: 365px) and (max-width:449px){
+    
      #PageNav {
 	width: 100%;
 	display: inline-block;
@@ -154,6 +146,7 @@ and open the template in the editor.
 		&:first-child {
 		    margin: 3px 12px;
 		}
+		
 		a{
 		    padding: 2% 25%;
 		    width: 100%;
@@ -165,14 +158,13 @@ and open the template in the editor.
 			border: 2px solid transparent
 		    }
 		}
-
 	    }
 	}
-
     }
 }
 
 @media screen and (min-width: 450px) and (max-width:639px){
+    
     #PageNav {
 	.full-width {
 	    li {
@@ -213,7 +205,6 @@ and open the template in the editor.
 		    font-weight: 700;
 		}
 	    }
-	    
 	}
     }
 }

@@ -28,7 +28,6 @@ $(document).ready(function() {
 	var divId = '#About-us';
 	$.scrollTo(divId, 1000,{offset: {top:0, left:0}});
 	// make relevant page nav element appear current/selected:
-//	$('.nav li').removeClass('current');
 	$('.pageNavLinkHome').parent().addClass('current');
     }
     
@@ -83,7 +82,6 @@ $(document).ready(function() {
 	    var divId = '#' + $(this).attr("href");	
 	    $.scrollTo(divId, 1000,{offset: {top:0, left:0}});
 	    // make relevant page nav element appear current/selected:
-//	    $('.nav li').removeClass('current');
 	    $('.mainNavLinkAbout').parent().addClass('current');
 	}else{
 	    
@@ -183,4 +181,3 @@ $(document).ready(function() {
 });
 
 })(jQuery);
-

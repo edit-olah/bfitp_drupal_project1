@@ -14,7 +14,7 @@
 					'" title="' . $field_detail_page_header_image [0]['title'] . 
 					'" src="' . image_style_url('detail_page_header_image', $field_detail_page_header_image [0]['uri']) .'" />';
 			    } ?>
-			</div><!--/.leftContainer -->
+			</div><!-- /.leftContainer -->
 
 			<div class="rightContainer">
 			    <?php if(isset($title)){
@@ -23,7 +23,7 @@
 			    <?php if(isset($field_top_section_header_3[0]['value'])){
 				print '<h3 class="tagline">' . $field_top_section_header_3[0]['value'] . '</h3>';
 			    } ?>
-			</div> <!--/.rightContainer -->
+			</div> <!-- /.rightContainer -->
 
 		    </div><!-- /.container -->
 
@@ -46,5 +46,5 @@
 	    <!-- MAIN CONTENT end -->
 
 	</article>
-    </div><!-- / #MainContent -->
+    </div><!-- /#MainContent -->
 </main>

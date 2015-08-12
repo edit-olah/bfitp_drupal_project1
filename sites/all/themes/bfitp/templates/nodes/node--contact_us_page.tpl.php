@@ -157,9 +157,9 @@
 					drupal_add_css('html body .container-decoImg .decoImg{background:url(' . file_create_url($field_contact_us_filler_image[0]['uri']) . ') 0 0 no-repeat; background-size: 106% auto;}', $option['type'] = 'inline');
 				    } ?>
 				>
-				</div>
-			    </div>
-			</div>
+				</div><!-- /.decoImg -->
+			    </div><!-- /.container-decoImg -->
+			</div><!-- /.wrapper-decoImg -->
 		    </li>
 		    <li>
 			<!-- SIDEBAR beginning -->
@@ -188,7 +188,6 @@
 
 	<!-- CONTACT DETAILS CALLOUT BOXES GRID end -->                  
 
-
-
-    </div><!-- / #MainContent -->
+	
+    </div><!-- /#MainContent -->
 </main>

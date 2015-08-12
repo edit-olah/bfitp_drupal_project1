@@ -1,9 +1,4 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
+/** 
     Created on : 10-Apr-2015, 14:53:39
     Author     : Edit
 */
@@ -12,6 +7,7 @@ and open the template in the editor.
 
 
 /*================================= TOP-NAV =================================*/
+
 #HeaderWrapper.full-width {
     width: 100%;
 }
@@ -77,21 +73,9 @@ and open the template in the editor.
 	    font-size: 1.3em;
 	}
     }
-    
 }
 
-/*.topNav a:hover,
-.topNav li.current a {
-    color: #dbedd6;
-    background-color: lighten($primaryBG, 10);
-    border-radius: 3px;
-    border: 2px dashed lighten($primaryBG, 5);
-    text-decoration: none;
-}*/
-
-
 @media screen and (max-width: 639px) {
-    
     
     #TopBanner .logo-container {
 	clear: initial;
@@ -102,8 +86,8 @@ and open the template in the editor.
 	    margin: 0;    
 	}
 	
-	
     }
+    
     .topNav {
 	clear: both;
 	width:100%;
@@ -132,22 +116,18 @@ and open the template in the editor.
 	    }
 	    
 	    a {
-	    width: 100%;
-	    margin: 0 1.5%;
-	    font-size: 1em;
-	    display: block;
-	    padding: 8px;
+		width: 100%;
+		margin: 0 1.5%;
+		font-size: 1em;
+		display: block;
+		padding: 8px;
 	    }
-
 	}
-
-	
     }
-    
-    
 }
 
 @media screen and (min-width:320px) and (max-width:460px) {
+    
     .topNav {
 	li {
 	    a {
@@ -157,8 +137,8 @@ and open the template in the editor.
     }
 }
 
-
 @media screen and (min-width: 640px) and (max-width: 1023px) {
+    
     #TopBanner .logo-container {
 	margin-left: 1.7%;
 	margin-bottom: 1%;
@@ -178,6 +158,7 @@ and open the template in the editor.
 }
 
 @media screen and (min-width:640px) and (max-width:669px) {
+    
     .topNav {
 	li {
 	    margin-top: 3.5%;
@@ -188,8 +169,8 @@ and open the template in the editor.
     }
 }
 
-
 @media screen and (min-width:670px) and (max-width:755px) {
+    
     .topNav {
 	li {
 	    a {

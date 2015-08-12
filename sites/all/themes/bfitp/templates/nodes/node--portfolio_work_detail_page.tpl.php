@@ -15,7 +15,7 @@
 					'" title="' . $field_detail_page_header_image[0]['title'] . 
 					'" src="' . image_style_url('portfolio_header_460x230', $field_detail_page_header_image[0]['uri']) .'" />';
 			    } ?>
-			</div><!--/.leftContainer -->
+			</div><!-- /.leftContainer -->
 
 			<div class="rightContainer">
 			   
@@ -29,11 +29,11 @@
 				print '<h3 class="tagline">' . $field_top_section_header_3[0]['value'] . '</h3>';
 			    } ?>
 			   
-			</div> <!--/.rightContainer -->
+			</div> <!-- /.rightContainer -->
 
 		    </div><!-- /.container -->
 		</header>
-	    </div> <!-- /.page#DetailPageHeader -->
+	    </div> <!-- /.page.portfolio-project-header#DetailPageHeader -->
 
 	    <!-- HEADER end -->		    
 
@@ -47,7 +47,7 @@
 			    print $body[0]['value'];
 			} ?>			
 
-		    </div><!--/.leftContainer -->
+		    </div><!-- /.leftContainer -->
 
 		    <!-- SIDEBAR beginning -->
 		    
@@ -80,7 +80,7 @@
 							print '<a href="' . $collection->field_sidebar_section_link['und'][0]['url'] . '">' . $collection->field_sidebar_section_link['und'][0]['title'] . '</a>';
 						    } ?>
 						</section>
-					    </div>	
+					    </div><!-- /.sidebar-section -->
 					    
 					    
 					 <?php   
@@ -92,12 +92,12 @@
 				
 			    </div><!-- /#SidebarContent -->
 			</aside>
-		    </div><!--/.rightContainer -->
+		    </div><!-- /.rightContainer -->
 
 		    <!-- SIDEBAR end -->
 		    
 		</div><!-- /.container -->
-	    </div><!-- / .page#DetailPageMainContent -->
+	    </div><!-- /.page.blog-post-article#DetailPageMainContent -->
 
 	    <!-- MAIN CONTENT end -->
 
@@ -123,10 +123,10 @@
 				    <?php if(isset($contact->body['und'][0]['value'])){
 					print $contact->body['und'][0]['value'];
 				    }?> 
-				</div>
+				</div><!-- /.leftContainer.subcontainer -->
 				<div class="rightContainer badge">
 				    <div class="membershipBadge">Drupal Association member</div>
-				</div>
+				</div><!-- /.rightContainer.badge -->
 			    </header>
 
 			    <div class="contactDetails"> 
@@ -171,11 +171,11 @@
 						    . '</a>' 
 						. '</p>';
 				    }?>
-				</div>
-			    </div>
+				</div><!-- /.buttons -->
+			    </div><!-- /.contactDetails -->
 			    
 			    
-			</div><!--/.leftContainer -->
+			</div><!-- /.leftContainer -->
 
 			<div class="rightContainer">
 			    <?php if(isset($contact->field_contact_me_profile_image)){
@@ -184,7 +184,7 @@
 					'" src="' . image_style_url('general_square', $contact->field_contact_me_profile_image['und'][0]['uri']) .'" />';
 			    } ?>
 
-			</div> <!--/.rightContainer -->
+			</div> <!-- /.rightContainer -->
 			<?php     
 				if(isset($contact->field_social_icons_fc['und'][0]['value'])){
 			    ?>
@@ -197,7 +197,7 @@
 						    . '" target="_blank"><i class="fa ' . $collection->field_font_awesome_class_name['und'][0]['value'] . '"></i></a></div>';
 					}  
 				    } // end of foreach ?>
-				</div>
+				</div><!-- /.socialIcons-->
 			    <?php } ?>
 		    </div><!-- /.container -->
 		</section>
@@ -207,6 +207,6 @@
 	
 	<?php } ?>
 
-    </div><!-- / #MainContent -->
+    </div><!-- /#MainContent -->
 </main>
 

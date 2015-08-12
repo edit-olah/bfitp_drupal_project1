@@ -1,9 +1,4 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
+/** 
     Created on : 10-Apr-2015, 14:52:01
     Author     : Edit
 */
@@ -42,7 +37,6 @@ and open the template in the editor.
 
 @media screen and (max-width: 639px) {
     
-
     .logo-container {
 	clear: both;
 	width: 100%;
@@ -70,12 +64,13 @@ and open the template in the editor.
 }
 
 @media screen and (max-width: 364px) {
+    
     .logo-container.fixedNavPage-logoContainer {
 	clear: both;
 	width: 100%;
+	
 	.logo {
 	    background-position: 50%;
 	}
     }
-    
 }

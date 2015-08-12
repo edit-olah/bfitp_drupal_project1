@@ -1,4 +1,4 @@
-/* 
+/**
     Created on : 06-Jan-2015, 07:57:18
     Author     : Edit
 */
@@ -7,16 +7,14 @@
 // =================
 
 
+/*=========================== VARIABLES ============================*/
 
 // Font family and size
 
-//Font files have been added to the project to be able to work off-line in the development phase
-//$baseFont	    : sourceCodeProNormal,"Helvetica Neue", Helvetica, Arial, sans-serif;  
-
 $baseFont	    : 'Source Code Pro',"Helvetica Neue", Helvetica, Arial, sans-serif;
 $zerowidthFont : 'zero-width';
-$baseFontSize	    : 62.5%; //if browser default is 16px (font-size on <html> 
-				//level), this equals 10px -> 10px = 0.625rem
+$baseFontSize	    : 62.5%; /** if browser default is 16px (font-size on <html> 
+				* level), this equals 10px -> 10px = 0.625rem */
     
 
 // Font weights
@@ -38,7 +36,8 @@ $extraLargeFontSize	: 1.7em;
 $xxLargeFontSize	: 1.8em; 
 
 
- // background colors
+// background colors
+
 $primaryBG	    : #3A3F39;
 $secondaryBG	    : #899787;
 $greenBG2	    : #bdde37;
@@ -47,12 +46,15 @@ $turqBG		    : #1C926E;
 $orangeBG	    : #DC6E2A;
 $magnetaBG	    : #C1255C;
 
+
 //font colors
+
 $primaryFontColor   : #B9C8B5;
 $secondaryFontColor : #859900;
-//$headings-fontColor : #ABEC9A;
+
 
 //other colors
+
 $lightGreen	    : #ABF381;
 $semiLightGreen	    : #85E14F;
 $semiDarkGreen	    : #39820E;
@@ -83,7 +85,6 @@ $secondaryPadding   : 15px 15px;
 $minPadding	    : 15px 0;
 
 
-
 //mix it up
 
 $mixitupWidth1		    : 98%; //1 item in a row
@@ -93,13 +94,15 @@ $mixitupWidth4		    : 23%; //4 items in a row
 $mixitupWidth5		    : 19%; //5 items in a row
 
 
-// hamburger menu
+// hamburger menu ------------------
 
 // line heights
+
 $line-height--small: 1.2;
 $line-height--medium: 1.5;
 
 // colours
+
 $neutral: rgb(120,120,120);
 
 

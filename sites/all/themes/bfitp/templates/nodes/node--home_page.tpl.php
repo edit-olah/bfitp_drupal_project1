@@ -29,7 +29,7 @@
 			</section>
 		    </div><!-- /.heroText -->
 		</div><!-- /.container -->
-	    </div><!-- /.heroContent -->
+	    </div><!-- /.heroContent#home -->
 
 	</div><!-- / #Hero -->
 
@@ -77,7 +77,7 @@
 							'" title="' . $contact->field_contact_me_profile_image['und'][0]['title'] . 
 							'" src="' . image_style_url('general_square', $contact->field_contact_me_profile_image['und'][0]['uri']) .'" />';
 					    } ?>
-					</div>
+					</div><!-- /.leftContainer -->
 					<div class="rightContainer">
 					    <section>
 
@@ -103,7 +103,7 @@
 							
 						}?>
 					    </section>
-					</div>
+					</div><!-- /.rightContainer -->
 
 				    </div><!-- /.grid-contentHolder -->
 				</li>
@@ -120,6 +120,5 @@
 	<!-- HOME CALLOUT BOXES SECTION end -->                  
 
 
-
-    </div><!-- / #MainContent -->
+    </div><!-- /#MainContent -->
 </main>

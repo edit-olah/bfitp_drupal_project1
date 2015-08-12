@@ -1,12 +1,19 @@
+/** 
+    Created on : 06-Jan-2015, 07:56:17
+    Author     : Edit
+*/
+
 // style.scss
-// ==============
+// ==============================================
  
 //Compass imports
+
 @import "compass";
 @import "compass/reset";
-//@import "compass/css3/box-shadow";
  
+
 //Core partials
+
 @import "base";
 @import "fonts";
 @import "variables";
@@ -19,11 +26,7 @@
 @import "heropanel";
 @import "grid";
 @import "mixitup";
-@import "contactmodule";
+@import "contactblock";
 @import "hamburger";
 @import "drupaladmin";
 @import "cookiepolicy";
- 
-// JS partials
-//@import "pixgrid";
-//@import "rclick";

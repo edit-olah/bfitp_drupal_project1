@@ -91,7 +91,7 @@
 			   print 'fixedNavPage-logoContainer';
 			}?>">
 			 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><span class="logo"><?php print t('Barefoot in the Park'); ?></span></a>
-		     </div>
+		     </div><!-- /.logo-container -->
 		    
 		    <?php
 			if(isset($node->type) && $node->type === 'profile_page'){
@@ -148,8 +148,7 @@
 			    print '<li><a class="pageNavLink" href="ContactIndi">' . t('Contact') . ' ' .  $name[0] . '</a></li>';
 			?>	
 			
-		    </ul><!--.nav.full-width -->
-		    <!--<div class="clear"></div>-->
+		    </ul><!--/.nav.full-width -->
 		</nav>
 	    </div><!-- /#PageNav -->
 
@@ -178,7 +177,7 @@
 	<?php print render($page['help']); ?>
 	<?php print render($page['content']); ?>
 
-    </div>
+    </div><!-- /#MainContentWrapper -->
     <!--==============================footer================================-->
         
         <div id="Footer">
@@ -189,6 +188,6 @@
 			<?php print render($page['footer']); ?>
                     </div><!-- /.container -->
 
-                </div><!-- / #FooterContent -->
+                </div><!-- /#FooterContent -->
             </footer>
         </div><!-- /#Footer -->

@@ -48,6 +48,7 @@
 
 	    <section>
 		<div class="container">
+		    
 		    <header>
 			<?php if(isset($title)){
 			    print '<h1>' . $title . '</h1>';
@@ -62,11 +63,10 @@
 			
 		    } ?>
 		    
-		    
 		</div><!-- /.container -->
 	    </section>
 
-	</div> <!-- /.page#OurPortfolioGrid -->
+	</div> <!-- /.page -->
 
 	<!-- MAIN CONTENT GRID end -->                  
 
@@ -91,10 +91,10 @@
 				    <?php if(isset($contact->body['und'][0]['value'])){
 					print $contact->body['und'][0]['value'];
 				    }?> 
-				</div>
+				</div><!-- /.leftContainer.subcontainer -->
 				<div class="rightContainer badge">
 				    <div class="membershipBadge">Drupal Association member</div>
-				</div>
+				</div><!-- /.rightContainer.badge -->
 			    </header>
 
 			    <div class="contactDetails"> 
@@ -139,11 +139,11 @@
 						    . '</a>' 
 						. '</p>';
 				    }?>
-				</div>
-			    </div>
+				</div><!-- /.buttons -->
+			    </div><!-- /.contactDetails -->
 			    
 			    
-			</div><!--/.leftContainer -->
+			</div><!-- /.leftContainer -->
 
 			<div class="rightContainer">
 			    <?php if(isset($contact->field_contact_me_profile_image)){
@@ -152,10 +152,11 @@
 					'" src="' . image_style_url('general_square', $contact->field_contact_me_profile_image['und'][0]['uri']) .'" />';
 			    } ?>
 
-			</div> <!--/.rightContainer -->
+			</div> <!-- /.rightContainer -->
+			
 			<?php     
-				if(isset($contact->field_social_icons_fc['und'][0]['value'])){
-			    ?>
+			    if(isset($contact->field_social_icons_fc['und'][0]['value'])){
+			?>
 				<div class="socialIcons">
 				    <?php foreach($contact->field_social_icons_fc['und'] as $item){
 					$collection = entity_load('field_collection_item', array($item['value']));
@@ -165,8 +166,9 @@
 						    . '" target="_blank"><i class="fa ' . $collection->field_font_awesome_class_name['und'][0]['value'] . '"></i></a></div>';
 					}  
 				    } // end of foreach ?>
-				</div>
-			    <?php } ?>
+				</div><!-- /.socialIcons -->
+				
+			<?php } ?>
 		    </div><!-- /.container -->
 		</section>
 	    </div> <!-- /.page#ContactIndi -->
@@ -176,5 +178,5 @@
 	<?php } ?>
 	
 
-    </div><!-- / #MainContent -->
+    </div><!-- /#MainContent -->
 </main>
