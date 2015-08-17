@@ -9,6 +9,10 @@
 
 /*================================= COOKIE POLICY custom styling =================================*/
 
+#sliding-popup .popup-content #popup-buttons {
+    margin-bottom: 1%;
+}
+
 #sliding-popup .popup-content #popup-buttons button {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -19,6 +23,8 @@
     border: 2px solid #45613F;
     font-family: $baseFont;
     font-weight: $medium;
+    font-size: 1.2em;
+    padding: 3px 4px;
 }
 
 #sliding-popup .popup-content #popup-buttons button:hover {
@@ -32,5 +38,16 @@
 
 #sliding-popup .popup-content #popup-text {
     color: $primaryFontColor;
-    font-size: 11px;
+    font-size: 1em;
+}
+
+@media screen and (max-width: 1023px) {
+    
+    #sliding-popup .popup-content {
+	    max-width: 96%;
+    }
+    
+    #sliding-popup .popup-content #popup-text {
+	padding-top: .5em;
+    }
 }
