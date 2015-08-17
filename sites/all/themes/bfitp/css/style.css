@@ -3664,18 +3664,18 @@ body.logged-in.node-type-profile-page {
 body.logged-in.node-type-profile-page #OuterHeaderWrapper {
   top: 30px;
 }
-/* line 22, ../components/sass/_drupaladmin.scss */
+/* line 23, ../components/sass/_drupaladmin.scss */
 body.logged-in.node-type-profile-page .fixedNavPage {
   margin-top: 0px;
 }
 
 /* Drupal admin view adjustments - end */
 /* Drupal login page styling - beginning */
-/* line 33, ../components/sass/_drupaladmin.scss */
+/* line 34, ../components/sass/_drupaladmin.scss */
 body.not-front.not-logged-in.page-user #MainContentWrapper {
   padding-top: 2em;
 }
-/* line 36, ../components/sass/_drupaladmin.scss */
+/* line 38, ../components/sass/_drupaladmin.scss */
 body.not-front.not-logged-in.page-user ul.primary {
   max-width: 1024px;
   margin: 0 auto;
@@ -3683,11 +3683,11 @@ body.not-front.not-logged-in.page-user ul.primary {
   display: block;
   padding: 0;
 }
-/* line 43, ../components/sass/_drupaladmin.scss */
+/* line 45, ../components/sass/_drupaladmin.scss */
 body.not-front.not-logged-in.page-user ul.primary li {
   display: inline-block;
 }
-/* line 46, ../components/sass/_drupaladmin.scss */
+/* line 48, ../components/sass/_drupaladmin.scss */
 body.not-front.not-logged-in.page-user ul.primary li a {
   font-size: 1.6rem;
   line-height: 1.6;
@@ -3701,28 +3701,28 @@ body.not-front.not-logged-in.page-user ul.primary li a {
   padding: .7em 1em;
   display: inline-block;
 }
-/* line 59, ../components/sass/_drupaladmin.scss */
+/* line 62, ../components/sass/_drupaladmin.scss */
 body.not-front.not-logged-in.page-user ul.primary li.active a, body.not-front.not-logged-in.page-user ul.primary li:hover a {
   color: #3f443e;
   background: #B9C8B5;
   border-color: #535a51;
 }
-/* line 66, ../components/sass/_drupaladmin.scss */
+/* line 70, ../components/sass/_drupaladmin.scss */
 body.not-front.not-logged-in.page-user .content {
   max-width: 1024px;
   margin: 0 auto;
 }
-/* line 69, ../components/sass/_drupaladmin.scss */
+/* line 74, ../components/sass/_drupaladmin.scss */
 body.not-front.not-logged-in.page-user .content label, body.not-front.not-logged-in.page-user .content .description {
   font-size: 1.4em;
   padding: 0.8em 0;
 }
-/* line 76, ../components/sass/_drupaladmin.scss */
+/* line 83, ../components/sass/_drupaladmin.scss */
 body.not-front.not-logged-in.page-user .content input {
   min-height: 2em;
   margin-bottom: .5em;
 }
-/* line 80, ../components/sass/_drupaladmin.scss */
+/* line 88, ../components/sass/_drupaladmin.scss */
 body.not-front.not-logged-in.page-user .content input.form-submit {
   color: #6adcba;
   font-weight: 600;
@@ -3735,13 +3735,13 @@ body.not-front.not-logged-in.page-user .content input.form-submit {
   border-radius: 3px;
   font-size: 1.6rem;
 }
-/* line 92, ../components/sass/_drupaladmin.scss */
+/* line 100, ../components/sass/_drupaladmin.scss */
 body.not-front.not-logged-in.page-user .content input.form-submit:hover {
   background-color: #464c45;
   border: 2px dashed #6b7569;
   text-decoration: none;
 }
-/* line 100, ../components/sass/_drupaladmin.scss */
+/* line 108, ../components/sass/_drupaladmin.scss */
 body.not-front.not-logged-in.page-user #Footer {
   position: fixed;
   bottom: 0;
@@ -3749,20 +3749,98 @@ body.not-front.not-logged-in.page-user #Footer {
   left: 0;
 }
 
+@media screen and (max-width: 1050px) {
+  /* line 119, ../components/sass/_drupaladmin.scss */
+  body.not-front.not-logged-in.page-user #MainContentWrapper {
+    padding: 15px 15px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  /* line 128, ../components/sass/_drupaladmin.scss */
+  body.not-front.not-logged-in.page-user ul.primary {
+    height: 3em;
+  }
+  /* line 131, ../components/sass/_drupaladmin.scss */
+  body.not-front.not-logged-in.page-user ul.primary li {
+    margin-bottom: 0;
+  }
+  /* line 134, ../components/sass/_drupaladmin.scss */
+  body.not-front.not-logged-in.page-user ul.primary li a {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    padding: .5em .5em;
+    margin: 0;
+  }
+  /* line 143, ../components/sass/_drupaladmin.scss */
+  body.not-front.not-logged-in.page-user input {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 588px) {
+  /* line 153, ../components/sass/_drupaladmin.scss */
+  body.not-front.not-logged-in.page-user ul.primary {
+    height: 4.3em;
+  }
+  /* line 156, ../components/sass/_drupaladmin.scss */
+  body.not-front.not-logged-in.page-user ul.primary li {
+    margin-bottom: 0;
+  }
+  /* line 159, ../components/sass/_drupaladmin.scss */
+  body.not-front.not-logged-in.page-user ul.primary li a {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    padding: .7em .7em;
+    margin: 0;
+  }
+}
 /* Drupal login page styling - end */
 /* Drupal 404 page styling - beginning */
-/* line 114, ../components/sass/_drupaladmin.scss */
+/* line 176, ../components/sass/_drupaladmin.scss */
 .error404 a {
   display: block;
 }
 
 /* Drupal 404 page styling - end */
+/* Drupal maintenance page styling - beginning */
+/* line 186, ../components/sass/_drupaladmin.scss */
+body.maintenance-page.in-maintenance #page {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+/* line 192, ../components/sass/_drupaladmin.scss */
+body.maintenance-page.in-maintenance #header, body.maintenance-page.in-maintenance #name-and-slogan, body.maintenance-page.in-maintenance #page-title {
+  padding-top: 2%;
+}
+/* line 204, ../components/sass/_drupaladmin.scss */
+body.maintenance-page.in-maintenance #content-content {
+  font-size: 1.4em;
+}
+
+@media screen and (min-width: 320px) and (max-width: 379px) {
+  /* line 212, ../components/sass/_drupaladmin.scss */
+  body.maintenance-page.in-maintenance #page {
+    padding: 15px 15px;
+  }
+}
+@media screen and (min-width: 380px) and (max-width: 1170px) {
+  /* line 221, ../components/sass/_drupaladmin.scss */
+  body.maintenance-page.in-maintenance #page {
+    padding: 15px 25px;
+  }
+}
+/* Drupal maintenance page styling - end */
 /** 
     Created on : Aug-2015, 17:56:48
     Author     : Edit
 */
 /*================================= COOKIE POLICY custom styling =================================*/
 /* line 12, ../components/sass/_cookiepolicy.scss */
+#sliding-popup .popup-content #popup-buttons {
+  margin-bottom: 1%;
+}
+
+/* line 16, ../components/sass/_cookiepolicy.scss */
 #sliding-popup .popup-content #popup-buttons button {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -3773,9 +3851,11 @@ body.not-front.not-logged-in.page-user #Footer {
   border: 2px solid #45613F;
   font-family: "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
+  font-size: 1.2em;
+  padding: 3px 4px;
 }
 
-/* line 24, ../components/sass/_cookiepolicy.scss */
+/* line 30, ../components/sass/_cookiepolicy.scss */
 #sliding-popup .popup-content #popup-buttons button:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #464c45), color-stop(1, #6b7569));
   background: -moz-linear-gradient(center top, #464c45 5%, #6b7569 100%);
@@ -3785,8 +3865,20 @@ body.not-front.not-logged-in.page-user #Footer {
   text-decoration: none;
 }
 
-/* line 33, ../components/sass/_cookiepolicy.scss */
+/* line 39, ../components/sass/_cookiepolicy.scss */
 #sliding-popup .popup-content #popup-text {
   color: #B9C8B5;
-  font-size: 11px;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 46, ../components/sass/_cookiepolicy.scss */
+  #sliding-popup .popup-content {
+    max-width: 96%;
+  }
+
+  /* line 50, ../components/sass/_cookiepolicy.scss */
+  #sliding-popup .popup-content #popup-text {
+    padding-top: .5em;
+  }
 }
