@@ -19,6 +19,7 @@ body.logged-in.node-type-profile-page{
     #OuterHeaderWrapper{
 	top: 30px;
     }
+    
     .fixedNavPage {
 	margin-top: 0px;
     }
@@ -33,6 +34,7 @@ body.not-front.not-logged-in.page-user{
     #MainContentWrapper {
 	padding-top: 2em;
     }
+    
     ul.primary {
 	max-width: 1024px;
 	margin: 0 auto;
@@ -56,6 +58,7 @@ body.not-front.not-logged-in.page-user{
 		padding: .7em 1em;
 		display: inline-block;
 	    }
+	    
 	    &.active a, &:hover a {
 		color: lighten($primaryBG, 2);
 		background: $primaryFontColor;
@@ -63,20 +66,25 @@ body.not-front.not-logged-in.page-user{
 	    }
 	}
     }   
+    
     .content{
 	max-width: 1024px;
 	margin: 0 auto;
+	
 	label {
 	    font-size: $defaultFontSize;
 	    padding: 0.8em 0;
 	}
+	
 	.description{
 	    @extend label;
 	}
+	
 	input {
 	    min-height: 2em;
 	    margin-bottom: .5em;
 	}
+	
 	input.form-submit {
 	    color: darken($lightTurq,3);
 	    font-weight: $semi-bold;
@@ -95,13 +103,67 @@ body.not-front.not-logged-in.page-user{
 		text-decoration:none;
 	    }
 	}
-
     }
+    
     #Footer{
 	position: fixed;
 	bottom: 0;
 	width: 100%;
 	left: 0;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    
+    body.not-front.not-logged-in.page-user{
+	#MainContentWrapper {
+	    padding: $secondaryPadding;
+	}
+    }
+}
+
+@media screen and (min-width: 320px)and (max-width: 479px) {
+    
+    body.not-front.not-logged-in.page-user{
+	ul.primary {
+	    height: 3em;
+	    
+	    li {
+		margin-bottom: 0;
+		
+		a {
+		    font-size: 1.2rem;
+		    line-height: 1.2;
+		    padding: .5em .5em;
+		    margin: 0;
+		}
+	    }
+	}
+	
+	input {
+	    width: 100%;
+	}
+    }
+    
+}
+
+@media screen and (min-width: 480px)and (max-width: 588px) {
+    
+    body.not-front.not-logged-in.page-user{
+	ul.primary {
+	    height: 4.3em;
+	    
+	    li {
+		margin-bottom: 0;
+		
+		a {
+		    font-size: 1.4rem;
+		    line-height: 1.4;
+		    padding: .7em .7em;
+		    margin: 0;
+		}
+	    }
+	}	
     }
 }
 
@@ -117,3 +179,49 @@ body.not-front.not-logged-in.page-user{
 }
 
 /* Drupal 404 page styling - end */
+
+/* Drupal maintenance page styling - beginning */
+
+body.maintenance-page.in-maintenance {
+    #page {
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+    }
+    
+    #header {
+	padding-top: 2%;
+    }
+    
+    #name-and-slogan {
+	@extend #header;
+    }
+    
+    #page-title {
+	@extend #header;
+    }
+    
+    #content-content {
+	font-size: $defaultFontSize;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 379px) {
+    
+    body.maintenance-page.in-maintenance {
+	#page {
+	    padding: $secondaryPadding;
+	}
+    }
+}
+
+@media screen and (min-width: 380px) and (max-width: 1170px) {
+    
+    body.maintenance-page.in-maintenance {
+	#page {
+	    padding: $defaultPadding;
+	}
+    }
+}
+
+/* Drupal maintenance page styling - end */
