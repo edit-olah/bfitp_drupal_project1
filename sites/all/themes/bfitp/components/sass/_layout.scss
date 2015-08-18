@@ -64,6 +64,17 @@ body {
     }
 }
 
+@media screen and (max-width: 639px) {
+    
+    #breadcrumb {
+	padding: 0;
+	    
+	.breadcrumb {
+	    font-size: 1rem;
+	}
+    }
+}
+
 /*================== GLOBAL LAYOUTS BASE - end ========================*/
 
 
@@ -246,19 +257,8 @@ th {
     margin: 0 auto;
 }
 
-#OuterHeaderWrapper {
-    width: 100%;
-    position: fixed;
-    height: auto;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    background-color: $primaryBG;
-    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
-}
-
 .fixedNavPage { 
-    margin-top: 175px;
+    margin-top: 160px;
 }
 
 .page {
@@ -284,21 +284,21 @@ th {
 @media screen and (max-width: 364px) {
     
     .fixedNavPage {
-      margin-top: 200px;
+	margin-top: 98px;
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 449px) {
+@media screen and (min-width: 365px) and (max-width: 449px) {
     
     .fixedNavPage {
-	margin-top:  165px;
+	margin-top: 115px;
     }
 }
 
-@media screen and (min-width: 450px) and (max-width: 871px) {
+@media screen and (min-width: 450px) and (max-width: 639px) {
 
     .fixedNavPage {
-	margin-top: 155px;
+	margin-top: 112px;
     }
 }
     

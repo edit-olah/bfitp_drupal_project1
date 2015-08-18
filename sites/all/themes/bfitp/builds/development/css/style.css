@@ -305,16 +305,26 @@ body {
   font-size: 1.2rem;
 }
 
+@media screen and (max-width: 639px) {
+  /* line 69, ../components/sass/_layout.scss */
+  #breadcrumb {
+    padding: 0;
+  }
+  /* line 72, ../components/sass/_layout.scss */
+  #breadcrumb .breadcrumb {
+    font-size: 1rem;
+  }
+}
 /*================== GLOBAL LAYOUTS BASE - end ========================*/
 /*============ GLOBAL TEXTS - beginning ===============*/
-/* line 74, ../components/sass/_layout.scss */
+/* line 85, ../components/sass/_layout.scss */
 h1, h2, .grid li h2 a, h3, h4, h5, h6 {
   font-family: "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #85E14F;
   font-weight: 600;
 }
 
-/* line 80, ../components/sass/_layout.scss */
+/* line 91, ../components/sass/_layout.scss */
 h1 {
   font-size: 1.7em;
   color: #a3e87b;
@@ -322,12 +332,12 @@ h1 {
   line-height: 1.6;
 }
 
-/* line 87, ../components/sass/_layout.scss */
+/* line 98, ../components/sass/_layout.scss */
 .page header h1 {
   padding: 5px 0 10px;
 }
 
-/* line 91, ../components/sass/_layout.scss */
+/* line 102, ../components/sass/_layout.scss */
 h2, .grid li h2 a {
   font-size: 1.5em;
   color: #85E14F;
@@ -335,85 +345,85 @@ h2, .grid li h2 a {
   line-height: 1.4;
 }
 
-/* line 99, ../components/sass/_layout.scss */
+/* line 110, ../components/sass/_layout.scss */
 h3 {
   font-size: 1.4em;
   margin-bottom: .5em;
   line-height: 1.3;
 }
 
-/* line 105, ../components/sass/_layout.scss */
+/* line 116, ../components/sass/_layout.scss */
 h4 {
   font-size: 1.4em;
   margin-bottom: .5em;
   line-height: 1.3;
 }
 
-/* line 111, ../components/sass/_layout.scss */
+/* line 122, ../components/sass/_layout.scss */
 .sidebar-header {
   margin: 0 25px 25px;
 }
 
-/* line 116, ../components/sass/_layout.scss */
+/* line 127, ../components/sass/_layout.scss */
 a {
   text-decoration: none;
   color: #6adcba;
   font-weight: 600;
 }
 
-/* line 123, ../components/sass/_layout.scss */
+/* line 134, ../components/sass/_layout.scss */
 a:hover {
   text-decoration: underline;
   color: #B9C8B5;
 }
 
-/* line 129, ../components/sass/_layout.scss */
+/* line 140, ../components/sass/_layout.scss */
 a, p, li, th, td {
   font-size: 1.4em;
   line-height: 1.5;
   margin-bottom: .5em;
 }
 
-/* line 135, ../components/sass/_layout.scss */
+/* line 146, ../components/sass/_layout.scss */
 ul, li {
   list-style-type: none;
 }
 
-/* line 139, ../components/sass/_layout.scss */
+/* line 150, ../components/sass/_layout.scss */
 .bold, em {
   font-weight: 700;
 }
 
-/* line 143, ../components/sass/_layout.scss */
+/* line 154, ../components/sass/_layout.scss */
 .semiBold {
   font-weight: 600;
 }
 
-/* line 147, ../components/sass/_layout.scss */
+/* line 158, ../components/sass/_layout.scss */
 .large-text {
   font-size: 1.5em;
 }
 
-/* line 151, ../components/sass/_layout.scss */
+/* line 162, ../components/sass/_layout.scss */
 .semi-large-text {
   font-size: 1.4em;
 }
 
-/* line 155, ../components/sass/_layout.scss */
+/* line 166, ../components/sass/_layout.scss */
 .highlighted {
   color: #a3e87b;
 }
 
-/* line 159, ../components/sass/_layout.scss */
+/* line 170, ../components/sass/_layout.scss */
 .extraPadding {
   padding: 0 0 15px 0;
 }
 
-/* line 163, ../components/sass/_layout.scss */
+/* line 174, ../components/sass/_layout.scss */
 .button {
   display: inline-block;
 }
-/* line 166, ../components/sass/_layout.scss */
+/* line 177, ../components/sass/_layout.scss */
 .button a {
   width: 100%;
   display: block;
@@ -425,31 +435,31 @@ ul, li {
   border: 2px dashed #464c45;
   border-radius: 3px;
 }
-/* line 177, ../components/sass/_layout.scss */
+/* line 188, ../components/sass/_layout.scss */
 .button a:hover {
   background-color: #464c45;
   border: 2px dashed #6b7569;
   text-decoration: none;
 }
 
-/* line 186, ../components/sass/_layout.scss */
+/* line 197, ../components/sass/_layout.scss */
 table {
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
-/* line 191, ../components/sass/_layout.scss */
+/* line 202, ../components/sass/_layout.scss */
 td, th {
   border: 2px solid #B9C8B5;
   padding: 5px;
   min-width: 6em;
 }
-/* line 195, ../components/sass/_layout.scss */
+/* line 206, ../components/sass/_layout.scss */
 td a, th a {
   font-size: 1.4rem;
 }
 
-/* line 200, ../components/sass/_layout.scss */
+/* line 211, ../components/sass/_layout.scss */
 th {
   font-family: "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #ABF381;
@@ -457,18 +467,18 @@ th {
 }
 
 @media screen and (max-width: 639px) {
-  /* line 208, ../components/sass/_layout.scss */
+  /* line 219, ../components/sass/_layout.scss */
   h1 {
     font-size: 1.5em;
   }
 
-  /* line 212, ../components/sass/_layout.scss */
+  /* line 223, ../components/sass/_layout.scss */
   .page header h1 {
     padding: 0 15px 10px;
   }
 }
 @media screen and (min-width: 1002px) and (max-width: 1040px) {
-  /* line 221, ../components/sass/_layout.scss */
+  /* line 232, ../components/sass/_layout.scss */
   .email a {
     font-size: 1em;
     white-space: nowrap;
@@ -476,38 +486,26 @@ th {
 }
 /*============ GLOBAL TEXTS - end ===============*/
 /*====================== GLOBAL LAYOUT - beginning ========================*/
-/* line 235, ../components/sass/_layout.scss */
+/* line 246, ../components/sass/_layout.scss */
 .container,
 #HeaderWrapper {
   width: 100%;
   max-width: 1024px;
 }
 
-/* line 241, ../components/sass/_layout.scss */
+/* line 252, ../components/sass/_layout.scss */
 .container {
   margin: 0 auto;
 }
 
-/* line 245, ../components/sass/_layout.scss */
+/* line 256, ../components/sass/_layout.scss */
 #HeaderWrapper {
   margin: 0 auto;
 }
 
-/* line 249, ../components/sass/_layout.scss */
-#OuterHeaderWrapper {
-  width: 100%;
-  position: fixed;
-  height: auto;
-  left: 0;
-  top: 0;
-  z-index: 10;
-  background-color: #3A3F39;
-  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
-}
-
 /* line 260, ../components/sass/_layout.scss */
 .fixedNavPage {
-  margin-top: 175px;
+  margin-top: 160px;
 }
 
 /* line 264, ../components/sass/_layout.scss */
@@ -534,19 +532,19 @@ th {
 @media screen and (max-width: 364px) {
   /* line 286, ../components/sass/_layout.scss */
   .fixedNavPage {
-    margin-top: 200px;
+    margin-top: 98px;
   }
 }
-@media screen and (min-width: 375px) and (max-width: 449px) {
+@media screen and (min-width: 365px) and (max-width: 449px) {
   /* line 293, ../components/sass/_layout.scss */
   .fixedNavPage {
-    margin-top: 165px;
+    margin-top: 115px;
   }
 }
-@media screen and (min-width: 450px) and (max-width: 871px) {
+@media screen and (min-width: 450px) and (max-width: 639px) {
   /* line 300, ../components/sass/_layout.scss */
   .fixedNavPage {
-    margin-top: 155px;
+    margin-top: 112px;
   }
 }
 @media screen and (min-width: 640px) and (max-width: 1023px) {
@@ -1204,28 +1202,55 @@ th {
     width: 100%;
     background-position: 50%;
     margin-top: 5px;
+    background-size: 70%;
   }
 
-  /* line 55, ../components/sass/_logo.scss */
+  /* line 56, ../components/sass/_logo.scss */
   .logo-container.fixedNavPage-logoContainer {
     float: left;
     clear: initial;
     width: 80%;
   }
-  /* line 60, ../components/sass/_logo.scss */
+  /* line 61, ../components/sass/_logo.scss */
   .logo-container.fixedNavPage-logoContainer .logo {
     background-position: 0%;
   }
 }
 @media screen and (max-width: 364px) {
-  /* line 68, ../components/sass/_logo.scss */
+  /* line 69, ../components/sass/_logo.scss */
   .logo-container.fixedNavPage-logoContainer {
     clear: both;
-    width: 100%;
+    width: 75%;
   }
-  /* line 72, ../components/sass/_logo.scss */
+  /* line 73, ../components/sass/_logo.scss */
   .logo-container.fixedNavPage-logoContainer .logo {
-    background-position: 50%;
+    background-position: 0;
+    width: 82%;
+    background-size: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 4em;
+  }
+}
+@media screen and (min-width: 365px) and (max-width: 432px) {
+  /* line 87, ../components/sass/_logo.scss */
+  .logo-container .logo {
+    background-size: 85%;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 433px) and (max-width: 529px) {
+  /* line 97, ../components/sass/_logo.scss */
+  .logo-container .logo {
+    background-size: 65%;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 530px) and (max-width: 639px) {
+  /* line 107, ../components/sass/_logo.scss */
+  .logo-container .logo {
+    background-size: 53%;
+    margin: 0;
   }
 }
 /** 
@@ -1430,17 +1455,38 @@ th {
     Author     : Edit
 */
 /*================================= TOP-NAV =================================*/
-/* line 11, ../components/sass/_topnav.scss */
+/* only on profile page content type - beginning */
+/* line 13, ../components/sass/_topnav.scss */
+#OuterHeaderWrapper {
+  width: 100%;
+  position: fixed;
+  height: auto;
+  line-height: 1;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: #3A3F39;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 365px) and (max-width: 449px) {
+  /* line 27, ../components/sass/_topnav.scss */
+  #OuterHeaderWrapper {
+    height: 11.5em;
+  }
+}
+/* only on profile page content type - end */
+/* line 34, ../components/sass/_topnav.scss */
 #HeaderWrapper.full-width {
   width: 100%;
 }
 
-/* line 15, ../components/sass/_topnav.scss */
+/* line 38, ../components/sass/_topnav.scss */
 #TopBanner {
   width: 100%;
 }
 
-/* line 19, ../components/sass/_topnav.scss */
+/* line 42, ../components/sass/_topnav.scss */
 .topNav {
   width: 65%;
   float: right;
@@ -1452,7 +1498,7 @@ th {
   font-size: 1em;
   font-family: "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 30, ../components/sass/_topnav.scss */
+/* line 53, ../components/sass/_topnav.scss */
 .topNav li {
   display: block;
   float: left;
@@ -1464,20 +1510,20 @@ th {
   font-family: "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 2px dashed rgba(189, 222, 55, 0.1);
 }
-/* line 41, ../components/sass/_topnav.scss */
+/* line 64, ../components/sass/_topnav.scss */
 .topNav li:first-child {
   width: 15%;
 }
-/* line 45, ../components/sass/_topnav.scss */
+/* line 68, ../components/sass/_topnav.scss */
 .topNav li:nth-child(2) {
   width: 40%;
 }
-/* line 49, ../components/sass/_topnav.scss */
+/* line 72, ../components/sass/_topnav.scss */
 .topNav li:last-child {
   margin-right: 0;
   width: 35%;
 }
-/* line 54, ../components/sass/_topnav.scss */
+/* line 77, ../components/sass/_topnav.scss */
 .topNav li:hover, .topNav li.current {
   color: #dbedd6;
   background-color: #535a51;
@@ -1485,7 +1531,7 @@ th {
   border: 2px dashed #464c45;
   text-decoration: none;
 }
-/* line 62, ../components/sass/_topnav.scss */
+/* line 85, ../components/sass/_topnav.scss */
 .topNav li a {
   display: inline;
   margin-bottom: 0;
@@ -1501,18 +1547,18 @@ th {
 }
 
 @media screen and (max-width: 639px) {
-  /* line 80, ../components/sass/_topnav.scss */
+  /* line 103, ../components/sass/_topnav.scss */
   #TopBanner .logo-container {
     clear: initial;
     margin-left: 0;
   }
-  /* line 84, ../components/sass/_topnav.scss */
+  /* line 107, ../components/sass/_topnav.scss */
   #TopBanner .logo-container .logo {
     padding: 2% 0;
     margin: 0;
   }
 
-  /* line 91, ../components/sass/_topnav.scss */
+  /* line 114, ../components/sass/_topnav.scss */
   .topNav {
     clear: both;
     width: 100%;
@@ -1520,73 +1566,75 @@ th {
     margin-bottom: 0;
     padding: 0;
     box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.3);
+    height: 2.5em;
   }
-  /* line 99, ../components/sass/_topnav.scss */
+  /* line 123, ../components/sass/_topnav.scss */
   .topNav li {
     margin-right: 2.5%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: .1%;
+    padding-bottom: .1%;
+    margin-bottom: 0;
   }
-  /* line 104, ../components/sass/_topnav.scss */
+  /* line 129, ../components/sass/_topnav.scss */
   .topNav li:first-child {
     width: 21%;
     margin-left: 1%;
   }
-  /* line 109, ../components/sass/_topnav.scss */
+  /* line 134, ../components/sass/_topnav.scss */
   .topNav li:nth-child(2) {
     width: 39%;
   }
-  /* line 113, ../components/sass/_topnav.scss */
+  /* line 138, ../components/sass/_topnav.scss */
   .topNav li:last-child {
     margin-right: 0;
     width: 33%;
   }
-  /* line 118, ../components/sass/_topnav.scss */
+  /* line 143, ../components/sass/_topnav.scss */
   .topNav li a {
     width: 100%;
     margin: 0 1.5%;
     font-size: 1em;
     display: block;
-    padding: 8px;
+    padding: 4px 8px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 460px) {
-  /* line 133, ../components/sass/_topnav.scss */
+  /* line 158, ../components/sass/_topnav.scss */
   .topNav li a {
     font-size: .85em;
   }
 }
 @media screen and (min-width: 640px) and (max-width: 1023px) {
-  /* line 142, ../components/sass/_topnav.scss */
+  /* line 167, ../components/sass/_topnav.scss */
   #TopBanner .logo-container {
     margin-left: 1.7%;
     margin-bottom: 1%;
   }
 
-  /* line 146, ../components/sass/_topnav.scss */
+  /* line 171, ../components/sass/_topnav.scss */
   .topNav {
     width: 50%;
     padding: 0;
     margin-top: 2.5%;
   }
-  /* line 152, ../components/sass/_topnav.scss */
+  /* line 177, ../components/sass/_topnav.scss */
   .topNav li a {
     font-size: 1.15em;
     padding: 15px 5px;
   }
 }
 @media screen and (min-width: 640px) and (max-width: 669px) {
-  /* line 163, ../components/sass/_topnav.scss */
+  /* line 188, ../components/sass/_topnav.scss */
   .topNav li {
     margin-top: 3.5%;
   }
-  /* line 165, ../components/sass/_topnav.scss */
+  /* line 190, ../components/sass/_topnav.scss */
   .topNav li a {
     font-size: .9em;
   }
 }
 @media screen and (min-width: 670px) and (max-width: 755px) {
-  /* line 176, ../components/sass/_topnav.scss */
+  /* line 201, ../components/sass/_topnav.scss */
   .topNav li a {
     font-size: 1em;
   }
@@ -3636,20 +3684,45 @@ https://github.com/callmenick/Animating-Hamburger-Icons
   /* line 148, ../components/sass/_hamburger.scss */
   .cmn-toggle-switch {
     display: block;
+    width: 45px;
+    height: 40px;
   }
 
-  /* line 152, ../components/sass/_hamburger.scss */
+  /* line 154, ../components/sass/_hamburger.scss */
   .cmn-toggle-switch__htx {
     float: left;
     margin-top: 5%;
+    margin-top: 14;
+  }
+
+  /* line 160, ../components/sass/_hamburger.scss */
+  .cmn-toggle-switch span {
+    top: 19px;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+  }
+
+  /* line 167, ../components/sass/_hamburger.scss */
+  .cmn-toggle-switch span::before {
+    top: -10px;
+  }
+
+  /* line 171, ../components/sass/_hamburger.scss */
+  .cmn-toggle-switch span::after {
+    bottom: -10px;
+  }
+
+  /* line 175, ../components/sass/_hamburger.scss */
+  .cmn-toggle-switch span::before, .cmn-toggle-switch span::after {
+    height: 2px;
   }
 }
-@media screen and (max-width: 364px) {
-  /* line 159, ../components/sass/_hamburger.scss */
-  .cmn-toggle-switch__htx {
-    margin-top: 0;
-  }
-}
+/*@media screen and (max-width: 364px) {
+    .cmn-toggle-switch__htx {
+	margin-top: 14;
+    }
+}*/
 /** 
     Created on : 28-Jul-2015, 09:21:00
     Author     : Edit
