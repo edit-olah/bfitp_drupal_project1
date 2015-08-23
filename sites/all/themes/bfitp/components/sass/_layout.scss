@@ -111,6 +111,9 @@ h3 {
     font-size: $defaultFontSize;
     margin-bottom: .5em;
     line-height: 1.3;
+    a {
+	font-size: 1.4rem;
+    }
 }
 
 h4 {
@@ -141,6 +144,10 @@ a, p, li, th, td {
     font-size: $defaultFontSize;
     line-height: 1.5;
     margin-bottom: .5em;
+}
+
+p a, li a {
+    font-size: 1.4rem;
 }
 
 ul, li {
@@ -211,7 +218,7 @@ td, th {
 th {
   font-family: "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: $lightGreen;
-  font-weight: 600;
+  font-weight: $semi-bold;
 }
 
 @media screen and (max-width: 639px) {
@@ -760,6 +767,7 @@ button {
 .summary{
     p{
 	color: lighten($semiLightGreen, 20);
+	font-weight: 500;
     }
 }
 
@@ -788,6 +796,11 @@ button {
 	
 	h2 {
 	    font-size: $xxLargeFontSize;
+	    
+	    .smallTextHeader {
+		font-size: 1.5rem;
+		font-weight: $medium;
+	    }
 	}
 
 	h3 {
@@ -890,16 +903,74 @@ button {
 
 /*** 2-column main content page - beginning ***/
 
+
 #DetailPageMainContent {
     
     .leftContainer {
 	width: 70%;
-	padding-right: 10px;
+	padding-right: 20px;
 	box-sizing: border-box;
+	
+	a, p, li{
+	    line-height: 1.7;
+	    margin-bottom: .7em;
+	}
+
+	#{headings()} {
+	    margin-top: 1.8em;
+	    margin-bottom: 1em;
+	    line-height: 1.7;
+	    color: $primaryFontColor;
+	    font-size: $largeFontSize;
+	}
+	
+	textarea {
+	    background-color: lighten($primaryBG, 4);
+	    border: none;
+	    box-sizing: border-box;
+	    font-family: monospace;
+	    font-size: 1.4rem;
+	    white-space: pre-wrap;
+	    word-wrap: break-word;
+	    width: 100%;
+	    color: $primaryFontColor;
+	    padding: $defaultPadding;
+	    overflow: hidden;
+	    margin-bottom: 1.4em;
+	    
+	    &.small {
+		min-height: 6em;
+	    }
+	    
+	    &.medium {
+		min-height: 9em;
+	    }
+	}
+	
+	pre {
+	    @extend textarea;
+	}
+	
+	ul{
+	    width: 100%;
+	    list-style-type: circle;
+	    list-style-position: outside;
+	    list-style-image: none;
+	    padding: 0 0 0 17px;
+	    
+	    li{
+		list-style-type: circle;
+		list-style-position: outside;
+		list-style-image: none
+	    }
+	}
+	
     }
+
     
     .rightContainer {
 	width: 28%;
+	
 	.grid {
 	    padding: 20px 10px 0 10px;
 	    background-color: lighten($primaryBG, 10);

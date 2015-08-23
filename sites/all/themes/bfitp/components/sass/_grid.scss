@@ -325,7 +325,6 @@
 	}
 	
 	h3 {
-	    font-size: 1rem;
 	    
 	    a, a:hover, a:active, a.active {
 		font-size: $defaultFontSize;
@@ -363,6 +362,9 @@
     }
 }
 
+li .grid-full-width.blog-section li h3 {
+    font-size: 1rem;
+}
 
 @media screen and (max-width: 900px) {
     
