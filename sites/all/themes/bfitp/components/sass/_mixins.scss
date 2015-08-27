@@ -70,6 +70,20 @@
 	}
 }
 
+@mixin list() {
+    width: 100%;
+    list-style-type: circle;
+    list-style-position: outside;
+    list-style-image: none;
+    padding: 0 0 0 17px;
+
+    li{
+	list-style-type: circle;
+	list-style-position: outside;
+	list-style-image: none
+    }
+}
+
 @mixin clearfix {
   &:after {
     content: "";

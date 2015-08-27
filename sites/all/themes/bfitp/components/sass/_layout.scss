@@ -821,17 +821,7 @@ button {
     
     .personalSummary {
 	ul{
-	    width: 100%;
-	    list-style-type: circle;
-	    list-style-position: outside;
-	    list-style-image: none;
-	    padding: 0 0 0 17px;
-	    
-	    li{
-		list-style-type: circle;
-		list-style-position: outside;
-		list-style-image: none
-	    }
+	    @include list;
 	}
     }
 }
@@ -924,6 +914,12 @@ button {
 	    font-size: $largeFontSize;
 	}
 	
+	.portfolioMainImage {
+	    width: 100%;
+	    height: auto;
+	    margin-bottom: 3%;
+	}
+	
 	textarea {
 	    background-color: lighten($primaryBG, 4);
 	    border: none;
@@ -951,18 +947,8 @@ button {
 	    @extend textarea;
 	}
 	
-	ul{
-	    width: 100%;
-	    list-style-type: circle;
-	    list-style-position: outside;
-	    list-style-image: none;
-	    padding: 0 0 0 17px;
-	    
-	    li{
-		list-style-type: circle;
-		list-style-position: outside;
-		list-style-image: none
-	    }
+	ul {
+	    @include list;
 	}
 	
     }
@@ -1000,6 +986,12 @@ button {
 		}
 	    }
 	}
+	
+	.sidebar-section {
+	    ul {
+		@include list;
+	    }
+	}
     }  
 }
 
@@ -1013,7 +1005,8 @@ button {
 	
 	.leftContainer{
 	    display: block;
-	    width: 100%;	    
+	    width: 100%;
+	    padding-right: 0;
 	}
 	
 	.rightContainer {
@@ -1090,6 +1083,14 @@ button {
 	    display: block;
 	    width: 100%;
 	    margin-top: 20px;
+	}
+    }
+}
+
+@media screen and (min-width:461px) and (max-width:640px) {
+    #DetailPageHeader.portfolio-project-header {
+	.rightContainer{
+	    width: 100%;
 	}
     }
 }
