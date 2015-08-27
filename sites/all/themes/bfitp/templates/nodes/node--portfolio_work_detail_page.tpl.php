@@ -70,14 +70,14 @@
 					?>
 					    <div class="sidebar-section">
 						<section>
-						    <?php if(isset($collection->field_sidebar_section_header)){
+						    <?php if(isset($collection->field_sidebar_section_header['und'][0]['value'])){
 							print '<h3>' . $collection->field_sidebar_section_header['und'][0]['value'] . '</h3>';
 						    } ?>
-						    <?php if(isset($collection->field_sidebar_section_text)){
+						    <?php if(isset($collection->field_sidebar_section_text['und'][0]['value'])){
 							print '<p>' . $collection->field_sidebar_section_text['und'][0]['value'] . '</p>';
 						    } ?>
-						    <?php if(isset($collection->field_sidebar_section_text)){
-							print '<a href="' . $collection->field_sidebar_section_link['und'][0]['url'] . '">' . $collection->field_sidebar_section_link['und'][0]['title'] . '</a>';
+						    <?php if(isset($collection->field_sidebar_section_link['und'][0]['title'])){
+							print '<a href="' . $collection->field_sidebar_section_link['und'][0]['url'] . '" target="_blank">' . $collection->field_sidebar_section_link['und'][0]['title'] . '</a>';
 						    } ?>
 						</section>
 					    </div><!-- /.sidebar-section -->
