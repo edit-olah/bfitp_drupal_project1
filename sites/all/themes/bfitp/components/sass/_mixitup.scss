@@ -195,14 +195,7 @@
 	
 	.filter-buttons {
 	    button {
-		@include mixitupRect(10px, 5%);
-
-		/* this hides the colour-coded top left label for sorting being 
-		 displayed, remove this when colour-coding makes sense due to 
-		 content development */
-		&:after {
-		    content: initial; // in IE this is not supported
-		}	    
+		@include mixitupRect(10px, 5%);   
 	    }
 
 	}
@@ -212,56 +205,6 @@
 	    label{
 		margin-bottom: 10px;
 	    }
-	    
-	    button[data-filter=".webdev"]:after{
-		border-right-color: $lightGreen;
-	    }
-	    button[data-filter=".drupal"]:after{
-		border-right-color: $drupalBlue;
-	    }
-	    button[data-filter=".threeD"]:after{
-		border-right-color: $lightOrange;
-	    }
-	    button[data-filter=".animation"]:after{
-		border-right-color: darken($lightOrange,20);
-	    }
-	    button[data-filter=".drawing"]:after{
-		border-right-color: lighten($lightMagneta,10);
-	    }
-	    button[data-filter=".markup"]:after{
-		border-right-color: lighten($lightGreen, 20);
-	    }
-	    button[data-filter=".extension-language"]:after{
-		border-right-color: lighten($lightGreen, 10);
-	    }
-	    button[data-filter=".dynamic-programming-language"]:after{
-		border-right-color: $lightGreen;
-	    }
-	    button[data-filter=".code-library"]:after{
-		border-right-color: darken($lightGreen, 15);
-	    }	
-	    button[data-filter=".frontend-automation"]:after{
-		border-right-color: lighten($semiDarkTurq,40);
-	    }	
-	    button[data-filter=".version-control"]:after{
-		border-right-color: $lightTurq;
-	    }		
-	    button[data-filter=".virtualization"]:after{
-		border-right-color: $lightOrange;
-	    }
-	    button[data-filter=".terminal-emulator"]:after{
-		border-right-color: $semiLightOrange;
-	    }
-	    button[data-filter=".cut-up"]:after{
-		border-right-color: darken($semiLightOrange, 20);
-	    }
-	    button[data-filter=".cms"]:after{
-		border-right-color: lighten($semiDarkTurq,23);
-	    }
-	    button[data-filter=".additional"]:after{
-		border-right-color: $lightMagneta;
-	    }	
-
 	} 
     }	
 }
@@ -275,79 +218,22 @@
     width: 59%;
     vertical-align: top;
     margin-top: 7px;
-    //mixin override - beginning
-	h2 {
-	    display: block;
-	    font-size: 1.4rem;
-	}
+    
+    h2 {
+	display: block;
+	font-size: 1.4rem;
+    }
+    
     .mix {
 	@include mixitupRect(10px, 2%);
 	width: 49%;
 	min-height: 33px;
 	margin-bottom: .5%;
-	
-	    /* this hides the colour-coded top left label for sorting being 
-	     displayed, remove this when colour-coding makes sense due to 
-	     content development */
-	    &:after {
-		content: initial; // in IE this is not supported
-	    }
     }
+    
     .gap {
 	width: 24.5%;
     }
-    //mixin override - end
-    
-    
-    .mix.webdev:after {
-	border-right-color: $lightGreen;
-    }
-    .mix.cms:after{
-	border-right-color: lighten($semiDarkTurq,23);
-    }
-    .mix.drupal:after {
-	border-right-color: $drupalBlue;
-    }    
-    .mix.threeD:after {
-	border-right-color: $lightOrange;
-    }
-    .mix.animation:after {
-	border-right-color: darken($lightOrange,20);
-    }
-    .mix.drawing:after {
-	border-right-color:  lighten($lightMagneta,10);
-    }
-    .mix.markup:after{
-	border-right-color: lighten($lightGreen, 20);
-    }
-    .mix.extension-language:after{
-	border-right-color: lighten($lightGreen, 10);
-    }
-    .mix.dynamic-programming-language:after{
-	border-right-color: $lightGreen;
-    }
-    .mix.code-library:after{
-	border-right-color: darken($lightGreen, 15);
-    }	
-    .mix.frontend-automation:after{
-	border-right-color: lighten($semiDarkTurq,40);
-    }	
-    .mix.version-control:after{
-	border-right-color: $lightTurq;
-    }		
-    .mix.virtualization:after{
-	border-right-color: $lightOrange;
-    }
-    .mix.terminal-emulator:after{
-	border-right-color: $semiLightOrange;
-    }
-    .mix.cut-up:after{
-	border-right-color: darken($semiLightOrange, 20);
-    }
-    .mix.additional:after{
-	border-right-color: $lightMagneta;
-    }	
-    
 }
 
 @media screen and (max-width: 445px){
@@ -525,33 +411,6 @@
 		vertical-align: top;
 	    }
 	}
-	
-	.filter-buttons {
-	    button[data-filter=".html"]:after{
-		border-right-color: $lightTurq;
-	    }
-	    button[data-filter=".css"]:after{
-		border-right-color: darken($lightTurq,27);
-	    }
-	    button[data-filter=".sass"]:after{
-		border-right-color: darken($lightTurq,40);
-	    }
-	    button[data-filter=".css-animation"]:after{
-		border-right-color: darken($lightTurq,52);
-	    }
-	    button[data-filter=".drupal-project"]:after{
-		border-right-color: $drupalBlue;
-	    }
-	    button[data-filter=".website-project"]:after{
-		border-right-color: $secondaryFontColor;
-	    }
-	    button[data-filter=".js-jquery"]:after{
-		border-right-color: $semiLightMagneta;
-	    }
-	    button[data-filter=".angularjs"]:after{
-		border-right-color: $semiDarkMagneta;
-	    }
-	}  
     }
 }
 
@@ -695,34 +554,8 @@
 		&:hover {
 		    border: 2px dashed lighten($primaryBG, 28);
 		}
-
 	    }
 	}
-    }
-
-    .portfoMix.html:after {
-	border-right-color: $lightTurq;
-    }
-    .portfoMix.css:after {
-	border-right-color: darken($lightTurq,27);
-    }
-    .portfoMix.sass:after {
-	border-right-color: darken($lightTurq,40);
-    }
-    .portfoMix.css-animation:after {
-	border-right-color: darken($lightTurq,52);
-    }
-    .portfoMix.drupal-project:after {
-	border-right-color: $drupalBlue;
-    }
-    .portfoMix.website-project:after {
-	border-right-color: $secondaryFontColor;
-    }
-    .portfoMix.js-jquery:after {
-	border-right-color: $semiLightMagneta;
-    }
-    .portfoMix.angularjs:after {
-	border-right-color:  $semiDarkMagneta;
     }
 }
 

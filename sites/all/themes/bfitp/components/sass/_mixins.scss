@@ -37,19 +37,6 @@
 	padding-top: $beforePaddingTop;
 	vertical-align: middle;
     }
-    
-    &:after {
-	content: '';
-	position: absolute;
-	border: $scale solid transparent;
-	border-right-color: white;
-	top: -$scale;
-	left: -$scale;
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
-    }
 }
 
 

@@ -987,7 +987,7 @@ th {
   list-style-image: none;
   padding: 0 0 0 17px;
 }
-/* line 80, ../components/sass/_mixins.scss */
+/* line 67, ../components/sass/_mixins.scss */
 #DetailPageMainContent .personalSummary ul li {
   list-style-type: circle;
   list-style-position: outside;
@@ -1107,7 +1107,7 @@ th {
   list-style-image: none;
   padding: 0 0 0 17px;
 }
-/* line 80, ../components/sass/_mixins.scss */
+/* line 67, ../components/sass/_mixins.scss */
 #DetailPageMainContent .leftContainer ul li {
   list-style-type: circle;
   list-style-position: outside;
@@ -1153,7 +1153,7 @@ th {
   list-style-image: none;
   padding: 0 0 0 17px;
 }
-/* line 80, ../components/sass/_mixins.scss */
+/* line 67, ../components/sass/_mixins.scss */
 #DetailPageMainContent .rightContainer .sidebar-section ul li {
   list-style-type: circle;
   list-style-position: outside;
@@ -2683,19 +2683,6 @@ li .blog-post .blog-summary {
   padding-top: 5%;
   vertical-align: middle;
 }
-/* line 41, ../components/sass/_mixins.scss */
-.control-bar .filter-buttons button:after {
-  content: '';
-  position: absolute;
-  border: 10px solid transparent;
-  border-right-color: white;
-  top: -10px;
-  left: -10px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
 
 @media screen and (min-width: 320px) and (max-width: 534px) {
   /* line 81, ../components/sass/_mixitup.scss */
@@ -2770,7 +2757,7 @@ li .blog-post .blog-summary {
   border: 2px dashed #585f56;
   position: relative;
 }
-/* line 65, ../components/sass/_mixins.scss */
+/* line 52, ../components/sass/_mixins.scss */
 .mixItUp-container .mix p, .mixItUp-container .portfoMix p {
   line-height: 1.2;
   font-size: 1.3rem;
@@ -2783,19 +2770,6 @@ li .blog-post .blog-summary {
   display: inline-block;
   padding-top: 5%;
   vertical-align: middle;
-}
-/* line 41, ../components/sass/_mixins.scss */
-.mixItUp-container .mix:after, .mixItUp-container .portfoMix:after {
-  content: '';
-  position: absolute;
-  border: 20px solid transparent;
-  border-right-color: white;
-  top: -20px;
-  left: -20px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
 }
 /* line 142, ../components/sass/_mixitup.scss */
 .mixItUp-container .mix {
@@ -2838,9 +2812,6 @@ li .blog-post .blog-summary {
 /* line 197, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons button {
   position: relative;
-  /* this hides the colour-coded top left label for sorting being 
-   displayed, remove this when colour-coding makes sense due to 
-   content development */
 }
 /* line 34, ../components/sass/_mixins.scss */
 #Skills .control-bar .filter-buttons button:before {
@@ -2849,115 +2820,31 @@ li .blog-post .blog-summary {
   padding-top: 5%;
   vertical-align: middle;
 }
-/* line 41, ../components/sass/_mixins.scss */
-#Skills .control-bar .filter-buttons button:after {
-  content: '';
-  position: absolute;
-  border: 10px solid transparent;
-  border-right-color: white;
-  top: -10px;
-  left: -10px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-/* line 203, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button:after {
-  content: initial;
-}
-/* line 212, ../components/sass/_mixitup.scss */
+/* line 205, ../components/sass/_mixitup.scss */
 #Skills .control-bar .filter-buttons label, #Skills .control-bar .filter-buttons body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #Skills .control-bar .filter-buttons .description {
   margin-bottom: 10px;
-}
-/* line 216, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".webdev"]:after {
-  border-right-color: #ABF381;
-}
-/* line 219, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".drupal"]:after {
-  border-right-color: #137CC1;
-}
-/* line 222, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".threeD"]:after {
-  border-right-color: #FFB587;
-}
-/* line 225, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".animation"]:after {
-  border-right-color: #ff7621;
-}
-/* line 228, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".drawing"]:after {
-  border-right-color: #f8b0c9;
-}
-/* line 231, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".markup"]:after {
-  border-right-color: #e9fcde;
-}
-/* line 234, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".extension-language"]:after {
-  border-right-color: #caf7b0;
-}
-/* line 237, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".dynamic-programming-language"]:after {
-  border-right-color: #ABF381;
-}
-/* line 240, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".code-library"]:after {
-  border-right-color: #7cec3b;
-}
-/* line 243, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".frontend-automation"]:after {
-  border-right-color: #4bedbd;
-}
-/* line 246, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".version-control"]:after {
-  border-right-color: #76DFC0;
-}
-/* line 249, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".virtualization"]:after {
-  border-right-color: #FFB587;
-}
-/* line 252, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".terminal-emulator"]:after {
-  border-right-color: #FF9959;
-}
-/* line 255, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".cut-up"]:after {
-  border-right-color: #f25d00;
-}
-/* line 258, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".cms"]:after {
-  border-right-color: #15cc96;
-}
-/* line 261, ../components/sass/_mixitup.scss */
-#Skills .control-bar .filter-buttons button[data-filter=".additional"]:after {
-  border-right-color: #F481A9;
 }
 
 /*** Skills - buttons / control bar - end ***/
 /*** Skills - grid - beginning ***/
-/* line 273, ../components/sass/_mixitup.scss */
+/* line 216, ../components/sass/_mixitup.scss */
 #SkillsContainer {
   display: inline-block;
   width: 59%;
   vertical-align: top;
   margin-top: 7px;
 }
-/* line 279, ../components/sass/_mixitup.scss */
+/* line 222, ../components/sass/_mixitup.scss */
 #SkillsContainer h2, #SkillsContainer .grid li h2 a, .grid li h2 #SkillsContainer a {
   display: block;
   font-size: 1.4rem;
 }
-/* line 283, ../components/sass/_mixitup.scss */
+/* line 227, ../components/sass/_mixitup.scss */
 #SkillsContainer .mix {
   position: relative;
   width: 49%;
   min-height: 33px;
   margin-bottom: .5%;
-  /* this hides the colour-coded top left label for sorting being 
-   displayed, remove this when colour-coding makes sense due to 
-   content development */
 }
 /* line 34, ../components/sass/_mixins.scss */
 #SkillsContainer .mix:before {
@@ -2966,188 +2853,107 @@ li .blog-post .blog-summary {
   padding-top: 2%;
   vertical-align: middle;
 }
-/* line 41, ../components/sass/_mixins.scss */
-#SkillsContainer .mix:after {
-  content: '';
-  position: absolute;
-  border: 10px solid transparent;
-  border-right-color: white;
-  top: -10px;
-  left: -10px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-/* line 292, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix:after {
-  content: initial;
-}
-/* line 296, ../components/sass/_mixitup.scss */
+/* line 234, ../components/sass/_mixitup.scss */
 #SkillsContainer .gap {
   width: 24.5%;
 }
-/* line 302, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.webdev:after {
-  border-right-color: #ABF381;
-}
-/* line 305, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.cms:after {
-  border-right-color: #15cc96;
-}
-/* line 308, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.drupal:after {
-  border-right-color: #137CC1;
-}
-/* line 311, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.threeD:after {
-  border-right-color: #FFB587;
-}
-/* line 314, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.animation:after {
-  border-right-color: #ff7621;
-}
-/* line 317, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.drawing:after {
-  border-right-color: #f8b0c9;
-}
-/* line 320, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.markup:after {
-  border-right-color: #e9fcde;
-}
-/* line 323, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.extension-language:after {
-  border-right-color: #caf7b0;
-}
-/* line 326, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.dynamic-programming-language:after {
-  border-right-color: #ABF381;
-}
-/* line 329, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.code-library:after {
-  border-right-color: #7cec3b;
-}
-/* line 332, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.frontend-automation:after {
-  border-right-color: #4bedbd;
-}
-/* line 335, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.version-control:after {
-  border-right-color: #76DFC0;
-}
-/* line 338, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.virtualization:after {
-  border-right-color: #FFB587;
-}
-/* line 341, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.terminal-emulator:after {
-  border-right-color: #FF9959;
-}
-/* line 344, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.cut-up:after {
-  border-right-color: #f25d00;
-}
-/* line 347, ../components/sass/_mixitup.scss */
-#SkillsContainer .mix.additional:after {
-  border-right-color: #F481A9;
-}
 
 @media screen and (max-width: 445px) {
-  /* line 356, ../components/sass/_mixitup.scss */
+  /* line 242, ../components/sass/_mixitup.scss */
   #SkillsContainer .mix {
     width: 98%;
     min-height: initial;
     line-height: 1;
     margin-bottom: 6px;
   }
-  /* line 362, ../components/sass/_mixitup.scss */
+  /* line 248, ../components/sass/_mixitup.scss */
   #SkillsContainer .mix p {
     padding: .1em 1.5em;
     font-size: 1.2rem;
     line-height: 1.2;
   }
-  /* line 369, ../components/sass/_mixitup.scss */
+  /* line 255, ../components/sass/_mixitup.scss */
   #SkillsContainer .gap {
     width: 98%;
   }
 }
 @media screen and (min-width: 531px) and (max-width: 648px) {
-  /* line 378, ../components/sass/_mixitup.scss */
+  /* line 264, ../components/sass/_mixitup.scss */
   #SkillsContainer .mix {
     min-height: 48px;
     margin-bottom: 6px;
   }
 }
 @media screen and (min-width: 649px) and (max-width: 831px) {
-  /* line 389, ../components/sass/_mixitup.scss */
+  /* line 275, ../components/sass/_mixitup.scss */
   #SkillsContainer .mix {
     min-height: 48px;
     margin-bottom: 5px;
   }
 }
 @media screen and (max-width: 1002px) {
-  /* line 401, ../components/sass/_mixitup.scss */
+  /* line 287, ../components/sass/_mixitup.scss */
   #Skills .control-bar label, #Skills .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #Skills .control-bar .description {
     display: block;
   }
-  /* line 405, ../components/sass/_mixitup.scss */
+  /* line 291, ../components/sass/_mixitup.scss */
   #Skills .control-bar .filter-buttons button {
     margin-bottom: 5px;
   }
 
-  /* line 413, ../components/sass/_mixitup.scss */
+  /* line 299, ../components/sass/_mixitup.scss */
   #SkillsContainer .mix {
     margin-bottom: 6px;
   }
 }
 @media screen and (max-width: 530px) {
-  /* line 422, ../components/sass/_mixitup.scss */
+  /* line 308, ../components/sass/_mixitup.scss */
   #Skills .control-bar {
     display: none;
   }
 
-  /* line 427, ../components/sass/_mixitup.scss */
+  /* line 313, ../components/sass/_mixitup.scss */
   #SkillsContainer {
     width: 100%;
   }
-  /* line 431, ../components/sass/_mixitup.scss */
+  /* line 317, ../components/sass/_mixitup.scss */
   #SkillsContainer .mix:after {
     border-right-color: transparent !important;
   }
 }
 @media screen and (min-width: 465px) and (max-width: 530px) {
-  /* line 440, ../components/sass/_mixitup.scss */
+  /* line 326, ../components/sass/_mixitup.scss */
   #SkillsContainer {
     width: 100%;
   }
 }
 /* for where list of skills has more content in the individual list items - beginning */
 @media screen and (max-width: 1002px) {
-  /* line 452, ../components/sass/_mixitup.scss */
+  /* line 338, ../components/sass/_mixitup.scss */
   #SkillsContainer.more-content .mix {
     min-height: 60px;
   }
 }
 @media screen and (max-width: 481px) {
-  /* line 461, ../components/sass/_mixitup.scss */
+  /* line 347, ../components/sass/_mixitup.scss */
   #SkillsContainer.more-content .mix {
     min-height: initial;
   }
 }
 @media screen and (min-width: 482px) and (max-width: 433px) {
-  /* line 471, ../components/sass/_mixitup.scss */
+  /* line 357, ../components/sass/_mixitup.scss */
   #SkillsContainer.more-content .mix {
     min-height: 76px;
   }
 }
 @media screen and (min-width: 530px) and (max-width: 551px) {
-  /* line 480, ../components/sass/_mixitup.scss */
+  /* line 366, ../components/sass/_mixitup.scss */
   #SkillsContainer.more-content .mix {
     min-height: 92px;
   }
 }
 @media screen and (min-width: 552px) and (max-width: 622px) {
-  /* line 489, ../components/sass/_mixitup.scss */
+  /* line 375, ../components/sass/_mixitup.scss */
   #SkillsContainer.more-content .mix {
     min-height: 70px;
   }
@@ -3157,60 +2963,28 @@ li .blog-post .blog-summary {
 /* ============================= Skills section - end ============================================*/
 /* ============================= Portfolio section - beginning =============================*/
 /*** Portfolio - buttons / control bar - beginning ***/
-/* line 513, ../components/sass/_mixitup.scss */
+/* line 399, ../components/sass/_mixitup.scss */
 #Portfolio .control-bar .group:first-child, #DetailPageHeader .control-bar .group:first-child, #DetailPageMainContent .control-bar .group:first-child, #ContactIndi .control-bar .group:first-child {
   margin-bottom: 1%;
 }
-/* line 518, ../components/sass/_mixitup.scss */
+/* line 404, ../components/sass/_mixitup.scss */
 #Portfolio .control-bar .filter-buttons, #DetailPageHeader .control-bar .filter-buttons, #DetailPageMainContent .control-bar .filter-buttons, #ContactIndi .control-bar .filter-buttons {
   width: 100%;
 }
-/* line 521, ../components/sass/_mixitup.scss */
+/* line 407, ../components/sass/_mixitup.scss */
 #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
   width: 10.8%;
   min-height: 46px;
   min-width: initial;
   vertical-align: top;
 }
-/* line 530, ../components/sass/_mixitup.scss */
-#Portfolio .control-bar .filter-buttons button[data-filter=".html"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".html"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".html"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".html"]:after {
-  border-right-color: #76DFC0;
-}
-/* line 533, ../components/sass/_mixitup.scss */
-#Portfolio .control-bar .filter-buttons button[data-filter=".css"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".css"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".css"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".css"]:after {
-  border-right-color: #26a580;
-}
-/* line 536, ../components/sass/_mixitup.scss */
-#Portfolio .control-bar .filter-buttons button[data-filter=".sass"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".sass"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".sass"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".sass"]:after {
-  border-right-color: #1a6f56;
-}
-/* line 539, ../components/sass/_mixitup.scss */
-#Portfolio .control-bar .filter-buttons button[data-filter=".css-animation"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".css-animation"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".css-animation"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".css-animation"]:after {
-  border-right-color: #0e3d30;
-}
-/* line 542, ../components/sass/_mixitup.scss */
-#Portfolio .control-bar .filter-buttons button[data-filter=".drupal-project"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".drupal-project"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".drupal-project"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".drupal-project"]:after {
-  border-right-color: #137CC1;
-}
-/* line 545, ../components/sass/_mixitup.scss */
-#Portfolio .control-bar .filter-buttons button[data-filter=".website-project"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".website-project"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".website-project"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".website-project"]:after {
-  border-right-color: #859900;
-}
-/* line 548, ../components/sass/_mixitup.scss */
-#Portfolio .control-bar .filter-buttons button[data-filter=".js-jquery"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".js-jquery"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".js-jquery"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".js-jquery"]:after {
-  border-right-color: #E24F83;
-}
-/* line 551, ../components/sass/_mixitup.scss */
-#Portfolio .control-bar .filter-buttons button[data-filter=".angularjs"]:after, #DetailPageHeader .control-bar .filter-buttons button[data-filter=".angularjs"]:after, #DetailPageMainContent .control-bar .filter-buttons button[data-filter=".angularjs"]:after, #ContactIndi .control-bar .filter-buttons button[data-filter=".angularjs"]:after {
-  border-right-color: #830E37;
-}
 
 @media screen and (min-width: 320px) and (max-width: 535px) {
-  /* line 562, ../components/sass/_mixitup.scss */
+  /* line 421, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar label, #DetailPageHeader .control-bar label, #DetailPageMainContent .control-bar label, #ContactIndi .control-bar label, #Portfolio .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #Portfolio .control-bar .description, #DetailPageHeader .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #DetailPageHeader .control-bar .description, #DetailPageMainContent .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #DetailPageMainContent .control-bar .description, #ContactIndi .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #ContactIndi .control-bar .description {
     display: block;
   }
-  /* line 567, ../components/sass/_mixitup.scss */
+  /* line 426, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
     width: 100%;
     min-height: 30px;
@@ -3218,49 +2992,49 @@ li .blog-post .blog-summary {
   }
 }
 @media screen and (min-width: 536px) and (max-width: 639px) {
-  /* line 581, ../components/sass/_mixitup.scss */
+  /* line 440, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar label, #DetailPageHeader .control-bar label, #DetailPageMainContent .control-bar label, #ContactIndi .control-bar label, #Portfolio .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #Portfolio .control-bar .description, #DetailPageHeader .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #DetailPageHeader .control-bar .description, #DetailPageMainContent .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #DetailPageMainContent .control-bar .description, #ContactIndi .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #ContactIndi .control-bar .description {
     display: block;
   }
-  /* line 586, ../components/sass/_mixitup.scss */
+  /* line 445, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
     width: 49%;
     min-height: 30px;
   }
 }
 @media screen and (min-width: 640px) and (max-width: 818px) {
-  /* line 599, ../components/sass/_mixitup.scss */
+  /* line 458, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar label, #DetailPageHeader .control-bar label, #DetailPageMainContent .control-bar label, #ContactIndi .control-bar label, #Portfolio .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #Portfolio .control-bar .description, #DetailPageHeader .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #DetailPageHeader .control-bar .description, #DetailPageMainContent .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #DetailPageMainContent .control-bar .description, #ContactIndi .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #ContactIndi .control-bar .description {
     display: block;
     margin: .4em .1em;
   }
-  /* line 605, ../components/sass/_mixitup.scss */
+  /* line 464, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
     width: 32%;
     min-height: 30px;
   }
 }
 @media screen and (min-width: 819px) and (max-width: 884px) {
-  /* line 618, ../components/sass/_mixitup.scss */
+  /* line 477, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar label, #DetailPageHeader .control-bar label, #DetailPageMainContent .control-bar label, #ContactIndi .control-bar label, #Portfolio .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #Portfolio .control-bar .description, #DetailPageHeader .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #DetailPageHeader .control-bar .description, #DetailPageMainContent .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #DetailPageMainContent .control-bar .description, #ContactIndi .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #ContactIndi .control-bar .description {
     display: block;
   }
-  /* line 623, ../components/sass/_mixitup.scss */
+  /* line 482, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
     width: 24.4%;
     min-height: 30px;
   }
 }
 @media screen and (min-width: 885px) and (max-width: 1083px) {
-  /* line 636, ../components/sass/_mixitup.scss */
+  /* line 495, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar label, #DetailPageHeader .control-bar label, #DetailPageMainContent .control-bar label, #ContactIndi .control-bar label, #Portfolio .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #Portfolio .control-bar .description, #DetailPageHeader .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #DetailPageHeader .control-bar .description, #DetailPageMainContent .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #DetailPageMainContent .control-bar .description, #ContactIndi .control-bar body.not-front.not-logged-in.page-user .content .description, body.not-front.not-logged-in.page-user .content #ContactIndi .control-bar .description {
     display: block;
   }
-  /* line 640, ../components/sass/_mixitup.scss */
+  /* line 499, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar .filter-buttons, #DetailPageHeader .control-bar .filter-buttons, #DetailPageMainContent .control-bar .filter-buttons, #ContactIndi .control-bar .filter-buttons {
     display: block;
   }
-  /* line 643, ../components/sass/_mixitup.scss */
+  /* line 502, ../components/sass/_mixitup.scss */
   #Portfolio .control-bar .filter-buttons button, #DetailPageHeader .control-bar .filter-buttons button, #DetailPageMainContent .control-bar .filter-buttons button, #ContactIndi .control-bar .filter-buttons button {
     width: 11.8%;
     font-size: 1.2em;
@@ -3268,18 +3042,18 @@ li .blog-post .blog-summary {
 }
 /*** Portfolio - buttons / control bar - end ***/
 /*** Portfolio - grid - beginning ***/
-/* line 658, ../components/sass/_mixitup.scss */
+/* line 517, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix {
   padding: 10px;
   box-sizing: border-box;
 }
-/* line 662, ../components/sass/_mixitup.scss */
+/* line 521, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix img {
   width: 100%;
   height: auto;
   margin: 0 auto;
 }
-/* line 668, ../components/sass/_mixitup.scss */
+/* line 527, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix h3 {
   font-size: 1.4em;
   line-height: 1.4;
@@ -3288,7 +3062,7 @@ li .blog-post .blog-summary {
   padding-bottom: 2%;
   min-height: 41px;
 }
-/* line 677, ../components/sass/_mixitup.scss */
+/* line 536, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix h4 {
   font-size: 1.3em;
   line-height: 1.3;
@@ -3297,90 +3071,58 @@ li .blog-post .blog-summary {
   color: #B9C8B5;
   min-height: 39px;
 }
-/* line 686, ../components/sass/_mixitup.scss */
+/* line 545, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix .button {
   width: 100%;
   margin-bottom: 0;
   padding: 0;
 }
-/* line 691, ../components/sass/_mixitup.scss */
+/* line 550, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix .button a {
   background-color: #5a6258;
   font-size: 1.1em;
 }
-/* line 695, ../components/sass/_mixitup.scss */
+/* line 554, ../components/sass/_mixitup.scss */
 #PortfolioContainer .portfoMix .button a:hover {
   border: 2px dashed #7f8a7d;
 }
-/* line 703, ../components/sass/_mixitup.scss */
-#PortfolioContainer .portfoMix.html:after {
-  border-right-color: #76DFC0;
-}
-/* line 706, ../components/sass/_mixitup.scss */
-#PortfolioContainer .portfoMix.css:after {
-  border-right-color: #26a580;
-}
-/* line 709, ../components/sass/_mixitup.scss */
-#PortfolioContainer .portfoMix.sass:after {
-  border-right-color: #1a6f56;
-}
-/* line 712, ../components/sass/_mixitup.scss */
-#PortfolioContainer .portfoMix.css-animation:after {
-  border-right-color: #0e3d30;
-}
-/* line 715, ../components/sass/_mixitup.scss */
-#PortfolioContainer .portfoMix.drupal-project:after {
-  border-right-color: #137CC1;
-}
-/* line 718, ../components/sass/_mixitup.scss */
-#PortfolioContainer .portfoMix.website-project:after {
-  border-right-color: #859900;
-}
-/* line 721, ../components/sass/_mixitup.scss */
-#PortfolioContainer .portfoMix.js-jquery:after {
-  border-right-color: #E24F83;
-}
-/* line 724, ../components/sass/_mixitup.scss */
-#PortfolioContainer .portfoMix.angularjs:after {
-  border-right-color: #830E37;
-}
 
 @media screen and (min-width: 320px) and (max-width: 639px) {
-  /* line 734, ../components/sass/_mixitup.scss */
+  /* line 567, ../components/sass/_mixitup.scss */
   #PortfolioContainer .gap {
     width: 49%;
   }
-  /* line 738, ../components/sass/_mixitup.scss */
+  /* line 571, ../components/sass/_mixitup.scss */
   #PortfolioContainer .portfoMix {
     width: 49%;
   }
-  /* line 743, ../components/sass/_mixitup.scss */
+  /* line 576, ../components/sass/_mixitup.scss */
   #PortfolioContainer .portfoMix .button a {
     font-size: 1em;
   }
 }
 @media screen and (min-width: 640px) and (max-width: 767px) {
-  /* line 755, ../components/sass/_mixitup.scss */
+  /* line 588, ../components/sass/_mixitup.scss */
   #PortfolioContainer .gap {
     width: 32%;
   }
-  /* line 759, ../components/sass/_mixitup.scss */
+  /* line 592, ../components/sass/_mixitup.scss */
   #PortfolioContainer .portfoMix {
     width: 32%;
   }
-  /* line 763, ../components/sass/_mixitup.scss */
+  /* line 596, ../components/sass/_mixitup.scss */
   #PortfolioContainer .portfoMix .button a {
     font-size: 1.1em;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 808px) {
-  /* line 777, ../components/sass/_mixitup.scss */
+  /* line 610, ../components/sass/_mixitup.scss */
   #PortfolioContainer .portfoMix .button a {
     font-size: .9em;
   }
 }
 @media screen and (min-width: 809px) and (max-width: 863px) {
-  /* line 790, ../components/sass/_mixitup.scss */
+  /* line 623, ../components/sass/_mixitup.scss */
   #PortfolioContainer .portfoMix .button a {
     font-size: 1em;
   }
