@@ -4,9 +4,9 @@
  */
 function bfitp_general_block_info() {
   
-  $blocks['dynamic_menu'] = array(
-    'info' => t('Dynamic Menu'),
-  );
+    $blocks['dynamic_menu'] = array(
+	'info' => t('Dynamic Menu'),
+    );
 
   return $blocks;
 }
@@ -16,14 +16,14 @@ function bfitp_general_block_info() {
  * $delta name of the block
  */
 function bfitp_general_block_view($delta = '') {
-  // This example is adapted from node.module.
-  $block = array();
+    // This example is adapted from node.module.
+    $block = array();
 
-  switch ($delta) {
-      case 'dynamic_menu':
-	$block['content'] = bfitp_general_dynamic_menu();
-      break;
-  };
+    switch ($delta) {
+	case 'dynamic_menu':
+	    $block['content'] = bfitp_general_dynamic_menu();
+	break;
+    };
   
   return $block;
   
@@ -97,13 +97,13 @@ function bfitp_general_dynamic_menu(){
 	$output .= '<li><a href="' .  url('<front>') . '">' . t('Home') . '</a></li>';
 
 	if(arg(1) == 18){
-	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah">' .t('Edit\'s Portfolio') .'</a></li>';
-	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah-resume">' .t('Edit\'s Resume') .'</a></li>';
-	 }
-	 if(arg(1) == 19){
-	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte">' .t('Peter\'s Portfolio') .'</a></li>';
-	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte-resume">' .t('Peter\'s Resume') .'</a></li>';
-	 }                      
+	    $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah">' .t('Edit\'s Portfolio') .'</a></li>';
+	    $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah-resume">' .t('Edit\'s Resume') .'</a></li>';
+	}
+	if(arg(1) == 19){
+	    $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte">' .t('Peter\'s Portfolio') .'</a></li>';
+	    $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte-resume">' .t('Peter\'s Resume') .'</a></li>';
+	}                      
 
 	$output .= '</ul>';
 	
@@ -116,13 +116,13 @@ function bfitp_general_dynamic_menu(){
 	$output .= '<ul class="topNav">';
 	$output .= '<li><a href="' .  url('<front>') . '">' . t('Home') . '</a></li>';
 	if(arg(1) == 5){
-	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah-blog">' .t('Edit\'s Blog') .'</a></li>';
-	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah-resume">' .t('Edit\'s Resume') .'</a></li>';
-	 }
-	 if(arg(1) == 22){
-	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte-blog">' .t('Peter\'s Blog') .'</a></li>';
-	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte-resume">' .t('Peter\'s Resume') .'</a></li>';
-	 } 
+	    $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah-blog">' .t('Edit\'s Blog') .'</a></li>';
+	    $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah-resume">' .t('Edit\'s Resume') .'</a></li>';
+	}
+	if(arg(1) == 22){
+	    $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte-blog">' .t('Peter\'s Blog') .'</a></li>';
+	    $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte-resume">' .t('Peter\'s Resume') .'</a></li>';
+	} 
 	$output .= '</ul>';
     }
     
@@ -134,13 +134,13 @@ function bfitp_general_dynamic_menu(){
 	$output .= '<li><a href="' .  url('<front>') . '">' . t('Home') . '</a></li>';
 	if(arg(1) == 8){
 	    $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah">' .t('Edit\'s Portfolio') .'</a></li>';
-	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah-blog">' .t('Edit\'s Blog') .'</a></li>';
-	     
-	 }
-	 if(arg(1) == 23){
-	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte">' .t('Peter\'s Portfolio') .'</a></li>';
-	     $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte-blog">' .t('Peter\'s Blog') .'</a></li>';
-	 } 
+	    $output .= '<li><a href="'.$GLOBALS['base_url'].'/edit-olah-blog">' .t('Edit\'s Blog') .'</a></li>';
+
+	}
+	if(arg(1) == 23){
+	    $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte">' .t('Peter\'s Portfolio') .'</a></li>';
+	    $output .= '<li><a href="'.$GLOBALS['base_url'].'/peter-whyte-blog">' .t('Peter\'s Blog') .'</a></li>';
+	} 
 	$output .= '</ul>';
     }  
     
@@ -214,8 +214,8 @@ function bfitp_general_dynamic_menu(){
     
     $block = array(
 	'message' => array(
-	  '#type' => 'markup',
-	  '#markup' => $output,
+	    '#type' => 'markup',
+	    '#markup' => $output,
 	),
       );
       return $block;
@@ -271,29 +271,28 @@ function portfolio_mixitup($user){
      *    and we put it into an array, where we identify ':userid' with the '$user' variable that we are going to use to pass into our function. 'fetchAll()' is a Drupal command to get all matching data.
      * 'SELECT distinct n.title, n.nid, img.field_detail_page_header_image_fid as imgid' --- we are asking about multiple values: node title, node id, 
      *    'field_detail_page_header_image_fid' (image field id) from the 'img' table (which is just the table for 'field_data_field_detail_page_header_image' field aliased earlier as 'img') shortened / aliased as 'imgid'.  */
-    $projects = db_query("SELECT distinct n.title, n.nid, img.field_detail_page_header_image_fid as imgid
+    $projects = db_query("SELECT distinct n.title, n.nid, img.field_detail_page_header_image_fid as imgid, skills.field_skills_list_value as skillsList
 			    FROM node n
 			    INNER JOIN field_data_field_created_by user ON n.nid = user.entity_id
+			    INNER JOIN field_data_field_skills_list skills ON n.nid = skills.entity_id
 			    INNER JOIN field_data_field_detail_page_header_image img ON n.nid = img.entity_id
 			    WHERE n.type = 'portfolio_work_detail_page'
 			    AND user.field_created_by_target_id = :userid;", array(':userid'=>$user))->fetchAll();
     
     foreach($projects as $project){
 	$imguri = file_load($project->imgid);
-	$categoryClassList = '';
-	foreach($categorybynodeid as $porfolioWorkPageId){
-	    if(isset($porfolioWorkPageId[$project->nid]) && $porfolioWorkPageId[$project->nid] != null){
-		$categoryClassList .= $porfolioWorkPageId[$project->nid] . ' ';
-	    }
-	};
+	
+	// Calling function: build category list by portfolio work detail page node id in getCategoryList() function (see end of page)
+	$categoryClassList = getCategoryList($project->nid);
 
+	
 	$portfolioContainer .= '<div class="portfoMix click-follow '. $categoryClassList .'">
 				<section>
 				    <img alt="' . $project->title . 
 					'" title="' . $project->title . 
 					'" src="' . image_style_url('portfolio_header_460x230', $imguri->uri) .'" />
 				    <h3>' . $project->title . '</h3>
-				    <h4>'.$categoryClassList.'</h4>
+				    <h4>'.$project->skillsList .'</h4>
 				    <p class="button">' . l('More details >>', 'node/' . $project->nid) . '</p>
 				</section>
 			    </div><!--/.portfoMix --> ';
@@ -366,4 +365,22 @@ function bfitp_breadcrumb($variables) {
     $output .= '<div class="breadcrumb">' . implode(' » ', $breadcrumb) . ' » '. $title .'</div>';
     return $output;
   }
+}
+
+// function to build category list by portfolio work detail page node id
+function getCategoryList($nid){
+    $categories = db_query("SELECT distinct category.entity_id AS cid, category.field_portfolio_work_category_value AS categoryClass
+			    FROM node n
+			    INNER JOIN field_data_field_created_by user ON n.nid = user.entity_id
+			    INNER JOIN field_data_field_portfolio_work_category category ON n.nid = category.entity_id
+			    WHERE n.type = 'portfolio_work_detail_page'
+			    AND n.nid = :portfolioID", array(':portfolioID'=>$nid))->fetchAll();
+
+    $categoryList = '';
+    
+    foreach($categories as $category){
+	$categoryList .= $category->categoryClass . ' ';
+    }
+    
+    return $categoryList;
 }
