@@ -2168,7 +2168,7 @@ $(document).ready(function() {
 	e.preventDefault();
 	// when clicked scroll to relevant section:
 	var divId = '#' + $(this).attr("href");	
-	$.scrollTo(divId, 1000,{offset: {top:-170, left:0}});
+	$.scrollTo(divId, 1000,{offset: {top:-140, left:0}});
 	
 	// make relevant page nav element appear current/selected: 
 	$('.pageNavLink').parent().removeClass('current');
@@ -2180,7 +2180,7 @@ $(document).ready(function() {
 	// if Hamburger Menu is active (therefore pageNav is visible) and when this pageNavLink is clicked: 
 		
 	if(($('.cmn-toggle-switch').hasClass('active')) && ($('.pageNavLink').data('clicked') === true)){
-	    bfitp_timeout(3000);
+	    bfitp_timeout(1500);
 	}
 	
 
