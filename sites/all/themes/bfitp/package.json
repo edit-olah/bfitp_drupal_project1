@@ -1,6 +1,6 @@
 {
-  "name": "bfitp_workflow",
-  "version": "0.0.1",
+  "name": "bfitp",
+  "version": "0.0.2",
   "description": "Barefoot in the park website build - workflow",
   "author": "Edit Olah",
   "devDependencies": {
