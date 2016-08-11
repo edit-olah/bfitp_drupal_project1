@@ -317,6 +317,7 @@ function get_related($taxonomyIds, $currentArticle){
 				INNER JOIN field_data_field_detail_page_header_image img ON node.nid = img.entity_id
 				WHERE tid IN (:tids)
 				AND node.nid <> :currentArticle
+				AND node.status = 1
 				LIMIT 3", array(':tids'=>$taxonomyIds, ':currentArticle'=>$currentArticle))->fetchAll();
     return $related_articles;
     
