@@ -86,6 +86,7 @@ body {
     font-family: $baseFont;
     color: $semiLightGreen;
     font-weight: $semi-bold;
+    text-align: left;
 }
 
 h1 {
@@ -131,7 +132,7 @@ a {
     text-decoration: none;
     color: darken($lightTurq,3);
     font-weight: $semi-bold;
-    
+    word-wrap: break-word;
 }
 
 a:hover {
@@ -176,6 +177,10 @@ ul, li {
 
 .extraPadding{
     padding: 0 0 15px 0;
+}
+
+.wordwrap {
+    word-wrap: break-word;
 }
 
 .button {
@@ -992,11 +997,42 @@ button {
 		@include list;
 	    }
 	}
-    }  
+    }
+    
+        
+    .imgwidth100percent {
+	width: 100%;
+	height: auto;
+    }
+    
+    .imgwidth70percent {
+	width: 70%;
+	height: auto;
+    }
 }
 
-#DetailPageMainContent.blog-post-article{
+#DetailPageMainContent.blog-post-article {
     padding: 25px 15px;
+    .leftContainer {
+	section {
+	    border-top: 2px solid #535a51;
+	    box-sizing: border-box;
+	    padding-bottom: .9em;
+	    padding-top: .7em;
+	}
+    }
+    .tips {
+	margin-top: .6em;
+	background-color: #455042;
+	border-bottom: 6px solid #434d40;
+	border-top: 6px solid #434d40;
+	box-sizing: border-box;
+	padding: $minPaddingReverse;
+	
+	h2, h3 {
+	    margin-top: .2em;
+	}
+    }
 }
 
 @media screen and (max-width: 639px) {
@@ -1020,6 +1056,15 @@ button {
 		border-top: 3px dashed lighten($primaryBG, 15);
 	    }
 	}
+	
+	.imgwidth70percent {
+	    width: 100%;
+	}
+	
+	.imgwidth50percent {
+	    width: 90%;
+	    height: auto;
+	}
     }
 }
 
@@ -1037,6 +1082,10 @@ button {
 		    padding: 0px 5px;
 		}
 	    }
+	}
+	
+	.imgwidth70percent {
+	    width: 100%;
 	}
     }
 }
