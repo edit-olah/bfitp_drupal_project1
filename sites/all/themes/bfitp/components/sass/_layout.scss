@@ -155,24 +155,32 @@ ul, li {
     list-style-type: none; 
 }
 
-.bold, em {
+.bold, strong {
     font-weight: $bold;
+}
+
+em { 
+    font-style: italic;
 }
 
 .semiBold {
     font-weight: $semi-bold;
 }
 
-.large-text{
+.large-text {
    font-size: $semiLargeFontSize; 
 }
 
-.semi-large-text{
+.semi-large-text {
    font-size: $defaultFontSize;
 }
 
 .highlighted{
     color: lighten($semiLightGreen, 10);
+}
+
+.fringe {
+    color: darken($primaryFontColor, 22);
 }
 
 .extraPadding{
@@ -954,6 +962,11 @@ button {
 	
 	ul {
 	    @include list;
+	    li {
+		li:nth-last-child(n + 2) {
+		    margin-bottom: 0;
+		}
+	    }
 	}
 	
     }
